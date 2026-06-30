@@ -120,6 +120,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Ezoic Consent Script */}
+        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" />
+        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" />
+        {/* Ezoic Main Script */}
+        <script async src="//www.ezojs.com/ezoic/sa.min.js" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.ezstandalone = window.ezstandalone || {};
+          ezstandalone.cmd = ezstandalone.cmd || [];
+        `}} />
+        <script src="//ezoicanalytics.com/analytics.js" />
       </head>
       <body className={inter.variable}>
         {children}

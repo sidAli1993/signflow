@@ -9,63 +9,41 @@ export interface AdBannerProps {
   className?: string;
 }
 
+const SLOT_MAP: Record<string, number> = {
+  'home-top': 101,
+  'home-bottom': 102,
+  'footer-top': 103,
+  'signature-download': 104,
+  'features-bottom': 105,
+  'how-it-works-bottom': 106,
+  'privacy-bottom': 107,
+  'cookie-bottom': 108,
+  'terms-bottom': 109,
+};
+
 export const AdBanner: React.FC<AdBannerProps> = ({ slot, format = 'auto', className = '' }) => {
   const [isBlocked, setIsBlocked] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Inject the Ethical Ads script on client mount
-    let script = document.getElementById('ethicalads-script') as HTMLScriptElement | null;
-    
-    if (!script) {
-      script = document.createElement('script');
-      script.id = 'ethicalads-script';
-      script.src = 'https://media.ethicalads.io/media/client/ethicalads.min.js';
-      script.async = true;
-      
-      script.onload = () => {
-        setIsLoaded(true);
-        try {
-          // @ts-ignore
-          if (window.ethicalads) {
-            // @ts-ignore
-            window.ethicalads.load();
-          }
-        } catch (err) {}
-      };
-
-      script.onerror = () => {
+    // Attempt to fetch standard Ezoic script to detect AdBlocker
+    fetch('https://www.ezojs.com/ezoic/sa.min.js', { method: 'HEAD', mode: 'no-cors' })
+      .catch(() => {
         setIsBlocked(true);
-      };
-      
-      document.body.appendChild(script);
-    } else {
-      setIsLoaded(true);
-      // Script already exists, trigger load scan for new elements
-      try {
-        // @ts-ignore
-        if (window.ethicalads) {
-          // @ts-ignore
-          window.ethicalads.load();
-        }
-      } catch (err) {
-        // If script element exists but library failed (blocked)
-        setIsBlocked(true);
-      }
-    }
+      });
   }, []);
 
-  const publisher = process.env.NEXT_PUBLIC_ETHICALADS_PUBLISHER || 'ethicalads';
-  const adType = format === 'vertical' || format === 'rectangle' ? 'vertical' : 'horizontal';
+  const placeholderId = SLOT_MAP[slot] || 101;
+  const placeholderDivId = `ezoic-pub-ad-placeholder-${placeholderId}`;
 
   if (isBlocked) {
     return (
       <div className={`${styles.adWrapper} ${className}`}>
-        <div className={styles.blockedPlaceholder}>
-          <span className={styles.blockedTitle}>[Ad Blocker Active]</span>
-          <span className={styles.blockedDesc}>
-            Privacy-friendly <strong>Ethical Ads</strong> test banner is placed here. Please disable your Ad Blocker extension to view the live test ads format.
-          </span>
+        <div className={styles.blockedCard}>
+          <h3>Ad Blocker Detected</h3>
+          <p>Please disable your Ad Blocker and refresh the page to use this tool.</p>
+          <button onClick={() => window.location.reload()} className={styles.reloadBtn}>
+            I've Disabled It (Reload)
+          </button>
         </div>
       </div>
     );
@@ -73,14 +51,8 @@ export const AdBanner: React.FC<AdBannerProps> = ({ slot, format = 'auto', class
 
   return (
     <div className={`${styles.adWrapper} ${className}`}>
-      {/* Ethical Ads Container */}
-      <div
-        className={adType}
-        data-ea-publisher={publisher}
-        data-ea-type="image"
-        data-ea-style="stickybox"
-        id={`ea-ad-${slot}`}
-      />
+      {/* Ezoic Ad Placeholder container */}
+      <div id={placeholderDivId} />
     </div>
   );
 };

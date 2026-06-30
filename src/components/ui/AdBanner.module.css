@@ -38,13 +38,66 @@
   line-height: 1.45;
 }
 
+.blockedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.1);
+  border-top: 5px solid var(--color-error);
+}
+
+.blockedCard h3 {
+  font-size: 20px;
+  color: var(--color-error);
+  margin-bottom: var(--space-xs);
+}
+
+.blockedCard p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.reloadBtn {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.reloadBtn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 600px) {
   .adWrapper {
     margin: var(--space-sm) auto;
     min-height: 80px;
   }
-  
-  .blockedDesc {
-    font-size: 11px;
+  .blockedCard {
+    padding: var(--space-lg);
+  }
+  .blockedCard h3 {
+    font-size: 16px;
+  }
+  .blockedCard p {
+    font-size: 12px;
   }
 }

@@ -50,6 +50,7 @@ export const Footer: React.FC = () => {
             <h4 className={styles.colTitle}>Product</h4>
             <Link href="/features" className={styles.link}>Features</Link>
             <Link href="/" className={styles.link}>Signature Maker</Link>
+            <Link href="/blog" className={styles.link}>Blog & Guides</Link>
             <Link href="/how-it-works" className={styles.link}>How It Works</Link>
           </div>
           

@@ -1,0 +1,77 @@
+.postContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+}
+
+.article {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.articleHeader {
+  margin-bottom: 3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2rem;
+}
+
+.articleTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.articleMeta {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.articleContent {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.articleContent h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.articleContent p {
+  margin-bottom: 1.5rem;
+}
+
+.articleContent ul, .articleContent ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.articleContent li {
+  margin-bottom: 0.5rem;
+}
+
+.articleContent strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .article {
+    padding: 2rem;
+  }
+  .articleTitle {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,157 @@
+import React from 'react';
+import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { Navbar } from '@/components/marketing/Navbar';
+import { Footer } from '@/components/marketing/Footer';
+import styles from './post.module.css';
+
+// This would normally come from a CMS or markdown files
+const getPostData = (slug: string) => {
+  const posts = {
+    'create-digital-signature-online-free': {
+      title: 'How to Create a Digital Signature Online for Free in 2026',
+      date: 'June 25, 2026',
+      author: 'MyDigitSign Team',
+      content: `
+        <p>In today's fast-paced digital world, printing, signing, and scanning documents is a thing of the past. If you're wondering <strong>how to create a digital signature online for free</strong>, you've come to the right place.</p>
+        
+        <h2>Why Use an Online Digital Signature?</h2>
+        <p>Electronic signatures save time, money, and trees. Whether you are signing a freelance contract, a lease agreement, or an NDA, using a tool like MyDigitSign ensures your documents are processed instantly and securely.</p>
+        
+        <h2>3 Steps to Create Your Free Digital Signature</h2>
+        <ol>
+          <li><strong>Draw or Type:</strong> Use your mouse, trackpad, or touchscreen to draw your signature. Alternatively, type your name and choose a cursive font.</li>
+          <li><strong>Upload Your PDF:</strong> Drag and drop the document you need to sign securely into your browser.</li>
+          <li><strong>Place and Save:</strong> Drag your newly created signature onto the signature line, resize it, and download the finished PDF.</li>
+        </ol>
+
+        <h2>Is it safe?</h2>
+        <p>Absolutely. Tools like MyDigitSign operate entirely in your local browser. Your sensitive documents never touch our servers, guaranteeing 100% privacy and security.</p>
+      `
+    },
+    'are-electronic-signatures-legally-binding': {
+      title: 'Are Electronic Signatures Legally Binding?',
+      date: 'June 20, 2026',
+      author: 'MyDigitSign Legal',
+      content: `
+        <p>One of the most common questions we receive is: <em>Are electronic signatures legally binding?</em> The short answer is yes.</p>
+        
+        <h2>The ESIGN Act and UETA</h2>
+        <p>In the United States, the Electronic Signatures in Global and National Commerce (ESIGN) Act of 2000 and the Uniform Electronic Transactions Act (UETA) establish that electronic records and signatures carry the same weight and legal effect as traditional paper documents and handwritten signatures.</p>
+
+        <h2>What makes an e-signature valid?</h2>
+        <ul>
+          <li><strong>Intent to sign:</strong> The signer must demonstrate clear intent to sign the agreement.</li>
+          <li><strong>Consent to do business electronically:</strong> All parties must agree to conduct the transaction electronically.</li>
+          <li><strong>Association of signature with the record:</strong> The system used to capture the transaction must keep an associated record that reflects the process by which the signature was created.</li>
+        </ul>
+
+        <h2>When to use paper instead</h2>
+        <p>While 99% of business transactions can be done electronically, certain documents like wills, codicils, and certain court documents still require wet-ink signatures and notarization in some jurisdictions.</p>
+      `
+    },
+    'ultimate-guide-signing-pdf-securely': {
+      title: 'The Ultimate Guide to Signing PDFs Securely',
+      date: 'June 15, 2026',
+      author: 'MyDigitSign Security',
+      content: `
+        <p>PDFs are the standard for document sharing, but ensuring they are signed securely is critical for protecting your business and personal data.</p>
+        
+        <h2>Beware of Server-Side Processing</h2>
+        <p>Many online PDF signers require you to upload your sensitive tax documents, NDAs, and contracts to their servers. This introduces a massive security risk. If their servers are breached, your data is exposed.</p>
+
+        <h2>Client-Side Signing is the Future</h2>
+        <p>Modern applications like <strong>MyDigitSign</strong> use client-side rendering. This means the PDF is loaded and signed entirely within the memory of your own web browser. No data is transmitted over the internet.</p>
+
+        <h2>Best Practices</h2>
+        <ul>
+          <li>Always verify the identity of the person you are sending the document to.</li>
+          <li>Never upload sensitive documents to free tools that process PDFs on their backend servers.</li>
+          <li>Keep a secure backup of all signed agreements.</li>
+        </ul>
+      `
+    }
+  };
+  
+  return posts[slug as keyof typeof posts] || null;
+};
+
+type Props = {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = getPostData(resolvedParams.slug);
+  
+  if (!post) {
+    return { title: 'Post Not Found' };
+  }
+  
+  return {
+    title: post.title,
+    description: post.content.substring(3, 150) + '...',
+    openGraph: {
+      title: post.title,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+    }
+  };
+}
+
+export default async function BlogPost({ params }: Props) {
+  const resolvedParams = await params;
+  const post = getPostData(resolvedParams.slug);
+
+  if (!post) {
+    notFound();
+  }
+
+  // Schema.org JSON-LD for Articles
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "datePublished": new Date(post.date).toISOString(),
+    "publisher": {
+      "@type": "Organization",
+      "name": "MyDigitSign",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mydigitsign.com/icon.svg"
+      }
+    }
+  };
+
+  return (
+    <>
+      <Navbar />
+      <main className={styles.postContainer}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <article className={styles.article}>
+          <header className={styles.articleHeader}>
+            <h1 className={styles.articleTitle}>{post.title}</h1>
+            <div className={styles.articleMeta}>
+              <span>By {post.author}</span>
+              <span>•</span>
+              <time>{post.date}</time>
+            </div>
+          </header>
+          <div 
+            className={styles.articleContent}
+            dangerouslySetInnerHTML={{ __html: post.content }} 
+          />
+        </article>
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -5,9 +5,96 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "MyDigitSign | Free Online Document Signing",
-  description: "The easiest way to design signatures, sign documents, and share them instantly. No signup or credit card required. Free forever — powered by MyDigitSign.",
+  title: {
+    default: "MyDigitSign | Free Online Document Signing & Digital Signatures",
+    template: "%s | MyDigitSign",
+  },
+  description: "Create free digital signatures, sign PDFs online, and share documents securely. No sign-up required, legally binding, 100% free forever.",
+  keywords: [
+    "free digital signature",
+    "sign pdf online",
+    "electronic signature free",
+    "draw signature online",
+    "document signing software",
+    "e-sign pdf",
+    "MyDigitSign"
+  ],
+  authors: [{ name: "MyDigitSign Team" }],
+  creator: "MyDigitSign",
+  publisher: "MyDigitSign",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   metadataBase: new URL("https://mydigitsign.com"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
+  },
+  openGraph: {
+    title: "MyDigitSign | Free Online Document Signing",
+    description: "Create free digital signatures, sign PDFs online, and share documents securely. 100% free forever.",
+    url: "https://mydigitsign.com",
+    siteName: "MyDigitSign",
+    images: [
+      {
+        url: "/og-image.png", // We will need an og-image later, or it degrades gracefully
+        width: 1200,
+        height: 630,
+        alt: "MyDigitSign - Free Document Signing",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyDigitSign | Free Online Document Signing",
+    description: "Create free digital signatures, sign PDFs online, and share documents securely. 100% free forever.",
+    creator: "@mydigitsign",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    // This is a placeholder for Google Search Console verification string
+    google: "PLACEHOLDER_GOOGLE_SITE_VERIFICATION", 
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "MyDigitSign",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "description": "Free online digital signature maker and PDF signing tool."
+    },
+    {
+      "@type": "WebSite",
+      "name": "MyDigitSign",
+      "url": "https://mydigitsign.com"
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -30,6 +117,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={inter.variable}>
         {children}

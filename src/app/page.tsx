@@ -88,7 +88,7 @@ export default function Home() {
       return (
         <div className={styles.creatorSection}>
           <div className={styles.introHeader}>
-            <h2 className={styles.introTitle}>Create Your Signature</h2>
+            <h2 className={styles.introTitle}>Create Your Free Digital Signature</h2>
             <p className={styles.introDesc}>
               Draw, type, or upload your signature. Once you are satisfied, click Adopt to proceed to signing your document.
             </p>

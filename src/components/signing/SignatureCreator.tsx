@@ -30,6 +30,10 @@ export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, stan
   const [pendingDownloadUrl, setPendingDownloadUrl] = useState<string | null>(null);
   const [downloadFileName, setDownloadFileName] = useState('');
   
+  // Ad Blocker state
+  const [isAdBlockerActive, setIsAdBlockerActive] = useState(false);
+  const [showBlockerModal, setShowBlockerModal] = useState(false);
+  
   const padRef = useRef<SignaturePad | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const typeCanvasRef = useRef<HTMLCanvasElement>(null);
@@ -42,6 +46,39 @@ export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, stan
   ];
 
   const colors = ['#000000', '#1D4ED8', '#B91C1C'];
+
+  // Advanced Ad Blocker detection check (network bait + DOM bait elements)
+  useEffect(() => {
+    // Check 1: Network test (fetching a Google Ads JS script)
+    fetch('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
+      method: 'HEAD',
+      mode: 'no-cors',
+      cache: 'no-store',
+    }).catch(() => {
+      setIsAdBlockerActive(true);
+    });
+
+    // Check 2: DOM element test (injecting bait div with ad classes)
+    const bait = document.createElement('div');
+    bait.className = 'pub_300x250 pub_300x250m pub_728x90 text-ad adLayout ad_text adRect adsbox ad-placement';
+    bait.setAttribute('style', 'width: 1px !important; height: 1px !important; position: absolute !important; left: -9999px !important; top: -9999px !important;');
+    document.body.appendChild(bait);
+
+    const checkBait = () => {
+      if (
+        bait.offsetHeight === 0 ||
+        bait.offsetWidth === 0 ||
+        window.getComputedStyle(bait).getPropertyValue('display') === 'none' ||
+        window.getComputedStyle(bait).getPropertyValue('visibility') === 'hidden'
+      ) {
+        setIsAdBlockerActive(true);
+      }
+      document.body.removeChild(bait);
+    };
+
+    const timer = setTimeout(checkBait, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Initialize signature pad for drawing
   useEffect(() => {
@@ -169,6 +206,11 @@ export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, stan
 
   // Download Trigger Flow
   const triggerDownload = async () => {
+    if (isAdBlockerActive) {
+      setShowBlockerModal(true);
+      return;
+    }
+
     let dataUrl = '';
     
     if (activeTab === 'draw') {
@@ -224,6 +266,11 @@ export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, stan
   };
 
   const handleSave = () => {
+    if (isAdBlockerActive) {
+      setShowBlockerModal(true);
+      return;
+    }
+
     let dataUrl = '';
     
     if (activeTab === 'draw') {
@@ -451,6 +498,25 @@ export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, stan
           </div>
         </div>
       </Modal>
+
+      {/* Ad Blocker Alert Modal */}
+      {showBlockerModal && (
+        <div className={styles.blockerModalOverlay}>
+          <div className={styles.blockerModalCard}>
+            <div className={styles.blockerAlertIcon}>⚠️</div>
+            <h2>Ad Blocker Detected</h2>
+            <p>
+              Please disable your Ad Blocker (uBlock, AdBlock, AdGuard, Brave Shields, etc.) to generate, adopt, or download your signature.
+            </p>
+            <p className={styles.blockerSupportText}>
+              Since this digital signature maker is 100% free with no limits, ads help us pay the hosting bills.
+            </p>
+            <button onClick={() => window.location.reload()} className={styles.blockerReloadBtn}>
+              I have disabled it (Reload Page)
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

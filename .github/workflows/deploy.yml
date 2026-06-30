@@ -1,0 +1,37 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /home/isa_cpanel/web/mydigitsign.com/public_html
+            # Configure git url with token to bypass prompts
+            git remote set-url origin https://sidAli1993:${{ secrets.GH_PAT }}@github.com/sidAli1993/signflow.git
+            
+            # Fetch and reset to match remote exactly
+            git fetch --all
+            git reset --hard origin/main
+            
+            # Load Node environment
+            export NVM_DIR="$HOME/.nvm"
+            source "$NVM_DIR/nvm.sh"
+            
+            # Install and build
+            npm install
+            npm run build
+            
+            # Restart the PM2 process
+            pm2 restart signflow
+            pm2 save

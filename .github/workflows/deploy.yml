@@ -24,13 +24,14 @@ jobs:
             if [ ! -d ".git" ]; then
               echo "Initializing Git repository on server..."
               git init
-              git remote add origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
-            else
-              git remote set-url origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
             fi
+
+            # Force re-link the remote origin
+            git remote remove origin 2>/dev/null || true
+            git remote add origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
             
             # Fetch and reset to match remote exactly
-            git fetch --all
+            git fetch origin
             git reset --hard origin/main
             
             # Load Node environment

@@ -17,6 +17,9 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/isa_cpanel/web/mydigitsign.com/public_html
+            # Configure git to trust the directory to bypass security check
+            git config --global --add safe.directory /home/isa_cpanel/web/mydigitsign.com/public_html
+
             # Initialize git if the server directory is not a git repository
             if [ ! -d ".git" ]; then
               echo "Initializing Git repository on server..."

@@ -68,8 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // This is a placeholder for Google Search Console verification string
-    google: "PLACEHOLDER_GOOGLE_SITE_VERIFICATION", 
+    google: "XtqCBoGXMTs7UHgh3e3XjSTCJvEEyXy8VSFEirjMOeo", 
   },
 };
 

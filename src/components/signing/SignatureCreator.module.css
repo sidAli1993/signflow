@@ -1,0 +1,342 @@
+.creator {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.standalone {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--glass-border);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(12px);
+}
+
+.workspace {
+  padding: var(--space-xl);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.typeWorkspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.nameInput {
+  max-width: 100%;
+}
+
+.fontGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: var(--space-xs);
+}
+
+.fontCard {
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 32px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background-color: var(--color-bg);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fontCard:hover {
+  border-color: var(--color-primary-light);
+}
+
+.selectedFont {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-bg);
+}
+
+.drawWorkspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex: 1;
+}
+
+.canvasContainer {
+  position: relative;
+  flex: 1;
+  min-height: 200px;
+  background-color: #ffffff; /* Explicitly white for clear background when exporting */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  touch-action: none; /* Prevent scrolling when drawing on touch devices */
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.canvasPlaceholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #CBD5E1;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.canvasLine {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  border-bottom: 2px dashed #E2E8F0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.drawControls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.uploadWorkspace {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadBox {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.uploadBox:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-surface-hover);
+}
+
+.uploadIcon {
+  color: var(--color-text-muted);
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.colorPicker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.colorLabel {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.colorBtn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.colorBtn:hover {
+  transform: scale(1.1);
+}
+
+.selectedColor {
+  border-color: var(--color-primary-light);
+  transform: scale(1.1);
+}
+
+.footer {
+  padding: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+}
+
+.downloadActions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: flex-end;
+}
+
+.uploadPreview {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  background-color: #ffffff;
+}
+
+.sigPreviewImage {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .fontGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .downloadActions {
+    flex-direction: column;
+  }
+  
+  .downloadActions button {
+    width: 100%;
+  }
+}
+
+.downloadSettings {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.settingsTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.settingsDesc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  align-items: flex-end;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.inputLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+}
+
+.checkboxGroup {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-xs);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkboxLabel input {
+  cursor: pointer;
+}
+
+.downloadBtnContainer {
+  margin-top: var(--space-xs);
+}
+
+.adModalContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+  text-align: center;
+}
+
+.adModalStatus {
+  font-size: 14.5px;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.adModalBanner {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.adModalActions {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

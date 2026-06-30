@@ -1,0 +1,324 @@
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color var(--transition-normal);
+}
+
+.mainContent {
+  flex: 1;
+  padding: var(--space-2xl) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px; /* Wide view on larger monitors */
+  padding: 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.adRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Step Indicator */
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.stepNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stepLabel {
+  font-size: 14px;
+}
+
+.stepActive {
+  color: var(--color-primary);
+}
+
+.stepActive .stepNum {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-bg);
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-border);
+}
+
+/* Content Card */
+.contentCard {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2xl);
+  backdrop-filter: var(--glass-blur);
+}
+
+/* Sections */
+.creatorSection, .uploadSection, .editorSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.introHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.introTitle {
+  font-size: 32px;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+}
+
+.introDesc {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+.creatorWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Features Row */
+.featuresRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2xl);
+}
+
+.featCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.featIcon {
+  color: var(--color-primary);
+}
+
+.featCard h4 {
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.featCard p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Upload Section */
+.backLinkWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--space-sm);
+}
+
+.uploadZone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  transition: all var(--transition-fast);
+  background-color: rgba(59, 130, 246, 0.01);
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.uploadZone:hover, .dragOver {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-surface-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.uploadCloudIcon {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.uploadZone:hover .uploadCloudIcon {
+  color: var(--color-primary);
+}
+
+.uploadTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.uploadSub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.uploadFormats {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.hiddenInput {
+  display: none;
+}
+
+/* Signature Badge */
+.signatureBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-sm) var(--space-lg);
+  width: fit-content;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.badgeText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.badgeImageWrapper {
+  background-color: white;
+  border-radius: var(--radius-sm);
+  padding: 4px var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+}
+
+.badgeImage {
+  height: 24px;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+/* Editor Section */
+.editorHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.editorTitle {
+  font-size: 28px;
+  color: var(--color-text);
+  letter-spacing: -0.5px;
+}
+
+.editorDesc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+.editorContainer {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: var(--space-lg) 0;
+  }
+  
+  .contentCard {
+    padding: var(--space-md); /* tighter padding for mobile screen alignment */
+  }
+  
+  .featuresRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .introTitle {
+    font-size: 24px;
+  }
+  
+  .introDesc {
+    font-size: 14px;
+  }
+  
+  .stepIndicator {
+    gap: var(--space-sm);
+  }
+  
+  .stepLabel {
+    font-size: 12px;
+  }
+  
+  .stepNum {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepLabel {
+    display: none; /* hide step text on very small devices to avoid overlaps */
+  }
+  .stepIndicator {
+    max-width: 150px;
+  }
+}

@@ -83,15 +83,22 @@
 /* Content Card */
 .contentCard {
   background: var(--color-bg-secondary);
-  background-image: linear-gradient(135deg, rgba(99, 102, 241, 0.03), rgba(139, 92, 246, 0.03));
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
-  padding: var(--space-3xl);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), 0 8px 16px -4px rgba(0, 0, 0, 0.03);
+  padding: var(--space-4xl) var(--space-3xl);
   position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="dark"] .contentCard {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3), 0 8px 16px -4px rgba(0, 0, 0, 0.2);
+}
+
+.contentCard:hover {
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.08), 0 12px 24px -6px rgba(0, 0, 0, 0.04);
 }
 
 .contentCard::before {
@@ -100,8 +107,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), #8b5cf6, #ec4899);
+  height: 5px;
+  background: linear-gradient(90deg, #2563EB, #8B5CF6, #3B82F6);
 }
 
 /* Sections */
@@ -127,21 +134,28 @@
 }
 
 .introTitle {
-  font-size: 42px;
+  font-size: 56px;
   font-weight: 800;
-  letter-spacing: -1px;
-  background: linear-gradient(135deg, var(--color-text) 30%, var(--color-primary) 100%);
+  letter-spacing: -1.5px;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  line-height: 1.1;
+}
+
+.introTitle span {
+  background: linear-gradient(135deg, #2563EB 0%, #8B5CF6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: var(--space-xs);
-  line-height: 1.2;
 }
 
 .introDesc {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-text-secondary);
   line-height: 1.6;
+  font-weight: 400;
+  max-width: 85%;
+  margin: 0 auto;
 }
 
 .creatorWrapper {

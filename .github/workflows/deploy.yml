@@ -17,8 +17,14 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/isa_cpanel/web/mydigitsign.com/public_html
-            # Configure git url with token to bypass prompts
-            git remote set-url origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
+            # Initialize git if the server directory is not a git repository
+            if [ ! -d ".git" ]; then
+              echo "Initializing Git repository on server..."
+              git init
+              git remote add origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
+            else
+              git remote set-url origin https://sidAli1993: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@github.com/sidAli1993/signflow.git
+            fi
             
             # Fetch and reset to match remote exactly
             git fetch --all

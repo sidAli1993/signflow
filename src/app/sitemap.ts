@@ -3,13 +3,19 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
 
-  // In the future, we could fetch blog posts from a database here
-  // and map them to sitemap entries.
   const blogPosts = [
     '/blog',
     '/blog/create-digital-signature-online-free',
     '/blog/are-electronic-signatures-legally-binding',
     '/blog/ultimate-guide-signing-pdf-securely'
+  ];
+
+  const staticPages = [
+    { path: '/features', changeFrequency: 'monthly' as const, priority: 0.9 },
+    { path: '/how-it-works', changeFrequency: 'monthly' as const, priority: 0.9 },
+    { path: '/privacy-policy', changeFrequency: 'yearly' as const, priority: 0.3 },
+    { path: '/cookie-policy', changeFrequency: 'yearly' as const, priority: 0.3 },
+    { path: '/terms-of-service', changeFrequency: 'yearly' as const, priority: 0.3 },
   ];
 
   const blogUrls = blogPosts.map((slug) => ({
@@ -19,6 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const staticUrls = staticPages.map((page) => ({
+    url: `${baseUrl}${page.path}`,
+    lastModified: new Date(),
+    changeFrequency: page.changeFrequency,
+    priority: page.priority,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -26,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
+    ...staticUrls,
     ...blogUrls
   ];
 }

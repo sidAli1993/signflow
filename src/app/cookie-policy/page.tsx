@@ -1,10 +1,23 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Cookie Policy - Transparency & User Preferences",
+  description: "Read the Cookie Policy of MyDigitSign. Learn how we utilize HTML5 browser LocalStorage instead of traditional tracking cookies to preserve your theme preference.",
+  keywords: [
+    "cookie policy",
+    "cookies and localstorage",
+    "privacy-friendly web apps",
+    "no tracking cookies e-sign"
+  ],
+  alternates: {
+    canonical: "/cookie-policy",
+  },
+};
 
 export default function CookiePolicy() {
   return (

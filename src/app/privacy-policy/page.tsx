@@ -1,10 +1,23 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - Secure Local Document Signing",
+  description: "Read the Privacy Policy of MyDigitSign. Learn how we ensure complete security by processing your PDFs and signatures 100% locally in your browser.",
+  keywords: [
+    "privacy policy",
+    "secure document signing",
+    "local e-signatures",
+    "private pdf signing tool"
+  ],
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

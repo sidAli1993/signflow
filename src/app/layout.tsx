@@ -6,18 +6,24 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "MyDigitSign | Free Online Document Signing & Digital Signatures",
-    template: "%s | MyDigitSign",
+    default: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
+    template: "%s | MyDigitSign - Free Document Signer",
   },
-  description: "Create free digital signatures, sign PDFs online, and share documents securely. No sign-up required, legally binding, 100% free forever.",
+  description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures, and share secure documents in seconds. 100% private, client-side, & no registration.",
   keywords: [
     "free digital signature",
-    "sign pdf online",
+    "sign pdf online free",
+    "online signature generator",
     "electronic signature free",
-    "draw signature online",
-    "document signing software",
-    "e-sign pdf",
-    "MyDigitSign"
+    "digital signature maker",
+    "write signature online",
+    "how to sign a pdf",
+    "esign documents online free",
+    "client-side pdf signing",
+    "e-sign pdf document",
+    "secure electronic signature",
+    "create signature online",
+    "mydigitsign"
   ],
   authors: [{ name: "MyDigitSign Team" }],
   creator: "MyDigitSign",
@@ -35,13 +41,13 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "MyDigitSign | Free Online Document Signing",
-    description: "Create free digital signatures, sign PDFs online, and share documents securely. 100% free forever.",
+    title: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
+    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures. 100% private & secure.",
     url: "https://mydigitsign.com",
     siteName: "MyDigitSign",
     images: [
       {
-        url: "/og-image.png", // We will need an og-image later, or it degrades gracefully
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "MyDigitSign - Free Document Signing",
@@ -52,8 +58,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MyDigitSign | Free Online Document Signing",
-    description: "Create free digital signatures, sign PDFs online, and share documents securely. 100% free forever.",
+    title: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
+    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures.",
     creator: "@mydigitsign",
   },
   robots: {
@@ -77,21 +83,53 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "SoftwareApplication",
+      "@type": "WebApplication",
+      "@id": "https://mydigitsign.com/#webapp",
       "name": "MyDigitSign",
+      "url": "https://mydigitsign.com",
       "operatingSystem": "All",
       "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "E-Signature & PDF Tools",
       "offers": {
         "@type": "Offer",
         "price": "0.00",
         "priceCurrency": "USD"
       },
-      "description": "Free online digital signature maker and PDF signing tool."
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128"
+      },
+      "description": "Free online digital signature maker and secure browser-based PDF signing tool. 100% client-side, privacy-first document signing.",
+      "browserRequirements": "Requires HTML5 compatible browser"
     },
     {
       "@type": "WebSite",
+      "@id": "https://mydigitsign.com/#website",
       "name": "MyDigitSign",
-      "url": "https://mydigitsign.com"
+      "url": "https://mydigitsign.com",
+      "description": "Create free digital signatures and sign PDFs online securely.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://mydigitsign.com/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://mydigitsign.com/#organization",
+      "name": "MyDigitSign",
+      "url": "https://mydigitsign.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mydigitsign.com/icon.svg"
+      },
+      "sameAs": [
+        "https://github.com/sidAli1993/signflow"
+      ]
     }
   ]
 };

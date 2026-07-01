@@ -1,10 +1,52 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
+
+export const metadata: Metadata = {
+  title: "How It Works - How to Sign a PDF & Create a Signature Online",
+  description: "Learn how to easily sign a PDF online or draw a free electronic signature step-by-step using MyDigitSign's 100% private client-side utility.",
+  keywords: [
+    "how to sign a pdf",
+    "how to write signature online",
+    "create digital signature online",
+    "sign document online free",
+    "how to use MyDigitSign"
+  ],
+  alternates: {
+    canonical: "/how-it-works",
+  },
+};
+
+// JSON-LD HowTo Schema
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Create a Free Digital Signature and Sign a PDF",
+  "description": "Step-by-step guide to drawing or typing your signature and placing it securely on a PDF or image document.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Design Your Signature",
+      "text": "Choose to type your name in elegant script, draw it freehand with your mouse or touchscreen, or upload a pre-made image file.",
+      "url": "https://mydigitsign.com/how-it-works"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Upload Your Document",
+      "text": "Drag and drop your PDF or image document (PNG, JPG, JPEG) up to 10MB into the secure upload area.",
+      "url": "https://mydigitsign.com/how-it-works"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Drag, Resize, and Download",
+      "text": "Drag the signature outline onto your document, use the bottom-right handle to resize it, and download your finished signed PDF.",
+      "url": "https://mydigitsign.com/how-it-works"
+    }
+  ]
+};
 
 export default function HowItWorks() {
   return (
@@ -13,6 +55,10 @@ export default function HowItWorks() {
       
       <main className={styles.mainContent}>
         <div className={styles.container}>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+          />
           <div className={styles.header}>
             <h1 className={styles.title}>How It Works</h1>
             <p className={styles.subtitle}>MyDigitSign is a completely browser-based signing utility.</p>

@@ -87,15 +87,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) {
     return { title: 'Post Not Found' };
   }
+
+  const plainTextDescription = post.content
+    .replace(/<[^>]*>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .substring(0, 155) + '...';
   
   return {
     title: post.title,
-    description: post.content.substring(3, 150) + '...',
+    description: plainTextDescription,
+    alternates: {
+      canonical: `/blog/${resolvedParams.slug}`,
+    },
     openGraph: {
       title: post.title,
+      description: plainTextDescription,
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      url: `https://mydigitsign.com/blog/${resolvedParams.slug}`,
     }
   };
 }

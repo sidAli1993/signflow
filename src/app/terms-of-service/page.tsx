@@ -1,10 +1,23 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Terms of Service - Free E-Sign & PDF Utility Agreement",
+  description: "Read the Terms of Service for MyDigitSign. Understand the usage license, zero server storage policy, and legal disclaimers for online signatures.",
+  keywords: [
+    "terms of service",
+    "electronic signature terms",
+    "free pdf signer user agreement",
+    "legally binding e-sign disclaimers"
+  ],
+  alternates: {
+    canonical: "/terms-of-service",
+  },
+};
 
 export default function TermsOfService() {
   return (

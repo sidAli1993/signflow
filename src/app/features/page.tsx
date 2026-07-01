@@ -1,11 +1,25 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import { Edit3, FileCode, Sliders, Moon, Share2, ShieldCheck } from 'lucide-react';
 import styles from '../static-page.module.css';
+
+export const metadata: Metadata = {
+  title: "Features - Free E-Signature & Online PDF Signing Tool",
+  description: "Explore the features of MyDigitSign. Fully secure client-side signing, interactive layout overlays, light & dark themes, native share integration, and no server storage.",
+  keywords: [
+    "e-signature software features",
+    "pdf signing tool",
+    "online signature maker",
+    "free electronic signature website",
+    "secure local document signing"
+  ],
+  alternates: {
+    canonical: "/features",
+  },
+};
 
 export default function Features() {
   return (

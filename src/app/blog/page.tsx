@@ -6,8 +6,18 @@ import { Metadata } from 'next';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog | Digital Signature Insights & Guides',
-  description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, and document security.',
+  title: 'Blog | Digital Signature Insights, Guides & Security Tips',
+  description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, e-signatures compliance, and document security.',
+  keywords: [
+    "digital signature blog",
+    "e-sign guides",
+    "how to sign documents",
+    "pdf security tips",
+    "electronic signature legal compliance"
+  ],
+  alternates: {
+    canonical: '/blog',
+  },
 };
 
 const posts = [

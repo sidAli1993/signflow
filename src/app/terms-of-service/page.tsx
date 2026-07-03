@@ -6,7 +6,7 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Free E-Sign & PDF Utility Agreement",
+  title: "Terms of Service - User Agreement",
   description: "Read the Terms of Service for MyDigitSign. Understand the usage license, zero server storage policy, and legal disclaimers for online signatures.",
   keywords: [
     "terms of service",
@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/terms-of-service",
+  },
+  openGraph: {
+    title: "Terms of Service - User Agreement",
+    description: "Read the Terms of Service for MyDigitSign. Understand the usage license, zero server storage policy, and legal disclaimers for online signatures.",
+    url: "/terms-of-service",
   },
 };
 

@@ -6,7 +6,7 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Secure Local Document Signing",
+  title: "Privacy Policy - Secure Signing",
   description: "Read the Privacy Policy of MyDigitSign. Learn how we ensure complete security by processing your PDFs and signatures 100% locally in your browser.",
   keywords: [
     "privacy policy",
@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy - Secure Signing",
+    description: "Read the Privacy Policy of MyDigitSign. Learn how we ensure complete security by processing your PDFs and signatures 100% locally in your browser.",
+    url: "/privacy-policy",
   },
 };
 

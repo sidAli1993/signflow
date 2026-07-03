@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
-    template: "%s | MyDigitSign - Free Document Signer",
+    default: "MyDigitSign - Free Online Document & PDF Signer",
+    template: "%s | MyDigitSign",
   },
-  description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures, and share secure documents in seconds. 100% private, client-side, & no registration.",
+  description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures, 100% privately in your browser with no registration.",
   keywords: [
     "free digital signature",
     "sign pdf online free",
@@ -36,13 +36,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mydigitsign.com"),
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-    },
   },
   openGraph: {
-    title: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
-    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures. 100% private & secure.",
+    title: "MyDigitSign - Free Online Document & PDF Signer",
+    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures, 100% privately in your browser with no registration.",
     url: "https://mydigitsign.com",
     siteName: "MyDigitSign",
     images: [
@@ -58,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MyDigitSign - Free Online Document Signing & Electronic Signature Maker",
-    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures.",
+    title: "MyDigitSign - Free Online Document & PDF Signer",
+    description: "Create legally binding electronic signatures for free. Sign PDFs online, type or draw signatures, 100% privately in your browser with no registration.",
     creator: "@mydigitsign",
   },
   robots: {

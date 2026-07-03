@@ -6,7 +6,7 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "How It Works - How to Sign a PDF & Create a Signature Online",
+  title: "How to Sign a PDF & Create Signatures",
   description: "Learn how to easily sign a PDF online or draw a free electronic signature step-by-step using MyDigitSign's 100% private client-side utility.",
   keywords: [
     "how to sign a pdf",
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/how-it-works",
+  },
+  openGraph: {
+    title: "How to Sign a PDF & Create Signatures",
+    description: "Learn how to easily sign a PDF online or draw a free electronic signature step-by-step using MyDigitSign's 100% private client-side utility.",
+    url: "/how-it-works",
   },
 };
 

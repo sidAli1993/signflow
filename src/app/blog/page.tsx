@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog | Digital Signature Insights, Guides & Security Tips',
+  title: 'Blog - Digital Signature Guides',
   description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, e-signatures compliance, and document security.',
   keywords: [
     "digital signature blog",
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/blog',
+  },
+  openGraph: {
+    title: 'Blog - Digital Signature Guides',
+    description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, e-signatures compliance, and document security.',
+    url: '/blog',
   },
 };
 

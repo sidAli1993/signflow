@@ -7,8 +7,8 @@ import { Edit3, FileCode, Sliders, Moon, Share2, ShieldCheck } from 'lucide-reac
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Features - Free E-Signature & Online PDF Signing Tool",
-  description: "Explore the features of MyDigitSign. Fully secure client-side signing, interactive layout overlays, light & dark themes, native share integration, and no server storage.",
+  title: "Features - Online PDF Signer",
+  description: "Explore MyDigitSign's features: secure client-side signing, interactive layout overlays, light & dark themes, native sharing, and zero server storage.",
   keywords: [
     "e-signature software features",
     "pdf signing tool",
@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/features",
+  },
+  openGraph: {
+    title: "Features - Online PDF Signer",
+    description: "Explore MyDigitSign's features: secure client-side signing, interactive layout overlays, light & dark themes, native sharing, and zero server storage.",
+    url: "/features",
   },
 };
 

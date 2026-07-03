@@ -6,8 +6,8 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Cookie Policy - Transparency & User Preferences",
-  description: "Read the Cookie Policy of MyDigitSign. Learn how we utilize HTML5 browser LocalStorage instead of traditional tracking cookies to preserve your theme preference.",
+  title: "Cookie Policy - User Preferences",
+  description: "Read our Cookie Policy. Learn how MyDigitSign uses browser LocalStorage instead of tracking cookies to save your theme preferences securely.",
   keywords: [
     "cookie policy",
     "cookies and localstorage",
@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/cookie-policy",
+  },
+  openGraph: {
+    title: "Cookie Policy - User Preferences",
+    description: "Read our Cookie Policy. Learn how MyDigitSign uses browser LocalStorage instead of tracking cookies to save your theme preferences securely.",
+    url: "/cookie-policy",
   },
 };
 

@@ -5,6 +5,8 @@ import { Button } from '@/components/ui';
 import { Download, Share2, RefreshCw, ChevronLeft, ChevronRight, Check } from 'lucide-react';
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
+import { signPdfWithCertificate } from '@/utils/pdfSigner';
+import { CertificateUploader } from './CertificateUploader';
 import styles from './DocumentEditor.module.css';
 
 // Configure pdfjs worker CDN
@@ -25,6 +27,15 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   
   const [position, setPosition] = useState({ x: 30, y: 50 });
   const [size, setSize] = useState({ width: 150, height: 75 });
+
+  const [signingMode, setSigningMode] = useState<'visual' | 'digital'>('visual');
+  const [p12Buffer, setP12Buffer] = useState<ArrayBuffer | null>(null);
+  const [p12Passphrase, setP12Passphrase] = useState<string>('');
+
+  const handleCertLoaded = (buffer: ArrayBuffer | null, passphrase?: string) => {
+    setP12Buffer(buffer);
+    setP12Passphrase(passphrase || '');
+  };
   
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
@@ -271,28 +282,53 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
 
   const generateSignedPdf = async (): Promise<File> => {
     const fileBytes = await file.arrayBuffer();
-    const pdfDocLib = await PDFDocument.load(fileBytes);
-    const pages = pdfDocLib.getPages();
+    
+    const containerWidth = containerRef.current?.offsetWidth || 1;
+    const containerHeight = containerRef.current?.offsetHeight || 1;
+    
+    // We need to calculate page dimensions using pdf-lib first to set the rect coordinates
+    const tempPdf = await PDFDocument.load(fileBytes);
+    const tempPages = tempPdf.getPages();
+    const tempPage = tempPages[pageNum - 1];
+    const pdfWidth = tempPage.getWidth();
+    const pdfHeight = tempPage.getHeight();
+    
+    const finalWidth = (size.width / containerWidth) * pdfWidth;
+    const finalHeight = (size.height / containerHeight) * pdfHeight;
+    const finalX = (position.x / 100) * pdfWidth;
+    const finalY = pdfHeight - ((position.y / 100) * pdfHeight) - finalHeight;
+
+    if (signingMode === 'digital') {
+      if (!p12Buffer) {
+        throw new Error('Please upload and validate a certificate before signing.');
+      }
+      
+      const signedPdfBytes = await signPdfWithCertificate({
+        pdfBytes: new Uint8Array(fileBytes),
+        p12Buffer: p12Buffer,
+        passphrase: p12Passphrase,
+        visualOptions: {
+          page: pageNum,
+          x: finalX,
+          y: finalY,
+          width: finalWidth,
+          height: finalHeight,
+          signatureUrl: signatureUrl,
+        }
+      });
+      
+      const blob = new Blob([signedPdfBytes as any], { type: 'application/pdf' });
+      return new File([blob], `signed_${file.name}`, { type: 'application/pdf' });
+    }
+
+    // Visual signature logic
+    const pages = tempPdf.getPages();
     const currentPage = pages[pageNum - 1];
     
     // Embed signature image
     const response = await fetch(signatureUrl);
     const sigImageBytes = await response.arrayBuffer();
-    const embeddedSigImage = await pdfDocLib.embedPng(sigImageBytes);
-    
-    // Calculate PDF page points
-    const pdfWidth = currentPage.getWidth();
-    const pdfHeight = currentPage.getHeight();
-    
-    const containerWidth = containerRef.current?.offsetWidth || 1;
-    const containerHeight = containerRef.current?.offsetHeight || 1;
-    
-    // Absolute point mapping
-    const finalWidth = (size.width / containerWidth) * pdfWidth;
-    const finalHeight = (size.height / containerHeight) * pdfHeight;
-    
-    const finalX = (position.x / 100) * pdfWidth;
-    const finalY = pdfHeight - ((position.y / 100) * pdfHeight) - finalHeight;
+    const embeddedSigImage = await tempPdf.embedPng(sigImageBytes);
 
     currentPage.drawImage(embeddedSigImage, {
       x: finalX,
@@ -301,7 +337,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
       height: finalHeight,
     });
     
-    const signedPdfBytes = await pdfDocLib.save();
+    const signedPdfBytes = await tempPdf.save();
     const blob = new Blob([signedPdfBytes as any], { type: 'application/pdf' });
     return new File([blob], `signed_${file.name}`, { type: 'application/pdf' });
   };
@@ -345,36 +381,74 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
 
   return (
     <div className={styles.editorContainer}>
-      <div className={styles.workspace}>
-        <div className={styles.canvasWrapper} ref={containerRef}>
-          <canvas ref={canvasRef} className={styles.pdfCanvas} />
-          
-          {isRendering && (
-            <div className={styles.renderLoader}>
-              <div className={styles.spinner}></div>
-              <span>Rendering PDF page...</span>
+      <div className={styles.editorMain}>
+        <div className={styles.workspace}>
+          <div className={styles.canvasWrapper} ref={containerRef}>
+            <canvas ref={canvasRef} className={styles.pdfCanvas} />
+            
+            {isRendering && (
+              <div className={styles.renderLoader}>
+                <div className={styles.spinner}></div>
+                <span>Rendering PDF page...</span>
+              </div>
+            )}
+
+            {!isSigned && !isRendering && (
+              <div
+                ref={sigRef}
+                className={`${styles.sigOverlay} ${isDragging ? styles.dragging : ''}`}
+                style={{
+                  left: `${position.x}%`,
+                  top: `${position.y}%`,
+                  width: `${size.width}px`,
+                  height: `${size.height}px`,
+                }}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
+              >
+                <img src={signatureUrl} alt="Signature" className={styles.sigImage} draggable={false} />
+                <div 
+                  className={styles.resizeHandle}
+                  onMouseDown={handleResizeMouseDown}
+                  onTouchStart={handleResizeTouchStart}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className={styles.sidebarPanel}>
+          <div className={styles.panelSection}>
+            <h4 className={styles.panelTitle}>Signature Type</h4>
+            <div className={styles.modeTabs}>
+              <button
+                type="button"
+                className={`${styles.modeTab} ${signingMode === 'visual' ? styles.activeTab : ''}`}
+                onClick={() => setSigningMode('visual')}
+                disabled={isSigned || isProcessing}
+              >
+                Visual Only
+              </button>
+              <button
+                type="button"
+                className={`${styles.modeTab} ${signingMode === 'digital' ? styles.activeTab : ''}`}
+                onClick={() => setSigningMode('digital')}
+                disabled={isSigned || isProcessing}
+              >
+                Cryptographic Cert
+              </button>
             </div>
+          </div>
+
+          {signingMode === 'digital' && !isSigned && (
+            <CertificateUploader onCertificateLoaded={handleCertLoaded} />
           )}
 
-          {!isSigned && !isRendering && (
-            <div
-              ref={sigRef}
-              className={`${styles.sigOverlay} ${isDragging ? styles.dragging : ''}`}
-              style={{
-                left: `${position.x}%`,
-                top: `${position.y}%`,
-                width: `${size.width}px`,
-                height: `${size.height}px`,
-              }}
-              onMouseDown={handleMouseDown}
-              onTouchStart={handleTouchStart}
-            >
-              <img src={signatureUrl} alt="Signature" className={styles.sigImage} draggable={false} />
-              <div 
-                className={styles.resizeHandle}
-                onMouseDown={handleResizeMouseDown}
-                onTouchStart={handleResizeTouchStart}
-              />
+          {signingMode === 'digital' && isSigned && (
+            <div className={styles.panelSection}>
+              <p className={styles.pageLabel} style={{ color: 'var(--color-success, #22c55e)' }}>
+                ✓ Document cryptographically signed.
+              </p>
             </div>
           )}
         </div>
@@ -383,7 +457,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
       <div className={styles.controlsBar}>
         <div className={styles.leftControls}>
           <Button variant="ghost" leftIcon={<RefreshCw size={16} />} onClick={onStartOver}>
-            Start Over
+             Start Over
           </Button>
           
           <div className={styles.navigation}>
@@ -414,7 +488,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
             variant="outline"
             leftIcon={<Share2 size={16} />}
             onClick={handleShareClick}
-            disabled={isProcessing || isRendering}
+            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
           >
             Share
           </Button>
@@ -422,7 +496,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
             variant="primary"
             leftIcon={isSigned ? <Check size={16} /> : <Download size={16} />}
             onClick={handleDownload}
-            disabled={isProcessing || isRendering}
+            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
           >
             {isProcessing ? 'Processing...' : isSigned ? 'Saved!' : 'Download Signed'}
           </Button>

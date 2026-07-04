@@ -6,21 +6,22 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Secure Signing",
-  description: "Read the Privacy Policy of MyDigitSign. Learn how we ensure complete security by processing your PDFs and signatures 100% locally in your browser.",
+  title: "Privacy Policy — No Data Stored, 100% Client-Side",
+  description: "MyDigitSign never stores your documents or signatures. All processing happens locally in your browser. Read our full privacy policy.",
   keywords: [
     "privacy policy",
-    "secure document signing",
-    "local e-signatures",
-    "private pdf signing tool"
+    "no data upload pdf signer",
+    "client-side document signing",
+    "private pdf tool",
+    "secure local e-signature"
   ],
   alternates: {
-    canonical: "/privacy-policy",
+    canonical: "https://mydigitsign.com/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy - Secure Signing",
-    description: "Read the Privacy Policy of MyDigitSign. Learn how we ensure complete security by processing your PDFs and signatures 100% locally in your browser.",
-    url: "/privacy-policy",
+    title: "Privacy Policy — No Data Stored, 100% Client-Side",
+    description: "MyDigitSign never stores your documents or signatures. All processing happens locally in your browser. Read our full privacy policy.",
+    url: "https://mydigitsign.com/privacy-policy",
   },
 };
 

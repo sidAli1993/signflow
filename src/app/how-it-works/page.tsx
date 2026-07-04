@@ -6,22 +6,24 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "How to Sign a PDF & Create Signatures",
-  description: "Learn how to easily sign a PDF online or draw a free electronic signature step-by-step using MyDigitSign's 100% private client-side utility.",
+  title: "How to Sign a PDF Online Free — Step by Step Guide",
+  description: "Learn how to sign a PDF online for free with MyDigitSign in 3 steps: draw or type your signature, upload your document, place and download. No account needed.",
   keywords: [
-    "how to sign a pdf",
-    "how to write signature online",
-    "create digital signature online",
-    "sign document online free",
-    "how to use MyDigitSign"
+    "how to sign a pdf online free",
+    "how to draw signature online",
+    "sign pdf step by step",
+    "how to use pdf signer",
+    "sign document online tutorial",
+    "pdf signing guide",
+    "how to add signature to pdf free"
   ],
   alternates: {
-    canonical: "/how-it-works",
+    canonical: "https://mydigitsign.com/how-it-works",
   },
   openGraph: {
-    title: "How to Sign a PDF & Create Signatures",
-    description: "Learn how to easily sign a PDF online or draw a free electronic signature step-by-step using MyDigitSign's 100% private client-side utility.",
-    url: "/how-it-works",
+    title: "How to Sign a PDF Online Free — Step by Step Guide",
+    description: "Learn how to sign a PDF online for free with MyDigitSign in 3 steps: draw or type your signature, upload your document, place and download. No account needed.",
+    url: "https://mydigitsign.com/how-it-works",
   },
 };
 

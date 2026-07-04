@@ -7,22 +7,25 @@ import { Edit3, FileCode, Sliders, Moon, Share2, ShieldCheck } from 'lucide-reac
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Features - Online PDF Signer",
-  description: "Explore MyDigitSign's features: secure client-side signing, interactive layout overlays, light & dark themes, native sharing, and zero server storage.",
+  title: "Tool Features — Free PDF Signer & Digital Signature Maker",
+  description: "Explore all features of MyDigitSign: draw or type signatures, sign PDFs and images, drag-to-place, resize, download instantly. 100% free, no account needed.",
   keywords: [
-    "e-signature software features",
-    "pdf signing tool",
-    "online signature maker",
-    "free electronic signature website",
-    "secure local document signing"
+    "pdf signer features",
+    "draw signature online",
+    "type signature in cursive",
+    "upload signature image",
+    "sign pdf no upload",
+    "client-side pdf signing",
+    "free e-signature tool features",
+    "drag signature on pdf"
   ],
   alternates: {
-    canonical: "/features",
+    canonical: "https://mydigitsign.com/features",
   },
   openGraph: {
-    title: "Features - Online PDF Signer",
-    description: "Explore MyDigitSign's features: secure client-side signing, interactive layout overlays, light & dark themes, native sharing, and zero server storage.",
-    url: "/features",
+    title: "Tool Features — Free PDF Signer & Digital Signature Maker",
+    description: "Explore all features of MyDigitSign: draw or type signatures, sign PDFs and images, drag-to-place, resize, download instantly. 100% free, no account needed.",
+    url: "https://mydigitsign.com/features",
   },
 };
 

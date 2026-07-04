@@ -6,22 +6,22 @@ import { Metadata } from 'next';
 import styles from './blog.module.css';
 
 export const metadata: Metadata = {
-  title: 'Blog - Digital Signature Guides',
-  description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, e-signatures compliance, and document security.',
+  title: 'Digital Signature Blog — PDF Signing Guides & Tips',
+  description: 'Guides on digital signatures, how to sign PDFs online, e-signature legality, and document security — from the MyDigitSign team.',
   keywords: [
-    "digital signature blog",
-    "e-sign guides",
-    "how to sign documents",
-    "pdf security tips",
-    "electronic signature legal compliance"
+    "digital signature guide",
+    "how to sign pdf online",
+    "e-signature legal tips",
+    "pdf signing tutorial",
+    "electronic signature compliance"
   ],
   alternates: {
-    canonical: '/blog',
+    canonical: 'https://mydigitsign.com/blog',
   },
   openGraph: {
-    title: 'Blog - Digital Signature Guides',
-    description: 'Read the latest guides, tips, and insights about digital signatures, PDF signing, e-signatures compliance, and document security.',
-    url: '/blog',
+    title: 'Digital Signature Blog — PDF Signing Guides & Tips',
+    description: 'Guides on digital signatures, how to sign PDFs online, e-signature legality, and document security — from the MyDigitSign team.',
+    url: 'https://mydigitsign.com/blog',
   },
 };
 

@@ -6,21 +6,21 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Cookie Policy - User Preferences",
-  description: "Read our Cookie Policy. Learn how MyDigitSign uses browser LocalStorage instead of tracking cookies to save your theme preferences securely.",
+  title: "Cookie Policy — No Tracking Cookies",
+  description: "MyDigitSign does not use tracking cookies. We use browser localStorage only for your theme preference. Read our full cookie policy.",
   keywords: [
     "cookie policy",
-    "cookies and localstorage",
-    "privacy-friendly web apps",
-    "no tracking cookies e-sign"
+    "no tracking cookies",
+    "privacy friendly tool",
+    "localStorage theme preference"
   ],
   alternates: {
-    canonical: "/cookie-policy",
+    canonical: "https://mydigitsign.com/cookie-policy",
   },
   openGraph: {
-    title: "Cookie Policy - User Preferences",
-    description: "Read our Cookie Policy. Learn how MyDigitSign uses browser LocalStorage instead of tracking cookies to save your theme preferences securely.",
-    url: "/cookie-policy",
+    title: "Cookie Policy — No Tracking Cookies",
+    description: "MyDigitSign does not use tracking cookies. We use browser localStorage only for your theme preference. Read our full cookie policy.",
+    url: "https://mydigitsign.com/cookie-policy",
   },
 };
 

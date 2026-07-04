@@ -6,21 +6,21 @@ import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Terms of Service - User Agreement",
-  description: "Read the Terms of Service for MyDigitSign. Understand the usage license, zero server storage policy, and legal disclaimers for online signatures.",
+  title: "Terms of Service — Free PDF Signing Tool",
+  description: "Terms of Service for MyDigitSign. Free to use, no server storage, no accounts. Understand your rights and the tool's legal disclaimers.",
   keywords: [
     "terms of service",
-    "electronic signature terms",
-    "free pdf signer user agreement",
-    "legally binding e-sign disclaimers"
+    "free pdf signer terms",
+    "e-signature legal terms",
+    "no server pdf tool agreement"
   ],
   alternates: {
-    canonical: "/terms-of-service",
+    canonical: "https://mydigitsign.com/terms-of-service",
   },
   openGraph: {
-    title: "Terms of Service - User Agreement",
-    description: "Read the Terms of Service for MyDigitSign. Understand the usage license, zero server storage policy, and legal disclaimers for online signatures.",
-    url: "/terms-of-service",
+    title: "Terms of Service — Free PDF Signing Tool",
+    description: "Terms of Service for MyDigitSign. Free to use, no server storage, no accounts. Understand your rights and the tool's legal disclaimers.",
+    url: "https://mydigitsign.com/terms-of-service",
   },
 };
 

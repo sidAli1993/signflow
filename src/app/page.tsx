@@ -103,6 +103,7 @@ export default function Home() {
 
       {/* Breadcrumb JSON-LD */}
       <script
+        id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />

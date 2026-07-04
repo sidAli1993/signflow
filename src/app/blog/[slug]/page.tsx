@@ -9,6 +9,7 @@ import styles from './post.module.css';
 // This moves them from ƒ (Dynamic) to ○ (Static) — Google gets full HTML
 export async function generateStaticParams() {
   return [
+    { slug: 'free-digital-signature-certificate' },
     { slug: 'create-digital-signature-online-free' },
     { slug: 'are-electronic-signatures-legally-binding' },
     { slug: 'ultimate-guide-signing-pdf-securely' },
@@ -18,6 +19,26 @@ export async function generateStaticParams() {
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string) => {
   const posts = {
+    'free-digital-signature-certificate': {
+      title: 'How to Get a Free Digital Signature Certificate in 2026',
+      date: 'July 4, 2026',
+      author: 'MyDigitSign Team',
+      content: `
+        <p>If you've been asked to provide a secure signature online, you might be looking for a <strong>free digital signature certificate</strong>. Many enterprise tools charge hefty monthly fees just to generate one, but it doesn't have to be that way.</p>
+        
+        <h2>What is a Digital Signature Certificate?</h2>
+        <p>A digital signature certificate acts as a digital "fingerprint" or identity for a person or organization. It cryptographically binds an identity to a signature, ensuring that a signed document hasn't been tampered with after signing.</p>
+        
+        <h2>How to Generate Your Free Digital Sign</h2>
+        <p>With tools like MyDigitSign, you can instantly apply a secure <strong>digit sign</strong> to your PDFs without registering for an account. Here is how:</p>
+        <ol>
+          <li><strong>Upload Your Document:</strong> Your PDF is loaded securely into your local browser. It never leaves your device.</li>
+          <li><strong>Create Your Signature:</strong> Draw your signature, type it, or upload a scanned image.</li>
+          <li><strong>Apply and Download:</strong> Once placed, download your newly signed file.</li>
+        </ol>
+        <p>This streamlined process means you don't need a bulky enterprise software suite to handle simple, day-to-day document signing needs.</p>
+      `
+    },
     'create-digital-signature-online-free': {
       title: 'How to Create a Digital Signature Online for Free in 2026',
       date: 'June 25, 2026',

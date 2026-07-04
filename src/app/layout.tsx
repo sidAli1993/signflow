@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     "browser based pdf signer",
     "create digital signature",
     "sign pdf without account",
-    "mydigitsign"
+    "mydigitsign",
+    "digit sign",
+    "free digital signature certificate",
+    "digital sign"
   ],
   authors: [{ name: "MyDigitSign Team" }],
   creator: "MyDigitSign",
@@ -104,6 +107,7 @@ const jsonLd = {
       "browserRequirements": "Requires an HTML5-compatible browser",
       "featureList": [
         "Sign PDF files online for free",
+        "Create a free digital signature certificate",
         "Draw signature with mouse or touchscreen",
         "Type signature in cursive font",
         "Upload existing signature image",

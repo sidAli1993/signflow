@@ -27,6 +27,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'How to Get a Free Digital Signature Certificate in 2026',
+    slug: 'free-digital-signature-certificate',
+    excerpt: 'Step-by-step guide to generating a free digital signature certificate and securely signing your documents without paying any fees.',
+    date: 'July 4, 2026',
+  },
+  {
     title: 'How to Create a Digital Signature Online for Free in 2026',
     slug: 'create-digital-signature-online-free',
     excerpt: 'Learn the fastest, most secure way to create a digital signature online without paying for expensive software subscriptions.',

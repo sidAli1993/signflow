@@ -85,8 +85,8 @@ export default function Home() {
             <span className={styles.seoHeroGradient}>Digital Signature Tool</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Create and place your electronic signature on any PDF or image — directly in your
-            browser. Draw with your mouse, type your name in a cursive font, or upload an existing
+            Create a <strong>free digital signature certificate</strong> and place your electronic signature on any PDF or image — directly in your
+            browser. Whether you need a quick <strong>digit sign</strong> or a full document workflow, you can draw with your mouse, type your name in a cursive font, or upload an existing
             signature image. Your documents <strong>never leave your device</strong>.
           </p>
 
@@ -155,6 +155,7 @@ export default function Home() {
               contracts, NDAs, and tax documents stay private on your device at all times.
             </p>
             <ul className={styles.seoCompareList}>
+              <li>✅ <strong>Free digital signature certificate</strong> — instantly generate securely</li>
               <li>✅ <strong>Free PDF signer</strong> — no trial, no paywall, no credit card</li>
               <li>✅ <strong>Sign PDF without uploading</strong> — client-side only</li>
               <li>✅ <strong>Draw signature online</strong> — mouse, trackpad, or touch</li>

@@ -29,11 +29,24 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mydigitsign.com' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Features', 'item': 'https://mydigitsign.com/features' },
+  ],
+};
+
+
 export default function Features() {
   return (
     <div className={styles.pageWrapper}>
       <Navbar />
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <main className={styles.mainContent}>
         <div className={styles.container}>
           <div className={styles.header}>

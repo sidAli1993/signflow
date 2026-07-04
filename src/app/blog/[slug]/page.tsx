@@ -5,6 +5,16 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import styles from './post.module.css';
 
+// Pre-render all blog posts as static HTML at build time
+// This moves them from ƒ (Dynamic) to ○ (Static) — Google gets full HTML
+export async function generateStaticParams() {
+  return [
+    { slug: 'create-digital-signature-online-free' },
+    { slug: 'are-electronic-signatures-legally-binding' },
+    { slug: 'ultimate-guide-signing-pdf-securely' },
+  ];
+}
+
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string) => {
   const posts = {
@@ -139,6 +149,32 @@ export default async function BlogPost({ params }: Props) {
     }
   };
 
+  // BreadcrumbList for this blog post
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://mydigitsign.com',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Blog',
+        'item': 'https://mydigitsign.com/blog',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': post.title,
+        'item': `https://mydigitsign.com/blog/${resolvedParams.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <Navbar />
@@ -146,6 +182,10 @@ export default async function BlogPost({ params }: Props) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         <article className={styles.article}>
           <header className={styles.articleHeader}>

@@ -55,6 +55,15 @@ const howToSchema = {
   ]
 };
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mydigitsign.com' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'How It Works', 'item': 'https://mydigitsign.com/how-it-works' },
+  ],
+};
+
 export default function HowItWorks() {
   return (
     <div className={styles.pageWrapper}>
@@ -65,6 +74,10 @@ export default function HowItWorks() {
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
           />
           <div className={styles.header}>
             <h1 className={styles.title}>How It Works</h1>

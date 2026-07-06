@@ -11,31 +11,56 @@ export const metadata: Metadata = {
   },
   description: "Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — your files never leave your device. No registration required.",
   keywords: [
-    "free pdf signer",
+    "pdf signature free",
+    "digit sign",
+    "sign a document online",
+    "free online signature",
+    "create digital signature pdf",
+    "legal electronic signature",
+    "free digital signature certificate",
+    "digital signature tool",
+    "document signer",
+    "create pdf signature",
+    "digital sign tool",
+    "online signing",
+    "digital signature pdf download",
+    "e signature pdf online",
+    "free pdf e signature",
+    "sign documents online free",
+    "sign online signature",
+    "online document signer",
+    "free signing documents online",
+    "free online document signing",
+    "sign pdf documents free",
+    "sign document online free",
+    "free e sign",
+    "online pdf editor signature",
+    "digitally sign pdf online",
+    "e sign online",
+    "sign pdf free online",
+    "pdf signer online",
+    "free sign documents online",
+    "sign digitally online",
+    "signature pdf online",
+    "is docusign legally binding",
+    "pdf online sign",
     "sign pdf online free",
-    "online signature tool",
+    "do e signatures hold up in court",
+    "free electronic signature pdf",
+    "pdf signature online free",
+    "pdf signer free",
+    "legally binding electronic signature",
+    "create digital signature online free",
+    "free pdf signer",
     "digital signature maker",
     "electronic signature free",
     "draw signature online",
     "pdf signing tool no upload",
-    "sign document online",
     "e-sign pdf free",
     "browser based pdf signer",
     "create digital signature",
     "sign pdf without account",
-    "mydigitsign",
-    "digit sign",
-    "free digital signature certificate",
-    "digital sign",
-    "pdf signature free",
-    "pdf signer online",
-    "sign digitally online",
-    "pdf online sign",
-    "pdf signature online free",
-    "pdf signer free",
-    "free online signature",
-    "online pdf editor signature",
-    "free e sign"
+    "mydigitsign"
   ],
   authors: [{ name: "MyDigitSign Team" }],
   creator: "MyDigitSign",
@@ -194,6 +219,30 @@ const jsonLd = {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Once you have placed your signature on the PDF, simply click the Download button to download your signed digital signature PDF instantly to your device. There is no waiting time or email registration required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DocuSign legally binding and how does it compare to MyDigitSign?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, DocuSign is legally binding. However, DocuSign requires paid plans and document uploads to their cloud. MyDigitSign provides a completely free alternative to generate a legally binding electronic signature without uploads, registration, or cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do e-signatures hold up in court?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, e-signatures hold up in court. Under laws like the ESIGN Act in the US and eIDAS regulations in the European Union, a legally binding electronic signature carries the same weight as a traditional pen-and-paper signature for most business, financial, and legal agreements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I create a digital signature online free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can create a digital signature online free using MyDigitSign. Simply draw your signature, type it using elegant fonts, or upload an image. Once created, you can instantly use it for free online document signing and download the signed PDF locally."
           }
         }
       ]

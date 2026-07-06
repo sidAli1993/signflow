@@ -26,7 +26,16 @@ export const metadata: Metadata = {
     "mydigitsign",
     "digit sign",
     "free digital signature certificate",
-    "digital sign"
+    "digital sign",
+    "pdf signature free",
+    "pdf signer online",
+    "sign digitally online",
+    "pdf online sign",
+    "pdf signature online free",
+    "pdf signer free",
+    "free online signature",
+    "online pdf editor signature",
+    "free e sign"
   ],
   authors: [{ name: "MyDigitSign Team" }],
   creator: "MyDigitSign",
@@ -136,7 +145,7 @@ const jsonLd = {
           "name": "Is MyDigitSign completely free to use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, MyDigitSign is 100% free. There are no subscriptions, no hidden fees, and no account required. Simply open the tool and start signing."
+            "text": "Yes, MyDigitSign is a 100% free online PDF signer tool. There are no subscriptions, paywalls, or accounts needed. You can create a PDF signature free and place e-signatures instantly."
           }
         },
         {
@@ -165,10 +174,26 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          "name": "How do I sign a PDF with MyDigitSign?",
+          "name": "How do I sign a document online or create a digit sign with MyDigitSign?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "1) Draw, type, or upload your signature. 2) Upload your PDF or image. 3) Drag and resize your signature on the document. 4) Click Download to save your signed file."
+            "text": "1) Draw, type, or upload your signature. 2) Upload your PDF or image locally. 3) Drag and resize your signature on the document page. 4) Download your signed document. It's a quick, free, and secure way to sign a document online or digit sign files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use MyDigitSign as an online PDF editor signature tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! MyDigitSign functions as a lightweight online PDF editor signature tool. You can select, upload, and view PDFs, customize signature colors, place signatures on any page, and download the finished edited document securely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I download my digital signature PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once you have placed your signature on the PDF, simply click the Download button to download your signed digital signature PDF instantly to your device. There is no waiting time or email registration required."
           }
         }
       ]

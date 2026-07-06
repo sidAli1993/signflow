@@ -27,6 +27,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'How to Sign a Document Online & Use an Online PDF Editor Signature',
+    slug: 'how-to-sign-a-document-online-free-pdf-editor',
+    excerpt: 'Learn how to sign a document online for free and place an electronic signature using an online PDF editor signature tool.',
+    date: 'July 6, 2026',
+  },
+  {
     title: 'How to Get a Free Digital Signature Certificate in 2026',
     slug: 'free-digital-signature-certificate',
     excerpt: 'Step-by-step guide to generating a free digital signature certificate and securely signing your documents without paying any fees.',

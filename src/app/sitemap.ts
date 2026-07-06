@@ -5,9 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Real blog posts that have actual page content
   const blogPosts = [
+    'free-digital-signature-certificate',
     'create-digital-signature-online-free',
     'are-electronic-signatures-legally-binding',
     'ultimate-guide-signing-pdf-securely',
+    'how-to-sign-a-document-online-free-pdf-editor',
   ];
 
   return [

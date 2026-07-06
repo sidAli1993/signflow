@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     'browser based pdf signer',
     'create digital signature',
     'sign pdf without account',
+    'pdf signature free',
+    'digit sign',
+    'sign a document online',
+    'document signer',
+    'digital sign tool',
+    'digital signature pdf download',
+    'sign pdf documents free',
+    'free e sign',
+    'online pdf editor signature',
+    'sign pdf free online',
+    'pdf signer online',
+    'sign digitally online',
+    'pdf online sign',
+    'pdf signature online free',
+    'pdf signer free',
+    'free online signature'
   ],
   alternates: {
     canonical: 'https://mydigitsign.com',
@@ -85,9 +101,7 @@ export default function Home() {
             <span className={styles.seoHeroGradient}>Digital Signature Tool</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Create a <strong>free digital signature certificate</strong> and place your electronic signature on any PDF or image — directly in your
-            browser. Whether you need a quick <strong>digit sign</strong> or a full document workflow, you can draw with your mouse, type your name in a cursive font, or upload an existing
-            signature image. Your documents <strong>never leave your device</strong>.
+            Create a <strong>free digital signature certificate</strong> or secure <strong>digit sign</strong>, and place your electronic <strong>pdf signature free</strong> on any document — directly in your browser. If you want to <strong>sign a document online</strong>, you can draw with your mouse, type your name in cursive, or upload an existing signature image. This <strong>online pdf editor signature</strong> tool handles everything client-side, ensuring your confidential files <strong>never leave your device</strong>.
           </p>
 
           {/* Trust pills — server-rendered, crawlable */}
@@ -156,10 +170,12 @@ export default function Home() {
               contracts, NDAs, and tax documents stay private on your device at all times.
             </p>
             <ul className={styles.seoCompareList}>
-              <li>✅ <strong>Free digital signature certificate</strong> — instantly generate securely</li>
-              <li>✅ <strong>Free PDF signer</strong> — no trial, no paywall, no credit card</li>
-              <li>✅ <strong>Sign PDF without uploading</strong> — client-side only</li>
-              <li>✅ <strong>Draw signature online</strong> — mouse, trackpad, or touch</li>
+              <li>✅ <strong>Free digital signature certificate</strong> — generate a secure digit sign instantly</li>
+              <li>✅ <strong>PDF signature free</strong> — use our free PDF signer online without paywalls or credit cards</li>
+              <li>✅ <strong>Sign PDF without uploading</strong> — 100% client-side only</li>
+              <li>✅ <strong>Online PDF editor signature</strong> — drag, resize, and place signature overlays on any page</li>
+              <li>✅ <strong>Sign a document online</strong> — sign freelance contracts, NDAs, or tax documents quickly</li>
+              <li>✅ <strong>Draw signature online</strong> — custom strokes via mouse, trackpad, or touch</li>
               <li>✅ <strong>Type signature</strong> — beautiful cursive script fonts</li>
               <li>✅ <strong>Sign PDF on mobile</strong> — fully responsive tool</li>
               <li>✅ <strong>Legally binding e-signatures</strong> — compliant with ESIGN &amp; eIDAS</li>

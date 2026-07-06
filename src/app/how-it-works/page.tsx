@@ -15,7 +15,13 @@ export const metadata: Metadata = {
     "how to use pdf signer",
     "sign document online tutorial",
     "pdf signing guide",
-    "how to add signature to pdf free"
+    "how to add signature to pdf free",
+    "pdf signature free",
+    "digit sign",
+    "sign a document online",
+    "online pdf editor signature",
+    "pdf signer online",
+    "sign digitally online"
   ],
   alternates: {
     canonical: "https://mydigitsign.com/how-it-works",
@@ -80,13 +86,13 @@ export default function HowItWorks() {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
           />
           <div className={styles.header}>
-            <h1 className={styles.title}>How It Works</h1>
-            <p className={styles.subtitle}>MyDigitSign is a completely browser-based signing utility.</p>
+            <h1 className={styles.title}>How to Sign a PDF Online Free: Step-by-Step Guide</h1>
+            <p className={styles.subtitle}>MyDigitSign is a completely browser-based, secure digit sign and online PDF editor signature utility.</p>
           </div>
 
           <div className={styles.articleCard}>
             <p>
-              Traditional e-signing websites require you to upload private files to their servers, make accounts, and pay monthly subscriptions. MyDigitSign works differently:
+              Traditional e-signing websites require you to upload private files to their servers, make accounts, and pay monthly subscriptions. MyDigitSign works differently, giving you a way to get a <strong>pdf signature free</strong> and <strong>sign a document online</strong> without sacrificing privacy:
             </p>
 
             <h2>Step 1: Design Your Signature</h2>

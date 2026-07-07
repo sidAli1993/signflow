@@ -298,6 +298,8 @@ export default function RootLayout({
           ezstandalone.cmd = ezstandalone.cmd || [];
         `}} />
         <script src="//ezoicanalytics.com/analytics.js" />
+        {/* Ahrefs Analytics */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" async />
       </head>
       <body className={inter.variable}>
         {children}

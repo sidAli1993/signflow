@@ -8,7 +8,17 @@ import { AdBanner, Button } from '@/components/ui';
 import { ArrowLeft, UploadCloud, Shield, CheckCircle } from 'lucide-react';
 import styles from './page.module.css';
 
-export default function HomeClient() {
+interface HomeClientProps {
+  initialTab?: 'type' | 'draw' | 'upload';
+  titleOverride?: string;
+  descriptionOverride?: string;
+}
+
+export default function HomeClient({
+  initialTab,
+  titleOverride,
+  descriptionOverride,
+}: HomeClientProps = {}) {
   const [step, setStep] = useState<1 | 2>(1);
   const [signature, setSignature] = useState<string | null>(null);
   const [file, setFile] = useState<File | null>(null);
@@ -85,15 +95,18 @@ export default function HomeClient() {
       return (
         <div className={styles.creatorSection}>
           <div className={styles.introHeader}>
-            <h1 className={styles.introTitle}>
-              Create Your Free <span>Digital Signature</span>
-            </h1>
+            <h1 
+              className={styles.introTitle}
+              dangerouslySetInnerHTML={{
+                __html: titleOverride || 'Create Your Free <span>Digital Signature</span>'
+              }}
+            />
             <p className={styles.introDesc}>
-              Draw, type, or upload your signature. Once you are satisfied, click Adopt to proceed to signing your document.
+              {descriptionOverride || 'Draw, type, or upload your signature. Once you are satisfied, click Adopt to proceed to signing your document.'}
             </p>
           </div>
           <div className={styles.creatorWrapper}>
-            <SignatureCreator onSave={handleSignatureSave} />
+            <SignatureCreator onSave={handleSignatureSave} initialTab={initialTab} />
           </div>
 
           <div className={styles.featuresRow}>

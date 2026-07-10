@@ -27,6 +27,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'How to Sign a PDF on iPhone, iPad & Android for Free',
+    slug: 'how-to-sign-pdf-on-iphone-android-free',
+    excerpt: 'Learn how to easily complete an e signature pdf online or offline on any mobile device using built-in Markup or private client-side browser tools.',
+    date: 'July 10, 2026',
+  },
+  {
     title: 'How to Edit and Sign PDF Online & Sign a Document Online Free',
     slug: 'how-to-sign-a-document-online-free-pdf-editor',
     excerpt: 'Learn how to edit and sign PDF documents online, place a secure sign on document online, and sign a document online for free.',

@@ -247,10 +247,18 @@ const jsonLd = {
         },
         {
           "@type": "Question",
-          "name": "How can I create a digital signature online free?",
+          "name": "Are electronic signatures acceptable for legal documents?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can create a digital signature online free using MyDigitSign. Simply draw your signature, type it using elegant fonts, or upload an image. Once created, you can instantly use it for free online document signing and download the signed PDF locally."
+            "text": "Yes, electronic signatures are acceptable and legally recognized in over 180 countries. A secure, self-generated electronic signature is legal and valid for lease agreements, employee onboarding forms, freelance contracts, and sales agreements under laws like the ESIGN Act and eIDAS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I sign a document for free on my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To sign a document for free on iPhone, iPad, or Android, navigate to MyDigitSign in your mobile browser. Draw or type your cursive signature, upload the PDF or image file, position the overlay, and tap Download to save your signed document privately."
           }
         }
       ]

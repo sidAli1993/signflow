@@ -9,10 +9,11 @@ import styles from './SignatureCreator.module.css';
 interface SignatureCreatorProps {
   onSave?: (dataUrl: string) => void;
   standalone?: boolean;
+  initialTab?: string;
 }
 
-export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, standalone = false }) => {
-  const [activeTab, setActiveTab] = useState('type');
+export const SignatureCreator: React.FC<SignatureCreatorProps> = ({ onSave, standalone = false, initialTab }) => {
+  const [activeTab, setActiveTab] = useState(initialTab || 'type');
   const [typedName, setTypedName] = useState('John Doe');
   const [selectedFont, setSelectedFont] = useState('Dancing Script');
   const [penColor, setPenColor] = useState('#000000');

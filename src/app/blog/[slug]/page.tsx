@@ -25,22 +25,22 @@ const getPostData = (slug: string) => {
       date: 'July 6, 2026',
       author: 'MyDigitSign Editorial',
       content: `
-        <p>If you're looking for a simple, fast way to <strong>edit and sign pdf</strong> files or need to <strong>sign a document online</strong> for free, you don't need to purchase high-priced software subscriptions. There are powerful browser-based tools that allow you to edit, layout, and sign PDFs completely free.</p>
+        <p>If you're looking for a simple, fast way to <a href="/">edit and sign pdf</a> files or need to <a href="/">sign a document online</a> for free, you don't need to purchase high-priced software subscriptions. There are powerful browser-based tools that allow you to edit, layout, and sign PDFs completely free.</p>
         
         <h2>Why You Need to Edit and Sign PDF Files Online</h2>
         <p>Most traditional document signing workflows require complex processes: downloading a file, opening a separate PDF editor, adding visual components, converting, and uploading it back to an e-signature server. An integrated online editor simplifies this by combining document editing and signing into a single step.</p>
-        <p>MyDigitSign acts as a lightweight <strong>online pdf editor signature</strong> platform, letting you drag and drop your signature overlays, adjust their dimensions, and browse pages — entirely client-side. This makes it extremely easy to place a secure <strong>sign on document online</strong> without sending files to server hosts.</p>
+        <p>MyDigitSign acts as a lightweight <a href="/tools/draw-signature-online">online pdf editor signature</a> platform, letting you drag and drop your signature overlays, adjust their dimensions, and browse pages — entirely client-side. This makes it extremely easy to place a secure <strong>sign on document online</strong> without sending files to server hosts.</p>
         
         <h2>How to Sign a Document Online for Free (Step-by-Step)</h2>
         <ol>
-          <li><strong>Generate Your Signature:</strong> Type your name using cursive styling, sketch your signature freehand, or upload a photo of your handwritten signature.</li>
+          <li><strong>Generate Your Signature:</strong> <a href="/tools/type-signature-online">Type your name</a> using cursive styling, <a href="/tools/draw-signature-online">sketch your signature freehand</a>, or upload a <a href="/tools/sign-image-online">photo of your handwritten signature</a>.</li>
           <li><strong>Upload the PDF:</strong> Drag the PDF file directly into the editor. Since it runs in-browser, no upload to backend servers takes place.</li>
-          <li><strong>Edit & Place:</strong> Use our online editor tool to drag the signature elements, position them on the target lines, and scale them to fit. You can easily <strong>edit and sign pdf</strong> structures on any page.</li>
+          <li><strong>Edit & Place:</strong> Use our online editor tool to drag the signature elements, position them on the target lines, and scale them to fit. You can easily <a href="/">edit and sign pdf</a> structures on any page.</li>
           <li><strong>Download:</strong> Click Download to get a <strong>pdf signature free</strong> document saved locally.</li>
         </ol>
 
         <h2>Get a PDF Signature Free — Without Account Signup</h2>
-        <p>Many online services hide final downloads behind registration walls or subscription prompts. MyDigitSign ensures you can <strong>sign a document online</strong> and download the finished file in under a minute, with no signups, no fees, and absolute security.</p>
+        <p>Many online services hide final downloads behind registration walls or subscription prompts. MyDigitSign ensures you can <a href="/">sign a document online</a> and download the finished file in under a minute, with no signups, no fees, and absolute security.</p>
       `
     },
     'free-digital-signature-certificate': {
@@ -140,6 +140,8 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
         <h2>Are Electronic Signatures Acceptable Worldwide?</h2>
         <p>Yes. Across the globe, governments have established frameworks to validate digital contracts. For example, in the European Union, the eIDAS regulation governs e-signatures, classifying them into Standard, Advanced, and Qualified Electronic Signatures. For the vast majority of business transactions, lease agreements, and freelancer contracts, standard electronic signatures are fully accepted and legally binding.</p>
 
+        <p>Using a secure, 100% browser-based tool like MyDigitSign to <a href="/tools/draw-signature-online">draw signature online</a> or <a href="/tools/type-signature-online">type signature online</a> ensures that your private files never touch a server, while keeping your <a href="/">electronic signature legal</a> and compliant with international standards.</p>
+
         <h2>What makes an e-signature valid in court?</h2>
         <ul>
           <li><strong>Intent to sign:</strong> The signer must demonstrate clear intent to sign the agreement (e.g. clicking "Accept" or placing their signature).</li>
@@ -170,6 +172,37 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
           <li>Never upload sensitive documents to free tools that process PDFs on their backend servers.</li>
           <li>Keep a secure backup of all signed agreements.</li>
         </ul>
+      `
+    },
+    'how-to-sign-pdf-on-iphone-android-free': {
+      title: 'How to Sign a PDF on iPhone, iPad & Android for Free',
+      date: 'July 10, 2026',
+      author: 'MyDigitSign Editorial',
+      content: `
+        <p>If you're out of the office and need to sign an urgent contract, agreement, or lease, you don't need a computer. You can easily complete an <strong>e signature pdf online</strong> or offline using your mobile device. In this guide, we show you how to <strong>sign document for free</strong> on any iOS or Android phone or tablet.</p>
+        
+        <h2>How to Sign a PDF on iPhone & iPad (Using Markup)</h2>
+        <p>iOS devices come with a built-in feature called Markup, which allows you to draw or insert your handwritten signature onto files stored in the Files app or received in Mail:</p>
+        <ol>
+          <li>Open the PDF in the <strong>Files</strong> or <strong>Mail</strong> app.</li>
+          <li>Tap the <strong>Markup</strong> icon (the pen-in-circle emblem) in the top-right corner.</li>
+          <li>Tap the <strong>+</strong> button in the bottom menu and select <strong>Add Signature</strong>.</li>
+          <li>Draw your signature with your finger or use a previously saved one.</li>
+          <li>Drag it onto the signature line, scale the box, and tap **Done** to save.</li>
+        </ol>
+
+        <h2>How to Sign a Document Online Free on Android & iOS (Using MyDigitSign)</h2>
+        <p>If you don't want to use standard Markup tools, or if you are using an Android phone (which doesn't have a built-in global Markup editor), using a secure client-side browser signer is the easiest way to sign. Our tool is optimized to work on mobile screens, allowing you to <a href="/tools/draw-signature-online">draw signature online</a> or type it from your browser:</p>
+        <ol>
+          <li>Open your mobile web browser and go to <a href="/">mydigitsign.com</a>.</li>
+          <li><strong>Adopt a Signature:</strong> Switch to the <strong>Draw</strong> tab and sign with your finger on the screen, or use the <strong>Type</strong> tab to type your name in cursive script.</li>
+          <li><strong>Upload the File:</strong> Tap the uploader to browse your device files and select the PDF or image document.</li>
+          <li><strong>Place and Resize:</strong> Drag the signature overlay to the correct field, and scale it.</li>
+          <li><strong>Download:</strong> Click <strong>Download</strong> to save the signed PDF directly to your device storage. Since it runs client-side, your document is kept completely secure and private.</li>
+        </ol>
+
+        <h2>Is it Free and Secure to Sign on Mobile?</h2>
+        <p>Yes. By using MyDigitSign, you can <a href="/">sign a document online</a> for free without needing to install heavy apps from the App Store or Google Play Store. Furthermore, because no data is sent to backend servers, you can safely sign business contracts and private agreements on the go.</p>
       `
     }
   };

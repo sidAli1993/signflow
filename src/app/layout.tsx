@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   },
   description: "Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.",
   keywords: [
+    "edit and sign pdf",
+    "sign on document online",
     "pdf signature free",
     "digit sign",
     "sign a document online",

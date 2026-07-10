@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description:
     'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads, no signup, no limits.',
   keywords: [
+    'edit and sign pdf',
+    'sign on document online',
     'pdf signature free',
     'digit sign',
     'sign a document online',
@@ -153,7 +155,7 @@ export default function Home() {
       <section className={styles.seoExplainer} aria-label="How MyDigitSign works">
         <div className={styles.seoExplainerInner}>
           <h2 className={styles.seoExplainerTitle}>
-            The Simplest Way to Sign PDFs Online — Completely Free
+            The Simplest Way to Edit and Sign PDFs Online — Completely Free
           </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
@@ -195,9 +197,9 @@ export default function Home() {
             <ul className={styles.seoCompareList}>
               <li>✅ <strong>Free digital signature certificate</strong> — generate a secure digit sign instantly</li>
               <li>✅ <strong>PDF signature free</strong> — use our free PDF signer online without paywalls or credit cards</li>
-              <li>✅ <strong>Sign PDF without uploading</strong> — 100% client-side only</li>
+              <li>✅ <strong>Edit and sign pdf</strong> — 100% client-side without server uploads</li>
               <li>✅ <strong>Online PDF editor signature</strong> — drag, resize, and place signature overlays on any page</li>
-              <li>✅ <strong>Sign a document online</strong> — sign freelance contracts, NDAs, or tax documents quickly</li>
+              <li>✅ <strong>Sign on document online</strong> — sign freelance contracts, NDAs, or tax documents quickly</li>
               <li>✅ <strong>Draw signature online</strong> — custom strokes via mouse, trackpad, or touch</li>
               <li>✅ <strong>Type signature</strong> — beautiful cursive script fonts</li>
               <li>✅ <strong>Sign PDF on mobile</strong> — fully responsive tool</li>

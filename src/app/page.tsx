@@ -6,9 +6,9 @@ import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'MyDigitSign — Free Online PDF Signer & Digital Signature Tool',
+  title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
   description:
-    'Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — your files never leave your device. No account required.',
+    'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads, no signup, no limits.',
   keywords: [
     'pdf signature free',
     'digit sign',
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com',
   },
   openGraph: {
-    title: 'MyDigitSign — Free Online PDF Signer & Digital Signature Tool',
+    title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
     description:
-      'Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — your files never leave your device. No account required.',
+      'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads, no signup, no limits.',
     url: 'https://mydigitsign.com',
     siteName: 'MyDigitSign',
     images: [
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MyDigitSign — Free Online PDF Signer & Digital Signature Tool',
+    title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
     description:
-      'Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — no account needed.',
+      'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.',
     creator: '@mydigitsign',
     images: ['/og-image.png'],
   },
@@ -121,10 +121,10 @@ export default function Home() {
           </div>
           <h1 className={styles.seoHeroTitle}>
             Free Online PDF Signer &amp;{' '}
-            <span className={styles.seoHeroGradient}>Digital Signature Tool</span>
+            <span className={styles.seoHeroGradient}>Digit Sign Tool</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Create a <strong>free digital signature certificate</strong> or secure <strong>digit sign</strong>, and place your electronic <strong>pdf signature free</strong> on any document — directly in your browser. If you want to <strong>sign a document online</strong>, you can draw with your mouse, type your name in cursive, or upload an existing signature image. This <strong>online pdf editor signature</strong> tool handles everything client-side, ensuring your confidential files <strong>never leave your device</strong>.
+            Create a secure <strong>digit sign</strong> or place an electronic <strong>pdf signature free</strong> on any document — directly in your browser. If you want to <strong>sign a document online</strong>, you can draw with your mouse, type your name in cursive, or upload an existing signature image. This <strong>online pdf editor signature</strong> tool also supports uploading a <strong>free digital signature certificate</strong> to cryptographically sign PDFs locally, ensuring your confidential files <strong>never leave your device</strong>.
           </p>
 
           {/* Trust pills — server-rendered, crawlable */}

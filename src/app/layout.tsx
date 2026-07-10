@@ -6,10 +6,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "MyDigitSign — Free Online PDF Signer & Digital Signature Tool",
+    default: "Free PDF Signer (100% Private, No Uploads) — MyDigitSign",
     template: "%s | MyDigitSign",
   },
-  description: "Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — your files never leave your device. No registration required.",
+  description: "Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.",
   keywords: [
     "pdf signature free",
     "digit sign",
@@ -75,8 +75,8 @@ export const metadata: Metadata = {
     canonical: "https://mydigitsign.com",
   },
   openGraph: {
-    title: "MyDigitSign — Free Online PDF Signer & Digital Signature Tool",
-    description: "Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — your files never leave your device. No registration required.",
+    title: "Free PDF Signer (100% Private, No Uploads) — MyDigitSign",
+    description: "Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.",
     url: "https://mydigitsign.com",
     siteName: "MyDigitSign",
     images: [
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MyDigitSign — Free Online PDF Signer & Digital Signature Tool",
-    description: "Sign PDFs and documents online for free. Draw, type, or upload your signature. 100% browser-based — no account needed.",
+    title: "Free PDF Signer (100% Private, No Uploads) — MyDigitSign",
+    description: "Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.",
     creator: "@mydigitsign",
   },
   robots: {

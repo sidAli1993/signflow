@@ -45,9 +45,9 @@ const posts = [
     date: 'June 25, 2026',
   },
   {
-    title: 'Are Electronic Signatures Legally Binding?',
+    title: 'Are Electronic Signatures Legally Binding & Acceptable?',
     slug: 'are-electronic-signatures-legally-binding',
-    excerpt: 'A comprehensive guide to ESIGN and UETA acts, explaining when and how electronic signatures hold up in court.',
+    excerpt: 'A comprehensive guide explaining if an electronic signature is legal, which frameworks validate them, and if electronic signatures are acceptable in court.',
     date: 'June 20, 2026',
   },
   {

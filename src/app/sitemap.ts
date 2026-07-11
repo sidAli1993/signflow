@@ -12,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'how-to-sign-a-document-online-free-pdf-editor',
   ];
 
+  // Micro-tool landing pages targeting SEO search queries
+  const tools = [
+    'draw-signature-online',
+    'sign-image-online',
+    'type-signature-online',
+  ];
+
   return [
     // Homepage — the tool itself; changes only when new features ship
     {
@@ -34,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+
+    // Dedicated tool landing pages
+    ...tools.map((tool) => ({
+      url: `${baseUrl}/tools/${tool}`,
+      lastModified: new Date('2026-07-11'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
 
     // Blog index
     {

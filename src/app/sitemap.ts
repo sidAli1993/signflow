@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'are-electronic-signatures-legally-binding',
     'ultimate-guide-signing-pdf-securely',
     'how-to-sign-a-document-online-free-pdf-editor',
+    'how-to-sign-pdf-on-iphone-android-free',
   ];
 
   // Micro-tool landing pages targeting SEO search queries

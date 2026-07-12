@@ -16,6 +16,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://mydigitsign.com/sitemap.xml',
-    host: 'https://mydigitsign.com',
   };
 }

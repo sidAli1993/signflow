@@ -1,0 +1,30 @@
+# MyDigitSign
+
+> Free online PDF signer & digital signature tool. 100% browser-based — your files never leave your device.
+
+## About
+
+MyDigitSign is a free, privacy-first PDF signing tool that runs entirely in the browser. No server uploads, no account required, no subscriptions. Users can draw, type, or upload signatures and place them on PDF documents or images.
+
+## Key Features
+
+- Sign PDFs and images (PNG, JPG) online for free
+- 100% client-side processing — files never leave the user's device
+- Draw signature with mouse or touchscreen
+- Type signature in cursive fonts
+- Upload existing signature image
+- Drag, resize, and position signatures on any page
+- Download signed documents instantly
+- No account or registration required
+- Supports files up to 10MB
+- Legally compliant with ESIGN Act (USA) and eIDAS (EU)
+
+## Links
+
+- Homepage: https://mydigitsign.com
+- Features: https://mydigitsign.com/features
+- How It Works: https://mydigitsign.com/how-it-works
+- Blog: https://mydigitsign.com/blog
+- Draw Signature Online: https://mydigitsign.com/tools/draw-signature-online
+- Type Signature Online: https://mydigitsign.com/tools/type-signature-online
+- Sign Image Online: https://mydigitsign.com/tools/sign-image-online

@@ -117,6 +117,12 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "XtqCBoGXMTs7UHgh3e3XjSTCJvEEyXy8VSFEirjMOeo",
+    // Bing Webmaster Tools verification
+    // Replace with your actual code from https://www.bing.com/webmasters
+    other: {
+      'msvalidate.01': 'BD88B72DC7552E3EE3C4005E8E576F4D',
+      'yandex-verification': '1d4687a7eb6d94fc',
+    },
   },
 };
 
@@ -158,7 +164,15 @@ const jsonLd = {
         "No account or registration required",
         "Download signed PDF instantly"
       ],
-      "screenshot": "https://mydigitsign.com/og-image.png"
+      "screenshot": "https://mydigitsign.com/og-image.png",
+      // potentialAction helps AI engines and search engines understand
+      // that this is an interactive tool users can directly use
+      "potentialAction": {
+        "@type": "UseAction",
+        "target": "https://mydigitsign.com",
+        "name": "Sign a PDF for Free",
+        "description": "Open MyDigitSign to sign PDFs and documents online for free, 100% in your browser."
+      }
     },
     {
       // WebSite: clean definition without blog SearchAction
@@ -299,6 +313,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {/* OpenSearch — browser search bar integration */}
+        <link rel="search" type="application/opensearchdescription+xml" title="MyDigitSign" href="/opensearch.xml" />
+        {/* AI Discoverability — llms.txt standard */}
+        <link rel="llms" type="text/plain" href="/llms.txt" />
+        <link rel="llms-full" type="text/plain" href="/llms-full.txt" />
         <script
           id="global-schema"
           type="application/ld+json"

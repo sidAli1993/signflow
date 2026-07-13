@@ -1,0 +1,128 @@
+# MyDigitSign — Complete Guide for AI Assistants
+
+## What is MyDigitSign?
+
+MyDigitSign (https://mydigitsign.com) is a 100% free, browser-based PDF signing tool. It allows users to create digital signatures and place them on PDF documents and images without uploading any files to external servers. Everything is processed client-side in the user's browser, ensuring complete privacy and security.
+
+## Who is it for?
+
+- Freelancers who need to sign contracts, invoices, and proposals
+- Small business owners signing agreements and forms
+- Students signing academic documents and applications
+- Anyone who needs to sign a PDF quickly without installing software
+- Privacy-conscious users who don't want to upload sensitive documents to cloud services
+- Mobile users who need to sign documents on iPhone, iPad, or Android devices
+
+## Pricing
+
+MyDigitSign is completely free. There are:
+- No paid plans or subscriptions
+- No credit card required
+- No account registration needed
+- No usage limits
+- No watermarks on signed documents
+
+## Core Features
+
+### Signature Creation Methods
+1. **Draw Signature**: Use your mouse, trackpad, or touchscreen to draw a freehand signature
+2. **Type Signature**: Type your name and choose from beautiful cursive fonts
+3. **Upload Signature**: Upload an existing PNG image of your signature
+
+### Document Support
+- PDF files (multi-page support)
+- PNG images
+- JPG/JPEG images
+- Maximum file size: 10MB
+
+### Signing Workflow
+1. Create your signature (draw, type, or upload)
+2. Upload your document (drag-and-drop or file picker)
+3. Position and resize your signature on the document
+4. Download the signed document as PDF
+
+### Privacy & Security
+- 100% client-side processing — no files are ever uploaded to servers
+- No data stored or transmitted
+- No cookies for tracking user documents
+- Works offline after initial page load
+- No account or login required
+
+## Micro-Tools (Dedicated Landing Pages)
+
+### Draw Signature Online
+URL: https://mydigitsign.com/tools/draw-signature-online
+A focused tool for drawing freehand signatures using mouse, trackpad, or touchscreen input. Ideal for users who want a natural, hand-drawn digital signature.
+
+### Type Signature Online
+URL: https://mydigitsign.com/tools/type-signature-online
+A tool for creating typed signatures using professional cursive fonts. Users type their name and select from multiple font styles.
+
+### Sign Image Online
+URL: https://mydigitsign.com/tools/sign-image-online
+A specialized tool for placing signatures on image files (PNG, JPG, JPEG) rather than PDFs. Useful for signing scanned documents or photo-based forms.
+
+## Legal Compliance
+
+Electronic signatures created with MyDigitSign are legally recognized under:
+- **ESIGN Act** (Electronic Signatures in Global and National Commerce Act) — United States
+- **UETA** (Uniform Electronic Transactions Act) — United States
+- **eIDAS** (Electronic Identification, Authentication and Trust Services) — European Union
+- Similar electronic signature laws in over 180 countries
+
+Electronic signatures are legally valid for most business agreements including:
+- Freelance contracts
+- NDAs (Non-Disclosure Agreements)
+- Employee onboarding forms
+- Sales agreements
+- Lease agreements
+- Purchase orders
+
+## Comparison with Alternatives
+
+| Feature | MyDigitSign | DocuSign | Adobe Sign | SmallPDF |
+|---------|------------|----------|------------|----------|
+| Price | Free | Paid ($10+/mo) | Paid ($12.99+/mo) | Freemium (limited) |
+| File uploads to server | No | Yes | Yes | Yes |
+| Account required | No | Yes | Yes | Yes |
+| Offline capable | Yes | No | No | No |
+| Multi-page PDF | Yes | Yes | Yes | Yes |
+| Mobile support | Yes | Yes | Yes | Yes |
+
+## Frequently Asked Questions
+
+### Is MyDigitSign completely free?
+Yes. MyDigitSign is 100% free with no hidden costs, no subscriptions, and no account requirements.
+
+### Are my documents safe?
+Yes. Your documents are processed entirely in your browser. Nothing is uploaded to any server. Your files stay on your device at all times.
+
+### What browsers are supported?
+MyDigitSign works in all modern HTML5-compatible browsers including Chrome, Firefox, Safari, Edge, and their mobile versions.
+
+### Can I sign multiple pages?
+Yes. For multi-page PDFs, you can navigate between pages and place signatures on any page you need.
+
+### Is this legally binding?
+Yes. Electronic signatures are legally recognized under the ESIGN Act (USA), eIDAS (EU), and similar laws worldwide for the majority of business and legal documents.
+
+### How does this compare to DocuSign?
+DocuSign requires paid plans and uploads documents to their cloud. MyDigitSign is completely free, doesn't require an account, and never uploads your files anywhere.
+
+## Technical Details
+
+- Built with Next.js and React
+- Client-side PDF processing using pdf-lib and pdfjs-dist
+- Signature capture using signature_pad library
+- Responsive design — works on desktop, tablet, and mobile
+- No backend processing for document operations
+
+## Contact & Links
+
+- Website: https://mydigitsign.com
+- GitHub: https://github.com/sidAli1993/signflow
+- Features page: https://mydigitsign.com/features
+- How it works: https://mydigitsign.com/how-it-works
+- Blog: https://mydigitsign.com/blog
+- Privacy Policy: https://mydigitsign.com/privacy-policy
+- Terms of Service: https://mydigitsign.com/terms-of-service

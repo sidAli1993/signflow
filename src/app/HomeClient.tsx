@@ -95,7 +95,7 @@ export default function HomeClient({
       return (
         <div className={styles.creatorSection}>
           <div className={styles.introHeader}>
-            <h1 
+            <h2 
               className={styles.introTitle}
               dangerouslySetInnerHTML={{
                 __html: titleOverride || 'Create Your Free <span>Digital Signature</span>'

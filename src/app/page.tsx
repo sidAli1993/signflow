@@ -8,7 +8,7 @@ import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
   description:
-    'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads, no signup, no limits.',
+    'Sign PDFs & documents online for free. 100% private & browser-based—your files never leave your device. Secure digit sign with no server uploads.',
   keywords: [
     'e signature pdf online',
     'sign document for free',

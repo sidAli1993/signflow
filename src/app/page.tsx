@@ -6,7 +6,7 @@ import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
+  title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
   description:
     'Sign PDFs & documents online for free. 100% private & browser-based—your files never leave your device. Secure digit sign with no server uploads.',
   keywords: [
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com',
   },
   openGraph: {
-    title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
+    title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
     description:
       'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads, no signup, no limits.',
     url: 'https://mydigitsign.com',
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free PDF Signer (100% Private, No Uploads) — MyDigitSign',
+    title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
     description:
       'Sign PDFs & documents online for free. 100% browser-based & private—your files never leave your device. Secure digit sign with no server uploads.',
     creator: '@mydigitsign',
@@ -128,11 +128,11 @@ export default function Home() {
             <span>Free · No Account · No Upload</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Free Online PDF Signer &amp;{' '}
+            Sign PDF Online Free &amp;{' '}
             <span className={styles.seoHeroGradient}>Digit Sign Tool</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Create a secure <strong>digit sign</strong> or place an electronic <strong>pdf signature free</strong> on any document — directly in your browser. If you want to <strong>sign a document online</strong>, you can draw with your mouse, type your name in cursive, or upload an existing signature image. This <strong>online pdf editor signature</strong> tool also supports uploading a <strong>free digital signature certificate</strong> to cryptographically sign PDFs locally, ensuring your confidential files <strong>never leave your device</strong>.
+            Need an <strong>e signature pdf online</strong>? Create a secure <strong>digit sign</strong> or use our tool to <strong>sign a pdf document online free</strong> — directly in your browser. If you want to <strong>sign online pdf</strong>, you can draw with your mouse, type your name, or upload an image. This <strong>online pdf editor signature</strong> tool also supports uploading a <strong>free digital signature certificate</strong> to cryptographically sign PDFs locally, ensuring files <strong>never leave your device</strong>.
           </p>
 
           {/* Trust pills — server-rendered, crawlable */}

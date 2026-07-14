@@ -47,11 +47,19 @@ export const Footer: React.FC = () => {
           </div>
           
           <div className={styles.linksCol}>
-            <h4 className={styles.colTitle}>Product</h4>
+            <h4 className={styles.colTitle}>Free Tools</h4>
+            <Link href="/tools/draw-signature-online" className={styles.link}>Draw Signature Online</Link>
+            <Link href="/tools/type-signature-online" className={styles.link}>Type Signature Online</Link>
+            <Link href="/tools/sign-image-online" className={styles.link}>Sign Image Online</Link>
+            <Link href="/" className={styles.link}>Sign Online PDF</Link>
+          </div>
+          
+          <div className={styles.linksCol}>
+            <h4 className={styles.colTitle}>Product & Guides</h4>
             <Link href="/features" className={styles.link}>Features</Link>
-            <Link href="/" className={styles.link}>Signature Maker</Link>
-            <Link href="/blog" className={styles.link}>Blog & Guides</Link>
-            <Link href="/how-it-works" className={styles.link}>How It Works</Link>
+            <Link href="/blog/free-digital-signature-certificate" className={styles.link}>Free Digital Signature Certificate</Link>
+            <Link href="/blog/are-electronic-signatures-legally-binding" className={styles.link}>Legally Binding E Signature</Link>
+            <Link href="/blog/how-to-sign-pdf-on-iphone-android-free" className={styles.link}>Sign a PDF on iPhone</Link>
           </div>
           
           <div className={styles.linksCol}>

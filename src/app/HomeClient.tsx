@@ -7,6 +7,7 @@ import { ImageEditor } from '@/components/editor/ImageEditor';
 import { AdBanner, Button } from '@/components/ui';
 import { ArrowLeft, UploadCloud, Shield, CheckCircle } from 'lucide-react';
 import styles from './page.module.css';
+import { trackEvent } from '@/lib/analytics';
 
 interface HomeClientProps {
   initialTab?: 'type' | 'draw' | 'upload';
@@ -25,6 +26,7 @@ export default function HomeClient({
   const [isDragOver, setIsDragOver] = useState(false);
 
   const handleSignatureSave = (dataUrl: string) => {
+    trackEvent('signature_created');
     setSignature(dataUrl);
     setStep(2);
   };
@@ -32,6 +34,7 @@ export default function HomeClient({
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
+      trackEvent('document_uploaded');
       setFile(selectedFile);
     }
   };
@@ -53,6 +56,7 @@ export default function HomeClient({
     if (droppedFile) {
       const validTypes = ['application/pdf', 'image/png', 'image/jpeg', 'image/jpg'];
       if (validTypes.includes(droppedFile.type)) {
+        trackEvent('document_uploaded');
         setFile(droppedFile);
       } else {
         alert('Unsupported file type. Please upload a PDF or an Image (PNG, JPG).');
@@ -67,6 +71,7 @@ export default function HomeClient({
   };
 
   const handleShare = async (signedFile: File) => {
+    trackEvent('document_downloaded');
     if (navigator.share && navigator.canShare && navigator.canShare({ files: [signedFile] })) {
       try {
         await navigator.share({

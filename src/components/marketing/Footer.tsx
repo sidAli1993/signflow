@@ -61,6 +61,9 @@ export const Footer: React.FC = () => {
             <Link href="/blog/free-digital-signature-certificate" className={styles.link}>Free Digital Signature Certificate</Link>
             <Link href="/blog/are-electronic-signatures-legally-binding" className={styles.link}>Legally Binding E Signature</Link>
             <Link href="/blog/how-to-sign-pdf-on-iphone-android-free" className={styles.link}>Sign a PDF on iPhone</Link>
+            <Link href="/blog/how-to-sign-a-document-online-free-pdf-editor" className={styles.link}>Sign Document Online Free</Link>
+            <Link href="/blog/ultimate-guide-signing-pdf-securely" className={styles.link}>Secure PDF Signing Guide</Link>
+            <Link href="/blog/create-digital-signature-online-free" className={styles.link}>Create Digital Signature Free</Link>
           </div>
           
           <div className={styles.linksCol}>

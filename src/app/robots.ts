@@ -10,7 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',       // API routes — not indexable pages
           '/uploads/',   // User file uploads — private content
-          '/_next/',     // Next.js internal assets
           '/private/',   // Any private routes
         ],
       },
@@ -18,19 +17,19 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       // ─── Yandex ────────────────────────────────────────────────
       {
         userAgent: 'Yandex',
         allow: '/',
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       // ─── DuckDuckGo ────────────────────────────────────────────
       {
         userAgent: 'DuckDuckBot',
         allow: '/',
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       // ─── AI Crawlers — Explicitly Allowed ──────────────────────
       // These crawlers power AI assistants like ChatGPT, Perplexity,
@@ -39,42 +38,42 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'GPTBot',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'ChatGPT-User',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'Google-Extended',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'PerplexityBot',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'ClaudeBot',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'Applebot',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'anthropic-ai',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
       {
         userAgent: 'cohere-ai',
         allow: ['/', '/llms.txt', '/llms-full.txt'],
-        disallow: ['/api/', '/uploads/', '/_next/'],
+        disallow: ['/api/', '/uploads/'],
       },
     ],
     sitemap: 'https://mydigitsign.com/sitemap.xml',

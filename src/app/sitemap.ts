@@ -5,12 +5,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Real blog posts that have actual page content
   const blogPosts = [
-    'free-digital-signature-certificate',
-    'create-digital-signature-online-free',
-    'are-electronic-signatures-legally-binding',
-    'ultimate-guide-signing-pdf-securely',
-    'how-to-sign-a-document-online-free-pdf-editor',
-    'how-to-sign-pdf-on-iphone-android-free',
+    { slug: 'free-digital-signature-certificate', modified: '2026-07-18' },
+    { slug: 'create-digital-signature-online-free', modified: '2026-07-18' },
+    { slug: 'are-electronic-signatures-legally-binding', modified: '2026-07-18' },
+    { slug: 'ultimate-guide-signing-pdf-securely', modified: '2026-07-18' },
+    { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-18' },
+    { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-18' },
   ];
 
   // Micro-tool landing pages targeting SEO search queries
@@ -21,24 +21,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
-    // Homepage — the tool itself; changes only when new features ship
+    // Homepage — the tool itself
     {
       url: baseUrl,
-      lastModified: new Date('2026-06-25'),
-      changeFrequency: 'monthly',
+      lastModified: new Date('2026-07-18'),
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
 
-    // Core tool pages — high value, change infrequently
+    // Core tool pages
     {
       url: `${baseUrl}/features`,
-      lastModified: new Date('2026-06-25'),
+      lastModified: new Date('2026-07-18'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/how-it-works`,
-      lastModified: new Date('2026-06-25'),
+      lastModified: new Date('2026-07-18'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Dedicated tool landing pages
     ...tools.map((tool) => ({
       url: `${baseUrl}/tools/${tool}`,
-      lastModified: new Date('2026-07-11'),
+      lastModified: new Date('2026-07-18'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
@@ -54,16 +54,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog index
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-06-25'),
-      changeFrequency: 'monthly',
+      lastModified: new Date('2026-07-18'),
+      changeFrequency: 'weekly',
       priority: 0.7,
     },
 
-    // Individual blog posts — static, not updated frequently
-    ...blogPosts.map((slug) => ({
+    // Individual blog posts — updated today
+    ...blogPosts.map(({ slug, modified }) => ({
       url: `${baseUrl}/blog/${slug}`,
-      lastModified: new Date('2026-06-25'),
-      changeFrequency: 'yearly' as const,
+      lastModified: new Date(modified),
+      changeFrequency: 'monthly' as const,
       priority: 0.6,
     })),
 

@@ -1,0 +1,6 @@
+# Disable DirectoryIndex to prevent Apache from internally mapping / to index.html/index.php
+DirectoryIndex disabled
+
+# Route all traffic to the PM2 Next.js server on port 3000
+RewriteEngine On
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]

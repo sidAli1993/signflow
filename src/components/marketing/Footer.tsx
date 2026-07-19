@@ -56,6 +56,7 @@ export const Footer: React.FC = () => {
           
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Product & Guides</h4>
+            <Link href="/about" className={styles.link}>About Us</Link>
             <Link href="/features" className={styles.link}>Features</Link>
             <Link href="/how-it-works" className={styles.link}>How it Works</Link>
             <Link href="/blog/free-digital-signature-certificate" className={styles.link}>Free Digital Signature Certificate</Link>
@@ -75,6 +76,7 @@ export const Footer: React.FC = () => {
           
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Legal</h4>
+            <Link href="/about" className={styles.link}>About MyDigitSign</Link>
             <Link href="/privacy-policy" className={styles.link}>Privacy Policy</Link>
             <Link href="/terms-of-service" className={styles.link}>Terms of Service</Link>
             <Link href="/cookie-policy" className={styles.link}>Cookie Policy</Link>

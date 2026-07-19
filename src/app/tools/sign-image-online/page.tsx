@@ -67,6 +67,49 @@ const breadcrumbSchema = {
   ],
 };
 
+// HowTo schema — enables Google rich results for "how to sign image online"
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  'name': 'How to Sign an Image Online Free (PNG & JPG)',
+  'description': 'Upload a PNG or JPG image, overlay your digital signature, and download the signed image — 100% in your browser with no server uploads.',
+  'totalTime': 'PT2M',
+  'tool': [
+    { '@type': 'HowToTool', 'name': 'MyDigitSign Sign Image Tool' },
+    { '@type': 'HowToTool', 'name': 'Web Browser (any modern browser)' },
+  ],
+  'step': [
+    {
+      '@type': 'HowToStep',
+      'position': 1,
+      'name': 'Create Your Signature',
+      'text': 'Type your name in cursive, draw freehand with your mouse, or upload an existing signature image. Click Adopt to confirm.',
+      'url': 'https://mydigitsign.com/tools/sign-image-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 2,
+      'name': 'Upload Your Image Document',
+      'text': 'Drag and drop your PNG, JPG, or JPEG file into the browser uploader. The file is processed locally — nothing is uploaded to any server.',
+      'url': 'https://mydigitsign.com/tools/sign-image-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 3,
+      'name': 'Place and Resize Signature',
+      'text': 'Drag the signature overlay to the correct position on your image. Use the resize handle to scale it to fit naturally.',
+      'url': 'https://mydigitsign.com/tools/sign-image-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 4,
+      'name': 'Download Signed Image',
+      'text': 'Click Download to save your signed image directly to your device. The result is a standard PNG with your signature embedded.',
+      'url': 'https://mydigitsign.com/tools/sign-image-online',
+    },
+  ],
+};
+
 export default function SignImageTool() {
   return (
     <div className={styles.appWrapper}>
@@ -99,6 +142,11 @@ export default function SignImageTool() {
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <HomeClient 
@@ -134,6 +182,17 @@ export default function SignImageTool() {
                 Place the signature overlay on the target line, resize it as needed, and download the finished signed image.
               </p>
             </article>
+          </div>
+
+          {/* Internal links — Phase 2 internal linking strategy */}
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '0.5rem' }}>Related tools &amp; guides:</p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
+              <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
+              <li><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type Signature Online →</a></li>
+              <li><a href="/blog/ultimate-guide-signing-pdf-securely" style={{ color: 'var(--color-primary, #4f46e5)' }}>Guide: Signing PDFs Securely →</a></li>
+              <li><a href="/" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign a PDF Online →</a></li>
+            </ul>
           </div>
         </div>
       </section>

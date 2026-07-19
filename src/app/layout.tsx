@@ -88,7 +88,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      // SoftwareApplication: enables rich results (price, rating, category) in Google
+      // SoftwareApplication: enables rich results (price, category) in Google
+      // NOTE: aggregateRating removed — only add back when real verified reviews exist
       "@type": "SoftwareApplication",
       "@id": "https://mydigitsign.com/#app",
       "name": "MyDigitSign",
@@ -101,13 +102,6 @@ const jsonLd = {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "128",
-        "bestRating": "5",
-        "worstRating": "1"
       },
       "browserRequirements": "Requires an HTML5-compatible browser",
       "featureList": [
@@ -239,12 +233,22 @@ const jsonLd = {
       "@id": "https://mydigitsign.com/#organization",
       "name": "MyDigitSign",
       "url": "https://mydigitsign.com",
+      "email": "alimirza00@gmail.com",
+      "description": "MyDigitSign builds free, privacy-first document signing tools. Our flagship product lets users sign PDFs and images entirely in the browser with zero server uploads.",
+      "foundingDate": "2024",
       "logo": {
         "@type": "ImageObject",
         "url": "https://mydigitsign.com/icon.svg"
       },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "alimirza00@gmail.com"
+      },
       "sameAs": [
-        "https://github.com/sidAli1993/signflow"
+        "https://github.com/sidAli1993/signflow",
+        "https://x.com/alimirza00",
+        "https://www.linkedin.com/in/mirza-munawer-baig-3a0b15105/"
       ]
     }
   ]

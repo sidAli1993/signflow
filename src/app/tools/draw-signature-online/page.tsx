@@ -67,6 +67,49 @@ const breadcrumbSchema = {
   ],
 };
 
+// HowTo schema — enables Google rich results for "how to draw signature online"
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  'name': 'How to Draw a Signature Online Free',
+  'description': 'Draw your digital signature freehand using mouse or touchscreen, then place it on any PDF or image document instantly.',
+  'totalTime': 'PT2M',
+  'tool': [
+    { '@type': 'HowToTool', 'name': 'MyDigitSign Draw Signature Tool' },
+    { '@type': 'HowToTool', 'name': 'Web Browser (any modern browser)' },
+  ],
+  'step': [
+    {
+      '@type': 'HowToStep',
+      'position': 1,
+      'name': 'Open the Draw Tool',
+      'text': 'Navigate to mydigitsign.com/tools/draw-signature-online in any browser. No account or installation required.',
+      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 2,
+      'name': 'Draw Your Signature',
+      'text': 'Use your mouse, finger, or stylus to sketch your signature on the digital canvas. Click the Eraser to clear and start over if needed.',
+      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 3,
+      'name': 'Choose Pen Color',
+      'text': 'Select from Black, Blue, or Red pen colors to match your document requirements.',
+      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 4,
+      'name': 'Download PNG or Place on Document',
+      'text': 'Click Adopt to place your signature on a PDF document, or download it as a transparent PNG for use in Word, Google Docs, or email.',
+      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+    },
+  ],
+};
+
 export default function DrawSignatureTool() {
   return (
     <div className={styles.appWrapper}>
@@ -99,6 +142,11 @@ export default function DrawSignatureTool() {
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <HomeClient 
@@ -134,6 +182,17 @@ export default function DrawSignatureTool() {
                 Click adopt to sign a PDF document instantly, or download a transparent PNG file to use in Microsoft Word, Google Docs, or email signatures.
               </p>
             </article>
+          </div>
+
+          {/* Internal links — Phase 2 internal linking strategy */}
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '0.5rem' }}>Related tools &amp; guides:</p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
+              <li><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type Signature Online →</a></li>
+              <li><a href="/tools/sign-image-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Image Online →</a></li>
+              <li><a href="/blog/create-digital-signature-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>Create Digital Signature Free →</a></li>
+              <li><a href="/how-it-works" style={{ color: 'var(--color-primary, #4f46e5)' }}>How It Works →</a></li>
+            </ul>
           </div>
         </div>
       </section>

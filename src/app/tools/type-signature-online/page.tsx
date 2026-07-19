@@ -67,6 +67,49 @@ const breadcrumbSchema = {
   ],
 };
 
+// HowTo schema — enables Google rich results for "how to type signature online"
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  'name': 'How to Type a Signature Online Free Using Cursive Fonts',
+  'description': 'Generate a professional cursive signature by typing your name, selecting a font, and downloading or placing it on a document instantly.',
+  'totalTime': 'PT1M',
+  'tool': [
+    { '@type': 'HowToTool', 'name': 'MyDigitSign Type Signature Tool' },
+    { '@type': 'HowToTool', 'name': 'Web Browser (any modern browser)' },
+  ],
+  'step': [
+    {
+      '@type': 'HowToStep',
+      'position': 1,
+      'name': 'Type Your Name',
+      'text': 'Enter your full name or initials in the text field. The generator renders live previews of your signature across multiple cursive font styles.',
+      'url': 'https://mydigitsign.com/tools/type-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 2,
+      'name': 'Select a Cursive Font',
+      'text': 'Choose from professional handwriting fonts: Dancing Script, Pacifico, Great Vibes, or Caveat. Each creates a unique signature style.',
+      'url': 'https://mydigitsign.com/tools/type-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 3,
+      'name': 'Choose a Color',
+      'text': 'Select Black, Blue, or Red to match your document\'s signature field requirements.',
+      'url': 'https://mydigitsign.com/tools/type-signature-online',
+    },
+    {
+      '@type': 'HowToStep',
+      'position': 4,
+      'name': 'Download or Apply to Document',
+      'text': 'Click Adopt to place your signature directly on a PDF, or download a transparent PNG to use in Word, Google Docs, or email.',
+      'url': 'https://mydigitsign.com/tools/type-signature-online',
+    },
+  ],
+};
+
 export default function TypeSignatureTool() {
   return (
     <div className={styles.appWrapper}>
@@ -99,6 +142,11 @@ export default function TypeSignatureTool() {
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="howto-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
 
       <HomeClient 
@@ -134,6 +182,17 @@ export default function TypeSignatureTool() {
                 Click adopt to sign a contract instantly on our client-side editor, or download a transparent PNG file to insert into Word or Google Docs files.
               </p>
             </article>
+          </div>
+
+          {/* Internal links — Phase 2 internal linking strategy */}
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '0.5rem' }}>Related tools &amp; guides:</p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
+              <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
+              <li><a href="/tools/sign-image-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Image Online →</a></li>
+              <li><a href="/blog/create-digital-signature-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>Create Digital Signature Free →</a></li>
+              <li><a href="/how-it-works" style={{ color: 'var(--color-primary, #4f46e5)' }}>How It Works →</a></li>
+            </ul>
           </div>
         </div>
       </section>

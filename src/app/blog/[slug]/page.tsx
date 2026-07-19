@@ -815,7 +815,7 @@ export default async function BlogPost({ params }: Props) {
     notFound();
   }
 
-  // Schema.org JSON-LD for Articles
+  // Schema.org JSON-LD for Articles — enhanced with full author identity for E-E-A-T
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -824,11 +824,20 @@ export default async function BlogPost({ params }: Props) {
     "dateModified": new Date(post.lastModified).toISOString(),
     "author": {
       "@type": "Person",
-      "name": post.author
+      "@id": "https://mydigitsign.com/about#founder",
+      "name": "Ali Mirza",
+      "url": "https://mydigitsign.com/about",
+      "sameAs": [
+        "https://github.com/sidAli1993",
+        "https://x.com/alimirza00",
+        "https://www.linkedin.com/in/mirza-munawer-baig-3a0b15105/"
+      ]
     },
     "publisher": {
       "@type": "Organization",
+      "@id": "https://mydigitsign.com/#organization",
       "name": "MyDigitSign",
+      "url": "https://mydigitsign.com",
       "logo": {
         "@type": "ImageObject",
         "url": "https://mydigitsign.com/icon.svg"
@@ -882,12 +891,12 @@ export default async function BlogPost({ params }: Props) {
           <header className={styles.articleHeader}>
             <h1 className={styles.articleTitle}>{post.title}</h1>
             <div className={styles.articleMeta}>
-              <span>By {post.author}</span>
-              <span>•</span>
+              <span>By <a href="/about" style={{ color: 'inherit', textDecoration: 'underline' }}>Ali Mirza</a> &middot; MyDigitSign Team</span>
+              <span>&bull;</span>
               <time dateTime={new Date(post.date).toISOString()}>Published: {post.date}</time>
               {post.lastModified !== post.date && (
                 <>
-                  <span>•</span>
+                  <span>&bull;</span>
                   <time dateTime={new Date(post.lastModified).toISOString()} style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 600 }}>
                     Updated: {post.lastModified}
                   </time>
@@ -899,6 +908,25 @@ export default async function BlogPost({ params }: Props) {
             className={styles.articleContent}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* Author Bio — E-E-A-T trust signal for Google 2026 */}
+          <footer style={{
+            marginTop: '3rem',
+            paddingTop: '2rem',
+            borderTop: '1px solid rgba(128,128,128,0.2)',
+          }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <p style={{ fontWeight: 700, fontSize: '0.95rem', margin: 0 }}>Written by Ali Mirza</p>
+              <p style={{ margin: 0, fontSize: '0.875rem', opacity: 0.75 }}>
+                Ali Mirza is the founder of MyDigitSign — a free, privacy-first document signing
+                tool built for people who believe document signing should not require server
+                uploads, accounts, or subscription fees.
+              </p>
+              <p style={{ margin: 0, fontSize: '0.875rem' }}>
+                <a href="/about" style={{ color: 'var(--color-primary, #4f46e5)' }}>Read more about MyDigitSign →</a>
+              </p>
+            </div>
+          </footer>
         </article>
       </main>
       <Footer />

@@ -190,8 +190,9 @@ export default function SignImageTool() {
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
               <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
               <li><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type Signature Online →</a></li>
+              <li><a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF Online Free →</a></li>
+              <li><a href="/blog/how-to-sign-nda-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>How to Sign an NDA Online →</a></li>
               <li><a href="/blog/ultimate-guide-signing-pdf-securely" style={{ color: 'var(--color-primary, #4f46e5)' }}>Guide: Signing PDFs Securely →</a></li>
-              <li><a href="/" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign a PDF Online →</a></li>
             </ul>
           </div>
         </div>

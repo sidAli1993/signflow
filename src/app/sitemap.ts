@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'ultimate-guide-signing-pdf-securely', modified: '2026-07-18' },
     { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-18' },
     { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-18' },
+    { slug: 'how-to-sign-nda-online-free', modified: '2026-07-21' },
   ];
 
   // Micro-tool landing pages targeting SEO search queries
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'draw-signature-online',
     'sign-image-online',
     'type-signature-online',
+    'sign-pdf-online',
   ];
 
   return [

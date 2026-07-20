@@ -14,7 +14,8 @@ export async function generateStaticParams() {
     { slug: 'are-electronic-signatures-legally-binding' },
     { slug: 'ultimate-guide-signing-pdf-securely' },
     { slug: 'how-to-sign-a-document-online-free-pdf-editor' },
-    { slug: 'how-to-sign-pdf-on-iphone-android-free' }, // ← FIXED: was missing
+    { slug: 'how-to-sign-pdf-on-iphone-android-free' },
+    { slug: 'how-to-sign-nda-online-free' },
   ];
 }
 
@@ -746,6 +747,136 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
           <li><a href="/blog/create-digital-signature-online-free">How to Create a Digital Signature Online for Free</a></li>
           <li><a href="/blog/are-electronic-signatures-legally-binding">Are Electronic Signatures Legally Binding & Acceptable?</a></li>
           <li><a href="/blog/how-to-sign-a-document-online-free-pdf-editor">How to Edit and Sign PDF Online for Free</a></li>
+          <li><a href="/blog/ultimate-guide-signing-pdf-securely">The Ultimate Guide to Signing PDFs Securely</a></li>
+        </ul>
+      `
+    },
+    'how-to-sign-nda-online-free': {
+      title: 'How to Sign an NDA Online Free — No Account, No Uploads (2026)',
+      date: 'July 21, 2026',
+      lastModified: 'July 21, 2026',
+      author: 'MyDigitSign Editorial',
+      keywords: ['sign nda online free', 'sign document for free', 'e signature pdf online', 'sign a document online', 'electronic signature legal', 'edit and sign pdf'],
+      content: `
+        <p>Got an NDA sitting in your inbox and need to sign it right now? You don't need to print it, scan it, or pay for DocuSign. You can <strong>sign an NDA online free</strong> in under two minutes — and do it safely, without uploading your document to any third-party server.</p>
+
+        <p>This guide walks you through the entire process step by step, explains what makes an e-signature on an NDA legally binding, and answers the most common questions people have before signing a non-disclosure agreement electronically.</p>
+
+        <h2>Is It Legal to Sign an NDA Electronically?</h2>
+        <p>Yes — this is the first thing people ask, and the answer is a clear yes. Electronic signatures are fully legal for NDAs in the United States, EU, UK, Canada, Australia, and over 180 other countries.</p>
+        <p>Here's the legal foundation:</p>
+        <ul>
+          <li><strong>ESIGN Act (USA, 2000):</strong> Federal law explicitly states that an electronic signature has the same legal weight as a handwritten signature for most contracts and agreements, including non-disclosure agreements.</li>
+          <li><strong>UETA:</strong> The Uniform Electronic Transactions Act, adopted in 47 US states, reinforces this at the state level.</li>
+          <li><strong>eIDAS (EU):</strong> European regulation recognizes standard electronic signatures for the vast majority of business contracts, including NDAs.</li>
+        </ul>
+        <p>The key requirements are simple: both parties must intend to sign, and the signature must be associated with the document. A drawn or typed signature placed on an NDA PDF using a tool like <a href="/tools/sign-pdf-online">MyDigitSign</a> satisfies both requirements completely.</p>
+        <p>For a full breakdown of e-signature legality: <a href="/blog/are-electronic-signatures-legally-binding">Are Electronic Signatures Legally Binding? →</a></p>
+
+        <h2>What You Need Before You Start</h2>
+        <p>Good news — you don't need much:</p>
+        <ul>
+          <li>The NDA as a <strong>PDF file</strong> (most NDAs come as PDF attachments in email)</li>
+          <li>A modern web browser (Chrome, Firefox, Safari, or Edge)</li>
+          <li>That's it — no account, no software, no credit card</li>
+        </ul>
+        <p>If your NDA was sent as a Word document (<code>.docx</code>), export it as PDF first using the built-in "Save as PDF" option in Word, Google Docs, or LibreOffice.</p>
+
+        <h2>How to Sign an NDA Online Free — Step by Step</h2>
+        <p>Here's the fastest way to sign your NDA without uploading anything to a third-party server:</p>
+        <ol>
+          <li>
+            <strong>Open MyDigitSign in your browser:</strong> Go to <a href="/tools/sign-pdf-online">mydigitsign.com/tools/sign-pdf-online</a>. No account or registration required — the tool opens instantly.
+          </li>
+          <li>
+            <strong>Create your signature:</strong> You have three options:
+            <ul>
+              <li><strong>Draw it</strong> — use your mouse, trackpad, or finger to sketch your signature on the canvas. <a href="/tools/draw-signature-online">Try the draw signature tool →</a></li>
+              <li><strong>Type it</strong> — type your name and pick from professional cursive fonts. <a href="/tools/type-signature-online">Try the type signature tool →</a></li>
+              <li><strong>Upload it</strong> — have a scanned signature image? Upload it directly. <a href="/tools/sign-image-online">Try the sign image tool →</a></li>
+            </ul>
+          </li>
+          <li>
+            <strong>Click Adopt:</strong> Once you're happy with your signature, click Adopt. This locks it in and moves you to the document upload step.
+          </li>
+          <li>
+            <strong>Upload your NDA PDF:</strong> Click the upload area or drag and drop your NDA file into it. The file loads locally inside your browser — nothing is sent to any server.
+          </li>
+          <li>
+            <strong>Navigate to the signature page:</strong> Use the page navigation to find the signature block in your NDA. Most NDAs have signature fields on the last page.
+          </li>
+          <li>
+            <strong>Drag your signature to the correct line:</strong> Your signature appears as a draggable overlay. Position it directly on the signature field. Use the resize handle in the corner to scale it up or down until it fits naturally.
+          </li>
+          <li>
+            <strong>Download the signed NDA:</strong> Click Download. Your signed NDA saves instantly as a PDF to your device. No email required, no watermarks, and no waiting.
+          </li>
+        </ol>
+        <p>Total time: under 2 minutes.</p>
+
+        <h2>What Is an NDA and Why Does It Need a Signature?</h2>
+        <p>A Non-Disclosure Agreement (NDA) — also called a confidentiality agreement — is a legally binding contract between two or more parties. It establishes that certain information shared between them will remain confidential and cannot be disclosed to outside parties.</p>
+        <p>NDAs are extremely common in:</p>
+        <ul>
+          <li><strong>Freelance work:</strong> Clients ask freelancers to sign NDAs before sharing proprietary business information, product plans, or customer data.</li>
+          <li><strong>Employment:</strong> Employers routinely require NDAs as part of onboarding, especially for roles involving trade secrets or sensitive data.</li>
+          <li><strong>Business partnerships:</strong> Before sharing financials, technology, or strategic plans with a potential partner or investor, NDAs protect all parties.</li>
+          <li><strong>Product development:</strong> Developers, designers, and contractors often sign NDAs before seeing unreleased product specifications.</li>
+        </ul>
+        <p>The signature on an NDA is what makes it legally enforceable. Without a valid signature from both parties, the agreement is effectively unenforceable in court.</p>
+
+        <h2>One-Way vs Mutual NDAs — Does It Change How You Sign?</h2>
+        <p>NDAs come in two main types, but the signing process is identical for both:</p>
+        <ul>
+          <li><strong>One-way (unilateral) NDA:</strong> Only one party is disclosing confidential information — only that party's counterpart needs to sign. Common in employment situations.</li>
+          <li><strong>Mutual (bilateral) NDA:</strong> Both parties share confidential information and both must sign. Common in business partnerships and joint ventures.</li>
+        </ul>
+        <p>In either case, <a href="/tools/sign-pdf-online">signing the NDA PDF online</a> works exactly the same way. If a mutual NDA requires two signatures from two separate people, each person signs their own copy using MyDigitSign and sends the PDF back to the other party.</p>
+
+        <h2>Is My NDA Secure If I Sign It Online?</h2>
+        <p>This is the most important question — and the answer depends entirely on which tool you use.</p>
+        <p>Most "free" online signing tools work by <strong>uploading your document to their servers</strong>. Your NDA — which likely contains confidential business information, personal details, or trade secrets — travels over the internet to a third-party cloud server. That company stores it, processes it, and eventually sends it back. This creates real privacy and security risks.</p>
+        <p>MyDigitSign works completely differently. Your NDA file is <strong>never uploaded anywhere</strong>. The entire process happens inside your browser:</p>
+        <ul>
+          <li>The PDF is read from your device into browser memory</li>
+          <li>Your signature is placed on the document inside the browser</li>
+          <li>The signed PDF is written directly to your downloads folder</li>
+          <li>No data ever leaves your device</li>
+        </ul>
+        <p>This makes it the most private option available for signing sensitive agreements like NDAs.</p>
+
+        <h2>Should You Keep a Copy of the Signed NDA?</h2>
+        <p>Always. Here's what to do after signing:</p>
+        <ul>
+          <li><strong>Save the signed PDF</strong> to a secure folder — your hard drive, encrypted cloud storage, or a legal document management system.</li>
+          <li><strong>Email the signed copy</strong> to the other party and ask them to confirm receipt. This creates a timestamp and evidence of delivery.</li>
+          <li><strong>Request the countersigned copy</strong> once the other party has added their signature. Keep this final version — it's the enforceable document.</li>
+          <li><strong>Note the date</strong> — NDA duration matters. Many NDAs expire after 1–5 years. Know your timeline.</li>
+        </ul>
+
+        <h2>Frequently Asked Questions</h2>
+        <h3>Can I sign an NDA on my phone?</h3>
+        <p>Yes. Open <a href="/tools/sign-pdf-online">mydigitsign.com/tools/sign-pdf-online</a> in your mobile browser (Safari on iPhone, Chrome on Android). Draw your signature with your finger, upload the NDA PDF, place the signature, and tap Download. No app required.</p>
+
+        <h3>Does signing an NDA online hold up in court?</h3>
+        <p>Yes. Under the ESIGN Act and eIDAS, an electronically signed NDA is legally enforceable in court. Thousands of contract disputes involving e-signed documents have been successfully resolved. The key is demonstrating clear intent to sign, which a drawn or typed signature clearly provides.</p>
+
+        <h3>What if the NDA requires a "wet ink" signature?</h3>
+        <p>Some parties — particularly older organizations or those in heavily regulated industries — may still require a physical wet-ink signature. In that case, print the NDA, sign it by hand, scan it, and send the PDF. However, this is increasingly rare. Most modern businesses and legal teams accept e-signatures without any issue.</p>
+
+        <h3>Can I sign an NDA that was sent to me as a Word document?</h3>
+        <p>Not directly. First convert it to PDF: open the .docx in Word or Google Docs, go to File → Save as PDF (Word) or File → Download → PDF Document (Google Docs). Then upload the PDF to MyDigitSign to sign it.</p>
+
+        <h3>Is signing an NDA the same as agreeing to all its terms?</h3>
+        <p>Yes — that is the legal effect of signing. Read the NDA carefully before signing, particularly the duration, scope of confidential information, and any penalties for breach. If you're unsure about any clause, consult a lawyer before signing.</p>
+
+        <hr />
+        <h2>Related Articles</h2>
+        <ul>
+          <li><a href="/blog/are-electronic-signatures-legally-binding">Are Electronic Signatures Legally Binding &amp; Acceptable?</a></li>
+          <li><a href="/blog/create-digital-signature-online-free">How to Create a Digital Signature Online for Free</a></li>
+          <li><a href="/blog/how-to-sign-a-document-online-free-pdf-editor">How to Edit and Sign PDF Online for Free</a></li>
+          <li><a href="/blog/free-digital-signature-certificate">How to Get a Free Digital Signature Certificate</a></li>
           <li><a href="/blog/ultimate-guide-signing-pdf-securely">The Ultimate Guide to Signing PDFs Securely</a></li>
         </ul>
       `

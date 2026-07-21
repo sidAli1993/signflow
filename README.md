@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MyDigitSign — Free & Private PDF Signer Tool
 
-## Getting Started
+[![Website](https://img.shields.io/badge/Website-mydigitsign.com-blue?style=for-the-badge)](https://mydigitsign.com)
+[![Next.js](https://img.shields.io/badge/Built%20With-Next.js%2015-black?style=for-the-badge)](https://nextjs.org)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Client%252dSide-green?style=for-the-badge)](https://mydigitsign.com)
 
-First, run the development server:
+**[MyDigitSign](https://mydigitsign.com)** is a 100% browser-based, privacy-first tool designed to sign documents online for free. Unlike traditional document signing platforms, MyDigitSign processes your files entirely inside your local browser. Your PDFs, images, and signature certificates never touch our servers.
 
+## 🌟 Key Features
+
+*   **100% Private, Client-Side Processing:** Your documents are never uploaded to a server. All operations run locally via WebAssembly and browser APIs.
+*   **Create Your Free Digital Signature Certificate:** You can easily type your name using beautiful cursive fonts, draw your signature with a mouse or touchscreen, or upload a pre-made image.
+*   **Edit and Sign PDFs Online:** Drag, drop, resize, and position your digital signature anywhere on the document pages.
+*   **Multi-Format Support:** Sign PDF documents, PNG, JPG, or JPEG files up to 10MB in size.
+*   **Legally Binding:** Signatures generated meet standard electronic signature legal guidelines (such as the ESIGN Act and eIDAS) for everyday business, freelance, and personal agreements.
+
+---
+
+## 🛠️ Technology Stack
+
+*   **Frontend Framework:** Next.js 15 (App Router, TypeScript)
+*   **Styling:** Custom CSS with dark/light mode detection
+*   **Signature Engine:** Canvas API for drawing & text layouts
+*   **Document Editing:** Client-side PDF rendering and rendering manipulation
+*   **Analytics:** Privacy-compliant Google Analytics 4 event tracking
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+To run the project locally and start building:
+
+### 1. Install Dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Configure Environment Variables
+Copy `.env.example` to `.env` and configure your analytics keys:
+```bash
+cp .env.example .env
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the Development Server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your web browser to view the application.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚖️ Are Electronic Signatures Acceptable?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Yes! Under the ESIGN Act in the US, eIDAS in the European Union, and similar laws worldwide, electronic signatures are legally binding for the vast majority of personal, financial, and business agreements. MyDigitSign lets you sign documents online and create valid, self-generated digital signature certificates without a paid subscription or account creation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+*For detailed legality guides, check out our [Are Electronic Signatures Legally Binding?](https://mydigitsign.com/blog/are-electronic-signatures-legally-binding) guide on our blog.*
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! If you want to improve the PDF editor signature capabilities, add new fonts, or enhance security, feel free to open a pull request.
+
+**Repository Link:** [https://github.com/sidAli1993/signflow](https://github.com/sidAli1993/signflow)  
+**Live Application:** [https://mydigitsign.com](https://mydigitsign.com)

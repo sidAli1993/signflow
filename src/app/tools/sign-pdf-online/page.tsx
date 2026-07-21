@@ -6,15 +6,41 @@ import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star, CheckCircle, XCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sign PDF Online Free — No Upload, No Account | MyDigitSign',
+  title: 'Online Sign PDF Free — Document Signer (No Upload) | MyDigitSign',
   description:
-    'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool. Edit and sign PDF in seconds.',
+    'Online sign PDF free. Digitally sign documents, draw electronic signature, sign files online — no uploads, no watermarks, no account needed. 100% browser-based.',
   keywords: [
+    // Top GSC screenshot keywords
+    'online sign pdf',
+    'pdf signature online',
+    'online signature pdf',
+    'draw electronic signature',
+    'how to sign pdf on iphone',
+    'documents sign online',
+    'free document signer',
+    'legally binding electronic signature',
+    'signing documents online',
+    'document sign free',
+    'free electronic signature pdf',
+    'digitally sign pdf free',
+    'document digital signature',
+    'e sign free',
+    'sign files online',
+    'signing document online',
+    'signing pdf on iphone',
+    'digitally sign documents',
+    'online pdf signature',
+    'sign a document online',
+    'sign documents online free',
+    'online document signature',
+    'sign documents online',
+    'digitally sign pdf online',
+    'sign pdf online free',
+    // Our plan keywords
     'e signature pdf online',
     'sign document for free',
     'pdf editor signature',
     'pdf editor free signature',
-    'sign a document online',
     'edit and sign pdf',
     'sign on document online',
     'sign pdf online free no account',
@@ -27,9 +53,9 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com/tools/sign-pdf-online',
   },
   openGraph: {
-    title: 'Sign PDF Online Free — No Upload, No Account | MyDigitSign',
+    title: 'Online Sign PDF Free — Document Signer (No Upload) | MyDigitSign',
     description:
-      'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool. Edit and sign PDF in seconds.',
+      'Online sign PDF free. Digitally sign documents, draw electronic signature, sign files online — no uploads, no watermarks, no account needed. 100% browser-based.',
     url: 'https://mydigitsign.com/tools/sign-pdf-online',
     siteName: 'MyDigitSign',
     images: [
@@ -37,7 +63,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'MyDigitSign — Sign PDF Online Free',
+        alt: 'MyDigitSign — Online Sign PDF Free',
       },
     ],
     locale: 'en_US',
@@ -45,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sign PDF Online Free — No Upload, No Account | MyDigitSign',
+    title: 'Online Sign PDF Free — Document Signer (No Upload) | MyDigitSign',
     description:
-      'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool. Edit and sign PDF in seconds.',
+      'Online sign PDF free. Digitally sign documents, draw electronic signature, sign files online — no uploads, no watermarks, no account needed. 100% browser-based.',
     creator: '@mydigitsign',
     images: ['/og-image.png'],
   },

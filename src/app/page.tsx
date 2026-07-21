@@ -6,10 +6,42 @@ import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
+  title: 'Sign PDF Online Free — Online Signature PDF Tool | MyDigitSign',
   description:
-    'Sign PDFs & documents online for free. 100% private & browser-based—your files never leave your device. Secure digit sign with no server uploads.',
+    'Sign PDF online free. Online signature PDF tool — 100% private, no uploads, no account. Draw electronic signature, digitally sign documents, sign files online in seconds.',
   keywords: [
+    // Primary GSC keywords (ranked in screenshots — highest priority)
+    'online sign pdf',
+    'pdf signature online',
+    'online signature pdf',
+    'draw electronic signature',
+    'how to sign pdf on iphone',
+    'documents sign online',
+    'free document signer',
+    'legally binding electronic signature',
+    'signing documents online',
+    'document sign free',
+    'free electronic signature pdf',
+    'digitally sign pdf free',
+    'document digital signature',
+    'e sign free',
+    'how to sign a pdf document on iphone',
+    'sign files online',
+    'sign online document',
+    'signing document online',
+    'signing pdf on iphone',
+    'digitally sign documents',
+    'free app to sign pdf on iphone',
+    'online pdf signature',
+    'draw signature online',
+    'sign online pdf',
+    'sign a document online',
+    'sign documents online free',
+    'online document signature',
+    'sign documents online',
+    'digitally sign pdf online',
+    'sign pdf online free',
+    // Our 14 plan keywords
     'e signature pdf online',
     'sign document for free',
     'electronic signature legal',
@@ -18,50 +50,33 @@ export const metadata: Metadata = {
     'pdf editor free signature',
     'edit and sign pdf',
     'sign on document online',
-    'pdf signature free',
     'digit sign',
-    'sign a document online',
+    'free digital signature certificate',
+    'create a digital signature certificate',
+    // Supporting long-tail
+    'pdf signature free',
     'free online signature',
     'create digital signature pdf',
     'legal electronic signature',
-    'free digital signature certificate',
     'digital signature tool',
     'document signer',
-    'create pdf signature',
-    'digital sign tool',
-    'online signing',
-    'digital signature pdf download',
-    'e signature pdf online',
     'free pdf e signature',
-    'sign documents online free',
-    'sign online signature',
-    'online document signer',
-    'free signing documents online',
-    'free online document signing',
-    'sign pdf documents free',
     'sign document online free',
     'free e sign',
     'online pdf editor signature',
-    'digitally sign pdf online',
     'e sign online',
     'sign pdf free online',
     'pdf signer online',
-    'free sign documents online',
-    'sign digitally online',
     'signature pdf online',
     'is docusign legally binding',
     'pdf online sign',
-    'sign pdf online free',
     'do e signatures hold up in court',
-    'free electronic signature pdf',
     'pdf signature online free',
     'pdf signer free',
-    'legally binding electronic signature',
     'create digital signature online free',
     'free pdf signer',
     'digital signature maker',
     'electronic signature free',
-    'draw signature online',
     'pdf signing tool no upload',
     'e-sign pdf free',
     'browser based pdf signer',
@@ -128,11 +143,11 @@ export default function Home() {
             <span>Free · No Account · No Upload</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign PDF Online Free &amp;{' '}
-            <span className={styles.seoHeroGradient}>Digit Sign Tool</span>
+            Online Sign PDF &amp;{' '}
+            <span className={styles.seoHeroGradient}>Free Document Signer</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Need an <strong>e signature pdf online</strong>? Create a secure <strong>digit sign</strong> or use our tool to <strong>sign a pdf document online free</strong> — directly in your browser. If you want to <strong>sign online pdf</strong>, you can draw with your mouse, type your name, or upload an image. This <strong>online pdf editor signature</strong> tool also supports uploading a <strong>free digital signature certificate</strong> to cryptographically sign PDFs locally, ensuring files <strong>never leave your device</strong>.
+            Need an <strong>online signature PDF</strong> tool? <strong>Sign PDF online free</strong> — 100% private, no uploads, no account. <strong>Draw electronic signature</strong> with your mouse or finger, type your name, or upload an image to <strong>digitally sign documents</strong> in seconds. Want to <strong>sign files online</strong> without software? Our free <strong>document signer</strong> works on any device — including iPhone. <strong>Signing documents online</strong> has never been simpler or more secure.
           </p>
 
           {/* Trust pills — server-rendered, crawlable */}
@@ -201,16 +216,16 @@ export default function Home() {
               contracts, NDAs, and tax documents stay private on your device at all times.
             </p>
             <ul className={styles.seoCompareList}>
-              <li>✅ <strong>Free digital signature certificate</strong> — generate a secure digit sign instantly</li>
-              <li>✅ <strong>PDF signature free</strong> — use our free PDF signer online without paywalls or credit cards</li>
-              <li>✅ <strong>Edit and sign pdf</strong> — 100% client-side without server uploads</li>
-              <li>✅ <strong>Online PDF editor signature</strong> — drag, resize, and place signature overlays on any page</li>
-              <li>✅ <strong>Sign on document online</strong> — sign freelance contracts, NDAs, or tax documents quickly</li>
-              <li>✅ <strong>Draw signature online</strong> — custom strokes via mouse, trackpad, or touch</li>
-              <li>✅ <strong>Type signature</strong> — beautiful cursive script fonts</li>
-              <li>✅ <strong>Sign PDF on mobile</strong> — fully responsive tool</li>
-              <li>✅ <strong>Legally binding e-signatures</strong> — compliant with ESIGN &amp; eIDAS</li>
-              <li>✅ <strong>No registration needed</strong> — open and sign in under 60 seconds</li>
+              <li>✅ <strong>Online sign PDF</strong> — <strong>pdf signature online</strong> with zero server uploads</li>
+              <li>✅ <strong>Draw electronic signature</strong> — smooth vector strokes via mouse, trackpad, or touch</li>
+              <li>✅ <strong>Digitally sign documents</strong> — <strong>document digital signature</strong> support built-in</li>
+              <li>✅ <strong>Sign files online</strong> — PDF, PNG, JPG all supported, up to 10MB</li>
+              <li>✅ <strong>Signing documents online</strong> free — no account, no paywall, no watermark</li>
+              <li>✅ <strong>Edit and sign PDF</strong> — 100% client-side, <strong>digitally sign PDF free</strong></li>
+              <li>✅ <strong>Legally binding electronic signature</strong> — compliant with ESIGN & eIDAS</li>
+              <li>✅ <strong>Online document signature</strong> — drag, resize, and place on any page</li>
+              <li>✅ <strong>E sign free</strong> — open and <strong>sign document online free</strong> in under 60 seconds</li>
+              <li>✅ <strong>Sign PDF on iPhone</strong> — fully responsive, works on any mobile browser</li>
             </ul>
           </div>
 
@@ -219,27 +234,39 @@ export default function Home() {
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions (FAQ)</h2>
             <div className={styles.seoFaqGrid}>
               <article className={styles.faqItem}>
-                <h3>Is DocuSign legally binding and how does MyDigitSign compare?</h3>
+                <h3>How do I sign PDF online free with no account?</h3>
                 <p>
-                  Yes, DocuSign is legally binding. However, DocuSign requires document uploads to their cloud servers and paid plans for regular use. MyDigitSign offers a 100% free alternative to create a <strong>legally binding electronic signature</strong> locally in your browser, keeping your documents fully private.
+                  Just visit MyDigitSign — no signup required. You can <strong>online sign PDF</strong> by drawing, typing, or uploading your signature, then placing it on your document. The whole process takes under 60 seconds and your file never leaves your browser. It is the fastest way to get a <strong>pdf signature online</strong> for free.
                 </p>
               </article>
               <article className={styles.faqItem}>
-                <h3>Do e-signatures hold up in court?</h3>
+                <h3>How to sign PDF on iPhone or sign a PDF document on iPhone?</h3>
                 <p>
-                  Yes, electronic signatures are legally recognized and <strong>do e signatures hold up in court</strong> under major legislation such as the ESIGN Act and UETA in the United States, as well as the eIDAS regulations in the European Union.
+                  Open MyDigitSign in Safari or Chrome on your iPhone. Tap the tool, draw your signature with your finger, upload your PDF, then tap to place your <strong>online signature PDF</strong>. No app download needed. Whether you need to <strong>sign PDF on iPhone</strong> or <strong>signing PDF on iPhone</strong>, our mobile-friendly tool handles it completely inside your browser.
                 </p>
               </article>
               <article className={styles.faqItem}>
-                <h3>How can I create a digital signature online free?</h3>
+                <h3>Are electronically signed documents legally binding?</h3>
                 <p>
-                  You can <strong>create a digital signature online free</strong> with MyDigitSign by drawing with a touchscreen or mouse, typing your name with cursive fonts, or uploading a PNG image of your physical signature. You can then use it for secure <strong>online document signing</strong> instantly.
+                  Yes. A <strong>legally binding electronic signature</strong> is recognized under the ESIGN Act (US), UETA, and eIDAS (EU). When you <strong>digitally sign documents</strong> or <strong>sign files online</strong> with MyDigitSign, the resulting signature is legally enforceable for most business, financial, and personal agreements worldwide.
+                </p>
+              </article>
+              <article className={styles.faqItem}>
+                <h3>How can I create a digital signature or document digital signature free?</h3>
+                <p>
+                  You can <strong>create a digital signature online free</strong> with MyDigitSign by drawing with a touchscreen or mouse, typing your name with cursive fonts, or uploading a PNG image of your physical signature. Our tool supports both basic <strong>draw electronic signature</strong> and full cryptographic <strong>document digital signature</strong> (with a self-generated certificate).
                 </p>
               </article>
               <article className={styles.faqItem}>
                 <h3>Is there any file upload limit or format restriction?</h3>
                 <p>
-                  MyDigitSign supports standard PDF files as well as popular image files like PNG, JPG, and JPEG up to 10MB. Because the application runs entirely client-side, there is no network transfer or remote processing.
+                  MyDigitSign supports PDF, PNG, JPG, and JPEG files up to 10MB. You can <strong>sign documents online</strong> and <strong>sign files online</strong> entirely client-side — no network transfer or remote processing involved.
+                </p>
+              </article>
+              <article className={styles.faqItem}>
+                <h3>Is DocuSign legally binding and how does MyDigitSign compare?</h3>
+                <p>
+                  Yes, DocuSign is legally binding. However, it requires cloud uploads and paid plans. MyDigitSign is a 100% free alternative — <strong>document sign free</strong>, no server uploads, and fully private. Your <strong>signing document online</strong> experience stays entirely on your device.
                 </p>
               </article>
             </div>

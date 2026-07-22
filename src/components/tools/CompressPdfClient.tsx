@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PDFDocument } from 'pdf-lib';
-import { Upload, Zap, Download, CheckCircle, RefreshCw, FileText, Sliders } from 'lucide-react';
+import * as pdfjsLib from 'pdfjs-dist';
+import { Upload, Zap, Download, CheckCircle, RefreshCw, FileText, Sliders, AlertTriangle } from 'lucide-react';
 
 export default function CompressPdfClient() {
   const [file, setFile] = useState<File | null>(null);
@@ -24,20 +25,65 @@ export default function CompressPdfClient() {
     setCompressedResult(null);
   };
 
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+  }, []);
+
   const compressPdf = async () => {
     if (!file) return;
     setIsProcessing(true);
     try {
       const buffer = await file.arrayBuffer();
-      const pdfDoc = await PDFDocument.load(buffer, { ignoreEncryption: true });
+      
+      const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+      const newPdf = await PDFDocument.create();
+      
+      let scale = 1.0;
+      let quality = 0.7;
+      
+      if (compressionLevel === 'high') {
+        scale = 0.7;
+        quality = 0.5;
+      } else if (compressionLevel === 'low') {
+        scale = 1.5;
+        quality = 0.9;
+      }
+      
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const viewport = page.getViewport({ scale });
+        
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        if (!context) continue;
+        
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        
+        await page.render({ canvasContext: context, viewport }).promise;
+        
+        const imgDataUrl = canvas.toDataURL('image/jpeg', quality);
+        const imgBytes = Uint8Array.from(atob(imgDataUrl.split(',')[1]), c => c.charCodeAt(0));
+        
+        const jpgImage = await newPdf.embedJpg(imgBytes);
+        
+        // Restore original dimensions for the page
+        const originalViewport = page.getViewport({ scale: 1.0 });
+        const newPage = newPdf.addPage([originalViewport.width, originalViewport.height]);
+        
+        newPage.drawImage(jpgImage, {
+          x: 0,
+          y: 0,
+          width: originalViewport.width,
+          height: originalViewport.height,
+        });
+      }
 
-      // Save using PDF stream compression & structure optimization
-      const pdfBytes = await pdfDoc.save({ useObjectStreams: true });
+      const pdfBytes = await newPdf.save({ useObjectStreams: true });
       const blob = new Blob([pdfBytes as unknown as BlobPart], { type: 'application/pdf' });
       const compressedSize = blob.size;
       const originalSize = file.size;
 
-      // Calculate savings
       const savings = Math.max(0, Math.round(((originalSize - compressedSize) / originalSize) * 100));
       const url = URL.createObjectURL(blob);
 
@@ -126,6 +172,19 @@ export default function CompressPdfClient() {
                   </p>
                 </div>
               ))}
+            </div>
+            
+            {/* Warning Message */}
+            <div style={{ marginTop: '1.5rem', background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '12px', padding: '1rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+              <AlertTriangle size={20} color="#d97706" style={{ flexShrink: 0, marginTop: '2px' }} />
+              <div>
+                <h5 style={{ margin: '0 0 0.25rem 0', fontWeight: 700, fontSize: '0.9rem', color: '#92400e' }}>
+                  True Compression Flattening
+                </h5>
+                <p style={{ margin: 0, fontSize: '0.85rem', color: '#b45309', lineHeight: 1.5 }}>
+                  To achieve significant size reduction locally in your browser, your PDF pages will be converted into optimized images. This means text will no longer be selectable in the downloaded file, but the file size will be drastically reduced.
+                </p>
+              </div>
             </div>
           </div>
 

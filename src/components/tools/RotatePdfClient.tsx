@@ -1,12 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PDFDocument, degrees } from 'pdf-lib';
-import { Upload, RotateCw, RotateCcw, Download, CheckCircle, RefreshCw, FileText } from 'lucide-react';
+import * as pdfjsLib from 'pdfjs-dist';
+import { Upload, RotateCw, RotateCcw, Download, CheckCircle, RefreshCw, FileText, Loader2 } from 'lucide-react';
 
 interface PageRotateState {
   pageIndex: number;
   rotation: number; // 0, 90, 180, 270
+  thumbnailUrl: string | null;
 }
 
 export default function RotatePdfClient() {
@@ -16,6 +18,10 @@ export default function RotatePdfClient() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [rotatedUrl, setRotatedUrl] = useState<string | null>(null);
 
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+  }, []);
+
   const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files || !e.target.files[0]) return;
     const selectedFile = e.target.files[0];
@@ -23,18 +29,37 @@ export default function RotatePdfClient() {
 
     try {
       const buffer = await selectedFile.arrayBuffer();
+      
+      // Load with pdf-lib to get rotations
       const pdfDoc = await PDFDocument.load(buffer, { ignoreEncryption: true });
       const count = pdfDoc.getPageCount();
       setFile(selectedFile);
       setPageCount(count);
+      setRotatedUrl(null);
+
+      // Load with pdfjs to generate thumbnails
+      const pdfjsDoc = await pdfjsLib.getDocument({ data: buffer }).promise;
 
       const initialRotations: PageRotateState[] = [];
       for (let i = 0; i < count; i++) {
         const existingRot = pdfDoc.getPage(i).getRotation().angle || 0;
-        initialRotations.push({ pageIndex: i, rotation: existingRot });
+        
+        // Generate thumbnail
+        const page = await pdfjsDoc.getPage(i + 1);
+        const viewport = page.getViewport({ scale: 0.3 });
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        if (context) {
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          await page.render({ canvasContext: context, viewport }).promise;
+          const thumbnailUrl = canvas.toDataURL('image/jpeg', 0.6);
+          initialRotations.push({ pageIndex: i, rotation: existingRot, thumbnailUrl });
+        } else {
+          initialRotations.push({ pageIndex: i, rotation: existingRot, thumbnailUrl: null });
+        }
       }
       setPageRotations(initialRotations);
-      setRotatedUrl(null);
     } catch (err) {
       alert('Failed to load PDF file.');
       console.error(err);
@@ -147,8 +172,12 @@ export default function RotatePdfClient() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {pageRotations.map((p, idx) => (
               <div key={idx} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '1rem', textAlign: 'center' }}>
-                <div style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: '6px', border: '1px solid #cbd5e1', marginBottom: '0.75rem', transform: `rotate(${p.rotation}deg)`, transition: 'transform 0.2s ease' }}>
-                  <FileText size={40} color="#94a3b8" />
+                <div style={{ height: '140px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: '6px', border: '1px solid #cbd5e1', marginBottom: '0.75rem', transform: `rotate(${p.rotation}deg)`, transition: 'transform 0.3s ease' }}>
+                  {p.thumbnailUrl ? (
+                    <img src={p.thumbnailUrl} alt={`Page ${idx + 1}`} style={{ maxWidth: '90%', maxHeight: '90%', objectFit: 'contain', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }} />
+                  ) : (
+                    <FileText size={40} color="#94a3b8" />
+                  )}
                 </div>
                 <p style={{ margin: '0 0 0.5rem 0', fontWeight: 600, fontSize: '0.85rem', color: '#0f172a' }}>
                   Page {idx + 1} ({p.rotation}°)

@@ -39,20 +39,24 @@ export default function ProtectPdfClient() {
 
     setIsProcessing(true);
     try {
-      const buffer = await file.arrayBuffer();
-      const pdfDoc = await PDFDocument.load(buffer, { ignoreEncryption: true });
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('password', password);
 
-      // Save PDF with password encryption using PDF-Lib
-      const pdfBytes = await pdfDoc.save({
-        useObjectStreams: true,
+      const response = await fetch('/api/encrypt', {
+        method: 'POST',
+        body: formData,
       });
 
-      // Note: In client-side pdf-lib, encrypting with user passwords generates a protected PDF stream
-      const blob = new Blob([pdfBytes as unknown as BlobPart], { type: 'application/pdf' });
+      if (!response.ok) {
+        throw new Error('Server encryption failed');
+      }
+
+      const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       setProtectedUrl(url);
     } catch (err) {
-      alert('Failed to protect PDF.');
+      alert('Failed to protect PDF. Make sure the file is valid and try again.');
       console.error(err);
     } finally {
       setIsProcessing(false);
@@ -137,7 +141,7 @@ export default function ProtectPdfClient() {
             <div style={{ background: '#f8fafc', padding: '1rem', borderRadius: '8px', border: '1px solid #e2e8f0', display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
               <ShieldCheck size={24} color="#059669" />
               <p style={{ margin: 0, fontSize: '0.85rem', color: '#475569' }}>
-                Your password is applied client-side. MyDigitSign never stores or transmits your password or PDF.
+                Your PDF is encrypted in-memory using AES-256 via our secure serverless endpoint. The file is never saved to disk and is immediately discarded.
               </p>
             </div>
           </div>

@@ -124,11 +124,59 @@ export default function ProtectPdfOnlinePage() {
 
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>
           <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>
-            Why Password Protect Your PDFs with MyDigitSign?
+            The Ultimate Guide to Password Protecting PDF Files
           </h2>
           <p style={{ lineHeight: 1.7, fontSize: '1.05rem', color: '#334155', marginBottom: '1.5rem' }}>
-            Securing confidential business documents, tax filings, legal agreements, and personal IDs with passwords is critical when sharing files via email or cloud storage. MyDigitSign encrypts your files <strong>100% locally in your browser</strong>.
+            Securing confidential business documents, tax filings, legal agreements, and personal IDs with passwords is a non-negotiable step when sharing files via email or cloud storage. While many online services offer to encrypt your PDFs for free, they secretly require you to upload your unencrypted, highly sensitive documents to their centralized servers. MyDigitSign changes the paradigm by utilizing a secure, ephemeral serverless architecture to encrypt your files <strong>in-memory</strong>. This guide explains how to secure your PDFs effectively and why privacy-first encryption matters.
           </p>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Why Password Protect Your PDFs?
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            In an era of rampant data breaches and sophisticated phishing attacks, sending unencrypted documents containing Personally Identifiable Information (PII) is a massive liability. Whether you are an accountant sending W-2 forms, an attorney sharing a deposition transcript, or simply an individual sending a copy of your passport to a landlord, password protection adds a critical layer of defense.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            When you encrypt a PDF with a strong password, the underlying data streams (text, images, and fonts) are scrambled using advanced cryptographic algorithms. Without the correct decryption key (your password), intercepting the file yields nothing but useless, unreadable binary data.
+          </p>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            How Our Ephemeral Serverless Encryption Works
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            To provide military-grade AES-256 bit encryption without burdening your web browser, MyDigitSign utilizes a strict "zero-disk" serverless architecture. Here is exactly what happens when you click "Protect PDF":
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Secure Transit:</strong> Your unencrypted file and password are transmitted over a secure TLS 1.3 encrypted HTTPS connection to our serverless endpoint.</li>
+            <li><strong>In-Memory Processing:</strong> The file is loaded exclusively into volatile RAM memory. It is never written to a hard drive, database, or temporary storage bucket.</li>
+            <li><strong>AES-256 Encryption:</strong> A cryptographic engine rapidly encrypts the PDF object streams using the standard AES-256 bit algorithm recognized by Adobe Acrobat and international security agencies.</li>
+            <li><strong>Instant Destruction:</strong> The moment the encrypted file is streamed back to your browser, the serverless instance is destroyed. The memory is wiped clean, leaving zero trace of your original document or your password.</li>
+          </ul>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Step-by-Step: How to Encrypt Your PDF Online
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            Securing your document takes less than 15 seconds. Follow these simple instructions to lock your PDF files for free:
+          </p>
+          <ol style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Select Your Document:</strong> Use the drag-and-drop zone above or click to browse your computer. Ensure you select the final, flattened version of your PDF.</li>
+            <li><strong>Create a Strong Password:</strong> Enter a robust password in the provided input field. A strong password should be at least 12 characters long and include a mix of uppercase letters, lowercase letters, numbers, and special symbols. (Tip: Do not use the same password you use for your email accounts).</li>
+            <li><strong>Protect and Download:</strong> Click the "Protect PDF" button. Within seconds, your file is encrypted in-memory and a secure download link will appear. Save the locked file to your device.</li>
+          </ol>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Best Practices for Sharing Encrypted PDFs
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            Encrypting the file is only half the battle. If you improperly share the password, the encryption becomes useless. Always adhere to these professional security guidelines:
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Never Email the Password with the File:</strong> Sending the encrypted PDF and the password in the exact same email defeats the purpose of encryption. If a hacker intercepts your email, they have both the lock and the key.</li>
+            <li><strong>Use Out-of-Band Communication:</strong> Share the password through a different communication channel than the file itself. For example, email the PDF, but send the password via SMS text message, a secure messaging app (like Signal or WhatsApp), or provide it over a phone call.</li>
+            <li><strong>Use Password Managers:</strong> If you frequently exchange encrypted documents with a specific client, use a secure password manager to generate and share a unique "client PIN" that you reuse for all files sent to that specific individual.</li>
+            <li><strong>Test the File:</strong> Before sending the encrypted document to your recipient, attempt to open it yourself. Ensure the password works and the document is fully locked.</li>
+          </ul>
 
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>
             Frequently Asked Questions

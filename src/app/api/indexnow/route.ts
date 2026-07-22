@@ -27,9 +27,16 @@ function getAllUrls(): string[] {
     'ultimate-guide-signing-pdf-securely',
     'how-to-sign-a-document-online-free-pdf-editor',
     'how-to-sign-pdf-on-iphone-android-free',
+    'how-to-sign-nda-online-free',
   ];
 
   const tools = [
+    'sign-pdf-online',
+    'edit-pdf-online',
+    'merge-pdf-online',
+    'compress-pdf-online',
+    'protect-pdf-online',
+    'rotate-pdf-online',
     'draw-signature-online',
     'sign-image-online',
     'type-signature-online',
@@ -37,6 +44,7 @@ function getAllUrls(): string[] {
 
   return [
     baseUrl,
+    `${baseUrl}/tools`,
     `${baseUrl}/features`,
     `${baseUrl}/how-it-works`,
     `${baseUrl}/blog`,

@@ -62,6 +62,15 @@ const toolsList = [
     searchKeywords: ['merge pdf', 'combine pdf', 'join pdf files', 'pdf page reorder'],
   },
   {
+    slug: 'protect-pdf-online',
+    title: 'Protect PDF Online',
+    badge: 'Utility',
+    category: 'PDF Tools',
+    description: 'Encrypt your PDF documents with passwords. Uses military-grade AES-256 bit in-memory encryption to secure your files.',
+    icon: '🔒',
+    searchKeywords: ['protect pdf', 'encrypt pdf', 'password protect pdf', 'secure pdf file'],
+  },
+  {
     slug: 'compress-pdf-online',
     title: 'Compress PDF Online',
     badge: 'New',

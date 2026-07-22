@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
-import HomeClient from '../../HomeClient';
+import MergePdfClient from '@/components/tools/MergePdfClient';
 import { getSoftwareAppSchema, getHowToSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo-schemas';
 import styles from '../../static-page.module.css';
 
@@ -124,7 +124,8 @@ export default function MergePdfOnlinePage() {
           </p>
         </section>
 
-        <HomeClient />
+        {/* Client Application Engine Component */}
+        <MergePdfClient />
 
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>
           <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>

@@ -204,6 +204,24 @@ export default function Home() {
               </article>
             </div>
           </div>
+
+          {/* Internal links to PDF Micro-Tools */}
+          <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem', color: '#0f172a' }}>
+              Explore Our Free PDF & Signature Micro-Tools Suite
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.85rem', fontSize: '0.9rem' }}>
+              <li><a href="/tools" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 700 }}>All Tools Hub →</a></li>
+              <li><a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF Online Free →</a></li>
+              <li><a href="/tools/edit-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Free PDF Editor →</a></li>
+              <li><a href="/tools/merge-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Merge PDF Online →</a></li>
+              <li><a href="/tools/compress-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Compress PDF Online →</a></li>
+              <li><a href="/tools/protect-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Protect PDF Online →</a></li>
+              <li><a href="/tools/rotate-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Rotate PDF Online →</a></li>
+              <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
+              <li><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type Signature Online →</a></li>
+            </ul>
+          </div>
         </div>
       </section>
 

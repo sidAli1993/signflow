@@ -44,3 +44,8 @@ next-env.d.ts
 /uploads/
 dev.db
 dev.db-journal
+
+# analysis scratch files
+analyze_gsc.py
+gsc_parsed.json
+gsc_report.xlsx

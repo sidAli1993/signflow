@@ -5,6 +5,8 @@ import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
+import { getSoftwareAppSchema, getHowToSchema, getBreadcrumbSchema } from '@/lib/seo-schemas';
+
 export const metadata: Metadata = {
   title: 'Draw Signature Online Free — Create Digital Signatures | MyDigitSign',
   description:
@@ -48,67 +50,40 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'name': 'Home',
-      'item': 'https://mydigitsign.com',
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'name': 'Draw Signature Online',
-      'item': 'https://mydigitsign.com/tools/draw-signature-online',
-    },
-  ],
-};
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Draw Signature Online', url: '/tools/draw-signature-online' },
+]);
 
-// HowTo schema — enables Google rich results for "how to draw signature online"
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  'name': 'How to Draw a Signature Online Free',
-  'description': 'Draw your digital signature freehand using mouse or touchscreen, then place it on any PDF or image document instantly.',
-  'totalTime': 'PT2M',
-  'tool': [
-    { '@type': 'HowToTool', 'name': 'MyDigitSign Draw Signature Tool' },
-    { '@type': 'HowToTool', 'name': 'Web Browser (any modern browser)' },
-  ],
-  'step': [
+const softwareSchema = getSoftwareAppSchema({
+  name: 'MyDigitSign Draw Signature Tool',
+  description: 'Draw freehand electronic signatures using mouse or touch screen with instant transparent PNG download.',
+  url: 'https://mydigitsign.com/tools/draw-signature-online',
+});
+
+const howToSchema = getHowToSchema({
+  name: 'How to Draw a Digital Signature Online',
+  description: 'Draw your electronic signature freehand using a mouse, trackpad, or smartphone touch screen.',
+  totalTime: 'PT1M',
+  steps: [
     {
-      '@type': 'HowToStep',
-      'position': 1,
-      'name': 'Open the Draw Tool',
-      'text': 'Navigate to mydigitsign.com/tools/draw-signature-online in any browser. No account or installation required.',
-      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+      name: 'Draw Signature',
+      text: 'Use your mouse or finger to draw your signature on the interactive canvas.',
+      url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
     {
-      '@type': 'HowToStep',
-      'position': 2,
-      'name': 'Draw Your Signature',
-      'text': 'Use your mouse, finger, or stylus to sketch your signature on the digital canvas. Click the Eraser to clear and start over if needed.',
-      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+      name: 'Customize Ink Color',
+      text: 'Select black, blue, red, or custom ink color and stroke thickness.',
+      url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
     {
-      '@type': 'HowToStep',
-      'position': 3,
-      'name': 'Choose Pen Color',
-      'text': 'Select from Black, Blue, or Red pen colors to match your document requirements.',
-      'url': 'https://mydigitsign.com/tools/draw-signature-online',
-    },
-    {
-      '@type': 'HowToStep',
-      'position': 4,
-      'name': 'Download PNG or Place on Document',
-      'text': 'Click Adopt to place your signature on a PDF document, or download it as a transparent PNG for use in Word, Google Docs, or email.',
-      'url': 'https://mydigitsign.com/tools/draw-signature-online',
+      name: 'Download Signature Image',
+      text: 'Click Download PNG to save your transparent signature image.',
+      url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
   ],
-};
+});
 
 export default function DrawSignatureTool() {
   return (

@@ -5,6 +5,8 @@ import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star, CheckCircle, XCircle } from 'lucide-react';
 
+import { getSoftwareAppSchema, getHowToSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo-schemas';
+
 export const metadata: Metadata = {
   title: 'Sign PDF Online Free — No Uploads, No Watermarks | MyDigitSign',
   description:
@@ -16,6 +18,7 @@ export const metadata: Metadata = {
     'sign document for free',
     'pdf editor signature',
     'edit and sign pdf',
+    'how to sign pdf on iphone for free',
     'sign pdf online no account',
     'sign pdf without watermark',
     'free electronic signature pdf',
@@ -51,96 +54,45 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── JSON-LD Schemas ────────────────────────────────────────────────────────
+// ─── JSON-LD Schemas (Updated July 22, 2026) ──────────────────────────────────
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://mydigitsign.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Sign PDF Online',
-      item: 'https://mydigitsign.com/tools/sign-pdf-online',
-    },
-  ],
-};
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Tools', url: '/tools' },
+  { name: 'Sign PDF Online', url: '/tools/sign-pdf-online' },
+]);
 
-// HowTo schema — triggers Google rich results for "how to sign pdf online free"
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How to Sign a PDF Online Free (No Upload)',
-  description:
-    'Sign any PDF document online for free in under 2 minutes. No account, no server upload, no watermark. Runs 100% inside your browser.',
-  totalTime: 'PT2M',
-  tool: [
-    { '@type': 'HowToTool', name: 'MyDigitSign Sign PDF Tool' },
-    { '@type': 'HowToTool', name: 'Any modern web browser' },
-  ],
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Create Your Signature',
-      text: 'Draw your signature freehand, type your name in a cursive font, or upload an existing signature image. Click Adopt to confirm it.',
-      url: 'https://mydigitsign.com/tools/sign-pdf-online',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Upload Your PDF',
-      text: 'Drag and drop your PDF file into the uploader, or click to browse. Your file is loaded locally in your browser — nothing is sent to any server.',
-      url: 'https://mydigitsign.com/tools/sign-pdf-online',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Place Your Signature',
-      text: 'Drag the signature overlay to the signature line on your document. Use the resize handle to scale it to the perfect size.',
-      url: 'https://mydigitsign.com/tools/sign-pdf-online',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Download the Signed PDF',
-      text: 'Click Download to save your signed PDF directly to your device. No email, no registration, and no watermarks added.',
-      url: 'https://mydigitsign.com/tools/sign-pdf-online',
-    },
-  ],
-};
-
-// SoftwareApplication schema — per-page, as required by the SEO plan
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Sign PDF Online Free — MyDigitSign',
+const softwareSchema = getSoftwareAppSchema({
+  name: 'MyDigitSign Sign PDF Tool',
+  description: '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser.',
   url: 'https://mydigitsign.com/tools/sign-pdf-online',
-  applicationCategory: 'UtilitiesApplication',
-  operatingSystem: 'Any',
-  offers: {
-    '@type': 'Offer',
-    price: '0',
-    priceCurrency: 'USD',
-  },
-  featureList: [
-    'Sign PDF online for free',
-    'Edit and sign PDF in browser',
-    'No file upload to server',
-    'No watermarks on download',
-    'Draw, type, or upload signature',
-    'No account or registration required',
-    'Works on mobile, tablet, and desktop',
+  applicationCategory: 'BusinessApplication',
+});
+
+const howToSchema = getHowToSchema({
+  name: 'How to Sign a PDF Online Free (No Uploads)',
+  description: 'Sign any PDF document online for free in under 2 minutes on desktop, iPhone, or Android.',
+  totalTime: 'PT1M',
+  steps: [
+    {
+      name: 'Create Your Signature',
+      text: 'Draw your signature freehand, type your name in cursive, or upload an image signature.',
+      url: 'https://mydigitsign.com/tools/sign-pdf-online',
+    },
+    {
+      name: 'Upload Your PDF',
+      text: 'Select your PDF file. Processing happens locally in your web browser with zero server upload.',
+      url: 'https://mydigitsign.com/tools/sign-pdf-online',
+    },
+    {
+      name: 'Place Signature & Download',
+      text: 'Drag your signature onto the target PDF page, adjust size, and click Download Signed PDF.',
+      url: 'https://mydigitsign.com/tools/sign-pdf-online',
+    },
   ],
-  description:
-    'Free browser-based PDF e-signature tool. Sign any PDF document online without uploading files to a server. No account, no watermarks, no cost.',
-};
+});
+
+
 
 // FAQPage schema — triggers expandable Q&A rich results in Google SERP
 const faqSchema = {

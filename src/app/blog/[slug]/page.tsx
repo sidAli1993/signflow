@@ -1035,6 +1035,38 @@ export default async function BlogPost({ params }: Props) {
               )}
             </div>
           </header>
+
+          {/* Graphical Tool Banner CTA */}
+          <div style={{
+            background: 'linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%)',
+            border: '1px solid #bfdbfe',
+            borderRadius: '16px',
+            padding: '1.5rem',
+            margin: '1.5rem 0 2rem 0',
+            boxShadow: '0 4px 12px rgba(37, 99, 235, 0.08)',
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+              <span style={{ fontSize: '1.5rem' }}>⚡</span>
+              <h3 style={{ margin: 0, fontSize: '1.2rem', fontWeight: 700, color: '#1e3a8a' }}>
+                Need to Sign or Edit a PDF Right Now?
+              </h3>
+            </div>
+            <p style={{ margin: '0 0 1rem 0', color: '#334155', fontSize: '0.95rem', lineHeight: 1.5 }}>
+              Use our 100% free browser tools. Your documents stay on your device with zero server uploads and no account required.
+            </p>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <a href="/tools/sign-pdf-online" style={{ background: '#2563eb', color: '#fff', padding: '0.55rem 1.1rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.875rem' }}>
+                ✍️ Sign PDF Online Free →
+              </a>
+              <a href="/tools/edit-pdf-online" style={{ background: '#10b981', color: '#fff', padding: '0.55rem 1.1rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.875rem' }}>
+                📝 Free PDF Editor →
+              </a>
+              <a href="/tools" style={{ background: '#ffffff', color: '#475569', border: '1px solid #cbd5e1', padding: '0.55rem 1.1rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.875rem' }}>
+                Explore All Tools
+              </a>
+            </div>
+          </div>
+
           <div
             className={styles.articleContent}
             dangerouslySetInnerHTML={{ __html: post.content }}

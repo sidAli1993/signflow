@@ -45,6 +45,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
 
+    // Compare Hub & Pages
+    {
+      url: `${baseUrl}/compare/docusign-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
     // Core informational pages
     {
       url: `${baseUrl}/features`,

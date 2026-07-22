@@ -45,6 +45,7 @@ function getAllUrls(): string[] {
   return [
     baseUrl,
     `${baseUrl}/tools`,
+    `${baseUrl}/compare/docusign-alternative`,
     `${baseUrl}/features`,
     `${baseUrl}/how-it-works`,
     `${baseUrl}/blog`,

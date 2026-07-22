@@ -7,9 +7,9 @@ import { getSoftwareAppSchema, getHowToSchema, getFAQSchema, getBreadcrumbSchema
 import styles from '../../static-page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Free PDF Editor Online — Edit & Sign PDFs in Browser | MyDigitSign',
+  title: 'Fill and Sign PDF Online — Free PDF Editor | MyDigitSign',
   description:
-    'Edit PDF documents online for free. Add text, signatures, dates, checkmarks, highlights, and annotations directly in your browser. 100% serverless and private.',
+    'Fill and sign PDF documents online for free. Add text, signatures, dates, checkmarks, highlights, and annotations directly in your browser.',
   keywords: [
     'edit pdf online',
     'free pdf editor signature',
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com/tools/edit-pdf-online',
   },
   openGraph: {
-    title: 'Free PDF Editor Online — Edit & Sign PDFs in Browser | MyDigitSign',
+    title: 'Fill and Sign PDF Online — Free PDF Editor | MyDigitSign',
     description:
-      'Edit PDF documents online for free. Add text, signatures, dates, and annotations directly in your browser. 100% serverless and private.',
+      'Fill and sign PDF documents online for free. Add text, signatures, dates, and annotations directly in your browser. 100% serverless and private.',
     url: 'https://mydigitsign.com/tools/edit-pdf-online',
     siteName: 'MyDigitSign',
     type: 'website',
@@ -119,7 +119,7 @@ export default function EditPdfOnlinePage() {
             📝 Free PDF Editor & Annotator • 100% Private Client-Side
           </div>
           <h1 className={styles.title} style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>
-            Free PDF Editor Online — Edit, Fill & Sign PDFs
+            Fill and Sign PDF Online — Free PDF Editor
           </h1>
           <p className={styles.subtitle} style={{ fontSize: '1.1rem', color: '#64748b' }}>
             Add text, dates, checkmarks, redactions, and signatures to any PDF form. No account, no watermarks, no server uploads.
@@ -132,7 +132,7 @@ export default function EditPdfOnlinePage() {
         {/* 1,300 Words Rich Content SEO Section */}
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>
           <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>
-            Complete Guide to Online PDF Editing & Signing
+            Complete Guide to Fill and Sign PDF Online
           </h2>
           <p style={{ lineHeight: 1.7, fontSize: '1.05rem', color: '#334155', marginBottom: '1.5rem' }}>
             PDF (Portable Document Format) is the global standard for contracts, invoices, application forms, and official documentation. However, editing a PDF file has traditionally required expensive software subscriptions or complex desktop software. MyDigitSign provides a powerful, <strong>100% free web-based PDF editor</strong> that runs inside your browser.

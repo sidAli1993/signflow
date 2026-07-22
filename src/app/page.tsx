@@ -6,9 +6,9 @@ import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Sign PDF Online Free — 100% Private, No Uploads | MyDigitSign',
+  title: 'Digital Signature Online Free — 100% Private, No Uploads | MyDigitSign',
   description:
-    'Sign PDFs and documents online for free. 100% browser-based & private — your files never leave your device. Draw, type, or upload your electronic signature in seconds.',
+    'Create your digital signature online for free. 100% browser-based & private — your files never leave your device. Draw, type, or upload your electronic signature in seconds.',
   keywords: [
     'sign pdf online free',
     'free pdf signer',
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com',
   },
   openGraph: {
-    title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
+    title: 'Digital Signature Online Free (100% Private) — MyDigitSign',
     description:
-      'Sign PDFs & documents online for free. 100% browser-based & private — your files never leave your device. Secure digital signature with no server uploads.',
+      'Create a digital signature online for free. 100% browser-based & private — your files never leave your device. Secure digital signature with no server uploads.',
     url: 'https://mydigitsign.com',
     siteName: 'MyDigitSign',
     images: [
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sign PDF Online Free (100% Private E-Signature) — MyDigitSign',
+    title: 'Digital Signature Online Free (100% Private) — MyDigitSign',
     description:
-      'Sign PDFs & documents online for free. 100% browser-based & private — your files never leave your device. Secure digital signature with no server uploads.',
+      'Create a digital signature online for free. 100% browser-based & private — your files never leave your device. Secure digital signature with no server uploads.',
     creator: '@mydigitsign',
     images: ['/og-image.png'],
   },
@@ -85,7 +85,7 @@ export default function Home() {
             <span>Free · No Account · No Upload</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign PDFs &amp; Documents Online —{' '}
+            Digital Signature Online —{' '}
             <span className={styles.seoHeroGradient}>100% Free &amp; Private</span>
           </h1>
           <p className={styles.seoHeroDesc}>

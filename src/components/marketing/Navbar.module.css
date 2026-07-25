@@ -3,14 +3,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 72px;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
-  display: flex;
-  align-items: center;
 }
 
 .container {
@@ -18,6 +15,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-lg);
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,8 +82,145 @@
   color: var(--color-primary-light);
 }
 
+/* ── Search Button ── */
+.searchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+
+.searchBtn:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-primary);
+}
+
+/* ── Slide-Down Search Bar ── */
+.searchBar {
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  border-top: 0px solid var(--color-border);
+  transition: max-height 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.22s ease,
+              border-top 0.28s ease;
+}
+
+.searchBarOpen {
+  max-height: 80px;
+  opacity: 1;
+  border-top: 1px solid var(--color-border);
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.75rem var(--space-lg);
+}
+
+.searchIcon {
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: var(--color-text);
+  font-family: inherit;
+  caret-color: var(--color-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+/* Remove browser default search-cancel button */
+.searchInput::-webkit-search-cancel-button {
+  display: none;
+}
+
+.searchClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.searchClear:hover {
+  background: var(--color-surface-hover, #e2e8f0);
+}
+
+.searchSubmit {
+  padding: 0.35rem 0.9rem;
+  border-radius: 99px;
+  border: none;
+  background: var(--gradient-primary);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.searchSubmit:hover {
+  opacity: 0.88;
+}
+
+/* ── Backdrop ── */
+.searchBackdrop {
+  position: fixed;
+  inset: 0;
+  top: 72px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  z-index: 99;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (max-width: 768px) {
   .nav {
     display: none;
   }
+
+  .searchForm {
+    padding: 0.75rem 1rem;
+  }
+
+  .searchSubmit {
+    display: none;
+  }
 }
+
+

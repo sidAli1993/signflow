@@ -89,9 +89,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      // SoftwareApplication: enables rich results (price, category) in Google
+      // SoftwareApplication + WebApplication: dual typing for maximum AI/search coverage
       // NOTE: aggregateRating removed — only add back when real verified reviews exist
-      "@type": "SoftwareApplication",
+      "@type": ["SoftwareApplication", "WebApplication"],
       "@id": "https://mydigitsign.com/#app",
       "name": "MyDigitSign",
       "url": "https://mydigitsign.com",
@@ -127,12 +127,20 @@ const jsonLd = {
       }
     },
     {
-      // WebSite: clean definition without blog SearchAction
+      // WebSite with SearchAction — enables Google SERP site-search box
       "@type": "WebSite",
       "@id": "https://mydigitsign.com/#website",
       "name": "MyDigitSign",
       "url": "https://mydigitsign.com",
-      "description": "Free online PDF signer and digital signature tool. No uploads, no account required."
+      "description": "Free online PDF signer and digital signature tool. No uploads, no account required.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://mydigitsign.com/blog?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       // FAQPage: generates expandable Q&A rich results in Google SERP
@@ -236,7 +244,7 @@ const jsonLd = {
       "url": "https://mydigitsign.com",
       "email": "alimirza00@gmail.com",
       "description": "MyDigitSign builds free, privacy-first document signing tools. Our flagship product lets users sign PDFs and images entirely in the browser with zero server uploads.",
-      "foundingDate": "2024",
+      "foundingDate": "2026",
       "logo": {
         "@type": "ImageObject",
         "url": "https://mydigitsign.com/icon.svg"
@@ -285,16 +293,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Ezoic Consent Script */}
-        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" />
-        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" />
+        {/* Ezoic Consent Script — defer to avoid render-blocking */}
+        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" async />
+        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" async />
         {/* Ezoic Main Script */}
         <script async src="//www.ezojs.com/ezoic/sa.min.js" />
         <script dangerouslySetInnerHTML={{ __html: `
           window.ezstandalone = window.ezstandalone || {};
           ezstandalone.cmd = ezstandalone.cmd || [];
         `}} />
-        <script src="//ezoicanalytics.com/analytics.js" />
+        <script src="//ezoicanalytics.com/analytics.js" async />
         {/* Ahrefs Analytics */}
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" async />
       </head>

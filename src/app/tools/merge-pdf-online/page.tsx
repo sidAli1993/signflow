@@ -28,7 +28,24 @@ export const metadata: Metadata = {
       'Merge multiple PDF files into one clean document online for free. Visual page drag-and-drop reordering.',
     url: 'https://mydigitsign.com/tools/merge-pdf-online',
     siteName: 'MyDigitSign',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MyDigitSign — Merge PDF Online Free',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Merge PDF Online Free — Combine PDF Files Client-Side | MyDigitSign',
+    description:
+      'Merge multiple PDF files into one clean document online for free. Visual page drag-and-drop reordering.',
+    creator: '@mydigitsign',
+    images: ['/og-image.png'],
   },
 };
 
@@ -81,6 +98,14 @@ const faqItems = [
     question: 'Does merging PDFs reduce visual quality or fonts?',
     answer: 'No. Our merger retains vector text fonts, high-res images, and embedded layouts with 100% fidelity.',
   },
+  {
+    question: 'Can I reorder pages before merging?',
+    answer: 'Yes. MyDigitSign shows a visual thumbnail grid of all pages across your uploaded PDFs. Simply drag and drop the thumbnails to set the exact page order before downloading the merged file.',
+  },
+  {
+    question: 'Will the merged PDF work on all devices?',
+    answer: 'Yes. The resulting file is a standard PDF that opens correctly on Windows, Mac, iPhone, Android, and all modern PDF readers including Adobe Acrobat, Chrome, and Safari.',
+  },
 ];
 
 const faqSchema = getFAQSchema(faqItems);
@@ -122,6 +147,7 @@ export default function MergePdfOnlinePage() {
           <p className={styles.subtitle} style={{ fontSize: '1.1rem', color: '#64748b' }}>
             Combine multiple PDF files into one organized document. Drag and drop to reorder pages. No server uploads.
           </p>
+          <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>Updated: July 25, 2026</p>
         </section>
 
         {/* Client Application Engine Component */}

@@ -27,7 +27,24 @@ export const metadata: Metadata = {
       'Rotate PDF pages online for free. Turn individual pages 90, 180, or 270 degrees. 100% private client-side processing.',
     url: 'https://mydigitsign.com/tools/rotate-pdf-online',
     siteName: 'MyDigitSign',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MyDigitSign — Rotate PDF Online Free',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rotate PDF Online Free — Rotate PDF Pages 90 or 180 Degrees | MyDigitSign',
+    description:
+      'Rotate PDF pages online for free. Turn individual pages 90, 180, or 270 degrees. 100% private client-side processing.',
+    creator: '@mydigitsign',
+    images: ['/og-image.png'],
   },
 };
 
@@ -76,6 +93,18 @@ const faqItems = [
     question: 'Are my rotated pages permanently saved?',
     answer: 'Yes. The downloaded PDF file saves the page orientation matrix permanently.',
   },
+  {
+    question: 'Will rotating a PDF reduce its quality?',
+    answer: 'No. MyDigitSign rewrites the PDF rotation matrix without re-encoding the image content. The visual quality of your document remains identical after rotation.',
+  },
+  {
+    question: 'Can I rotate a scanned PDF from my phone?',
+    answer: 'Yes. MyDigitSign works on all mobile browsers including Safari on iPhone and Chrome on Android. Upload your scanned PDF, rotate the sideways pages, and download the corrected document directly to your phone.',
+  },
+  {
+    question: 'Does rotating a PDF change the file size?',
+    answer: 'No. Rotating only modifies the orientation metadata inside the PDF. The file size stays virtually the same because no image data is re-encoded.',
+  },
 ];
 
 const faqSchema = getFAQSchema(faqItems);
@@ -117,6 +146,7 @@ export default function RotatePdfOnlinePage() {
           <p className={styles.subtitle} style={{ fontSize: '1.1rem', color: '#64748b' }}>
             Fix sideways or upside down scanned pages. Rotate single pages or whole documents 90° or 180°.
           </p>
+          <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>Updated: July 25, 2026</p>
         </section>
 
         {/* Client Application Engine Component */}

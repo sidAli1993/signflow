@@ -10,10 +10,12 @@ import { getSoftwareAppSchema, getHowToSchema, getBreadcrumbSchema } from '@/lib
 export const metadata: Metadata = {
   title: 'Draw Signature Online Free — Create Digital Signatures | MyDigitSign',
   description:
-    'Draw your signature online free using your mouse, trackpad, or touch screen. Adopt, customize pen color, and download your free signature PNG instantly.',
+    'Draw your digital signature online free using your mouse, trackpad, or touchscreen. No account, no upload — sign with mouse and download transparent PNG instantly.',
   keywords: [
     'draw signature online',
     'draw signature free',
+    'digital sign with mouse',
+    'sign with mouse',
     'create digital signature',
     'electronic signature drawing',
     'draw my signature',
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Draw Signature Online Free — Create Digital Signatures | MyDigitSign',
     description:
-      'Draw your signature online free using your mouse, trackpad, or touch screen. Adopt, customize pen color, and download your free signature PNG instantly.',
+      'Draw your digital signature online free using your mouse, trackpad, or touchscreen. Sign with mouse and download as transparent PNG instantly.',
     url: 'https://mydigitsign.com/tools/draw-signature-online',
     siteName: 'MyDigitSign',
     images: [
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Draw Signature Online Free — Create Digital Signatures | MyDigitSign',
     description:
-      'Draw your signature online free using your mouse, trackpad, or touch screen. Adopt, customize pen color, and download your free signature PNG instantly.',
+      'Draw your digital signature online free using your mouse, trackpad, or touchscreen. No account, no upload.',
     creator: '@mydigitsign',
     images: ['/og-image.png'],
   },
@@ -62,24 +64,76 @@ const softwareSchema = getSoftwareAppSchema({
   url: 'https://mydigitsign.com/tools/draw-signature-online',
 });
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do I draw a digital signature online with my mouse?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Click the Draw tab on MyDigitSign, then click and drag your mouse on the signature canvas to draw your signature freehand. You can adjust the pen color (black, blue, or red) and click Clear to start over. Once satisfied, click Adopt Signature to use it for signing PDFs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I sign with mouse and download the result as a PNG?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. After drawing your signature, click the Download PNG button to save a transparent background PNG of your signature. You can use this file in Word documents, Google Docs, Outlook emails, or anywhere that accepts image uploads.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does the draw signature tool work on touchscreen phones?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. The drawing canvas is fully optimized for touch input. Open MyDigitSign in Safari (iPhone) or Chrome (Android), switch to the Draw tab, and use your finger or stylus to create a natural, handwritten-style digital signature.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the drawn signature legally valid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. A drawn electronic signature is legally binding under the ESIGN Act (USA), eIDAS (EU), and equivalent laws in over 180 countries for most business agreements including contracts, NDAs, and lease agreements.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between drawing and typing a signature?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A drawn signature is freehand and unique to you, similar to pen on paper. A typed signature uses cursive fonts to render your name. Both are legally equivalent for electronic signing purposes. Drawing feels more personal; typing is faster for repeated use.',
+      },
+    },
+  ],
+};
+
 const howToSchema = getHowToSchema({
-  name: 'How to Draw a Digital Signature Online',
+  name: 'How to Draw a Digital Signature Online Free',
   description: 'Draw your electronic signature freehand using a mouse, trackpad, or smartphone touch screen.',
   totalTime: 'PT1M',
   steps: [
     {
-      name: 'Draw Signature',
-      text: 'Use your mouse or finger to draw your signature on the interactive canvas.',
+      name: 'Open the Draw Tab',
+      text: 'Navigate to the Draw Signature tool and click the Draw tab on the signature creator.',
+      url: 'https://mydigitsign.com/tools/draw-signature-online',
+    },
+    {
+      name: 'Draw Your Signature',
+      text: 'Use your mouse, finger, or stylus to draw your signature on the digital canvas. Click Clear to start over if needed.',
       url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
     {
       name: 'Customize Ink Color',
-      text: 'Select black, blue, red, or custom ink color and stroke thickness.',
+      text: 'Select black, blue, or red ink color to match your document\'s requirements.',
       url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
     {
-      name: 'Download Signature Image',
-      text: 'Click Download PNG to save your transparent signature image.',
+      name: 'Adopt or Download',
+      text: 'Click Adopt Signature to sign a PDF, or click Download PNG to save a transparent signature image for use in other documents.',
       url: 'https://mydigitsign.com/tools/draw-signature-online',
     },
   ],
@@ -100,9 +154,8 @@ export default function DrawSignatureTool() {
             Draw Signature Online <span className={styles.seoHeroGradient}>Free &amp; Secure</span>
           </h1>
           <p className={styles.seoHeroDesc}>
-            Need to <strong>draw signature online</strong> free for an official agreement? Our secure, browser-based drawing board allows you to create handwritten digital signatures with smooth vector strokes using your mouse, touchscreen, or trackpad. Choose custom colors, customize layout, and download a transparent signature PNG or proceed directly to sign files privately.
+            Need to <strong>draw a digital signature online</strong> free? Use your mouse, touchscreen, or trackpad to sketch a handwritten signature on our secure canvas. Every stroke stays 100% inside your browser — <strong>sign with mouse</strong> and download a transparent PNG in seconds, or adopt the signature to sign a PDF directly.
           </p>
-
           <ul className={styles.seoTrustPills} role="list" aria-label="Key features">
             <li><Shield size={14} aria-hidden="true" /><span>100% In-Browser Drawing</span></li>
             <li><Lock size={14} aria-hidden="true" /><span>Privacy Protected</span></li>
@@ -110,6 +163,7 @@ export default function DrawSignatureTool() {
             <li><Zap size={14} aria-hidden="true" /><span>Free to Draw</span></li>
             <li><Users size={14} aria-hidden="true" /><span>No Signup Needed</span></li>
           </ul>
+          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginTop: '0.75rem', opacity: 0.7 }}>Updated: July 25, 2026</p>
         </div>
       </section>
 
@@ -159,7 +213,53 @@ export default function DrawSignatureTool() {
             </article>
           </div>
 
-          {/* Internal links — Phase 2 internal linking strategy */}
+          {/* Why draw your signature section */}
+          <div className={styles.seoCompare} style={{ marginTop: '2.5rem' }}>
+            <h2 className={styles.seoCompareTitle}>Why Draw Your Digital Signature Online?</h2>
+            <p className={styles.seoCompareDesc}>
+              A hand-drawn signature is the most personal form of electronic signing. When you <strong>sign with mouse</strong> or finger on MyDigitSign, the result looks and feels like your real handwriting — which matters for contracts, legal documents, and anything requiring a personal touch. Unlike typed cursive fonts, a drawn signature is unique to you and harder to replicate.
+            </p>
+            <ul className={styles.seoCompareList}>
+              <li>✅ <strong>Unique to you</strong> — your handwriting style is your identity</li>
+              <li>✅ <strong>Looks professional</strong> — mirrors a real pen-on-paper signature</li>
+              <li>✅ <strong>Legally binding</strong> — valid under ESIGN Act, eIDAS, and 180+ countries</li>
+              <li>✅ <strong>Download as PNG</strong> — use in Word, Google Docs, Outlook, or anywhere</li>
+              <li>✅ <strong>Works with mouse or touch</strong> — desktop and mobile browsers both supported</li>
+            </ul>
+          </div>
+
+          {/* FAQ Section */}
+          <div className={styles.seoFaq}>
+            <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
+            <div className={styles.seoFaqGrid}>
+              <div className={styles.faqItem}>
+                <h3>How do I draw a digital signature with my mouse?</h3>
+                <p>Select the Draw tab, then click and drag on the canvas to draw your signature freehand. You can clear and redo as many times as needed. Once happy, click Adopt Signature.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Can I draw my signature on a phone or tablet?</h3>
+                <p>Yes. The canvas supports touch input on all smartphones and tablets. Open the page in Safari (iPhone) or Chrome (Android) and draw with your finger — the result is smooth and natural.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Will my drawn signature be saved anywhere?</h3>
+                <p>No. Your signature exists only inside your browser’s memory for the current session. When you close the tab, it is gone. Nothing is stored on our servers.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Can I download the drawn signature as a PNG?</h3>
+                <p>Yes. Click the Download PNG button to save your signature as a transparent-background PNG image. You can then paste it into any document, email, or design tool.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Is a mouse-drawn signature legally valid?</h3>
+                <p>Yes. A drawn electronic signature has the same legal weight as a typed or uploaded one under the ESIGN Act (US) and eIDAS (EU) for most business, personal, and legal agreements.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>What is the difference between drawing and typing my signature?</h3>
+                <p>Drawing creates a freehand signature unique to your hand, similar to pen on paper. Typing uses cursive fonts to render your name. Both are legally equivalent — drawing feels more personal, typing is faster for repeated use.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Internal links */}
           <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
             <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '0.5rem' }}>Related tools &amp; guides:</p>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
@@ -173,6 +273,12 @@ export default function DrawSignatureTool() {
           </div>
         </div>
       </section>
+
+      {/* JSON-LD Schemas */}
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Footer />
     </div>

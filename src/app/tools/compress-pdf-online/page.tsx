@@ -28,7 +28,24 @@ export const metadata: Metadata = {
       'Compress PDF files online for free. Shrink PDF file size for email attachments without losing document sharpness.',
     url: 'https://mydigitsign.com/tools/compress-pdf-online',
     siteName: 'MyDigitSign',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MyDigitSign — Compress PDF Online Free',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Compress PDF Online Free — Reduce PDF File Size | MyDigitSign',
+    description:
+      'Compress PDF files online for free. Shrink PDF file size for email attachments without losing document sharpness.',
+    creator: '@mydigitsign',
+    images: ['/og-image.png'],
   },
 };
 
@@ -77,6 +94,18 @@ const faqItems = [
     question: 'How much file size reduction can I expect?',
     answer: 'Depending on the original PDF structure and image content, file sizes are typically reduced by 30% to 75%.',
   },
+  {
+    question: 'Is it safe to compress confidential PDFs online?',
+    answer: 'Yes — because MyDigitSign compresses 100% inside your browser, your file never leaves your device. No server ever receives your document, making it safe for sensitive contracts, tax returns, and medical records.',
+  },
+  {
+    question: 'Can I compress a PDF that is password-protected?',
+    answer: 'You will need to remove the password protection first. Use our free PDF Protector tool to manage passwords, then compress the unlocked document.',
+  },
+  {
+    question: 'What is the maximum PDF size this tool can handle?',
+    answer: 'MyDigitSign can process PDF files up to 50MB for compression. Because processing runs locally in your browser, there are no server-side size restrictions.',
+  },
 ];
 
 const faqSchema = getFAQSchema(faqItems);
@@ -118,6 +147,7 @@ export default function CompressPdfOnlinePage() {
           <p className={styles.subtitle} style={{ fontSize: '1.1rem', color: '#64748b' }}>
             Shrink heavy PDF documents for email attachments and portal uploads. 100% browser-based with zero file uploads.
           </p>
+          <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>Updated: July 25, 2026</p>
         </section>
 
         {/* Client Application Engine Component */}

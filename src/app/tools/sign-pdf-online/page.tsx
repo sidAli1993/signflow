@@ -174,6 +174,7 @@ export default function SignPdfOnlineTool() {
             <li><Zap size={14} aria-hidden="true" /><span>Instant Download</span></li>
             <li><Users size={14} aria-hidden="true" /><span>No Account Required</span></li>
           </ul>
+          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginTop: '0.75rem', opacity: 0.7 }}>Updated: July 25, 2026</p>
         </div>
       </section>
 

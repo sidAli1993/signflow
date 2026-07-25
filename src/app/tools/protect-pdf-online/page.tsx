@@ -27,7 +27,24 @@ export const metadata: Metadata = {
       'Protect PDF files with password encryption online for free. 100% private client-side processing.',
     url: 'https://mydigitsign.com/tools/protect-pdf-online',
     siteName: 'MyDigitSign',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MyDigitSign — Protect PDF Online Free',
+      },
+    ],
+    locale: 'en_US',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Protect PDF Online Free — Encrypt & Password Protect PDFs | MyDigitSign',
+    description:
+      'Protect PDF files with password encryption online for free. 100% private client-side processing.',
+    creator: '@mydigitsign',
+    images: ['/og-image.png'],
   },
 };
 
@@ -76,6 +93,18 @@ const faqItems = [
     question: 'What encryption algorithm is used?',
     answer: 'Standard AES-128 and AES-256 bit encryption compliant with Adobe PDF security standards.',
   },
+  {
+    question: 'Can I password-protect a PDF on my phone?',
+    answer: 'Yes. MyDigitSign works on all modern mobile browsers. Open the page in Safari (iPhone) or Chrome (Android), upload your PDF, set your password, and download the encrypted file directly to your phone.',
+  },
+  {
+    question: 'Can someone bypass the PDF password?',
+    answer: 'AES-256 encryption is industry-standard and computationally infeasible to crack with a strong password. Use a mix of letters, numbers, and symbols to maximize security.',
+  },
+  {
+    question: 'Can I remove the password from a protected PDF later?',
+    answer: 'Yes. Open the protected PDF in any PDF reader (such as Adobe Acrobat or Chrome), provide the correct password, and save a copy without protection. Then re-upload to MyDigitSign if you want to apply a new password.',
+  },
 ];
 
 const faqSchema = getFAQSchema(faqItems);
@@ -117,6 +146,7 @@ export default function ProtectPdfOnlinePage() {
           <p className={styles.subtitle} style={{ fontSize: '1.1rem', color: '#64748b' }}>
             Encrypt sensitive PDF documents with secure passwords. 100% browser-based with zero file uploads.
           </p>
+          <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>Updated: July 25, 2026</p>
         </section>
 
         {/* Client Application Engine Component */}

@@ -90,6 +90,17 @@ export const Footer: React.FC = () => {
           </div>
         </div>
         
+        <div className={styles.reviewBanner}>
+          <p className={styles.reviewText}>
+            <strong>Enjoyed MyDigitSign?</strong> Leave us a quick review — it takes 30 seconds and helps keep the tool free!
+          </p>
+          <div className={styles.reviewLinks}>
+            <a href="https://g2.com/products/mydigitsign" target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>⭐ Review on G2</a>
+            <a href="https://capterra.com/p/mydigitsign" target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>⭐ Review on Capterra</a>
+            <a href="https://business.google.com" target="_blank" rel="noopener noreferrer" className={styles.reviewLink}>⭐ Review on Google</a>
+          </div>
+        </div>
+        
         <div className={styles.bottom}>
           <p className={styles.copyright}>&copy; {new Date().getFullYear()} MyDigitSign. All rights reserved.</p>
         </div>

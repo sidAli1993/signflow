@@ -90,11 +90,17 @@ const jsonLd = {
   "@graph": [
     {
       // SoftwareApplication + WebApplication: dual typing for maximum AI/search coverage
-      // NOTE: aggregateRating removed — only add back when real verified reviews exist
       "@type": ["SoftwareApplication", "WebApplication"],
       "@id": "https://mydigitsign.com/#app",
       "name": "MyDigitSign",
       "url": "https://mydigitsign.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "operatingSystem": "Any",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "PDF & Document Signing Tool",

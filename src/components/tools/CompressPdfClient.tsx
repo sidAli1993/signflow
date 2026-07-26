@@ -4,12 +4,14 @@ import React, { useState, useEffect } from 'react';
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
 import { Upload, Zap, Download, CheckCircle, RefreshCw, FileText, Sliders, AlertTriangle } from 'lucide-react';
+import { ReviewModal } from '@/components/ui/ReviewModal';
 
 export default function CompressPdfClient() {
   const [file, setFile] = useState<File | null>(null);
   const [compressionLevel, setCompressionLevel] = useState<'recommended' | 'high' | 'low'>('recommended');
   const [isProcessing, setIsProcessing] = useState(false);
   const [compressedResult, setCompressedResult] = useState<{ url: string; size: string; savingsPercent: number } | null>(null);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';
@@ -235,6 +237,7 @@ export default function CompressPdfClient() {
                 <a
                   href={compressedResult.url}
                   download={`compressed-${file.name}`}
+                  onClick={() => setShowReviewModal(true)}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -252,6 +255,11 @@ export default function CompressPdfClient() {
               </div>
             )}
           </div>
+          
+          <ReviewModal 
+            isOpen={showReviewModal} 
+            onClose={() => setShowReviewModal(false)} 
+          />
         </div>
       )}
     </div>

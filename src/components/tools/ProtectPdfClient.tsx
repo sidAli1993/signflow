@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { PDFDocument } from 'pdf-lib';
 import { Upload, Lock, Download, CheckCircle, RefreshCw, FileText, Eye, EyeOff, ShieldCheck } from 'lucide-react';
+import { ReviewModal } from '@/components/ui/ReviewModal';
 
 export default function ProtectPdfClient() {
   const [file, setFile] = useState<File | null>(null);
@@ -11,6 +12,7 @@ export default function ProtectPdfClient() {
   const [showPassword, setShowPassword] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [protectedUrl, setProtectedUrl] = useState<string | null>(null);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';
@@ -190,6 +192,7 @@ export default function ProtectPdfClient() {
                 <a
                   href={protectedUrl}
                   download={`protected-${file.name}`}
+                  onClick={() => setShowReviewModal(true)}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -208,6 +211,11 @@ export default function ProtectPdfClient() {
               </div>
             )}
           </div>
+          
+          <ReviewModal 
+            isOpen={showReviewModal} 
+            onClose={() => setShowReviewModal(false)} 
+          />
         </div>
       )}
     </div>

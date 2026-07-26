@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { PDFDocument } from 'pdf-lib';
 import { Upload, FileText, ArrowUp, ArrowDown, Trash2, Download, Plus, CheckCircle, RefreshCw } from 'lucide-react';
+import { ReviewModal } from '@/components/ui/ReviewModal';
 
 interface PdfFileItem {
   id: string;
@@ -16,6 +17,7 @@ export default function MergePdfClient() {
   const [files, setFiles] = useState<PdfFileItem[]>([]);
   const [isMerging, setIsMerging] = useState(false);
   const [mergedUrl, setMergedUrl] = useState<string | null>(null);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';
@@ -246,6 +248,7 @@ export default function MergePdfClient() {
                 <a
                   href={mergedUrl}
                   download="merged-document.pdf"
+                  onClick={() => setShowReviewModal(true)}
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -264,6 +267,11 @@ export default function MergePdfClient() {
               </div>
             )}
           </div>
+          
+          <ReviewModal 
+            isOpen={showReviewModal} 
+            onClose={() => setShowReviewModal(false)} 
+          />
         </div>
       )}
     </div>

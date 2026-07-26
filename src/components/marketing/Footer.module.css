@@ -141,3 +141,44 @@
     grid-template-columns: 1fr;
   }
 }
+
+.reviewBanner {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.reviewText {
+  color: #334155;
+  font-size: 1rem;
+}
+
+.reviewLinks {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reviewLink {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.reviewLink:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}

@@ -7,6 +7,7 @@ import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
 import { signPdfWithCertificate } from '@/utils/pdfSigner';
 import { CertificateUploader } from './CertificateUploader';
+import { ReviewModal } from '@/components/ui/ReviewModal';
 import styles from './DocumentEditor.module.css';
 
 // Configure pdfjs worker CDN
@@ -41,6 +42,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   const [isResizing, setIsResizing] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSigned, setIsSigned] = useState(false);
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -357,6 +359,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
       URL.revokeObjectURL(dataUrl);
       
       setIsSigned(true);
+      setShowReviewModal(true);
     } catch (err) {
       console.error('Signing error:', err);
       alert('Failed to apply signature to PDF.');
@@ -502,6 +505,11 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
           </Button>
         </div>
       </div>
+
+      <ReviewModal 
+        isOpen={showReviewModal} 
+        onClose={() => setShowReviewModal(false)} 
+      />
     </div>
   );
-}
+};

@@ -80,6 +80,7 @@ export const metadata: Metadata = {
     other: {
       'msvalidate.01': 'BD88B72DC7552E3EE3C4005E8E576F4D',
       'yandex-verification': '1d4687a7eb6d94fc',
+      'trustpilot-one-time-domain-verification-id': 'ff1c4b3a-b9a1-48ee-989a-7d74c0eb79e2',
     },
   },
 };

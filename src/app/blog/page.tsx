@@ -27,6 +27,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'How to Add a Signature in Microsoft Word (3 Easy Methods — 2026)',
+    slug: 'how-to-add-signature-in-word',
+    excerpt: 'Learn 3 easy methods to add a signature in Microsoft Word, including built-in signature lines, drawing, and converting to PDF for secure online signing.',
+    date: 'July 27, 2026',
+  },
+  {
+    title: 'What Is a Signature Line? (And How to Add One in Word & PDF)',
+    slug: 'what-is-a-signature-line',
+    excerpt: 'Discover the legal meaning of a signature line and exactly how to add one to a Microsoft Word document or a PDF file.',
+    date: 'July 27, 2026',
+  },
+  {
+    title: 'How to Ask Someone to Sign an NDA (3 Email Templates + Tips)',
+    slug: 'how-to-ask-someone-to-sign-nda',
+    excerpt: 'Need someone to sign a Non-Disclosure Agreement? Use these 3 professional email templates and our free online signing tools.',
+    date: 'July 27, 2026',
+  },
+  {
+    title: 'Can You Notarize Your Own Signature? (The Honest Legal Answer)',
+    slug: 'can-you-notarize-your-own-signature',
+    excerpt: 'Find out the strict legal rules regarding self-notarization, the penalties for attempting it, and what your actual alternatives are.',
+    date: 'July 27, 2026',
+  },
+  {
     title: 'How to Sign a PDF on iPhone, iPad & Android for Free',
     slug: 'how-to-sign-pdf-on-iphone-android-free',
     excerpt: 'Learn how to easily complete an e signature pdf online or offline on any mobile device using built-in Markup or private client-side browser tools.',

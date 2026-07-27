@@ -4,31 +4,27 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import { AdBanner } from '@/components/ui';
 import styles from '../static-page.module.css';
+import { Shield, Zap, Lock, HardDrive, FileCheck, ServerOff } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "How to Sign a PDF Online Free — Step by Step Guide",
-  description: "Learn how to sign a PDF online for free with MyDigitSign in 3 steps: draw or type your signature, upload your document, place and download. No account needed.",
+  title: "Features & How It Works — 100% Client-Side PDF Signer | MyDigitSign",
+  description: "Learn how MyDigitSign works entirely in your browser with zero server uploads. 100% private, free, and secure client-side electronic signature tool.",
   keywords: [
     "how to sign a pdf online free",
-    "how to draw signature online",
+    "client-side pdf signer",
+    "private pdf editor",
+    "no upload pdf sign",
     "sign pdf step by step",
-    "how to use pdf signer",
-    "sign document online tutorial",
-    "pdf signing guide",
-    "how to add signature to pdf free",
-    "pdf signature free",
-    "digit sign",
-    "sign a document online",
-    "online pdf editor signature",
-    "pdf signer online",
-    "sign digitally online"
+    "sign document online free privacy",
+    "electronic signature no account",
+    "pdf signature free"
   ],
   alternates: {
     canonical: "https://mydigitsign.com/how-it-works",
   },
   openGraph: {
-    title: "How to Sign a PDF Online Free — Step by Step Guide",
-    description: "Learn how to sign a PDF online for free with MyDigitSign in 3 steps: draw or type your signature, upload your document, place and download. No account needed.",
+    title: "Features & How It Works — 100% Client-Side PDF Signer | MyDigitSign",
+    description: "Learn how MyDigitSign works entirely in your browser with zero server uploads. 100% private, free, and secure client-side electronic signature tool.",
     url: "https://mydigitsign.com/how-it-works",
   },
 };
@@ -86,66 +82,55 @@ export default function HowItWorks() {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
           />
           <div className={styles.header}>
-            <h1 className={styles.title}>How to Sign a PDF Online Free: Step-by-Step Guide</h1>
-            <p className={styles.subtitle}>MyDigitSign is a completely browser-based, secure digit sign and online PDF editor signature utility.</p>
+            <h1 className={styles.title}>100% Private, Client-Side PDF Signing</h1>
+            <p className={styles.subtitle}>MyDigitSign is a completely browser-based, secure digit sign utility. We never upload your sensitive documents to any server.</p>
           </div>
 
           <div className={styles.articleCard}>
-            <p>
-              Traditional e-signing platforms require you to upload private files to their servers, create accounts, and pay monthly subscriptions. MyDigitSign works differently — giving you a way to get a <strong>pdf signature free</strong> and <strong>sign a document online</strong> without sacrificing privacy. Everything runs 100% inside your browser.
+            <p style={{ fontSize: '1.1rem', color: 'var(--color-text)', fontWeight: 500, marginBottom: '1rem' }}>
+              Traditional e-signing platforms require you to upload private files to their servers, create accounts, and pay monthly subscriptions. MyDigitSign fundamentally changes this by bringing the signing engine directly to your web browser.
             </p>
 
-            <h2>Step 1: Create Your Signature (3 Methods)</h2>
-            <p>Choose the method that works best for you:</p>
-            <ul>
-              <li><strong>Type:</strong> Enter your name and choose from beautiful cursive script fonts — Dancing Script, Pacifico, Great Vibes, or Caveat. Fast, clean, and consistent every time. <a href="/tools/type-signature-online">Try the Type Signature Tool →</a></li>
-              <li><strong>Draw:</strong> Draw your signature freehand directly on screen using your mouse, trackpad, or finger on a touchscreen. Adjust pen color (Black, Blue, Red) and clear the canvas to redo. <a href="/tools/draw-signature-online">Try the Draw Signature Tool →</a></li>
-              <li><strong>Upload:</strong> Have a scan or photo of your handwritten signature? Upload a PNG or JPG image and use it directly as your signature overlay. <a href="/tools/sign-image-online">Try the Sign Image Tool →</a></li>
-            </ul>
-            <p>All three methods output a high-resolution transparent PNG of your signature, ready to be placed on any document.</p>
+            <div className={styles.featuresGrid}>
+              <div className={styles.featureCard}>
+                <ServerOff className={styles.featureIcon} size={24} />
+                <h3 className={styles.featureTitle} style={{ marginTop: 0 }}>Zero Server Uploads</h3>
+                <p className={styles.featureDesc}>Your PDF documents are never transmitted over the internet. All processing happens locally in your device's memory.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <Lock className={styles.featureIcon} size={24} />
+                <h3 className={styles.featureTitle} style={{ marginTop: 0 }}>Absolute Privacy</h3>
+                <p className={styles.featureDesc}>Because we never see your files, your sensitive contracts, NDAs, and medical documents remain completely confidential.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <Zap className={styles.featureIcon} size={24} />
+                <h3 className={styles.featureTitle} style={{ marginTop: 0 }}>Instant Processing</h3>
+                <p className={styles.featureDesc}>No waiting for files to upload or download. The client-side engine renders and signs documents instantly.</p>
+              </div>
+              <div className={styles.featureCard}>
+                <Shield className={styles.featureIcon} size={24} />
+                <h3 className={styles.featureTitle} style={{ marginTop: 0 }}>Legally Binding</h3>
+                <p className={styles.featureDesc}>Signatures created here comply with the ESIGN Act (US) and eIDAS (EU) for legally enforceable agreements.</p>
+              </div>
+            </div>
 
-            <h2>Step 2: Upload Your PDF or Image Document</h2>
-            <p>Select your document using one of these methods:</p>
+            <h2 style={{ marginTop: '2.5rem' }}>How It Works Under the Hood</h2>
+            <p>MyDigitSign leverages modern, open-source web technologies to process everything directly in your browser:</p>
             <ul>
-              <li>Drag and drop a PDF file or image (PNG, JPG, JPEG — up to 10MB) directly onto the upload area.</li>
-              <li>Click the upload area to open your file browser and select a document manually.</li>
-              <li>On mobile, tap the upload area to access your camera roll, Downloads folder, or cloud storage (iCloud, Google Drive).</li>
-            </ul>
-            <p><strong>Privacy note:</strong> Your file is read by your browser locally. It is never sent to any server. The moment you close the tab, the data clears entirely.</p>
-
-            <h2>Step 3: Place, Resize & Download</h2>
-            <p>Assemble your signed document precisely:</p>
-            <ul>
-              <li>Drag the signature overlay to position it exactly on the signing line of your document.</li>
-              <li>Use the bottom-right drag handle to resize the signature proportionally — make it smaller for tight signature fields or larger for prominent placement.</li>
-              <li>Navigate between pages using the page controls if your document has multiple pages requiring signatures.</li>
-              <li>Click <strong>Download Signed</strong> to save the final PDF to your device, or use the <strong>Share</strong> button to send it directly via your OS's native sharing sheet (Mail, WhatsApp, Slack, etc.).</li>
-            </ul>
-
-            <h2>How It Works Under the Hood</h2>
-            <p>MyDigitSign uses modern, trusted open-source browser libraries:</p>
-            <ul>
-              <li><strong>PDF Rendering:</strong> <code>pdfjs-dist</code> (Mozilla's PDF.js) reads the PDF binary and renders each page onto HTML5 Canvas elements in your browser — the same engine Firefox uses to display PDFs.</li>
-              <li><strong>PDF Merging:</strong> <code>pdf-lib</code> embeds your signature image pixels into the actual PDF page structure at the correct coordinates — entirely in browser memory. The resulting file is a standard PDF that any PDF viewer can open.</li>
-              <li><strong>Image Signing:</strong> For PNG/JPG documents, HTML5 Canvas contexts composite your signature onto the image and export the merged result as a downloadable PNG.</li>
-              <li><strong>Certificate Signing:</strong> For <code>.pfx</code>/<code>.p12</code> certificates, cryptographic signing is performed client-side using the Web Crypto API — sealing the PDF with a tamper-evident digital signature.</li>
+              <li><strong>Local File Reading:</strong> HTML5 File API reads your document directly into your browser's RAM.</li>
+              <li><strong>PDF Rendering:</strong> <code>pdfjs-dist</code> (Mozilla's PDF.js) renders the PDF binary onto HTML5 Canvas elements.</li>
+              <li><strong>In-Browser Merging:</strong> <code>pdf-lib</code> embeds your signature image pixels into the PDF structure at the exact coordinates you choose.</li>
+              <li><strong>Local Download:</strong> The finalized PDF is saved directly to your hard drive or mobile storage without ever touching a network socket.</li>
             </ul>
 
-            <h2>Use Cases: When to Use MyDigitSign</h2>
-            <ul>
-              <li>✅ Signing freelance contracts and service agreements</li>
-              <li>✅ Signing lease agreements and rental documents</li>
-              <li>✅ Employment NDAs and onboarding forms</li>
-              <li>✅ Sales agreements and vendor contracts</li>
-              <li>✅ Medical consent forms and health documents</li>
-              <li>✅ School enrollment and scholarship forms</li>
-              <li>✅ Any document where you need to <a href="/">sign a document online free</a></li>
-            </ul>
-
-            <h2>Is the Signature Legally Binding?</h2>
-            <p>
-              Yes. Electronic signatures created with MyDigitSign are legally valid under the <strong>ESIGN Act</strong> (USA), <strong>UETA</strong>, and <strong>eIDAS</strong> (EU) for most commercial, personal, and financial agreements. Read the complete legal guide: <a href="/blog/are-electronic-signatures-legally-binding">Are Electronic Signatures Legally Binding & Acceptable? →</a>
-            </p>
+            <div style={{ background: 'var(--color-bg)', padding: '1.5rem', borderRadius: '12px', border: '1px solid var(--color-border)', marginTop: '2rem' }}>
+              <h2 style={{ marginTop: 0, borderBottom: 'none', paddingBottom: 0 }}>Step-by-Step Guide: How to Sign</h2>
+              <ol style={{ paddingLeft: '1.25rem' }}>
+                <li><strong>Create Your Signature:</strong> Type your name in a cursive font, draw it freehand with your mouse/touchscreen, or upload a photo of your signature.</li>
+                <li><strong>Select Your Document:</strong> Drag and drop your PDF. It is loaded instantly into your browser tab.</li>
+                <li><strong>Place &amp; Download:</strong> Drag your signature to the correct line, resize it using the corner handle, and click Download to save the signed file to your device.</li>
+              </ol>
+            </div>
 
             <h2>Frequently Asked Questions</h2>
 

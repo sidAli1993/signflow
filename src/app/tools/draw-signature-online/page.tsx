@@ -228,8 +228,38 @@ export default function DrawSignatureTool() {
             </ul>
           </div>
 
+          {/* SEO Expansion 1: Signature Maker */}
+          <div className={styles.seoArticle} style={{ marginTop: '2.5rem' }}>
+            <h2 className={styles.seoArticleTitle} style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--color-text)', fontWeight: 700 }}>The Best Free Signature Maker Online (No Watermarks, No Signups)</h2>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              When you need to <strong>draw signature online</strong>, the last thing you want is to be forced into creating an account or providing your credit card details. Many tools online claim to be a free <strong>signature maker online</strong>, but then restrict you at the final step by placing a large watermark over your drawn signature or refusing to let you download the file unless you sign up for a premium subscription.
+            </p>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              MyDigitSign is completely different. We believe that your digital identity should belong to you, which is why our <strong>draw signature free</strong> tool is truly 100% free with absolutely no hidden catches. When you use our canvas for your <strong>electronic signature drawing</strong>, the output is a pristine, high-resolution transparent PNG file. You can download it instantly and use it as many times as you like.
+            </p>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              Because our tool operates entirely on the client side (in your web browser), it is incredibly fast. There is no latency from uploading your drawing strokes to a server. You can sketch, erase, and redraw as quickly as your hand can move, making it the most responsive signature maker available on the web today.
+            </p>
+
+            <h2 className={styles.seoArticleTitle} style={{ fontSize: '1.5rem', marginBottom: '1rem', marginTop: '2.5rem', color: 'var(--color-text)', fontWeight: 700 }}>Electronic Signature Drawing: Digital Sign With Mouse vs. Touchscreen</h2>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              Creating a digital signature that looks identical to your real-life handwriting can sometimes be tricky depending on the hardware you are using. If you need to <strong>sign document online</strong> and want the most authentic result, here is how the two main input methods compare when you use our signature creator.
+            </p>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', marginTop: '1.5rem', color: 'var(--color-text)', fontWeight: 600 }}>How to Digital Sign With Mouse</h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              To <strong>digital sign with mouse</strong>, rest the heel of your hand on your desk to stabilize your movements. It often helps to increase your mouse sensitivity slightly so you don't run out of mousepad space while dragging. Click and hold the left mouse button, and try to draw the signature in one continuous, fluid motion rather than slow, deliberate strokes. If you make a mistake, simply click the "Clear" button and try again. It might take three or four attempts to get a mouse-drawn signature that perfectly matches your pen-and-ink style.
+            </p>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', marginTop: '1.5rem', color: 'var(--color-text)', fontWeight: 600 }}>Using a Touchscreen or Stylus</h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              For the absolute best <strong>draw my signature</strong> experience, open MyDigitSign on a smartphone, tablet, or a touchscreen laptop. Using your finger — or even better, a capacitive stylus like an Apple Pencil or Galaxy S-Pen — provides the tactile feedback necessary for perfect electronic signature drawing. The canvas responds instantly to your touch, capturing the natural curves and flourishes of your handwriting.
+            </p>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.6, color: 'var(--color-text-secondary)' }}>
+              Regardless of which method you choose, the resulting signature will be securely saved as a transparent PNG, ready to be embedded into PDFs, Word documents, or email clients instantly.
+            </p>
+          </div>
+
           {/* FAQ Section */}
-          <div className={styles.seoFaq}>
+          <div className={styles.seoFaq} style={{ marginTop: '3rem' }}>
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
             <div className={styles.seoFaqGrid}>
               <div className={styles.faqItem}>

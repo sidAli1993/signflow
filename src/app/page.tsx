@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD for homepage — BreadcrumbList + SiteNavigationElement
+// JSON-LD for homepage — BreadcrumbList + Organization + SoftwareApplication
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -69,6 +69,33 @@ const breadcrumbSchema = {
       'item': 'https://mydigitsign.com',
     },
   ],
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  'name': 'MyDigitSign',
+  'url': 'https://mydigitsign.com',
+  'logo': 'https://mydigitsign.com/logo.png',
+  'sameAs': [
+    'https://twitter.com/mydigitsign',
+    'https://github.com/mydigitsign'
+  ]
+};
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'MyDigitSign',
+  'applicationCategory': 'BusinessApplication',
+  'operatingSystem': 'Web Browser',
+  'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  },
+  'url': 'https://mydigitsign.com'
 };
 
 export default function Home() {
@@ -103,11 +130,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Breadcrumb JSON-LD */}
+      {/* JSON-LD Schemas */}
       <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        id="software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
       {/* ─── Interactive Tool (client-side) ─────────────────────────────── */}

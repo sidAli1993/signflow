@@ -1,5 +1,5 @@
 .postContainer {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
   min-height: 80vh;
@@ -37,7 +37,7 @@
 }
 
 .articleContent {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.8;
   color: var(--color-text);
 }

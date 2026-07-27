@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-07-25');
+  const lastModDate = new Date('2026-07-27');
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -10,9 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'create-digital-signature-online-free', modified: '2026-07-22' },
     { slug: 'are-electronic-signatures-legally-binding', modified: '2026-07-22' },
     { slug: 'ultimate-guide-signing-pdf-securely', modified: '2026-07-22' },
-    { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-22' },
+    { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-27' },
     { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-22' },
     { slug: 'how-to-sign-nda-online-free', modified: '2026-07-22' },
+    { slug: 'how-to-add-signature-in-word', modified: '2026-07-27' },
+    { slug: 'what-is-a-signature-line', modified: '2026-07-27' },
+    { slug: 'how-to-ask-someone-to-sign-nda', modified: '2026-07-27' },
+    { slug: 'can-you-notarize-your-own-signature', modified: '2026-07-27' },
   ];
 
   // Dedicated micro-tools suite

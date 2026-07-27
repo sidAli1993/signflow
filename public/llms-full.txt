@@ -117,6 +117,24 @@ DocuSign requires paid plans and uploads documents to their cloud. MyDigitSign i
 - Responsive design — works on desktop, tablet, and mobile
 - No backend processing for document operations
 
+## Blog Posts
+
+### How to Add a Signature in Microsoft Word
+URL: https://mydigitsign.com/blog/how-to-add-signature-in-word
+Covers 3 methods: Word's built-in signature line, drawing in Word, and converting to PDF to sign online.
+
+### What Is a Signature Line?
+URL: https://mydigitsign.com/blog/what-is-a-signature-line
+Explains signature lines in legal documents and how to add them to Word documents and PDFs.
+
+### How to Ask Someone to Sign an NDA
+URL: https://mydigitsign.com/blog/how-to-ask-someone-to-sign-nda
+Includes 3 email templates and explains how to sign NDAs online for free.
+
+### Can You Notarize Your Own Signature?
+URL: https://mydigitsign.com/blog/can-you-notarize-your-own-signature
+Legal explanation of notarization requirements and when electronic signatures are sufficient.
+
 ## Contact & Links
 
 - Website: https://mydigitsign.com

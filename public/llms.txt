@@ -28,3 +28,8 @@ MyDigitSign is a free, privacy-first PDF signing tool that runs entirely in the 
 - Draw Signature Online: https://mydigitsign.com/tools/draw-signature-online
 - Type Signature Online: https://mydigitsign.com/tools/type-signature-online
 - Sign Image Online: https://mydigitsign.com/tools/sign-image-online
+- Sign PDF Online: https://mydigitsign.com/tools/sign-pdf-online
+- How to Add Signature in Word: https://mydigitsign.com/blog/how-to-add-signature-in-word
+- What is a Signature Line: https://mydigitsign.com/blog/what-is-a-signature-line
+- How to Ask Someone to Sign NDA: https://mydigitsign.com/blog/how-to-ask-someone-to-sign-nda
+- Can You Notarize Your Own Signature: https://mydigitsign.com/blog/can-you-notarize-your-own-signature

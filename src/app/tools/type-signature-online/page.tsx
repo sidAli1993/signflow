@@ -67,6 +67,21 @@ const breadcrumbSchema = {
   ],
 };
 
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  'name': 'MyDigitSign Type Signature Tool',
+  'applicationCategory': 'BusinessApplication',
+  'operatingSystem': 'Web Browser',
+  'description': 'Free cursive font signature generator. Type your name and instantly create beautiful electronic signatures.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  },
+  'url': 'https://mydigitsign.com/tools/type-signature-online'
+};
+
 // HowTo schema — enables Google rich results for "how to type signature online"
 const howToSchema = {
   '@context': 'https://schema.org',
@@ -110,6 +125,45 @@ const howToSchema = {
   ],
 };
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'How do I create a typed signature online?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Simply type your name into the text box on MyDigitSign. The signature generator will automatically render your name using several professional cursive fonts. Pick the style you like, choose a color, and download it.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Is a typed signature legally valid?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes. Under the ESIGN Act and similar international laws, a typed electronic signature is fully legally binding as long as there is intent to sign and it is logically associated with the document.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Are these signature fonts free to use?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes, the cursive fonts used by the generator (such as Dancing Script, Pacifico, Great Vibes, and Caveat) are open-source and free for both personal and commercial use on your documents.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Does the signature generator store my name?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'No. The type signature generator works entirely in your web browser. Your name is never sent to our servers or stored anywhere. The transparent PNG is generated locally on your device.'
+      }
+    }
+  ]
+};
+
 export default function TypeSignatureTool() {
   return (
     <div className={styles.appWrapper}>
@@ -148,6 +202,16 @@ export default function TypeSignatureTool() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <script
+        id="software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
 
       <HomeClient 
         initialTab="type" 
@@ -182,6 +246,38 @@ export default function TypeSignatureTool() {
                 Click adopt to sign a contract instantly on our client-side editor, or download a transparent PNG file to insert into Word or Google Docs files.
               </p>
             </article>
+          </div>
+
+          <div className={styles.seoCompare} style={{ marginTop: '2.5rem' }}>
+            <h2 className={styles.seoCompareTitle}>Is a Typed Signature Legally Valid?</h2>
+            <p className={styles.seoCompareDesc}>
+              Absolutely. In the modern business world, you don't need a messy drawn signature for a contract to be binding. Under the <strong>ESIGN Act (USA)</strong> and <strong>eIDAS (EU)</strong>, a typed electronic signature holds the exact same legal weight as a wet-ink signature.
+            </p>
+            <p className={styles.seoCompareDesc} style={{ marginTop: '1rem' }}>
+              The most important factor in legal validity is <em>intent</em>. By typing your name, selecting a signature style, and choosing to apply it to a contract or NDA, you are clearly demonstrating your intent to sign. Our <strong>signature generator</strong> allows you to do this quickly and beautifully without printing anything.
+            </p>
+          </div>
+
+          <div className={styles.seoFaq}>
+            <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
+            <div className={styles.seoFaqGrid}>
+              <div className={styles.faqItem}>
+                <h3>How do I create a typed signature online?</h3>
+                <p>Simply type your name into the text box above. Our signature generator will automatically render your name using several professional cursive fonts. Pick your favorite style, choose a color, and click Adopt or Download.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Is a typed signature legally binding?</h3>
+                <p>Yes. Under international e-signature laws, a typed name on a contract or PDF is fully legally binding as long as there is intent to sign the agreement.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Are these signature fonts free to use?</h3>
+                <p>Yes, all cursive fonts used by the generator (Dancing Script, Pacifico, Great Vibes, and Caveat) are open-source and free for both personal and commercial use on your documents.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Does the signature generator store my name?</h3>
+                <p>No. Our tool works 100% in your browser. Your typed name is never sent to our servers. The transparent PNG is generated entirely on your own device ensuring total privacy.</p>
+              </div>
+            </div>
           </div>
 
           {/* Internal links — Phase 2 internal linking strategy */}

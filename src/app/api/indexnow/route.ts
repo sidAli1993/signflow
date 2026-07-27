@@ -28,6 +28,10 @@ function getAllUrls(): string[] {
     'how-to-sign-a-document-online-free-pdf-editor',
     'how-to-sign-pdf-on-iphone-android-free',
     'how-to-sign-nda-online-free',
+    'how-to-add-signature-in-word',
+    'what-is-a-signature-line',
+    'how-to-ask-someone-to-sign-nda',
+    'can-you-notarize-your-own-signature',
   ];
 
   const tools = [

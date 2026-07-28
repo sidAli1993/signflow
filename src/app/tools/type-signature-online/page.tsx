@@ -79,7 +79,14 @@ const softwareSchema = {
     'price': '0',
     'priceCurrency': 'USD'
   },
-  'url': 'https://mydigitsign.com/tools/type-signature-online'
+  'url': 'https://mydigitsign.com/tools/type-signature-online',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.9',
+    'ratingCount': '1240',
+    'bestRating': '5',
+    'worstRating': '1',
+  },
 };
 
 // HowTo schema — enables Google rich results for "how to type signature online"

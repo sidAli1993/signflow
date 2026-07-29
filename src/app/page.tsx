@@ -6,9 +6,9 @@ import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Digital Signature Online Free — 100% Private, No Uploads | MyDigitSign',
+  title: 'Digital Signature Online Free — 100% Private | MyDigitSign',
   description:
-    'Create your digital signature online for free. 100% browser-based & private — your files never leave your device. Draw, type, or upload your electronic signature in seconds.',
+    'Create a free digital signature online. 100% browser-based & private — your files never leave your device. Draw, type, or upload signatures in seconds.',
   keywords: [
     'sign pdf online free',
     'free pdf signer',

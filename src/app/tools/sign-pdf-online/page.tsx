@@ -174,7 +174,7 @@ export default function SignPdfOnlineTool() {
             <li><Zap size={14} aria-hidden="true" /><span>Instant Download</span></li>
             <li><Users size={14} aria-hidden="true" /><span>No Account Required</span></li>
           </ul>
-          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginTop: '0.75rem', opacity: 0.7 }}>Updated: July 25, 2026</p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--color-text-secondary)', marginTop: '0.75rem', opacity: 0.9 }}>Updated: July 25, 2026</p>
         </div>
       </section>
 
@@ -469,7 +469,7 @@ export default function SignPdfOnlineTool() {
 
           {/* ── Internal Links ── */}
           <div style={{ paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
-            <p style={{ fontSize: '0.875rem', opacity: 0.7, marginBottom: '0.75rem' }}>
+            <p style={{ fontSize: '0.875rem', opacity: 0.9, marginBottom: '0.75rem' }}>
               Related free tools &amp; guides:
             </p>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>

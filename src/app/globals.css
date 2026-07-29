@@ -64,10 +64,10 @@
   --color-border: #E5E7EB;
   --color-border-focus: rgba(79, 70, 229, 0.4);
 
-  /* Text */
+  /* Text — High Contrast WCAG AAA compliant */
   --color-text: #0F172A;
-  --color-text-secondary: #4B5563;
-  --color-text-muted: #9CA3AF;
+  --color-text-secondary: #334155;
+  --color-text-muted: #475569;
 
   /* ─── Glassmorphism ─────────────────────────────────────── */
   --glass-bg: rgba(255, 255, 255, 0.75);
@@ -127,9 +127,9 @@
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-focus: rgba(129, 140, 248, 0.4);
 
-  --color-text: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-text-muted: #475569;
+  --color-text: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
 
   --glass-bg: rgba(17, 17, 24, 0.72);
   --glass-bg-strong: rgba(17, 17, 24, 0.92);

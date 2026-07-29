@@ -1,6 +1,12 @@
 # Disable DirectoryIndex to prevent Apache from internally mapping / to index.html/index.php
 DirectoryIndex disabled
 
-# Route all traffic to the PM2 Next.js server on port 3000
+# Force HTTPS Redirect (301 Permanent Redirect)
 RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Route all traffic to the PM2 Next.js server on port 3000
 RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+

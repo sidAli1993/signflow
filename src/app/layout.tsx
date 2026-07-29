@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Sign PDF Online Free — 100% Private, No Uploads | MyDigitSign",
+    default: "Sign PDF Online Free — 100% Private Tool | MyDigitSign",
     template: "%s | MyDigitSign",
   },
-  description: "Sign PDFs and documents online for free. 100% browser-based & private — your files never leave your device. Secure digital signature tool with zero server uploads.",
+  description: "Sign PDFs and documents online for free. 100% browser-based & private — your files never leave your device. Secure digital signer with zero uploads.",
   keywords: [
     "sign pdf online free",
     "free pdf signer",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://mydigitsign.com"),
   alternates: {
-    canonical: "https://mydigitsign.com",
+    canonical: "./",
   },
   openGraph: {
     title: "Free PDF Signer (100% Private, No Uploads) — MyDigitSign",
@@ -300,28 +300,29 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Ezoic Consent Script — defer to avoid render-blocking */}
-        <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js" async />
-        <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js" async />
-        {/* Ezoic Main Script */}
-        <script async src="//www.ezojs.com/ezoic/sa.min.js" />
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.ezstandalone = window.ezstandalone || {};
-          ezstandalone.cmd = ezstandalone.cmd || [];
-        `}} />
-        <script src="//ezoicanalytics.com/analytics.js" async />
-        {/* Ahrefs Analytics */}
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" async />
       </head>
       <body className={inter.variable}>
+        {/* Third-party Analytics & Ad Scripts (lazyOnload to prevent PageSpeed / Lighthouse timeouts) */}
+        <Script id="ezoic-cmp-min" strategy="lazyOnload" src="https://cmp.gatekeeperconsent.com/min.js" />
+        <Script id="ezoic-cmp-main" strategy="lazyOnload" src="https://the.gatekeeperconsent.com/cmp.min.js" />
+        <Script id="ezoic-sa" strategy="lazyOnload" src="https://www.ezojs.com/ezoic/sa.min.js" />
+        <Script id="ezoic-cmd" strategy="lazyOnload">
+          {`
+            window.ezstandalone = window.ezstandalone || {};
+            ezstandalone.cmd = ezstandalone.cmd || [];
+          `}
+        </Script>
+        <Script id="ezoic-analytics" strategy="lazyOnload" src="https://ezoicanalytics.com/analytics.js" />
+        <Script id="ahrefs-analytics" strategy="lazyOnload" src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" />
         {/* Google Analytics Tag */}
         <Script
-          strategy="afterInteractive"
+          id="google-gtag"
+          strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=G-H9B8LS4FRG`}
         />
         <Script
           id="google-analytics"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

@@ -176,7 +176,7 @@
 
 .searchInput::placeholder {
   color: var(--color-text-secondary);
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 /* Remove browser default search-cancel button */

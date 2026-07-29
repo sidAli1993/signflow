@@ -14,15 +14,22 @@ interface ImageEditorProps {
 
 export function ImageEditor({ file, signatureUrl, onStartOver, onShare }: ImageEditorProps) {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
-  
-  // Position in percentage relative to the container (0-100)
+
   const [position, setPosition] = useState({ x: 30, y: 30 });
-  const [size, setSize] = useState({ width: 150, height: 75 });
-  
-  const [isDragging, setIsDragging] = useState(false);
-  const [isResizing, setIsResizing] = useState(false);
+  const [size, setSize]         = useState({ width: 150, height: 75 });
+
+  // Premium additions
+  const [zoom, setZoom]             = useState(100);
+  const [sigOpacity, setSigOpacity] = useState(100);
+
+  const ZOOM_STEPS = [50, 75, 100, 125, 150];
+  const zoomIn  = () => setZoom(z => { const i = ZOOM_STEPS.indexOf(z); return i < ZOOM_STEPS.length - 1 ? ZOOM_STEPS[i + 1] : z; });
+  const zoomOut = () => setZoom(z => { const i = ZOOM_STEPS.indexOf(z); return i > 0 ? ZOOM_STEPS[i - 1] : z; });
+
+  const [isDragging, setIsDragging]     = useState(false);
+  const [isResizing, setIsResizing]     = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [isSigned, setIsSigned] = useState(false);
+  const [isSigned, setIsSigned]         = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const sigRef = useRef<HTMLDivElement>(null);
@@ -287,12 +294,53 @@ export function ImageEditor({ file, signatureUrl, onStartOver, onShare }: ImageE
 
   return (
     <div className={styles.editorContainer}>
+
+      {/* Glass Controls Bar */}
+      <div className={styles.controlsBar}>
+        <div className={styles.leftControls}>
+          <Button variant="ghost" size="sm" leftIcon={<RefreshCw size={15} />} onClick={onStartOver}>
+            Start Over
+          </Button>
+        </div>
+
+        <div className={styles.rightControls}>
+          {/* Zoom */}
+          <div className={styles.zoomControl}>
+            <button className={styles.zoomBtn} onClick={zoomOut} disabled={zoom <= 50} aria-label="Zoom out">−</button>
+            <span className={styles.zoomDisplay}>{zoom}%</span>
+            <button className={styles.zoomBtn} onClick={zoomIn}  disabled={zoom >= 150} aria-label="Zoom in">+</button>
+          </div>
+
+          <Button
+            variant="outline" size="sm"
+            leftIcon={<Share2 size={15} />}
+            onClick={handleShareClick}
+            disabled={isProcessing}
+          >
+            Share
+          </Button>
+          <Button
+            variant="primary" size="sm"
+            leftIcon={isSigned ? <Check size={15} /> : <Download size={15} />}
+            onClick={handleDownload}
+            disabled={isProcessing}
+          >
+            {isProcessing ? 'Saving…' : isSigned ? 'Saved!' : 'Download Signed'}
+          </Button>
+        </div>
+      </div>
+
+      {/* Workspace */}
       <div className={styles.workspace}>
-        <div className={styles.canvasWrapper} ref={containerRef}>
+        <div
+          className={styles.canvasWrapper}
+          ref={containerRef}
+          style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'top center' }}
+        >
           {imageSrc && (
             <img src={imageSrc} alt="Document preview" className={styles.docImage} draggable={false} />
           )}
-          
+
           {!isSigned && (
             <div
               ref={sigRef}
@@ -302,46 +350,19 @@ export function ImageEditor({ file, signatureUrl, onStartOver, onShare }: ImageE
                 top: `${position.y}%`,
                 width: `${size.width}px`,
                 height: `${size.height}px`,
+                opacity: sigOpacity / 100,
               }}
               onMouseDown={handleMouseDown}
               onTouchStart={handleTouchStart}
             >
               <img src={signatureUrl} alt="Signature" className={styles.sigImage} draggable={false} />
-              
-              <div 
+              <div
                 className={styles.resizeHandle}
                 onMouseDown={handleResizeMouseDown}
                 onTouchStart={handleResizeTouchStart}
               />
             </div>
           )}
-        </div>
-      </div>
-
-      <div className={styles.controlsBar}>
-        <div className={styles.leftControls}>
-          <Button variant="ghost" leftIcon={<RefreshCw size={16} />} onClick={onStartOver}>
-            Start Over
-          </Button>
-        </div>
-        
-        <div className={styles.rightControls}>
-          <Button
-            variant="outline"
-            leftIcon={<Share2 size={16} />}
-            onClick={handleShareClick}
-            disabled={isProcessing}
-          >
-            Share
-          </Button>
-          <Button
-            variant="primary"
-            leftIcon={isSigned ? <Check size={16} /> : <Download size={16} />}
-            onClick={handleDownload}
-            disabled={isProcessing}
-          >
-            {isProcessing ? 'Processing...' : isSigned ? 'Saved!' : 'Download Signed'}
-          </Button>
         </div>
       </div>
     </div>

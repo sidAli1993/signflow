@@ -2,76 +2,186 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
+/* ─── Glass Controls Bar ──────────────────────────── */
+.controlsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: var(--space-md);
+  z-index: 20;
+}
+
+.leftControls,
+.rightControls {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border-left: 1px solid var(--color-border);
+  padding-left: var(--space-md);
+  margin-left: var(--space-xs);
+}
+
+.pageLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ─── Zoom Controls ───────────────────────────────── */
+.zoomControl {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  background: var(--color-bg);
+}
+
+.zoomBtn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  font-weight: 300;
+  transition: all var(--transition-fast);
+}
+
+.zoomBtn:hover {
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+.zoomDisplay {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text);
+  min-width: 40px;
+  text-align: center;
+  font-family: var(--font-mono);
+}
+
+/* ─── Main Editor Layout ──────────────────────────── */
+.editorMain {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: var(--space-md);
+  flex: 1;
+  align-items: stretch;
+}
+
+/* ─── PDF Workspace ───────────────────────────────── */
 .workspace {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-bg-secondary);
+  background: #1a1a2e;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
   overflow: auto;
-  min-height: 400px;
+  min-height: 480px;
   position: relative;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-inner);
+}
+
+/* Dot pattern behind PDF */
+.workspace::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 .canvasWrapper {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.08),
+    0 16px 48px rgba(0,0,0,0.5),
+    0 4px 8px rgba(0,0,0,0.3);
+  transition: transform var(--transition-normal);
 }
 
 .pdfCanvas {
   display: block;
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 72vh;
   object-fit: contain;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
+/* ─── Skeleton Loader ─────────────────────────────── */
 .renderLoader {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7);
+  inset: 0;
+  background: rgba(26, 26, 46, 0.75);
+  backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: var(--space-md);
   z-index: 50;
-  color: #0F172A;
-  font-weight: 500;
+  border-radius: inherit;
 }
 
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid #E2E8F0;
+  border: 3px solid rgba(255,255,255,0.1);
   border-top-color: var(--color-primary);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 0.8s linear infinite;
+}
+
+.renderLoader span {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.02em;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
+/* ─── Signature Overlay ───────────────────────────── */
 .sigOverlay {
   position: absolute;
-  border: 1.5px dashed var(--color-primary);
+  border: 2px dashed var(--color-primary);
   cursor: move;
   padding: 4px;
   box-sizing: border-box;
@@ -79,18 +189,23 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-  background-color: rgba(59, 130, 246, 0.05);
-  transition: box-shadow var(--transition-fast);
+  background: rgba(79, 70, 229, 0.04);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .sigOverlay:hover {
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  border-color: var(--color-accent);
+  background: rgba(79, 70, 229, 0.08);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
 .dragging {
   border-style: solid;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
-  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--color-accent);
+  background: rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15), var(--shadow-lg);
+  cursor: grabbing;
 }
 
 .sigImage {
@@ -98,66 +213,152 @@
   height: 100%;
   object-fit: contain;
   pointer-events: none;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
 }
 
+/* Resize handle */
 .resizeHandle {
   position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-primary);
-  border: 2px solid #ffffff;
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border: 2px solid #fff;
   border-radius: 50%;
-  bottom: -6px;
-  right: -6px;
+  bottom: -7px;
+  right: -7px;
   cursor: se-resize;
   z-index: 100;
   box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
 }
 
 .resizeHandle:hover {
-  transform: scale(1.2);
-  background-color: var(--color-primary-hover);
+  transform: scale(1.3);
+  background: var(--color-accent);
 }
 
-.controlsBar {
+/* ─── Sidebar Panel ───────────────────────────────── */
+.sidebarPanel {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space-md) var(--space-lg);
-  background-color: var(--color-surface);
+  flex-direction: column;
+  gap: var(--space-md);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  overflow-y: auto;
 }
 
-.leftControls, .rightControls {
+.panelSection {
   display: flex;
-  gap: var(--space-md);
-  align-items: center;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.navigation {
+.panelSection:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.panelTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
   display: flex;
   align-items: center;
-  gap: var(--space-md);
-  border-left: 1px solid var(--color-border);
-  padding-left: var(--space-md);
-  margin-left: var(--space-xs);
+  gap: 6px;
 }
 
-.pageLabel {
-  font-size: 14px;
-  font-weight: 500;
+.panelTitle svg {
+  color: var(--color-primary);
+}
+
+/* Mode tabs */
+.modeTabs {
+  display: flex;
+  background: var(--color-bg);
+  padding: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  gap: 4px;
+}
+
+.modeTab {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 8px var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
   color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.modeTab:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.activeTab {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Opacity slider */
+.opacityRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.opacitySlider {
+  flex: 1;
+  height: 4px;
+  border-radius: var(--radius-full);
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.opacityValue {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ─── Responsive ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .editorMain {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebarPanel {
+    order: -1;
+  }
 }
 
 @media (max-width: 768px) {
   .controlsBar {
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     padding: var(--space-md);
+    position: static;
   }
-  
-  .leftControls, .rightControls {
+
+  .leftControls,
+  .rightControls {
     width: 100%;
     justify-content: center;
   }
@@ -168,79 +369,8 @@
     margin-left: 0;
   }
 
-  .leftControls button, .rightControls button {
-    flex: 1;
+  .workspace {
+    padding: var(--space-md);
+    min-height: 350px;
   }
 }
-
-.editorMain {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  gap: var(--space-lg);
-  flex: 1;
-  align-items: stretch;
-}
-
-.sidebarPanel {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
-}
-
-.panelSection {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
-
-.panelTitle {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-text-secondary);
-  margin: 0 0 4px 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.modeTabs {
-  display: flex;
-  background-color: var(--color-bg-secondary);
-  padding: 4px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-}
-
-.modeTab {
-  flex: 1;
-  border: none;
-  background: none;
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.modeTab:hover {
-  color: var(--color-text);
-}
-
-.activeTab {
-  background-color: var(--color-surface);
-  color: var(--color-primary);
-  box-shadow: var(--shadow-sm);
-}
-
-@media (max-width: 1024px) {
-  .editorMain {
-    grid-template-columns: 1fr;
-  }
-}
-

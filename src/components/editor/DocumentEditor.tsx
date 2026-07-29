@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui';
-import { Download, Share2, RefreshCw, ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { Download, Share2, RefreshCw, ChevronLeft, ChevronRight, Check, Shield, PenLine, ZoomIn, ZoomOut, Minus, Plus } from 'lucide-react';
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
 import { signPdfWithCertificate } from '@/utils/pdfSigner';
@@ -25,23 +25,31 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   const [pageNum, setPageNum] = useState(1);
   const [numPages, setNumPages] = useState(0);
   const [isRendering, setIsRendering] = useState(false);
-  
+
   const [position, setPosition] = useState({ x: 30, y: 50 });
   const [size, setSize] = useState({ width: 150, height: 75 });
 
+  // Premium additions
+  const [zoom, setZoom]               = useState(100);
+  const [sigOpacity, setSigOpacity]   = useState(100);
+
+  const ZOOM_STEPS = [50, 75, 100, 125, 150];
+  const zoomIn  = () => setZoom(z => { const i = ZOOM_STEPS.indexOf(z); return i < ZOOM_STEPS.length - 1 ? ZOOM_STEPS[i + 1] : z; });
+  const zoomOut = () => setZoom(z => { const i = ZOOM_STEPS.indexOf(z); return i > 0 ? ZOOM_STEPS[i - 1] : z; });
+
   const [signingMode, setSigningMode] = useState<'visual' | 'digital'>('visual');
-  const [p12Buffer, setP12Buffer] = useState<ArrayBuffer | null>(null);
+  const [p12Buffer, setP12Buffer]     = useState<ArrayBuffer | null>(null);
   const [p12Passphrase, setP12Passphrase] = useState<string>('');
 
   const handleCertLoaded = (buffer: ArrayBuffer | null, passphrase?: string) => {
     setP12Buffer(buffer);
     setP12Passphrase(passphrase || '');
   };
-  
-  const [isDragging, setIsDragging] = useState(false);
-  const [isResizing, setIsResizing] = useState(false);
+
+  const [isDragging, setIsDragging]     = useState(false);
+  const [isResizing, setIsResizing]     = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [isSigned, setIsSigned] = useState(false);
+  const [isSigned, setIsSigned]         = useState(false);
   const [showReviewModal, setShowReviewModal] = useState(false);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -384,15 +392,78 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
 
   return (
     <div className={styles.editorContainer}>
+
+      {/* ── Glass Controls Bar ─────────────────────── */}
+      <div className={styles.controlsBar}>
+        <div className={styles.leftControls}>
+          <Button variant="ghost" size="sm" leftIcon={<RefreshCw size={15} />} onClick={onStartOver}>
+            Start Over
+          </Button>
+
+          {numPages > 1 && (
+            <div className={styles.navigation}>
+              <Button
+                variant="outline" size="sm"
+                onClick={() => setPageNum(p => Math.max(1, p - 1))}
+                disabled={pageNum <= 1 || isRendering}
+              >
+                <ChevronLeft size={15} />
+              </Button>
+              <span className={styles.pageLabel}>{pageNum} / {numPages}</span>
+              <Button
+                variant="outline" size="sm"
+                onClick={() => setPageNum(p => Math.min(numPages, p + 1))}
+                disabled={pageNum >= numPages || isRendering}
+              >
+                <ChevronRight size={15} />
+              </Button>
+            </div>
+          )}
+        </div>
+
+        <div className={styles.rightControls}>
+          {/* Zoom */}
+          <div className={styles.zoomControl}>
+            <button className={styles.zoomBtn} onClick={zoomOut} disabled={zoom <= 50} aria-label="Zoom out">−</button>
+            <span className={styles.zoomDisplay}>{zoom}%</span>
+            <button className={styles.zoomBtn} onClick={zoomIn}  disabled={zoom >= 150} aria-label="Zoom in">+</button>
+          </div>
+
+          <Button
+            variant="outline" size="sm"
+            leftIcon={<Share2 size={15} />}
+            onClick={handleShareClick}
+            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
+          >
+            Share
+          </Button>
+          <Button
+            variant="primary" size="sm"
+            leftIcon={isSigned ? <Check size={15} /> : <Download size={15} />}
+            onClick={handleDownload}
+            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
+          >
+            {isProcessing ? 'Saving…' : isSigned ? 'Saved!' : 'Download Signed'}
+          </Button>
+        </div>
+      </div>
+
+      {/* ── Main Editor ─────────────────────────────── */}
       <div className={styles.editorMain}>
+
+        {/* ── PDF Workspace ─────────────────────────── */}
         <div className={styles.workspace}>
-          <div className={styles.canvasWrapper} ref={containerRef}>
+          <div
+            className={styles.canvasWrapper}
+            ref={containerRef}
+            style={{ transform: `scale(${zoom / 100})`, transformOrigin: 'top center' }}
+          >
             <canvas ref={canvasRef} className={styles.pdfCanvas} />
-            
+
             {isRendering && (
               <div className={styles.renderLoader}>
-                <div className={styles.spinner}></div>
-                <span>Rendering PDF page...</span>
+                <div className={styles.spinner} />
+                <span>Rendering page {pageNum}…</span>
               </div>
             )}
 
@@ -405,12 +476,13 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
                   top: `${position.y}%`,
                   width: `${size.width}px`,
                   height: `${size.height}px`,
+                  opacity: sigOpacity / 100,
                 }}
                 onMouseDown={handleMouseDown}
                 onTouchStart={handleTouchStart}
               >
                 <img src={signatureUrl} alt="Signature" className={styles.sigImage} draggable={false} />
-                <div 
+                <div
                   className={styles.resizeHandle}
                   onMouseDown={handleResizeMouseDown}
                   onTouchStart={handleResizeTouchStart}
@@ -420,9 +492,15 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
           </div>
         </div>
 
+        {/* ── Sidebar ───────────────────────────────── */}
         <div className={styles.sidebarPanel}>
+
+          {/* Signing Mode */}
           <div className={styles.panelSection}>
-            <h4 className={styles.panelTitle}>Signature Type</h4>
+            <h4 className={styles.panelTitle}>
+              <PenLine size={13} />
+              Signature Mode
+            </h4>
             <div className={styles.modeTabs}>
               <button
                 type="button"
@@ -430,7 +508,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
                 onClick={() => setSigningMode('visual')}
                 disabled={isSigned || isProcessing}
               >
-                Visual Only
+                Visual
               </button>
               <button
                 type="button"
@@ -438,77 +516,48 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
                 onClick={() => setSigningMode('digital')}
                 disabled={isSigned || isProcessing}
               >
-                Cryptographic Cert
+                <Shield size={11} style={{ marginRight: 4 }} />
+                Cryptographic
               </button>
             </div>
           </div>
 
+          {/* Opacity */}
+          {!isSigned && (
+            <div className={styles.panelSection}>
+              <h4 className={styles.panelTitle}>Opacity</h4>
+              <div className={styles.opacityRow}>
+                <input
+                  type="range"
+                  className={styles.opacitySlider}
+                  min={10} max={100} step={5}
+                  value={sigOpacity}
+                  onChange={e => setSigOpacity(Number(e.target.value))}
+                  aria-label="Signature opacity"
+                />
+                <span className={styles.opacityValue}>{sigOpacity}%</span>
+              </div>
+            </div>
+          )}
+
+          {/* Certificate Uploader */}
           {signingMode === 'digital' && !isSigned && (
             <CertificateUploader onCertificateLoaded={handleCertLoaded} />
           )}
 
           {signingMode === 'digital' && isSigned && (
             <div className={styles.panelSection}>
-              <p className={styles.pageLabel} style={{ color: 'var(--color-success, #22c55e)' }}>
-                ✓ Document cryptographically signed.
+              <p style={{ fontSize: 13, color: 'var(--color-success)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 6 }}>
+                <Check size={14} /> Document cryptographically signed.
               </p>
             </div>
           )}
         </div>
       </div>
 
-      <div className={styles.controlsBar}>
-        <div className={styles.leftControls}>
-          <Button variant="ghost" leftIcon={<RefreshCw size={16} />} onClick={onStartOver}>
-             Start Over
-          </Button>
-          
-          <div className={styles.navigation}>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setPageNum(prev => Math.max(1, prev - 1))}
-              disabled={pageNum <= 1 || isRendering}
-            >
-              <ChevronLeft size={16} />
-            </Button>
-            <span className={styles.pageLabel}>
-              Page {pageNum} of {numPages}
-            </span>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => setPageNum(prev => Math.min(numPages, prev + 1))}
-              disabled={pageNum >= numPages || isRendering}
-            >
-              <ChevronRight size={16} />
-            </Button>
-          </div>
-        </div>
-        
-        <div className={styles.rightControls}>
-          <Button
-            variant="outline"
-            leftIcon={<Share2 size={16} />}
-            onClick={handleShareClick}
-            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
-          >
-            Share
-          </Button>
-          <Button
-            variant="primary"
-            leftIcon={isSigned ? <Check size={16} /> : <Download size={16} />}
-            onClick={handleDownload}
-            disabled={isProcessing || isRendering || (signingMode === 'digital' && !p12Buffer)}
-          >
-            {isProcessing ? 'Processing...' : isSigned ? 'Saved!' : 'Download Signed'}
-          </Button>
-        </div>
-      </div>
-
-      <ReviewModal 
-        isOpen={showReviewModal} 
-        onClose={() => setShowReviewModal(false)} 
+      <ReviewModal
+        isOpen={showReviewModal}
+        onClose={() => setShowReviewModal(false)}
       />
     </div>
   );

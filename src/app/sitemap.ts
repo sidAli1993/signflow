@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-07-27');
+  const lastModDate = new Date('2026-07-29');
 
   // Real blog posts that have actual page content
   const blogPosts = [

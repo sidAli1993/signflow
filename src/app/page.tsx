@@ -213,7 +213,7 @@ export default function Home() {
               <article className={styles.faqItem}>
                 <h3>How do I sign a PDF online for free without creating an account?</h3>
                 <p>
-                  Simply open MyDigitSign in your browser, draw or type your signature, upload your document, and place the signature overlay. You can download the completed document in seconds without registering.
+                  Simply open MyDigitSign in your browser, draw or type your signature, upload your document, and place the signature overlay. You can download the completed document in seconds without registering. You can also <a href="/tools/sign-image-online">sign an image online</a> just as easily.
                 </p>
               </article>
               <article className={styles.faqItem}>
@@ -225,7 +225,7 @@ export default function Home() {
               <article className={styles.faqItem}>
                 <h3>Are electronic signatures legally binding?</h3>
                 <p>
-                  Yes. Electronic signatures are legally enforceable under laws like the ESIGN Act and UETA in the United States and eIDAS in the European Union for most commercial, personal, and business contracts.
+                  Yes. Electronic signatures are legally enforceable under laws like the ESIGN Act and UETA in the United States and eIDAS in the European Union for most commercial, personal, and business contracts. Want to learn more? Read about <a href="/blog/what-is-a-signature-line">what a signature line means legally</a>.
                 </p>
               </article>
               <article className={styles.faqItem}>

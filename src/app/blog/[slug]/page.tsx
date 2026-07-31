@@ -46,10 +46,10 @@ const getPostData = (slug: string): Post | null => {
         <p>Signing a document online sounds simple — but for many people, the real questions are: <strong>Is it actually legal?</strong> What is the difference between an electronic and a digital signature? And how do you make sure your online signature will hold up if someone ever challenges it in court?</p>
         <p>This guide answers all of those questions. We'll cover the legal framework, the different types of electronic signatures, and walk you through exactly what you need to sign a document online safely and correctly.</p>
 
-        <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign now?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Skip straight to our free signing tool — no account, no upload, no watermarks.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+        <div style="background: var(--color-primary, #4f46e5); color: #fff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; box-shadow: 0 10px 25px -5px rgba(79,70,229,0.3);">
+          <p style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.25rem;">✍️ Stop Reading, Start Signing!</p>
+          <p style="margin: 0 0 1.25rem; font-size: 1rem; opacity: 0.9;">Sign any PDF document in your browser instantly. No account, no upload, no watermarks.</p>
+          <a href="/tools/sign-pdf-online" style="display: inline-block; background: #fff; color: var(--color-primary, #4f46e5); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Sign PDF Online Free</a>
         </div>
 
         <h2>Is It Legal to Sign Documents Online?</h2>
@@ -1177,7 +1177,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       ]
     },
     'what-is-a-signature-line': {
-      title: 'What Is a Signature Line? (And How to Add One in Word & PDF)',
+      title: 'What is a Signature Line? Definition, Format & How to Add One',
       date: 'July 27, 2026',
       lastModified: 'July 27, 2026',
       author: 'MyDigitSign Editorial',

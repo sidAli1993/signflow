@@ -40,3 +40,16 @@ Smallpdf (DA ~89), iLovePDF (DA ~82), PDF24 (DA ~72), DigiSigner (DA ~58)
 
 > When the user says "let's continue the SEO plan" or "discuss the plan", load the full plan from the artifact path above.
 
+---
+
+# Critical Rule: Always Read Data Before Acting
+
+**NEVER start any SEO work, content creation, or keyword targeting without first reading and confirming all user-provided data.**
+
+- If the user mentions a Google Sheet, CSV, or any external file with keyword/GSC data — **stop and ask for it immediately**. Do NOT proceed without it.
+- If a file cannot be read or accessed — **tell the user immediately** instead of guessing or working without it.
+- If keyword data is missing — **explicitly ask**: "Please share the Google Sheet / keyword data before I proceed."
+- Never assume 14 keywords are "all keywords" if the user mentions they have a larger dataset.
+
+This mistake was made once: SEO pages and blog posts were built without reading the user's full GSC keyword sheet, resulting in wasted work and incorrect targeting. **Do not repeat this.**
+

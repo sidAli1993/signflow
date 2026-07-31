@@ -8,7 +8,7 @@ import { Shield, Zap, Lock, FileCheck, Users, Star, CheckCircle, XCircle } from 
 import { getSoftwareAppSchema, getHowToSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo-schemas';
 
 export const metadata: Metadata = {
-  title: 'Sign PDF Online Free — No Uploads, No Watermarks | MyDigitSign',
+  title: 'Sign PDF Online Free — No Upload, No Watermark (2026)',
   description:
     'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool. Edit and sign PDFs in seconds.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: 'https://mydigitsign.com/tools/sign-pdf-online',
   },
   openGraph: {
-    title: 'Sign PDF Online Free — No Uploads, No Watermarks | MyDigitSign',
+    title: 'Sign PDF Online Free — No Upload, No Watermark (2026)',
     description:
       'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool.',
     url: 'https://mydigitsign.com/tools/sign-pdf-online',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sign PDF Online Free — No Uploads, No Watermarks | MyDigitSign',
+    title: 'Sign PDF Online Free — No Upload, No Watermark (2026)',
     description:
       'Sign any PDF online for free. No file uploads, no watermarks, no account needed. 100% browser-based PDF e-signature tool.',
     creator: '@mydigitsign',

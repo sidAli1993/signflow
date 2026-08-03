@@ -1,11 +1,11 @@
 /**
  * SEO Schema Generators for MyDigitSign
  * Generate fresh Schema.org JSON-LD data for Google Rich Results.
- * Updated: 2026-07-22
+ * Updated: 2026-08-03
  */
 
 export const BASE_URL = 'https://mydigitsign.com';
-export const CURRENT_DATE = '2026-07-22';
+export const CURRENT_DATE = '2026-08-03';
 
 export interface FAQItem {
   question: string;
@@ -21,14 +21,21 @@ export interface HowToStep {
 
 /**
  * Generates SoftwareApplication schema for tools.
+ *
+ * IMPORTANT: aggregateRating is ONLY included when real visible user reviews
+ * exist on the page. Fake/fabricated rating counts violate Google's structured
+ * data quality guidelines and risk manual actions.
+ *
+ * Pass `rating` only for pages that display actual user review content.
  */
 export function getSoftwareAppSchema(opts: {
   name: string;
   description: string;
   url: string;
   applicationCategory?: string;
+  rating?: { ratingValue: string; ratingCount: string };
 }) {
-  return {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: opts.name,
@@ -42,13 +49,6 @@ export function getSoftwareAppSchema(opts: {
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '1240',
-      bestRating: '5',
-      worstRating: '1',
-    },
     publisher: {
       '@type': 'Organization',
       name: 'MyDigitSign',
@@ -58,6 +58,19 @@ export function getSoftwareAppSchema(opts: {
     datePublished: '2026-06-01',
     dateModified: CURRENT_DATE,
   };
+
+  // Only add aggregateRating when real review data is passed
+  if (opts.rating) {
+    schema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: opts.rating.ratingValue,
+      ratingCount: opts.rating.ratingCount,
+      bestRating: '5',
+      worstRating: '1',
+    };
+  }
+
+  return schema;
 }
 
 /**

@@ -1,9 +1,22 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import HomeClient from './HomeClient';
 import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
+
+// Skeleton shown while HomeClient hydrates on the client
+function HomeClientSkeleton() {
+  return (
+    <div style={{ minHeight: '480px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--color-surface, #f8fafc)', borderRadius: '16px', margin: '1rem' }}>
+      <div style={{ textAlign: 'center', opacity: 0.6 }}>
+        <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>✍️</div>
+        <p style={{ color: 'var(--color-text-secondary, #64748b)', fontSize: '0.9rem' }}>Loading signature tool...</p>
+      </div>
+    </div>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'Digital Signature Online Free — 100% Private | MyDigitSign',
@@ -154,8 +167,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      {/* ─── Interactive Tool (client-side) ─────────────────────────────── */}
-      <HomeClient />
+      {/* ─── Interactive Tool (client-side with Suspense for LCP optimization) ─ */}
+      <Suspense fallback={<HomeClientSkeleton />}>
+        <HomeClient />
+      </Suspense>
 
       {/* ─── Server-rendered Explainer Section ──────────────────────────── */}
       {/* Below-the-fold static content for Google to index */}
@@ -252,7 +267,7 @@ export default function Home() {
           {/* Internal links to PDF Micro-Tools */}
           <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
             <h3 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.75rem', color: '#0f172a' }}>
-              Explore Our Free PDF & Signature Micro-Tools Suite
+              Explore Our Free PDF &amp; Signature Tools Suite
             </h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.85rem', fontSize: '0.9rem' }}>
               <li><a href="/tools" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 700 }}>All Tools Hub →</a></li>
@@ -264,6 +279,18 @@ export default function Home() {
               <li><a href="/tools/rotate-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Rotate PDF Online →</a></li>
               <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
               <li><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type Signature Online →</a></li>
+              <li><a href="/tools/pdf-to-jpg" style={{ color: 'var(--color-primary, #4f46e5)' }}>PDF to JPG →</a></li>
+              <li><a href="/tools/jpg-to-pdf" style={{ color: 'var(--color-primary, #4f46e5)' }}>JPG to PDF →</a></li>
+              <li><a href="/tools/split-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Split PDF Online →</a></li>
+            </ul>
+            <p style={{ fontSize: '0.875rem', color: '#94a3b8', marginTop: '1rem' }}>Compare:</p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
+              <li><a href="/compare/docusign-alternative" style={{ color: '#64748b' }}>DocuSign Alternative →</a></li>
+              <li><a href="/compare/adobe-sign-alternative" style={{ color: '#64748b' }}>Adobe Sign Alternative →</a></li>
+              <li><a href="/compare/smallpdf-alternative" style={{ color: '#64748b' }}>SmallPDF Alternative →</a></li>
+              <li><a href="/compare/pandadoc-alternative" style={{ color: '#64748b' }}>PandaDoc Alternative →</a></li>
+              <li><a href="/compare/hellosign-alternative" style={{ color: '#64748b' }}>HelloSign Alternative →</a></li>
+              <li><a href="/compare/signwell-alternative" style={{ color: '#64748b' }}>SignWell Alternative →</a></li>
             </ul>
           </div>
         </div>

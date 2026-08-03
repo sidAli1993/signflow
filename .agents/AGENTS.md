@@ -5,40 +5,46 @@ Whenever you are asked to write content for ANY project, you must ALWAYS conside
 
 ---
 
-# MyDigitSign — SEO Plan (Saved July 19, 2026)
+# MyDigitSign — SEO Plans (Reference Guide)
 
-A full SEO guide and 1-month premium action plan was created for **mydigitsign.com**.
-The complete plan is saved at:
+## ⭐ ACTIVE PLAN: Premium Futuristic SEO Master Plan (August 1, 2026)
+
+This is the **current and most up-to-date plan**. It was built after a full live codebase audit.
+The user will share more GSC/keyword data to refine it further.
+
+**Full plan saved at:**
+`C:\Users\Isa\.gemini\antigravity-ide\brain\ad7409be-8199-4849-af9d-9120e9577b5d\premium_seo_masterplan_2026.md`
+
+### Plan Status
+- **Phase 1 (Immediate Fixes):** NOT started yet — pending user's new data
+- **Phase 2 (AI-Era SEO):** NOT started yet
+- **Phase 3 (Scale & Authority):** NOT started yet
+
+### Key Pending Items from Plan
+1. Add HowTo schema to `/tools/type-signature-online` + `/tools/sign-image-online`
+2. Add SoftwareApplication schema to 7 tool pages
+3. Write 4 missing blog posts (DocuSign review, Freelancers, Lease, SmallPDF alternatives)
+4. Build `/compare/smallpdf-alternative` page
+5. Write "What Is a Digit Sign?" blog post — `digit sign` keyword at pos. **10**
+
+> ⚠️ **USER NOTE:** More GSC/keyword data will be shared to update and refine this plan before execution begins.
+> When user says "update the plan" or "here's the data", read the new data carefully first, then modify `premium_seo_masterplan_2026.md` accordingly.
+
+---
+
+## 📁 ARCHIVED PLAN: Original 30-Day Plan (July 19, 2026)
+
+This older plan has been largely completed. Kept for reference only.
 `C:\Users\Isa\.gemini\antigravity-ide\brain\c9299724-9396-4faa-baeb-62f0722feeb4\mydigitsign_seo_guide_and_plan.md`
 
-## Quick Summary
+### What Was Completed from This Plan
+- ✅ `/tools/sign-pdf-online` built with full schema
+- ✅ `/compare/docusign-alternative` built
+- ✅ `/tools/` hub page built
+- ✅ 11 blog posts published
+- ✅ Article + FAQPage + BreadcrumbList schema on all blogs
 
-**Goal:** Move 14 GSC keywords from positions 10–50 into top 3.
-
-### Highest Priority Tasks (discuss tomorrow)
-1. **Build `/tools/sign-pdf-online`** — captures 7 of 14 GSC keywords at once (Week 1)
-2. **Build `/compare/docusign-alternative`** — high-intent commercial traffic (Week 2)
-3. **Add HowTo schema** to `/tools/type-signature-online` + `/tools/sign-image-online`
-4. **Create `/tools/` hub index page** + add it to the Navbar
-5. **Write 6 new blog posts** (1 per week for 4 weeks, 2 in Week 2)
-6. **Submit to Product Hunt + AlternativeTo.net** (free high-DA backlinks)
-
-### Keyword Pinned for Tomorrow
-- `e signature pdf online` (pos. 21) → needs `/tools/sign-pdf-online`
-- `pdf editor signature` (pos. 43) → same page
-- `edit and sign pdf` (pos. 49) → same page
-- `sign on document online` (pos. 50) → same page
-
-### Content Sizing (reference)
-- Tool pages: 1,200–1,500 words
-- Blog posts (informational): 1,800–2,500 words
-- Comparison pages: 1,500–2,000 words
-
-### Top Competitors to Beat
-Smallpdf (DA ~89), iLovePDF (DA ~82), PDF24 (DA ~72), DigiSigner (DA ~58)
-**Our USP:** 100% client-side. Files never leave the browser. No account. Free forever.
-
-> When the user says "let's continue the SEO plan" or "discuss the plan", load the full plan from the artifact path above.
+> When the user says "let's continue the SEO plan" or "discuss the plan" — load the **ACTIVE PLAN** above, NOT this archived one.
 
 ---
 

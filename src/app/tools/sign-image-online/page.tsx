@@ -4,6 +4,7 @@ import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
+import { getSoftwareAppSchema } from '@/lib/seo-schemas';
 
 export const metadata: Metadata = {
   title: 'Sign Image Online Free — Sign PNG & JPG Files | MyDigitSign',
@@ -110,6 +111,13 @@ const howToSchema = {
   ],
 };
 
+const softwareSchema = getSoftwareAppSchema({
+  name: 'MyDigitSign Sign Image Tool',
+  description: 'Sign PNG and JPG images online for free. Place digital signatures on photos and scanned documents directly in your browser — no server uploads.',
+  url: 'https://mydigitsign.com/tools/sign-image-online',
+  applicationCategory: 'BusinessApplication',
+});
+
 export default function SignImageTool() {
   return (
     <div className={styles.appWrapper}>
@@ -147,6 +155,11 @@ export default function SignImageTool() {
         id="howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        id="software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
       <HomeClient 

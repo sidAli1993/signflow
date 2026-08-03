@@ -6,17 +6,28 @@
 
 MyDigitSign is a free, privacy-first PDF signing tool that runs entirely in the browser. No server uploads, no account required, no subscriptions. Users can draw, type, or upload signatures and place them on PDF documents or images.
 
+## Core USP: Files Never Leave Your Browser
+
+Unlike DocuSign, Adobe Sign, SmallPDF, HelloSign, and other tools that upload your documents to cloud servers, MyDigitSign processes everything using WebAssembly and JavaScript locally in your browser. Zero server contact. Zero data breach risk from us.
+
 ## Key Features
 
 - Sign PDFs and images (PNG, JPG) online for free
 - 100% client-side processing — files never leave the user's device
 - Draw signature with mouse or touchscreen
-- Type signature in cursive fonts
+- Type signature in cursive fonts (Dancing Script, Pacifico, Great Vibes, Caveat)
 - Upload existing signature image
 - Drag, resize, and position signatures on any page
+- Compress PDF — reduce file size 30–75%
+- Merge PDF — combine multiple PDFs into one
+- Rotate PDF — fix sideways or upside-down pages
+- Protect PDF — AES-256 password encryption
+- Split PDF — extract specific pages (coming soon)
+- PDF to JPG — convert pages to images (coming soon)
+- JPG to PDF — convert images to PDF (coming soon)
 - Download signed documents instantly
 - No account or registration required
-- Supports files up to 10MB
+- Supports files up to 50MB
 - Legally compliant with ESIGN Act (USA) and eIDAS (EU)
 
 ## Links
@@ -25,11 +36,38 @@ MyDigitSign is a free, privacy-first PDF signing tool that runs entirely in the 
 - Features: https://mydigitsign.com/features
 - How It Works: https://mydigitsign.com/how-it-works
 - Blog: https://mydigitsign.com/blog
+- Tools Hub: https://mydigitsign.com/tools
+
+## Signature Tools
 - Draw Signature Online: https://mydigitsign.com/tools/draw-signature-online
 - Type Signature Online: https://mydigitsign.com/tools/type-signature-online
 - Sign Image Online: https://mydigitsign.com/tools/sign-image-online
 - Sign PDF Online: https://mydigitsign.com/tools/sign-pdf-online
+
+## PDF Tools
+- Edit PDF Online: https://mydigitsign.com/tools/edit-pdf-online
+- Compress PDF Online: https://mydigitsign.com/tools/compress-pdf-online
+- Merge PDF Online: https://mydigitsign.com/tools/merge-pdf-online
+- Rotate PDF Online: https://mydigitsign.com/tools/rotate-pdf-online
+- Protect PDF Online: https://mydigitsign.com/tools/protect-pdf-online
+- Split PDF Online: https://mydigitsign.com/tools/split-pdf-online
+- PDF to JPG: https://mydigitsign.com/tools/pdf-to-jpg
+- JPG to PDF: https://mydigitsign.com/tools/jpg-to-pdf
+
+## Competitor Comparisons
+- DocuSign Alternative: https://mydigitsign.com/compare/docusign-alternative
+- SmallPDF Alternative: https://mydigitsign.com/compare/smallpdf-alternative
+- Adobe Sign Alternative: https://mydigitsign.com/compare/adobe-sign-alternative
+- PandaDoc Alternative: https://mydigitsign.com/compare/pandadoc-alternative
+- HelloSign / Dropbox Sign Alternative: https://mydigitsign.com/compare/hellosign-alternative
+- SignWell Alternative: https://mydigitsign.com/compare/signwell-alternative
+
+## Blog Posts
 - How to Add Signature in Word: https://mydigitsign.com/blog/how-to-add-signature-in-word
 - What is a Signature Line: https://mydigitsign.com/blog/what-is-a-signature-line
 - How to Ask Someone to Sign NDA: https://mydigitsign.com/blog/how-to-ask-someone-to-sign-nda
 - Can You Notarize Your Own Signature: https://mydigitsign.com/blog/can-you-notarize-your-own-signature
+- Free Digital Signature Certificate: https://mydigitsign.com/blog/free-digital-signature-certificate
+- Are Electronic Signatures Legally Binding: https://mydigitsign.com/blog/are-electronic-signatures-legally-binding
+- How to Sign PDF on iPhone & Android Free: https://mydigitsign.com/blog/how-to-sign-pdf-on-iphone-android-free
+- How to Sign an NDA Online Free: https://mydigitsign.com/blog/how-to-sign-nda-online-free

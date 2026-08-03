@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-07-29');
+  const lastModDate = new Date('2026-08-03');
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -30,6 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'draw-signature-online',
     'type-signature-online',
     'sign-image-online',
+    // Phase 3 new tools
+    'pdf-to-jpg',
+    'jpg-to-pdf',
+    'split-pdf-online',
   ];
 
   return [
@@ -49,12 +53,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
 
-    // Compare Hub & Pages
+    // Compare Hub
+    {
+      url: `${baseUrl}/compare`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    // Compare Pages
     {
       url: `${baseUrl}/compare/docusign-alternative`,
       lastModified: lastModDate,
       changeFrequency: 'weekly',
       priority: 0.9,
+    },
+    // Phase 1: SmallPDF alternative compare page
+    {
+      url: `${baseUrl}/compare/smallpdf-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Phase 3: Additional competitor compare pages
+    {
+      url: `${baseUrl}/compare/adobe-sign-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/pandadoc-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/hellosign-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/compare/signwell-alternative`,
+      lastModified: lastModDate,
+      changeFrequency: 'weekly',
+      priority: 0.85,
     },
 
     // Core informational pages

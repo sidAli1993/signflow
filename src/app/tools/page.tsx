@@ -98,6 +98,15 @@ const toolsList = [
     searchKeywords: ['type signature', 'cursive name generator', 'calligraphy signature', 'font signature maker'],
   },
   {
+    slug: 'rotate-pdf-online',
+    title: 'Rotate PDF Online',
+    badge: 'Utility',
+    category: 'PDF Tools',
+    description: 'Fix sideways or upside-down PDF pages. Rotate individual pages or all pages by 90, 180, or 270 degrees.',
+    icon: '🔄',
+    searchKeywords: ['rotate pdf', 'flip pdf pages', 'turn pdf 90 degrees', 'pdf page rotator'],
+  },
+  {
     slug: 'sign-image-online',
     title: 'Sign Image Online',
     badge: 'Utility',
@@ -105,6 +114,34 @@ const toolsList = [
     description: 'Add signatures, watermarks, or text overlays to PNG, JPG, or WebP images instantly in your browser.',
     icon: '🖼️',
     searchKeywords: ['sign image', 'watermark photo', 'sign png', 'sign jpg online'],
+  },
+  // Phase 3 new tools
+  {
+    slug: 'pdf-to-jpg',
+    title: 'PDF to JPG Free',
+    badge: 'New',
+    category: 'Convert',
+    description: 'Convert PDF pages to high-quality JPEG images. Extract each page as a separate JPG file — no server uploads, no watermarks.',
+    icon: '📄→🖼️',
+    searchKeywords: ['pdf to jpg', 'pdf to image', 'convert pdf to jpeg', 'extract pdf pages'],
+  },
+  {
+    slug: 'jpg-to-pdf',
+    title: 'JPG to PDF Free',
+    badge: 'New',
+    category: 'Convert',
+    description: 'Combine one or more JPG or PNG images into a single PDF document. 100% browser-based with no file uploads.',
+    icon: '🖼️→📄',
+    searchKeywords: ['jpg to pdf', 'image to pdf', 'photo to pdf', 'png to pdf free'],
+  },
+  {
+    slug: 'split-pdf-online',
+    title: 'Split PDF Online',
+    badge: 'New',
+    category: 'PDF Tools',
+    description: 'Extract specific pages or split your PDF into individual files. Choose page ranges or split every page separately.',
+    icon: '✂️',
+    searchKeywords: ['split pdf', 'extract pdf pages', 'separate pdf pages', 'pdf splitter free'],
   },
 ];
 
@@ -253,7 +290,7 @@ export default function ToolsHubPage() {
           </div>
 
           <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginTop: '2rem', textAlign: 'center' }}>
-            Last Updated: July 22, 2026 • MyDigitSign Team
+            Last Updated: August 3, 2026 • MyDigitSign Team
           </p>
         </section>
       </main>

@@ -58,6 +58,20 @@ export const Footer: React.FC = () => {
             <Link href="/tools/draw-signature-online" className={styles.link}>Draw Signature Online</Link>
             <Link href="/tools/type-signature-online" className={styles.link}>Type Signature Online</Link>
             <Link href="/tools/sign-image-online" className={styles.link}>Sign Image Online</Link>
+            <Link href="/tools/pdf-to-jpg" className={styles.link}>PDF to JPG Converter</Link>
+            <Link href="/tools/jpg-to-pdf" className={styles.link}>JPG to PDF Converter</Link>
+            <Link href="/tools/split-pdf-online" className={styles.link}>Split PDF Online</Link>
+          </div>
+          
+          <div className={styles.linksCol}>
+            <h4 className={styles.colTitle}>Compare Alternatives</h4>
+            <Link href="/compare" className={styles.link} style={{ fontWeight: 700, color: 'var(--color-primary, #4f46e5)' }}>Compare Hub →</Link>
+            <Link href="/compare/docusign-alternative" className={styles.link}>DocuSign Alternative</Link>
+            <Link href="/compare/adobe-sign-alternative" className={styles.link}>Adobe Sign Alternative</Link>
+            <Link href="/compare/smallpdf-alternative" className={styles.link}>SmallPDF Alternative</Link>
+            <Link href="/compare/hellosign-alternative" className={styles.link}>HelloSign Alternative</Link>
+            <Link href="/compare/pandadoc-alternative" className={styles.link}>PandaDoc Alternative</Link>
+            <Link href="/compare/signwell-alternative" className={styles.link}>SignWell Alternative</Link>
           </div>
           
           <div className={styles.linksCol}>
@@ -89,6 +103,7 @@ export const Footer: React.FC = () => {
             <Link href="/cookie-policy" className={styles.link}>Cookie Policy</Link>
           </div>
         </div>
+
         
         <div className={styles.reviewBanner}>
           <p className={styles.reviewText}>

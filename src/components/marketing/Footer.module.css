@@ -19,8 +19,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-  gap: var(--space-2xl);
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: var(--space-xl);
   margin-bottom: var(--space-2xl);
 }
 

@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   },
 };
 
+import SplitPdfClient from '@/components/tools/SplitPdfClient';
+
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Tools', url: '/tools' },
@@ -96,27 +98,10 @@ export default function SplitPdfOnlinePage() {
         </section>
 
         {/* Tool Area */}
-        <section style={{ maxWidth: '700px', margin: '2rem auto', padding: '0 1rem' }}>
-          <div style={{ background: '#f8fafc', border: '2px dashed #cbd5e1', borderRadius: '16px', padding: '3rem 2rem', textAlign: 'center' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>✂️📄</div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0f172a' }}>PDF Splitter</h2>
-            <p style={{ color: '#64748b', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-              Drop your PDF here. Extract any pages locally — zero server uploads.
-            </p>
-            <label htmlFor="split-pdf-input" style={{ display: 'inline-block', background: '#4f46e5', color: 'white', padding: '0.75rem 1.75rem', borderRadius: '8px', fontWeight: 600, cursor: 'pointer', fontSize: '1rem' }}>
-              Select PDF File
-            </label>
-            <input id="split-pdf-input" type="file" accept=".pdf" style={{ display: 'none' }} disabled />
-            <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#94a3b8' }}>
-              🔒 Your file stays in your browser — zero server uploads
-            </p>
-            <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#eff6ff', borderRadius: '10px', border: '1px solid #bfdbfe' }}>
-              <p style={{ color: '#1d4ed8', fontWeight: 600, margin: 0, fontSize: '0.9rem' }}>
-                ⚡ PDF splitter coming soon. In the meantime, try <a href="/tools/merge-pdf-online" style={{ color: '#1d4ed8' }}>Merge PDF</a> or <a href="/tools/rotate-pdf-online" style={{ color: '#1d4ed8' }}>Rotate PDF</a>.
-              </p>
-            </div>
-          </div>
+        <section style={{ maxWidth: '900px', margin: '2rem auto 3rem', padding: '0 1rem' }}>
+          <SplitPdfClient />
         </section>
+
 
         {/* SEO Content */}
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>

@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   },
 };
 
+import PdfToJpgClient from '@/components/tools/PdfToJpgClient';
+
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Tools', url: '/tools' },
@@ -98,27 +100,10 @@ export default function PdfToJpgPage() {
         </section>
 
         {/* Tool Area */}
-        <section style={{ maxWidth: '700px', margin: '2rem auto', padding: '0 1rem' }}>
-          <div style={{ background: '#f8fafc', border: '2px dashed #cbd5e1', borderRadius: '16px', padding: '3rem 2rem', textAlign: 'center' }}>
-            <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>📄→🖼️</div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0f172a' }}>PDF to JPG Converter</h2>
-            <p style={{ color: '#64748b', marginBottom: '1.5rem', fontSize: '0.95rem' }}>
-              Drop your PDF here or click to select. Conversion runs entirely in your browser.
-            </p>
-            <label htmlFor="pdf-to-jpg-input" style={{ display: 'inline-block', background: '#4f46e5', color: 'white', padding: '0.75rem 1.75rem', borderRadius: '8px', fontWeight: 600, cursor: 'pointer', fontSize: '1rem' }}>
-              Select PDF File
-            </label>
-            <input id="pdf-to-jpg-input" type="file" accept=".pdf" style={{ display: 'none' }} disabled />
-            <p style={{ marginTop: '1rem', fontSize: '0.8rem', color: '#94a3b8' }}>
-              🔒 Your file stays in your browser — zero server uploads
-            </p>
-            <div style={{ marginTop: '1.5rem', padding: '1rem', background: '#eff6ff', borderRadius: '10px', border: '1px solid #bfdbfe' }}>
-              <p style={{ color: '#1d4ed8', fontWeight: 600, margin: 0, fontSize: '0.9rem' }}>
-                ⚡ PDF to JPG conversion is coming soon. In the meantime, use our <a href="/tools/sign-pdf-online" style={{ color: '#1d4ed8' }}>Sign PDF</a> or <a href="/tools/compress-pdf-online" style={{ color: '#1d4ed8' }}>Compress PDF</a> tools.
-              </p>
-            </div>
-          </div>
+        <section style={{ maxWidth: '900px', margin: '2rem auto 3rem', padding: '0 1rem' }}>
+          <PdfToJpgClient />
         </section>
+
 
         {/* SEO Content */}
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>

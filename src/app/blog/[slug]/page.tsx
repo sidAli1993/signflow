@@ -1675,6 +1675,9 @@ export default async function BlogPost({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": post.title,
+    "image": [
+      "https://mydigitsign.com/og-image.png"
+    ],
     "datePublished": new Date(post.date).toISOString(),
     "dateModified": new Date(post.lastModified).toISOString(),
     "author": {
@@ -1695,7 +1698,7 @@ export default async function BlogPost({ params }: Props) {
       "url": "https://mydigitsign.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mydigitsign.com/icon.svg"
+        "url": "https://mydigitsign.com/og-image.png"
       }
     },
     "mainEntityOfPage": {

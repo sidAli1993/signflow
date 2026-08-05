@@ -53,7 +53,10 @@ export function getSoftwareAppSchema(opts: {
       '@type': 'Organization',
       name: 'MyDigitSign',
       url: BASE_URL,
-      logo: `${BASE_URL}/icon.svg`,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/og-image.png`,
+      },
     },
     datePublished: '2026-06-01',
     dateModified: CURRENT_DATE,
@@ -79,9 +82,11 @@ export function getSoftwareAppSchema(opts: {
 export function getHowToSchema(opts: {
   name: string;
   description: string;
+  url?: string;
   totalTime?: string;
   steps: HowToStep[];
 }) {
+  const pageUrl = opts.url || BASE_URL;
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -93,7 +98,7 @@ export function getHowToSchema(opts: {
       position: idx + 1,
       name: s.name,
       text: s.text,
-      url: s.url || BASE_URL,
+      url: s.url || pageUrl,
       ...(s.image ? { image: s.image } : {}),
     })),
     datePublished: '2026-06-01',
@@ -130,7 +135,7 @@ export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
       '@type': 'ListItem',
       position: idx + 1,
       name: item.name,
-      item: item.url.startsWith('http') ? item.url : `${BASE_URL}${item.url}`,
+      item: item.url.startsWith('http') ? item.url : `${BASE_URL}${item.url.startsWith('/') ? '' : '/'}${item.url}`,
     })),
   };
 }
@@ -148,7 +153,7 @@ export function getItemListSchema(tools: { name: string; url: string; descriptio
       '@type': 'ListItem',
       position: idx + 1,
       name: t.name,
-      url: t.url.startsWith('http') ? t.url : `${BASE_URL}${t.url}`,
+      url: t.url.startsWith('http') ? t.url : `${BASE_URL}${t.url.startsWith('/') ? '' : '/'}${t.url}`,
       description: t.description,
     })),
   };

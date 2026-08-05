@@ -167,17 +167,6 @@ export default function DrawSignatureTool() {
         </div>
       </section>
 
-      <script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        id="howto-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-
       <HomeClient 
         initialTab="draw" 
         titleOverride="Draw Your Free <span>Digital Signature</span>" 

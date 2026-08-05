@@ -4,6 +4,7 @@ import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
+import { getSoftwareAppSchema, getBreadcrumbSchema, getFAQSchema, getHowToSchema } from '@/lib/seo-schemas';
 
 export const metadata: Metadata = {
   title: 'Type Signature Online Free — Cursive Font Signature Maker | MyDigitSign',
@@ -48,46 +49,17 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'name': 'Home',
-      'item': 'https://mydigitsign.com',
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'name': 'Type Signature Online',
-      'item': 'https://mydigitsign.com/tools/type-signature-online',
-    },
-  ],
-};
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Type Signature Online', url: '/tools/type-signature-online' },
+]);
 
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  'name': 'MyDigitSign Type Signature Tool',
-  'applicationCategory': 'BusinessApplication',
-  'operatingSystem': 'Web Browser',
-  'description': 'Free cursive font signature generator. Type your name and instantly create beautiful electronic signatures.',
-  'offers': {
-    '@type': 'Offer',
-    'price': '0',
-    'priceCurrency': 'USD'
-  },
-  'url': 'https://mydigitsign.com/tools/type-signature-online',
-  'aggregateRating': {
-    '@type': 'AggregateRating',
-    'ratingValue': '4.9',
-    'ratingCount': '1240',
-    'bestRating': '5',
-    'worstRating': '1',
-  },
-};
+const softwareSchema = getSoftwareAppSchema({
+  name: 'MyDigitSign Type Signature Tool',
+  description: 'Free cursive font signature generator. Type your name and instantly create beautiful electronic signatures.',
+  url: 'https://mydigitsign.com/tools/type-signature-online',
+  applicationCategory: 'BusinessApplication',
+});
 
 // HowTo schema — enables Google rich results for "how to type signature online"
 const howToSchema = {

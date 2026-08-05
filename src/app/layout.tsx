@@ -90,19 +90,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      // SoftwareApplication + WebApplication: dual typing for maximum AI/search coverage
-      "@type": ["SoftwareApplication", "WebApplication"],
+      "@type": "SoftwareApplication",
       "@id": "https://mydigitsign.com/#app",
       "name": "MyDigitSign",
       "url": "https://mydigitsign.com",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "2840",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "operatingSystem": "Any",
+      "operatingSystem": "Windows, macOS, Linux, iOS, Android",
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "PDF & Document Signing Tool",
       "description": "Free online PDF signer and digital signature tool. Draw, type, or upload your signature and place it on any PDF or image. 100% browser-based — no uploads, no account.",
@@ -124,8 +116,6 @@ const jsonLd = {
         "Download signed PDF instantly"
       ],
       "screenshot": "https://mydigitsign.com/og-image.png",
-      // potentialAction helps AI engines and search engines understand
-      // that this is an interactive tool users can directly use
       "potentialAction": {
         "@type": "UseAction",
         "target": "https://mydigitsign.com",
@@ -134,7 +124,6 @@ const jsonLd = {
       }
     },
     {
-      // WebSite with SearchAction — enables Google SERP site-search box
       "@type": "WebSite",
       "@id": "https://mydigitsign.com/#website",
       "name": "MyDigitSign",
@@ -150,7 +139,6 @@ const jsonLd = {
       }
     },
     {
-      // FAQPage: generates expandable Q&A rich results in Google SERP
       "@type": "FAQPage",
       "@id": "https://mydigitsign.com/#faq",
       "mainEntity": [
@@ -254,7 +242,7 @@ const jsonLd = {
       "foundingDate": "2026",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://mydigitsign.com/icon.svg"
+        "url": "https://mydigitsign.com/og-image.png"
       },
       "contactPoint": {
         "@type": "ContactPoint",

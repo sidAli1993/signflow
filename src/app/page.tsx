@@ -89,10 +89,13 @@ const organizationSchema = {
   '@type': 'Organization',
   'name': 'MyDigitSign',
   'url': 'https://mydigitsign.com',
-  'logo': 'https://mydigitsign.com/logo.png',
+  'logo': {
+    '@type': 'ImageObject',
+    'url': 'https://mydigitsign.com/og-image.png',
+  },
   'sameAs': [
-    'https://twitter.com/mydigitsign',
-    'https://github.com/mydigitsign'
+    'https://twitter.com/alimirza00',
+    'https://github.com/sidAli1993/signflow'
   ]
 };
 
@@ -101,7 +104,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   'name': 'MyDigitSign',
   'applicationCategory': 'BusinessApplication',
-  'operatingSystem': 'Web Browser',
+  'operatingSystem': 'Windows, macOS, Linux, iOS, Android',
   'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
   'offers': {
     '@type': 'Offer',
@@ -109,18 +112,24 @@ const softwareSchema = {
     'priceCurrency': 'USD'
   },
   'url': 'https://mydigitsign.com',
-  'aggregateRating': {
-    '@type': 'AggregateRating',
-    'ratingValue': '4.9',
-    'ratingCount': '2840',
-    'bestRating': '5',
-    'worstRating': '1',
-  },
 };
 
 export default function Home() {
   return (
     <div className={styles.appWrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+
       <Navbar />
 
       {/* ─── Server-rendered SEO Hero Section ───────────────────────────── */}

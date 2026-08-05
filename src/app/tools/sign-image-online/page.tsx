@@ -4,7 +4,7 @@ import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
-import { getSoftwareAppSchema } from '@/lib/seo-schemas';
+import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
 
 export const metadata: Metadata = {
   title: 'Sign Image Online Free — Sign PNG & JPG Files | MyDigitSign',
@@ -49,67 +49,38 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'name': 'Home',
-      'item': 'https://mydigitsign.com',
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'name': 'Sign Image Online',
-      'item': 'https://mydigitsign.com/tools/sign-image-online',
-    },
-  ],
-};
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Sign Image Online', url: '/tools/sign-image-online' },
+]);
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  'name': 'How to Sign an Image Online Free (PNG & JPG)',
-  'description': 'Upload a PNG or JPG image, overlay your digital signature, and download the signed image — 100% in your browser with no server uploads.',
-  'totalTime': 'PT2M',
-  'tool': [
-    { '@type': 'HowToTool', 'name': 'MyDigitSign Sign Image Tool' },
-    { '@type': 'HowToTool', 'name': 'Web Browser (any modern browser)' },
-  ],
-  'step': [
+const howToSchema = getHowToSchema({
+  name: 'How to Sign an Image Online Free (PNG & JPG)',
+  description: 'Upload a PNG or JPG image, overlay your digital signature, and download the signed image — 100% in your browser with no server uploads.',
+  url: 'https://mydigitsign.com/tools/sign-image-online',
+  steps: [
     {
-      '@type': 'HowToStep',
-      'position': 1,
-      'name': 'Create Your Signature',
-      'text': 'Type your name in cursive, draw freehand with your mouse, or upload an existing signature image. Click Adopt to confirm.',
-      'url': 'https://mydigitsign.com/tools/sign-image-online',
+      name: 'Create Your Signature',
+      text: 'Type your name in cursive, draw freehand with your mouse, or upload an existing signature image. Click Adopt to confirm.',
+      url: 'https://mydigitsign.com/tools/sign-image-online',
     },
     {
-      '@type': 'HowToStep',
-      'position': 2,
-      'name': 'Upload Your Image Document',
-      'text': 'Drag and drop your PNG, JPG, or JPEG file into the browser uploader. The file is processed locally — nothing is uploaded to any server.',
-      'url': 'https://mydigitsign.com/tools/sign-image-online',
+      name: 'Upload Your Image Document',
+      text: 'Drag and drop your PNG, JPG, or JPEG file into the browser uploader. The file is processed locally — nothing is uploaded to any server.',
+      url: 'https://mydigitsign.com/tools/sign-image-online',
     },
     {
-      '@type': 'HowToStep',
-      'position': 3,
-      'name': 'Place and Resize Signature',
-      'text': 'Drag the signature overlay to the correct position on your image. Use the resize handle to scale it to fit naturally.',
-      'url': 'https://mydigitsign.com/tools/sign-image-online',
+      name: 'Position Signature Overlay',
+      text: 'Drag the signature overlay to the correct position on your image. Use the resize handle to scale it to fit naturally.',
+      url: 'https://mydigitsign.com/tools/sign-image-online',
     },
     {
-      '@type': 'HowToStep',
-      'position': 4,
-      'name': 'Download Signed Image',
-      'text': 'Click Download to save your signed image directly to your device. The result is a standard PNG with your signature embedded.',
-      'url': 'https://mydigitsign.com/tools/sign-image-online',
+      name: 'Download Signed Image',
+      text: 'Click Download to save your signed image directly to your device. The result is a standard PNG with your signature embedded.',
+      url: 'https://mydigitsign.com/tools/sign-image-online',
     },
   ],
-};
-
+});
 
 const softwareSchema = getSoftwareAppSchema({
   name: 'MyDigitSign Sign Image Tool',

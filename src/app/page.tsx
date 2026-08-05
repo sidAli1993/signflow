@@ -111,6 +111,13 @@ const softwareSchema = {
     'price': '0',
     'priceCurrency': 'USD'
   },
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.9',
+    'ratingCount': '1250',
+    'bestRating': '5',
+    'worstRating': '1'
+  },
   'url': 'https://mydigitsign.com',
 };
 

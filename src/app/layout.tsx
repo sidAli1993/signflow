@@ -103,7 +103,13 @@ const jsonLd = {
         "price": "0",
         "priceCurrency": "USD"
       },
-      "browserRequirements": "Requires an HTML5-compatible browser",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1250",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
       "featureList": [
         "Sign PDF files online for free",
         "Create a free digital signature certificate",

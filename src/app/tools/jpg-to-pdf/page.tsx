@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
+import JpgToPdfClient from '@/components/tools/JpgToPdfClient';
 import { getSoftwareAppSchema, getHowToSchema, getFAQSchema, getBreadcrumbSchema } from '@/lib/seo-schemas';
 import styles from '../../static-page.module.css';
 
@@ -38,8 +39,6 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
 };
-
-import JpgToPdfClient from '@/components/tools/JpgToPdfClient';
 
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Home', url: '/' },

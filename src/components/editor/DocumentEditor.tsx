@@ -10,9 +10,6 @@ import { CertificateUploader } from './CertificateUploader';
 import { ReviewModal } from '@/components/ui/ReviewModal';
 import styles from './DocumentEditor.module.css';
 
-// Configure pdfjs worker CDN
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
-
 interface DocumentEditorProps {
   file: File;
   signatureUrl: string;
@@ -25,6 +22,10 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   const [pageNum, setPageNum] = useState(1);
   const [numPages, setNumPages] = useState(0);
   const [isRendering, setIsRendering] = useState(false);
+
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+  }, []);
 
   const [position, setPosition] = useState({ x: 30, y: 50 });
   const [size, setSize] = useState({ width: 150, height: 75 });

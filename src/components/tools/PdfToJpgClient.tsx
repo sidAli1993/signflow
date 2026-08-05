@@ -1,12 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { Upload, FileText, CheckCircle, RefreshCw, Download, Image as ImageIcon } from 'lucide-react';
 import { ReviewModal } from '@/components/ui/ReviewModal';
-
-// Configure pdfjs worker matching the exact version in other components
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
 
 interface PageImage {
   id: string;
@@ -20,6 +17,10 @@ export default function PdfToJpgClient() {
   const [progress, setProgress] = useState(0);
   const [images, setImages] = useState<PageImage[]>([]);
   const [showReviewModal, setShowReviewModal] = useState(false);
+
+  useEffect(() => {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+  }, []);
 
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return bytes + ' B';

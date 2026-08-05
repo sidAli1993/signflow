@@ -113,7 +113,16 @@ export default function SplitPdfOnlinePage() {
             In all these cases, splitting the PDF to extract exactly the pages you need saves time, reduces file size, and avoids sharing irrelevant information. MyDigitSign&apos;s free PDF splitter handles this in seconds, directly in your browser.
           </p>
 
-          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>Splitting vs. Extracting — What&apos;s the Difference?</h3>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>How to Split a PDF Online — Step by Step</h2>
+          <ol style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Open the tool above</strong> — no account, no download needed.</li>
+            <li><strong>Upload your PDF</strong> — click &quot;Select PDF&quot; or drag and drop the file. It loads entirely in your browser.</li>
+            <li><strong>Choose pages to extract</strong> — select individual pages, a range (e.g., 2–5), or choose &quot;Split all&quot; to create individual files per page.</li>
+            <li><strong>Click &quot;Split PDF&quot;</strong> — processing is instant and happens locally.</li>
+            <li><strong>Download the result</strong> — save your new extracted PDF directly to your device.</li>
+          </ol>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>Splitting vs. Extracting — What&apos;s the Difference?</h3>
           <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
             <strong>Splitting</strong> typically means dividing a PDF into multiple separate files — for example, splitting a 12-page document into 12 individual one-page PDFs.
           </p>
@@ -123,6 +132,16 @@ export default function SplitPdfOnlinePage() {
           <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
             MyDigitSign supports both operations. You can split every page into its own file, or extract a custom selection of pages into a new PDF.
           </p>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>Common Use Cases for Splitting a PDF</h3>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Contracts:</strong> Extract only the signature pages from a multi-page legal agreement.</li>
+            <li><strong>Bank statements:</strong> Pull out a single month from a year-long combined PDF statement.</li>
+            <li><strong>Reports:</strong> Share a specific chapter or section of a long report without revealing the full document.</li>
+            <li><strong>Academic papers:</strong> Extract bibliography or appendix pages from a research document.</li>
+            <li><strong>Invoices:</strong> Separate individual invoices from a combined monthly billing PDF.</li>
+            <li><strong>Presentations:</strong> Extract specific slides exported as PDF pages for sharing individually.</li>
+          </ul>
 
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Frequently Asked Questions</h3>
           {faqItems.map((faq, i) => (

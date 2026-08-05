@@ -114,12 +114,32 @@ export default function JpgToPdfPage() {
             Once your images are in PDF format, you can also use our other tools to <a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>sign the PDF</a>, <a href="/tools/compress-pdf-online" style={{ color: '#4f46e5' }}>compress it</a>, or <a href="/tools/protect-pdf-online" style={{ color: '#4f46e5' }}>password-protect it</a>.
           </p>
 
-          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>Common Use Cases</h3>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>How to Convert JPG to PDF — Step by Step</h2>
+          <ol style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Open the tool above</strong> — no download or account required.</li>
+            <li><strong>Click &quot;Select Images&quot;</strong> or drag and drop your JPG, PNG, or JPEG files into the upload area.</li>
+            <li><strong>Arrange the order</strong> — drag your images into the sequence you want them to appear as pages in the PDF.</li>
+            <li><strong>Click &quot;Convert to PDF&quot;</strong> — processing happens instantly in your browser.</li>
+            <li><strong>Download your PDF</strong> — the file is saved directly to your device. Nothing is stored on any server.</li>
+          </ol>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>Common Use Cases</h3>
           <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
             <li><strong>Scanned documents:</strong> Combine multiple scanned page photos into one PDF.</li>
             <li><strong>Receipts and invoices:</strong> Convert receipt photos into a PDF for expense reports.</li>
             <li><strong>Portfolio compilation:</strong> Combine design or artwork images into a single PDF portfolio.</li>
             <li><strong>ID document submission:</strong> Convert photos of ID pages into a combined PDF.</li>
+            <li><strong>Medical forms:</strong> Scan and convert hand-filled medical forms into a single PDF for submission.</li>
+            <li><strong>Real estate documents:</strong> Combine photos of property documents, floor plans, or inspection pages into one file.</li>
+            <li><strong>Student assignments:</strong> Convert handwritten notes or drawings into a PDF to submit digitally.</li>
+          </ul>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>Tips for Best Quality Output</h3>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li>Use images with at least <strong>150 DPI resolution</strong> for crisp text in the PDF.</li>
+            <li>For document scans, crop white borders from your image before converting for cleaner output.</li>
+            <li>PNG images support transparency; if your image has a transparent background, it will render as white in the PDF.</li>
+            <li>After converting, use our <a href="/tools/compress-pdf-online" style={{ color: '#4f46e5' }}>PDF compressor</a> if you need to reduce the file size for email.</li>
           </ul>
 
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Frequently Asked Questions</h3>

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     "privacy friendly tool",
     "localStorage theme preference"
   ],
+  robots: { index: false, follow: false },
   alternates: {
     canonical: "https://mydigitsign.com/cookie-policy",
   },

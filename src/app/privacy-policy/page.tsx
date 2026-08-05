@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "private pdf tool",
     "secure local e-signature"
   ],
+  robots: { index: false, follow: false },
   alternates: {
     canonical: "https://mydigitsign.com/privacy-policy",
   },

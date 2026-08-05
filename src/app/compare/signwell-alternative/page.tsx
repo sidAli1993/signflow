@@ -128,6 +128,44 @@ export default function SignWellAlternativePage() {
             MyDigitSign takes a different philosophy: no friction. Open the page, create your signature, sign your document, and download. No account required, no limits imposed, and no file ever uploaded to our servers.
           </p>
 
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>SignWell Pricing in 2026</h2>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1rem' }}>
+            SignWell operates on a freemium model with meaningful limitations on its free tier:
+          </p>
+          <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Free Plan:</strong> Limited to 3 completed documents per month. Account registration required. No templates.</li>
+            <li><strong>Personal Plan:</strong> $8/month — unlimited documents for 1 user, basic templates, SMS reminders.</li>
+            <li><strong>Business Plan:</strong> $24/month — up to 3 users, custom branding, team management.</li>
+            <li><strong>Business Pro Plan:</strong> $60/month — unlimited users, Zapier integrations, and audit trails.</li>
+          </ul>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            <strong>MyDigitSign cost:</strong> $0/month. Unlimited documents, no account needed, no document limits — ever.
+          </p>
+
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Who Should Switch from SignWell to MyDigitSign?</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+            {[
+              { icon: '📄', title: 'Occasional Signers', desc: 'If you sign more than 3 documents a month, SignWell\'s free plan cuts you off. MyDigitSign has zero limits.' },
+              { icon: '🔐', title: 'Privacy-First Users', desc: 'SignWell uploads your documents to their servers. MyDigitSign processes everything locally — your files never leave your device.' },
+              { icon: '⚡', title: 'No-Signup Users', desc: 'SignWell requires account registration even for free use. With MyDigitSign, open the page and sign — zero registration.' },
+              { icon: '💰', title: 'Budget-Conscious Teams', desc: 'Why pay $24/month for a team plan when MyDigitSign handles all common signing scenarios for free?' },
+            ].map((item, i) => (
+              <div key={i} style={{ background: '#f0fdfa', border: '1px solid #99f6e4', borderRadius: '10px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.4rem', color: '#0f172a' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.875rem', color: '#475569', lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>MyDigitSign vs SignWell — Privacy Model</h2>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            SignWell, like most cloud-based e-signature tools, processes and stores your documents on their servers. That means your lease agreements, client contracts, and employment documents reside in their cloud — you&apos;re trusting a third party with your confidential information.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            MyDigitSign&apos;s architecture eliminates this risk entirely. When you open a PDF in MyDigitSign, it loads directly into your browser using Mozilla PDF.js. Your signature is created in canvas memory, embedded into the document using pdf-lib, and the signed PDF is returned to your browser&apos;s download manager. Not a single byte of your document travels to any server we operate.
+          </p>
+
           <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2rem', background: '#f0fdfa', borderRadius: '12px', border: '1px solid #99f6e4' }}>
             <h4 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem', color: '#0f172a' }}>Unlimited signing. Zero friction.</h4>
             <p style={{ color: '#475569', marginBottom: '1.5rem' }}>No account. No limits. Sign your first PDF in under 60 seconds.</p>
@@ -151,6 +189,7 @@ export default function SignWellAlternativePage() {
               <li><a href="/compare/hellosign-alternative" style={{ color: '#4f46e5' }}>HelloSign Alternative →</a></li>
               <li><a href="/compare/adobe-sign-alternative" style={{ color: '#4f46e5' }}>Adobe Sign Alternative →</a></li>
               <li><a href="/compare/pandadoc-alternative" style={{ color: '#4f46e5' }}>PandaDoc Alternative →</a></li>
+              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: '#4f46e5' }}>Are E-Signatures Legal? →</a></li>
             </ul>
           </div>
         </section>

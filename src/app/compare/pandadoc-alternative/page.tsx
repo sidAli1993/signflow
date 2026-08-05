@@ -128,6 +128,44 @@ export default function PandaDocAlternativePage() {
             MyDigitSign is designed for exactly these simpler, everyday signing needs. You get a fast, private, free experience without a subscription, without onboarding, and without uploading your sensitive documents to a third-party server.
           </p>
 
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>PandaDoc Pricing in 2026</h2>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1rem' }}>
+            PandaDoc is an enterprise-grade platform with pricing to match:
+          </p>
+          <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Free eSign Plan:</strong> Unlimited e-signatures, but requires account registration. No document creation or templates.</li>
+            <li><strong>Essentials Plan:</strong> $19/user/month — adds templates, rich media editor, and real-time tracking.</li>
+            <li><strong>Business Plan:</strong> $49/user/month — adds CRM integrations, approval workflows, and bulk send.</li>
+            <li><strong>Enterprise Plan:</strong> Custom pricing — Salesforce integration, SSO, and advanced analytics.</li>
+          </ul>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            Even PandaDoc&apos;s free tier requires account creation and uploads your documents to their cloud. MyDigitSign costs $0, requires no account, and processes your files 100% locally.
+          </p>
+
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Who Should Use MyDigitSign Instead of PandaDoc?</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+            {[
+              { icon: '💼', title: 'Freelancers & Consultants', desc: 'Sign client contracts, SOWs, and invoices without the enterprise overhead of a PandaDoc subscription.' },
+              { icon: '🏡', title: 'Property Managers', desc: 'Collect tenant signatures on lease agreements instantly. No $49/month plan needed for a simple rental contract.' },
+              { icon: '📝', title: 'Small Teams', desc: 'Sign NDAs, vendor agreements, and onboarding forms for free — when you don\'t need PandaDoc\'s CRM integrations.' },
+              { icon: '🔒', title: 'Privacy-Conscious Users', desc: 'Keep sensitive contracts on your local device. Unlike PandaDoc, MyDigitSign never stores your files on a server.' },
+            ].map((item, i) => (
+              <div key={i} style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '10px', padding: '1.25rem' }}>
+                <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.4rem', color: '#0f172a' }}>{item.title}</h3>
+                <p style={{ fontSize: '0.875rem', color: '#475569', lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>The Privacy Difference</h2>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            PandaDoc stores your signed documents in their cloud — your contracts, NDAs, and sensitive business documents live on their servers, subject to their data retention policies. In the event of a data breach, your confidential agreements are at risk.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            MyDigitSign operates on a fundamentally different model: zero-server processing. When you upload a PDF to sign, it loads directly into your browser memory using JavaScript. The signing process, page rendering, and final PDF compilation all happen on your device. The signed file is returned directly to your browser download — our servers never see it.
+          </p>
+
           <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2rem', background: '#fffbeb', borderRadius: '12px', border: '1px solid #fde68a' }}>
             <h4 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem', color: '#0f172a' }}>No subscription needed</h4>
             <p style={{ color: '#475569', marginBottom: '1.5rem' }}>Sign your first PDF free — right now, no account required.</p>
@@ -150,6 +188,7 @@ export default function PandaDocAlternativePage() {
               <li><a href="/compare/docusign-alternative" style={{ color: '#4f46e5' }}>DocuSign Alternative →</a></li>
               <li><a href="/compare/adobe-sign-alternative" style={{ color: '#4f46e5' }}>Adobe Sign Alternative →</a></li>
               <li><a href="/compare/smallpdf-alternative" style={{ color: '#4f46e5' }}>SmallPDF Alternative →</a></li>
+              <li><a href="/compare/hellosign-alternative" style={{ color: '#4f46e5' }}>HelloSign Alternative →</a></li>
               <li><a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>Sign PDF Free →</a></li>
             </ul>
           </div>

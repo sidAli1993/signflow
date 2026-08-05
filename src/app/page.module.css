@@ -9,7 +9,7 @@
 
 .mainContent {
   flex: 1;
-  padding: var(--space-2xl) 0;
+  padding: var(--space-xl) 0;
   display: flex;
   justify-content: center;
 }
@@ -20,13 +20,18 @@
   padding: 0 var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
 }
 
 .adRow {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.adRow:has(div:empty),
+.adRow:has(.adWrapper:not(:has(iframe)):not(:has(ins)):not(:has([class*="blockedCard"])):not(:has(div > *))) {
+  display: none;
 }
 
 /* ─── Step Indicator ───────────────────────────────── */
@@ -119,7 +124,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-lg);
-  padding: var(--space-4xl) var(--space-3xl);
+  padding: var(--space-2xl) var(--space-3xl);
   position: relative;
   overflow: hidden;
   transition: box-shadow var(--transition-normal), transform var(--transition-normal);
@@ -426,7 +431,7 @@
 .seoHero {
   background: var(--gradient-hero-light);
   border-bottom: 1px solid var(--color-border);
-  padding: var(--space-4xl) var(--space-lg) var(--space-3xl);
+  padding: var(--space-3xl) var(--space-lg) var(--space-xl);
   position: relative;
   overflow: hidden;
 }
@@ -541,7 +546,7 @@
 /* ─── SEO Explainer ────────────────────────────────── */
 .seoExplainer {
   background: var(--color-bg);
-  padding: var(--space-4xl) var(--space-lg);
+  padding: var(--space-2xl) var(--space-lg) var(--space-4xl);
   border-top: 1px solid var(--color-border);
 }
 

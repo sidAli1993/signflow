@@ -3,9 +3,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: var(--space-md) auto;
+  margin: 0 auto;
   overflow: hidden;
-  min-height: 100px;
+}
+
+.adWrapper:has(iframe),
+.adWrapper:has(ins),
+.adWrapper:has(.blockedCard),
+.adWrapper:has(div > *) {
+  min-height: 90px;
+  margin: var(--space-md) auto;
 }
 
 .blockedPlaceholder {

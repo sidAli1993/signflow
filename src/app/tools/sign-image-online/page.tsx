@@ -68,7 +68,6 @@ const breadcrumbSchema = {
   ],
 };
 
-// HowTo schema — enables Google rich results for "how to sign image online"
 const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
@@ -110,6 +109,7 @@ const howToSchema = {
     },
   ],
 };
+
 
 const softwareSchema = getSoftwareAppSchema({
   name: 'MyDigitSign Sign Image Tool',

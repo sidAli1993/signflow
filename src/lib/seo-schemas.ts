@@ -1,11 +1,11 @@
 /**
  * SEO Schema Generators for MyDigitSign
  * Generate fresh Schema.org JSON-LD data for Google Rich Results.
- * Updated: 2026-08-03
+ * Updated: 2026-08-05
  */
 
 export const BASE_URL = 'https://mydigitsign.com';
-export const CURRENT_DATE = '2026-08-03';
+export const CURRENT_DATE = '2026-08-05';
 
 export interface FAQItem {
   question: string;
@@ -47,7 +47,7 @@ export function getSoftwareAppSchema(opts: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/OnlineOnly',
     },
     publisher: {
       '@type': 'Organization',
@@ -94,7 +94,7 @@ export function getHowToSchema(opts: {
       name: s.name,
       text: s.text,
       url: s.url || BASE_URL,
-      image: s.image,
+      ...(s.image ? { image: s.image } : {}),
     })),
     datePublished: '2026-06-01',
     dateModified: CURRENT_DATE,

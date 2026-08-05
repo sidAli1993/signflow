@@ -44,6 +44,10 @@ function getAllUrls(): string[] {
     'draw-signature-online',
     'sign-image-online',
     'type-signature-online',
+    'pdf-to-jpg',
+    'jpg-to-pdf',
+    'split-pdf-online',
+    'sign-word-document',
   ];
 
   return [

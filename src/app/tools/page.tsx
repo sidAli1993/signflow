@@ -143,6 +143,15 @@ const toolsList = [
     icon: '✂️',
     searchKeywords: ['split pdf', 'extract pdf pages', 'separate pdf pages', 'pdf splitter free'],
   },
+  {
+    slug: 'sign-word-document',
+    title: 'Sign Word Document Online Free',
+    badge: 'New',
+    category: 'Signature',
+    description: 'Add an electronic signature to any Word (.doc/.docx) document online for free. Convert to PDF and sign — no server upload, no watermark, no account needed.',
+    icon: '📝✍️',
+    searchKeywords: ['sign word document', 'add signature to word', 'sign docx online', 'word document signature'],
+  },
 ];
 
 export default function ToolsHubPage() {

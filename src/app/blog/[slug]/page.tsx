@@ -1067,54 +1067,71 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       `
     },
     'how-to-add-signature-in-word': {
-      title: 'How to Add a Signature in Microsoft Word (3 Easy Methods — 2026)',
-      date: 'July 27, 2026',
-      lastModified: 'July 27, 2026',
+      title: 'How to Add a Signature in Microsoft Word (5 Easy Methods — 2026)',
+      date: 'August 5, 2026',
+      lastModified: 'August 5, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['how to add a signature in word', 'insert signature in word', 'how to add signature to word document', 'how to add signature to word', 'add signature to word document'],
+      keywords: ['how to add a signature in word', 'add signature to word document', 'insert signature in word', 'how to add signature on word', 'word document signature', 'sign word document online', 'how to sign a word document'],
       content: `
-        <p>If you're wondering how to add a signature in Microsoft Word, you're not alone. Signing a digital document shouldn't be complicated, yet many people still print their Word documents, sign them with a pen, and scan them back in. In 2026, there are much faster and more professional ways to do this.</p>
-        <p>In this guide, we'll show you three easy methods to sign your Word documents, ranging from Word's built-in signature line feature to using a free online PDF signer for a much more professional result.</p>
-        
+        <p>If you're wondering how to add a signature in Microsoft Word, you're not alone. Whether you need a quick drawn signature, a scanned image of your handwriting, or a secure legally-binding e-signature — there is a right method for every situation.</p>
+        <p>In this guide, we'll walk you through five proven methods to sign a Word document, including the fastest and most professional option for 2026.</p>
+
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign now?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Skip the hassle. Save your Word doc as a PDF and sign it instantly — no account, no upload, no watermarks.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Want to sign your Word doc right now?</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Save it as PDF → upload below → sign it instantly. Free, no watermark, no account, no server upload.</p>
+          <a href="/tools/sign-word-document" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign Word Document Online Free →</a>
         </div>
 
-        <h2>Method 1: Insert a Signature Line (Built into Word)</h2>
-        <p>Microsoft Word has a built-in feature specifically designed for this purpose. A signature line provides a clear, formatted space indicating where a person needs to sign.</p>
+        <h2>Method 1: Word's Built-in Signature Line Tool</h2>
+        <p>Microsoft Word's official method adds a formal placeholder box that shows where a person needs to sign. Best for preparing a document to be printed and signed physically.</p>
         <ol>
-          <li>Open your document in Microsoft Word.</li>
-          <li>Place your cursor exactly where you want the signature line to appear.</li>
-          <li>In the top ribbon, click on the <strong>Insert</strong> tab.</li>
-          <li>Look for the <strong>Text</strong> group on the right side and click on <strong>Signature Line</strong> (or Microsoft Office Signature Line).</li>
-          <li>A dialog box will appear. You can fill in the suggested signer's name, title, and email address.</li>
-          <li>Click <strong>OK</strong>. A formal signature line will appear in your document.</li>
+          <li>Open your document and place your cursor exactly where you want the signature.</li>
+          <li>Click the <strong>Insert</strong> tab on the top ribbon.</li>
+          <li>In the <strong>Text</strong> group (far right), click <strong>Signature Line</strong> (or <em>Microsoft Office Signature Line</em>).</li>
+          <li>Fill in the signer's name, title, and email in the <em>Signature Setup</em> dialog box.</li>
+          <li>Click <strong>OK</strong>. A formal signature box with an "X" will appear in your document.</li>
         </ol>
-        <p><em>Note:</em> To actually sign this line digitally within Word, you typically need a digital certificate. If you just want to print it or have someone draw on it later, this visual line is perfect.</p>
+        <p><em>Note:</em> To sign this line digitally inside Word, you need a digital certificate. If you just want a visual placeholder for print-and-sign, this is perfect.</p>
 
-        <h2>Method 2: Draw or Type Your Signature in Word</h2>
-        <p>If you don't need a cryptographic digital signature and just want a visual representation of your handwritten signature, you can draw it directly in Word.</p>
+        <h2>Method 2: Draw Your Signature in Word</h2>
+        <p>If you don't need a cryptographic certificate and just want a visual representation of your handwritten signature, draw it directly in Word.</p>
         <ol>
-          <li>Go to the <strong>Draw</strong> tab in the Word ribbon.</li>
-          <li>Select a pen tool.</li>
-          <li>Use your mouse, trackpad, or touchscreen to draw your signature directly onto the document.</li>
+          <li>Click the <strong>Draw</strong> tab in the Word ribbon.</li>
+          <li>Select a pen or pencil tool from the toolbar.</li>
+          <li>Use your mouse, trackpad, or touchscreen to sketch your signature directly on the document.</li>
         </ol>
-        <p>Alternatively, you can type your signature using a cursive font:</p>
+        <p>Alternatively, type your name and change the font to something like <em>Brush Script MT</em>, <em>Lucida Handwriting</em>, or <em>Segoe Script</em> to create a quick typed signature.</p>
+        <p><strong>Limitation:</strong> The .docx file remains fully editable, so anyone can modify the document after you sign it. This method is only appropriate for internal, informal documents.</p>
+
+        <h2>Method 3: Insert a Scanned Signature Image (with Transparent Background)</h2>
+        <p>This method works well if you have a photo or scan of your actual handwritten signature. Here is how to insert it cleanly without an ugly white background:</p>
         <ol>
-          <li>Type your name where you want to sign.</li>
-          <li>Highlight the text and change the font to something like <em>Brush Script MT</em> or <em>Lucinda Handwriting</em>.</li>
-          <li>Increase the font size to make it stand out from the rest of the text.</li>
+          <li>Sign a piece of white paper and take a clear photo of it, or scan it.</li>
+          <li>In Word, go to <strong>Insert → Pictures → This Device</strong> and select your signature image.</li>
+          <li>Click on the inserted image, then go to the <strong>Picture Format</strong> tab in the ribbon.</li>
+          <li>Click <strong>Color → Set Transparent Color</strong>, then click on the white background of your signature image. This removes the white block and makes your signature appear natural over the document.</li>
+          <li>Click on the image and go to <strong>Picture Format → Wrap Text → In Front of Text</strong>. This lets you freely drag the signature anywhere on the page.</li>
+          <li>Resize it using the corner handles so it fits naturally on the signature line.</li>
         </ol>
 
-        <h2>Method 3: Convert to PDF and Sign Online (Recommended)</h2>
-        <p>Word documents (<code>.docx</code>) are great for editing, but they are terrible for signing. Because Word documents are editable, anyone who receives the document can alter the text after you've signed it. The standard professional practice is to convert the document to a PDF before signing.</p>
+        <h2>Method 4: Save Signature for 1-Click Reuse (Word AutoText / Quick Parts)</h2>
+        <p>If you sign documents often, you can save your signature block as a <strong>Quick Part</strong> in Word and insert it in any future document in seconds:</p>
         <ol>
-          <li>In Word, go to <strong>File &gt; Save As</strong> and choose <strong>PDF</strong> as the format.</li>
-          <li>Go to a free, private signing tool like <a href="/tools/sign-pdf-online">MyDigitSign</a>.</li>
-          <li>Upload your new PDF. Because MyDigitSign processes everything client-side in your browser, your document is completely secure and never uploaded to any external server.</li>
-          <li>Draw or type your signature, drag it onto the line, and download your finalized, un-editable signed PDF.</li>
+          <li>Insert your signature image (see Method 3) and position it over a signature line.</li>
+          <li>Select the signature image and any associated text (e.g., your name, title).</li>
+          <li>Go to <strong>Insert → Quick Parts → AutoText → Save Selection to AutoText Gallery</strong>.</li>
+          <li>Give it a short name like <em>"mysig"</em> and click OK.</li>
+          <li>In any future Word document, type <em>"mysig"</em> and press <strong>F3</strong> — your full signature block inserts instantly.</li>
+        </ol>
+
+        <h2>Method 5: Convert to PDF and Sign Online (Recommended — Most Professional)</h2>
+        <p>This is the <strong>gold standard</strong> for signing Word documents in 2026. Because .docx files are editable, anyone who receives the document can alter its text after you've signed it. The professional practice is to convert to PDF first, then sign.</p>
+        <ol>
+          <li>In Word, go to <strong>File → Save As</strong> and choose <strong>PDF</strong> as the format. On Mac, use <strong>File → Export → PDF</strong>.</li>
+          <li>Go to <a href="/tools/sign-word-document">MyDigitSign's free Word Document Signer</a>.</li>
+          <li>Create your signature by drawing, typing, or uploading. Click <strong>Adopt</strong>.</li>
+          <li>Upload your PDF. Because MyDigitSign is 100% client-side, your file never leaves your device.</li>
+          <li>Drag your signature to the signature line, resize it, and click <strong>Download</strong> for a clean, watermark-free signed PDF.</li>
         </ol>
 
         <h2>Which Method Should You Use?</h2>
@@ -1128,114 +1145,223 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
           </thead>
           <tbody>
             <tr>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">1. Insert Signature Line</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Preparing a document to be printed and signed physically.</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (if not using a digital certificate)</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">1. Signature Line Tool</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Print-and-sign documents</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (needs certificate for digital)</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">2. Draw/Type in Word</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Internal, informal documents.</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (document is easily editable)</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">2. Draw in Word</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Internal, informal documents</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (document remains editable)</td>
             </tr>
             <tr>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">3. Convert to PDF &amp; Sign</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Contracts, NDAs, invoices, and any professional agreement.</td>
-              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">High (PDF prevents casual editing)</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">3. Insert Signature Image</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Casual agreements, personal use</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (document remains editable)</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">4. AutoText Quick Parts</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Repeated use, speed reuse</td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);">Low (document still editable)</td>
+            </tr>
+            <tr style="background: rgba(79,70,229,0.05);">
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);"><strong>5. Convert to PDF & Sign ⭐</strong></td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);"><strong>Contracts, NDAs, invoices, legal agreements</strong></td>
+              <td style="padding: 10px; border: 1px solid rgba(0,0,0,0.1);"><strong>High (PDF prevents editing after signing)</strong></td>
             </tr>
           </tbody>
         </table>
 
         <h2>Frequently Asked Questions</h2>
         <h3>Can I add a signature in Word for free?</h3>
-        <p>Yes. Microsoft Word has built-in features to draw or insert a signature line at no extra cost. Alternatively, converting it to PDF and using a tool like MyDigitSign is also completely free.</p>
-        
+        <p>Yes. Microsoft Word has built-in features to draw or insert a signature line at no extra cost. Alternatively, converting it to PDF and using a tool like <a href="/tools/sign-word-document">MyDigitSign</a> is also completely free with no watermarks.</p>
+
+        <h3>How do I remove the white background from my signature image in Word?</h3>
+        <p>Click on your signature image in Word → go to <strong>Picture Format → Color → Set Transparent Color</strong> → then click on the white background. This removes the white block and makes your signature look natural on the page.</p>
+
         <h3>How do I insert a signature image into Word?</h3>
-        <p>If you have a picture of your signature on your computer, go to <strong>Insert &gt; Pictures &gt; This Device</strong> and select your signature image. You can then resize it and use the "Wrap Text" option to place it exactly over a line.</p>
-        
+        <p>Go to <strong>Insert → Pictures → This Device</strong> and select your signature image. Then use <strong>Picture Format → Wrap Text → In Front of Text</strong> so you can drag it to any position on the page.</p>
+
         <h3>Is a signature typed in Word legally binding?</h3>
         <p>In many jurisdictions (like the US under the ESIGN Act), typed electronic signatures are legally binding for most agreements. However, saving the signed document as an un-editable PDF is strongly recommended to prevent tampering.</p>
 
+        <h3>How do I add a signature in Word on a Mac?</h3>
+        <p>On a Mac, open your Word document and save it as PDF via <strong>File → Export → PDF</strong>. Then use <a href="/tools/sign-word-document">MyDigitSign</a> to draw your signature and sign the PDF. Alternatively, use the Draw tab in Word for Mac to sketch a signature directly.</p>
+
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign your document?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Convert your Word document to PDF and use our 100% private signing tool.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign your Word document?</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Convert your Word file to PDF and sign it in seconds — 100% free, no watermark, no server upload.</p>
+          <a href="/tools/sign-word-document" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign Word Document Online Free →</a>
         </div>
       `,
       faq: [
         {
           question: "Can I add a signature in Word for free?",
-          answer: "Yes. Microsoft Word has built-in features to draw or insert a signature line at no extra cost. Alternatively, converting it to PDF and using a tool like MyDigitSign is also completely free."
+          answer: "Yes. Microsoft Word has built-in features to draw or insert a signature line at no extra cost. Alternatively, converting it to PDF and using MyDigitSign is also completely free with no watermarks."
+        },
+        {
+          question: "How do I remove the white background from my signature image in Word?",
+          answer: "Click your signature image in Word → go to Picture Format → Color → Set Transparent Color → then click the white background of the image. This makes your signature appear naturally on the document."
         },
         {
           question: "How do I insert a signature image into Word?",
-          answer: "If you have a picture of your signature on your computer, go to Insert > Pictures > This Device and select your signature image. You can then resize it and use the 'Wrap Text' option to place it exactly over a line."
+          answer: "Go to Insert → Pictures → This Device and select your signature image. Then use Picture Format → Wrap Text → In Front of Text so you can drag it to any position on the page."
         },
         {
           question: "Is a signature typed in Word legally binding?",
           answer: "In many jurisdictions (like the US under the ESIGN Act), typed electronic signatures are legally binding for most agreements. However, saving the signed document as an un-editable PDF is strongly recommended to prevent tampering."
+        },
+        {
+          question: "How do I add a signature in Word on a Mac?",
+          answer: "On a Mac, save your Word document as PDF via File → Export → PDF. Then use MyDigitSign to draw your signature and sign the PDF. Alternatively, use the Draw tab in Word for Mac to sketch a signature directly."
         }
       ]
     },
     'what-is-a-signature-line': {
-      title: 'What is a Signature Line? Definition, Format & How to Add One',
-      date: 'July 27, 2026',
-      lastModified: 'July 27, 2026',
+      title: 'What is a Signature Line? How to Add One in Word, Google Docs & PDF',
+      date: 'August 5, 2026',
+      lastModified: 'August 5, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['signature line', 'what is a signature line', 'signature line in word', 'add signature line to pdf', 'digital signature line'],
+      keywords: ['signature line', 'what is a signature line', 'what does its mean on a signature line', 'what does by mean on a signature line', 'signature line in word', 'how to add a signature line in word', 'how to insert a signature line in word', 'how to make a signature line in word', 'how to add signature line in word', 'how to put a line for signature on word', 'signature line in google docs', 'add signature line to pdf', 'digital signature line'],
       content: `
-        <p>You've seen them at the bottom of almost every contract, lease, and formal agreement: the <strong>signature line</strong>. But what exactly is its legal purpose, and how do you properly add one to your own digital documents?</p>
-        <p>In this guide, we'll explain what a signature line represents legally and show you exactly how to add one to a Microsoft Word document or a PDF file.</p>
+        <p>You've seen them at the bottom of almost every contract, lease, and formal agreement: the <strong>signature line</strong>. But what exactly is its legal purpose, what do notations like "By:" and "Its:" mean, and how do you properly add one to your digital documents?</p>
+        <p>In this comprehensive guide, we'll cover what a signature line represents legally, clarify mysterious signature line fields, and show you step-by-step how to insert signature lines in Microsoft Word, Google Docs, and PDF files.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Have a document ready to sign?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Skip the setup and sign your PDF instantly in your browser — 100% private and free.</p>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Need to sign a document right now?</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Skip the setup and sign your PDF instantly in your browser — 100% free with no signup required.</p>
           <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
         </div>
 
-        <h2>What Does a Signature Line Mean in a Legal Document?</h2>
-        <p>A signature line is a designated space within a document that indicates where a party must affix their signature to acknowledge, approve, or agree to the contents of that document.</p>
-        <p>Legally, the presence of a signature line (and the signature on it) demonstrates <strong>intent</strong>. By placing your signature on that specific line, you are signaling to a court or governing body that you have read the document and intend to be bound by its terms. Without a clear signature line, establishing that intent can be much more difficult in a contract dispute.</p>
-        <p>Usually, a formal signature line includes:</p>
-        <ul>
-          <li>The physical line (often an underscore character)</li>
-          <li>The printed or typed name of the signer beneath the line</li>
-          <li>Their title or role (e.g., "CEO," "Tenant," or "Contractor")</li>
-          <li>A space for the date of signing</li>
+        <h2>What Is a Signature Line?</h2>
+        <p>A signature line is a designated space within a document that indicates where a party must sign to acknowledge, approve, or enter into an agreement.</p>
+        <p>Legally, a signature line serves as a clear visual anchor demonstrating <strong>intent</strong>. By placing your signature on that designated line, you signal to courts and counterparties that you have read the document and intend to be legally bound by its terms.</p>
+
+        <h2>What Do "By:" and "Its:" Mean on a Signature Line?</h2>
+        <p>If you have ever signed a corporate contract or commercial lease, you likely noticed lines labeled <strong>"By:"</strong> and <strong>"Its:"</strong> below the company name. Here is what they actually mean:</p>
+        
+        <ul style="line-height: 1.7;">
+          <li><strong>"By:"</strong> Indicates the signature of the individual person authorized to sign. For example, <em>By: John Smith</em>. This proves who physically executed the document.</li>
+          <li><strong>"Its:"</strong> Short for <em>"In Its Capacity As"</em> or <em>"Its Title"</em>. This is where you write your official corporate role, such as <em>Chief Executive Officer</em>, <em>Managing Member</em>, or <em>Authorized Representative</em>.</li>
         </ul>
 
+        <div style="background: rgba(243, 244, 246, 0.7); border-left: 4px solid #4f46e5; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
+          <p style="margin: 0; font-size: 0.95rem;"><strong>💡 Why "Its:" matters legally:</strong> Writing your corporate title on the "Its:" line makes it legally clear that you are signing on behalf of the company, not as an individual. This protects you from personal personal liability for the contract's obligations.</p>
+        </div>
+
+        <h2>Standard Signature Line Formats & Examples</h2>
+        <p>A formal signature block usually follows standard layout conventions depending on whether an individual or a company is signing.</p>
+
+        <h3>1. Individual Signature Line Format</h3>
+        <pre style="background: #1e293b; color: #f8fafc; padding: 1rem 1.25rem; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+Signature: ___________________________
+Printed Name: Jane Doe
+Date: _______________
+        </pre>
+
+        <h3>2. Corporate / Business Signature Line Format</h3>
+        <pre style="background: #1e293b; color: #f8fafc; padding: 1rem 1.25rem; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+ACME HOLDINGS LLC
+
+By: ___________________________
+Name: John Smith
+Its: Managing Director
+Date: October 24, 2026
+        </pre>
+
         <h2>How to Add a Signature Line in Microsoft Word</h2>
-        <p>If you are drafting a contract in Word, adding a professional signature line takes just a few clicks:</p>
+        <p>There are three ways to add a signature line in Word — choose based on what you need:</p>
+
+        <h3>Method 1: Insert → Signature Line (Official Word Feature)</h3>
+        <p>This is the <strong>official method to insert a signature line in Word</strong> with a formal placeholder box:</p>
         <ol>
-          <li>Open your document and place your cursor where the signature should go.</li>
-          <li>Navigate to the <strong>Insert</strong> tab on the top ribbon.</li>
-          <li>On the far right, in the "Text" group, click <strong>Signature Line</strong>.</li>
-          <li>A dialog box called "Signature Setup" will appear.</li>
-          <li>Enter the signer's name in the first box and their title in the second box.</li>
-          <li>Click <strong>OK</strong>. Word will automatically generate a formatted line with an "X" indicating where the signature belongs.</li>
+          <li>Open your Word document and place your cursor exactly where you want the signature line.</li>
+          <li>Click the <strong>Insert</strong> tab on the top ribbon.</li>
+          <li>In the <em>Text</em> group on the far right, click <strong>Signature Line</strong> (or <em>Microsoft Office Signature Line</em>).</li>
+          <li>In the <em>Signature Setup</em> dialog, fill in the signer's name, title, and email address.</li>
+          <li>Tick <em>"Allow the signer to add comments"</em> if needed, then click <strong>OK</strong>.</li>
+          <li>Word inserts a formatted signature box with an "X" marker and the signer's printed name below it.</li>
+        </ol>
+        <p><em>Tip:</em> This is the best method when you want a <strong>formal, printable signature placeholder</strong> that clearly shows who needs to sign and where.</p>
+
+        <h3>Method 2: How to Make a Signature Line in Word with the Keyboard (Fastest)</h3>
+        <p>This is the fastest way to <strong>put a line for signature in Word</strong> without opening any dialog box:</p>
+        <ol>
+          <li>Click on a blank line in your Word document, exactly where you want the line to appear.</li>
+          <li>Type three hyphens: <code>---</code> (or three underscores: <code>___</code>)</li>
+          <li>Press <strong>Enter</strong>. Word's AutoFormat feature instantly converts it into a clean horizontal line.</li>
+          <li>Click above the line and type "Signature:" or "Signed by:" as a label.</li>
+        </ol>
+        <p><em>Note:</em> If AutoFormat isn't working, go to <strong>File → Options → Proofing → AutoCorrect Options → AutoFormat As You Type</strong> and make sure "Border lines" is checked.</p>
+
+        <h3>Method 3: How to Add a Signature Line in Word Using a Table (Best for Multi-Party Contracts)</h3>
+        <p>Need two or three signature lines side by side? The table method gives you the most control over alignment and spacing:</p>
+        <ol>
+          <li>Go to <strong>Insert → Table</strong> and create a table with the number of columns you need (e.g., 3 columns for 3 signers, 1 row).</li>
+          <li>Type the label in each cell ("Signature", "Printed Name", "Date").</li>
+          <li>Select all cells, right-click, go to <strong>Table Properties → Borders and Shading</strong>.</li>
+          <li>Remove all borders except the bottom border — this creates clean signature lines with perfect alignment.</li>
         </ol>
 
-        <h2>How to Add a Signature Line to a PDF</h2>
-        <p>If your document is already a PDF and is missing a signature line, you don't necessarily need to convert it back to Word. You can use free online tools to draw or type a line directly onto the document.</p>
-        <p>Using a tool like <a href="/tools/sign-pdf-online">MyDigitSign</a>, you can:</p>
+        <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0;">
+          <p style="margin: 0 0 0.4rem; font-weight: 700; font-size: 0.9rem; color: var(--color-primary, #4f46e5);">💡 Quick Reference: How to Add a Signature Line in Word</p>
+          <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.875rem; line-height: 1.8;">
+            <li><strong>Insert → Signature Line</strong> — Formal placeholder (best for professional contracts)</li>
+            <li><strong>Type <code>---</code> + Enter</strong> — Instant horizontal line (fastest method)</li>
+            <li><strong>Insert → Table</strong> — Multiple aligned signature lines (best for multi-signer forms)</li>
+          </ul>
+        </div>
+
+        <h2>How to Add a Signature Line in Google Docs</h2>
+        <p>Google Docs does not have a dedicated "Signature Line" button like Word, but you can create one easily using two methods:</p>
+
+        <h3>Method A: The Table Border Method (Recommended for Clean Alignments)</h3>
+        <ol>
+          <li>Go to <strong>Insert → Table → 2×1</strong> (a table with 2 columns and 1 row).</li>
+          <li>Select the top border of the table cells and set their border color to <strong>Transparent</strong> or 0pt.</li>
+          <li>Set the bottom border of the left cell to a 1pt black line.</li>
+          <li>Type "Signature:" above the line and "Name / Date" below it.</li>
+        </ol>
+
+        <h3>Method B: Using Google Docs Drawing Tool</h3>
+        <ol>
+          <li>Click <strong>Insert → Drawing → New</strong>.</li>
+          <li>Select the <strong>Line</strong> tool from the toolbar.</li>
+          <li>Hold down the <strong>Shift</strong> key while dragging to draw a perfectly straight line.</li>
+          <li>Click <strong>Save and Close</strong> to place the signature line in your document.</li>
+        </ol>
+
+        <h2>How to Sign a PDF Document Online (No Line Needed)</h2>
+        <p>If your document is already a PDF, you don't need a signature line at all. With <a href="/tools/sign-pdf-online">MyDigitSign's Free Online PDF Signer</a>, you can:</p>
         <ul>
-          <li>Upload your PDF securely (everything happens in your browser).</li>
-          <li>Use the drawing tool to draw a straight line if needed.</li>
-          <li>Simply place your digital signature directly in the empty space at the bottom of the document — a physical line isn't strictly necessary as long as the intent to sign is clear.</li>
+          <li>Upload any PDF securely right in your web browser — nothing is sent to any server.</li>
+          <li>Draw or type your signature with custom fonts and smooth line control.</li>
+          <li>Place your signature on any position on any page, with or without a printed line.</li>
+          <li>Download the final signed document instantly with zero watermarks.</li>
         </ul>
 
         <h2>Digital Signature Lines vs. Handwritten Signature Lines</h2>
-        <p>In the past, signature lines were designed exclusively for ink pens. Today, they serve a dual purpose.</p>
-        <p>If a document is printed, the line guides the pen. If the document is signed electronically, the line acts as a visual anchor for placing an e-signature image. Regardless of whether the signature is wet ink or digital, the legal function of the signature line remains exactly the same.</p>
+        <p>Historically, signature lines guided ink pens on paper. Today, signature lines on digital documents act as visual markers for placing electronic signature images.</p>
+        <p>Under global laws like the <strong>US ESIGN Act</strong> and <strong>EU eIDAS Regulation</strong>, an electronic signature placed over a digital signature line carries the exact same legal validity as a traditional wet-ink signature.</p>
 
         <h2>Frequently Asked Questions</h2>
-        <h3>Does a contract have to have a signature line to be valid?</h3>
-        <p>No, a formal line is not strictly required. As long as the signature is present and the intent to agree to the document is clear, the contract is generally valid. However, signature lines make documents look professional and remove any ambiguity.</p>
+        <h3>What does "Its" stand for on a signature line?</h3>
+        <p>"Its" stands for "In Its Capacity As" or "Its Title". It indicates the official title or capacity (such as CEO, Vice President, or Member) of the individual signing on behalf of a company.</p>
 
-        <h3>What does the X on a signature line mean?</h3>
-        <p>The "X" is simply a visual marker indicating the exact starting point where the person should begin writing or placing their signature. It has no special legal meaning on its own.</p>
+        <h3>What does "By" mean on a signature line?</h3>
+        <p>"By" marks the line where the authorized individual places their physical or digital signature to sign on behalf of themselves or an organization.</p>
+
+        <h3>What does the "X" on a signature line mean?</h3>
+        <p>The "X" is simply a visual marker pointing to the exact spot where the signature should begin. It has no independent legal weight.</p>
+
+        <h3>Does a contract need a signature line to be legally valid?</h3>
+        <p>No. A formal line is not legally mandatory. As long as both parties sign the document and their intent to be bound is clear, the agreement is generally valid under contract law.</p>
 
         <h3>Can I type my name on a signature line?</h3>
-        <p>Yes. Under laws like the ESIGN Act in the US, typing your name on a signature line constitutes a valid electronic signature, provided it was done with the intent to sign the document.</p>
+        <p>Yes. Under electronic signature laws, typing your name on a signature line is legally binding if done with the clear intent to sign.</p>
+
+        <h3>How do I make a signature line in Google Docs?</h3>
+        <p>You can create a signature line in Google Docs by inserting a 2x1 table and giving the top cell a bottom border, or by using <strong>Insert > Drawing > Line</strong>.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign your document?</p>
@@ -1245,16 +1371,44 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       `,
       faq: [
         {
-          question: "Does a contract have to have a signature line to be valid?",
-          answer: "No, a formal line is not strictly required. As long as the signature is present and the intent to agree to the document is clear, the contract is generally valid. However, signature lines make documents look professional and remove any ambiguity."
+          question: "What does 'Its' stand for on a signature line?",
+          answer: "'Its' stands for 'In Its Capacity As' or 'Its Title'. It indicates the official title or capacity (such as CEO, Vice President, or Member) of the individual signing on behalf of a company."
         },
         {
-          question: "What does the X on a signature line mean?",
-          answer: "The 'X' is simply a visual marker indicating the exact starting point where the person should begin writing or placing their signature. It has no special legal meaning on its own."
+          question: "What does 'By' mean on a signature line?",
+          answer: "'By' marks the line where the authorized individual places their physical or digital signature to sign on behalf of themselves or an organization."
+        },
+        {
+          question: "How do you add a signature line in Word?",
+          answer: "To add a signature line in Word, go to Insert → Signature Line (in the Text group) and fill in the signer's name and title. Alternatively, type three hyphens (---) on a blank line and press Enter — Word automatically converts it into a horizontal signature line."
+        },
+        {
+          question: "How do I insert a signature line in Word?",
+          answer: "Click where you want the signature line, go to Insert → Signature Line, fill in the signer details, and click OK. For a simpler version, type '---' or '___' on a new line and press Enter to auto-create a clean horizontal line."
+        },
+        {
+          question: "How do I make a signature line in Word?",
+          answer: "The fastest way to make a signature line in Word is to type three hyphens (---) or three underscores (___) on a blank line and press Enter. Word's AutoFormat feature instantly turns it into a clean horizontal line. For a formal placeholder, use Insert → Signature Line instead."
+        },
+        {
+          question: "How do I put a line for signature in Word?",
+          answer: "Type three underscores (___) on a blank line in your Word document and press Enter. Word automatically converts it into a neat underline/horizontal rule perfect for a signature. You can also use Insert → Table and remove all borders except the bottom border for a more controlled layout."
+        },
+        {
+          question: "What does the 'X' on a signature line mean?",
+          answer: "The 'X' is simply a visual marker pointing to the exact spot where the signature should begin. It has no independent legal weight."
+        },
+        {
+          question: "Does a contract need a signature line to be legally valid?",
+          answer: "No. A formal line is not legally mandatory. As long as both parties sign the document and their intent to be bound is clear, the agreement is generally valid under contract law."
         },
         {
           question: "Can I type my name on a signature line?",
-          answer: "Yes. Under laws like the ESIGN Act in the US, typing your name on a signature line constitutes a valid electronic signature, provided it was done with the intent to sign the document."
+          answer: "Yes. Under electronic signature laws, typing your name on a signature line is legally binding if done with the clear intent to sign."
+        },
+        {
+          question: "How do I make a signature line in Google Docs?",
+          answer: "You can create a signature line in Google Docs by inserting a 2x1 table and giving the bottom border of the cell a 1pt black line, or by using Insert → Drawing → Line."
         }
       ]
     },

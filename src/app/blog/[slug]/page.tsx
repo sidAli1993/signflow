@@ -1222,10 +1222,10 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       date: 'August 5, 2026',
       lastModified: 'August 5, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['signature line', 'what is a signature line', 'what does its mean on a signature line', 'what does by mean on a signature line', 'signature line in word', 'how to add a signature line in word', 'how to insert a signature line in word', 'how to make a signature line in word', 'how to add signature line in word', 'how to put a line for signature on word', 'signature line in google docs', 'add signature line to pdf', 'digital signature line'],
+      keywords: ['signature line', 'what is a signature line', 'document signature line', 'document with signature line', 'sig lines', 'what does its mean on a signature line', 'what does by mean on a signature line', 'signature line in word', 'how to add a signature line in word', 'how to insert a signature line in word', 'how to make a signature line in word', 'how to add signature line in word', 'how to put a line for signature on word', 'signature line in google docs', 'add signature line to pdf', 'digital signature line'],
       content: `
-        <p>You've seen them at the bottom of almost every contract, lease, and formal agreement: the <strong>signature line</strong>. But what exactly is its legal purpose, what do notations like "By:" and "Its:" mean, and how do you properly add one to your digital documents?</p>
-        <p>In this comprehensive guide, we'll cover what a signature line represents legally, clarify mysterious signature line fields, and show you step-by-step how to insert signature lines in Microsoft Word, Google Docs, and PDF files.</p>
+        <p>You've seen them at the bottom of almost every contract, lease, and agreement: the formal <strong>signature line</strong>. But what is its legal purpose, what do notations like "By:" and "Its:" mean, and how do you properly add one to your files?</p>
+        <p>In this guide, we'll cover what a signature line represents legally, clarify common line labels, and show you step-by-step how to insert signature lines in Microsoft Word, Google Docs, and PDF files.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Need to sign a document right now?</p>
@@ -1234,23 +1234,23 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
         </div>
 
         <h2>What Is a Signature Line?</h2>
-        <p>A signature line is a designated space within a document that indicates where a party must sign to acknowledge, approve, or enter into an agreement.</p>
-        <p>Legally, a signature line serves as a clear visual anchor demonstrating <strong>intent</strong>. By placing your signature on that designated line, you signal to courts and counterparties that you have read the document and intend to be legally bound by its terms.</p>
+        <p>A <strong>document signature line</strong> is a designated space within a document that indicates where a party must sign to acknowledge, approve, or enter into an agreement.</p>
+        <p>Legally, creating a clean <strong>document with signature line</strong> placeholders serves as a clear visual anchor demonstrating intent. By placing your handwritten or digital mark on that designated space, you signal to courts and counterparties that you have read the document and intend to be bound by its terms.</p>
 
         <h2>What Do "By:" and "Its:" Mean on a Signature Line?</h2>
-        <p>If you have ever signed a corporate contract or commercial lease, you likely noticed lines labeled <strong>"By:"</strong> and <strong>"Its:"</strong> below the company name. Here is what they actually mean:</p>
+        <p>If you have ever signed a corporate contract or commercial lease, you likely noticed labels like <strong>"By:"</strong> and <strong>"Its:"</strong> below the company name. Here is what they actually mean:</p>
         
         <ul style="line-height: 1.7;">
-          <li><strong>"By:"</strong> Indicates the signature of the individual person authorized to sign. For example, <em>By: John Smith</em>. This proves who physically executed the document.</li>
+          <li><strong>"By:"</strong> Indicates the signature of the <strong>person signing</strong> who is <strong>legally authorized</strong> to execute the contract. For example, <em>By: John Smith</em>. This proves who physically signed the page.</li>
           <li><strong>"Its:"</strong> Short for <em>"In Its Capacity As"</em> or <em>"Its Title"</em>. This is where you write your official corporate role, such as <em>Chief Executive Officer</em>, <em>Managing Member</em>, or <em>Authorized Representative</em>.</li>
         </ul>
 
         <div style="background: rgba(243, 244, 246, 0.7); border-left: 4px solid #4f46e5; padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0;">
-          <p style="margin: 0; font-size: 0.95rem;"><strong>💡 Why "Its:" matters legally:</strong> Writing your corporate title on the "Its:" line makes it legally clear that you are signing on behalf of the company, not as an individual. This protects you from personal personal liability for the contract's obligations.</p>
+          <p style="margin: 0; font-size: 0.95rem;"><strong>💡 Why "Its:" matters legally:</strong> Writing your corporate title on the "Its:" line makes it legally clear that you are signing on behalf of the business entity, not as an individual. This protects you from personal liability when <strong>signing the contract</strong>.</p>
         </div>
 
-        <h2>Standard Signature Line Formats & Examples</h2>
-        <p>A formal signature block usually follows standard layout conventions depending on whether an individual or a company is signing.</p>
+        <h2>Standard Signature Line Formats &amp; Examples</h2>
+        <p>A formal signature block usually follows standard layout conventions depending on whether an individual or a corporation is signing <strong>legal documents</strong>.</p>
 
         <h3>1. Individual Signature Line Format</h3>
         <pre style="background: #1e293b; color: #f8fafc; padding: 1rem 1.25rem; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
@@ -1270,12 +1270,12 @@ Date: October 24, 2026
         </pre>
 
         <h2>How to Add a Signature Line in Microsoft Word</h2>
-        <p>There are three ways to add a signature line in Word — choose based on what you need:</p>
+        <p>Whether you are creating standard contract templates or simple <strong>sig lines</strong> for forms, here are three ways to add a signature line in Word:</p>
 
         <h3>Method 1: Insert → Signature Line (Official Word Feature)</h3>
         <p>This is the <strong>official method to insert a signature line in Word</strong> with a formal placeholder box:</p>
         <ol>
-          <li>Open your Word document and place your cursor exactly where you want the signature line.</li>
+          <li>Open your Word document and place your cursor where you want the line to appear.</li>
           <li>Click the <strong>Insert</strong> tab on the top ribbon.</li>
           <li>In the <em>Text</em> group on the far right, click <strong>Signature Line</strong> (or <em>Microsoft Office Signature Line</em>).</li>
           <li>In the <em>Signature Setup</em> dialog, fill in the signer's name, title, and email address.</li>
@@ -1287,30 +1287,20 @@ Date: October 24, 2026
         <h3>Method 2: How to Make a Signature Line in Word with the Keyboard (Fastest)</h3>
         <p>This is the fastest way to <strong>put a line for signature in Word</strong> without opening any dialog box:</p>
         <ol>
-          <li>Click on a blank line in your Word document, exactly where you want the line to appear.</li>
+          <li>Click on a blank line in your Word document, right where you want the line.</li>
           <li>Type three hyphens: <code>---</code> (or three underscores: <code>___</code>)</li>
-          <li>Press <strong>Enter</strong>. Word's AutoFormat feature instantly converts it into a clean horizontal line.</li>
+          <li>Press <strong>Enter</strong>. Word's AutoFormat feature instantly turns it into a clean horizontal rule.</li>
           <li>Click above the line and type "Signature:" or "Signed by:" as a label.</li>
         </ol>
-        <p><em>Note:</em> If AutoFormat isn't working, go to <strong>File → Options → Proofing → AutoCorrect Options → AutoFormat As You Type</strong> and make sure "Border lines" is checked.</p>
 
         <h3>Method 3: How to Add a Signature Line in Word Using a Table (Best for Multi-Party Contracts)</h3>
-        <p>Need two or three signature lines side by side? The table method gives you the most control over alignment and spacing:</p>
+        <p>Need two or three signature fields side by side? The table method gives you full control over layout and alignment:</p>
         <ol>
-          <li>Go to <strong>Insert → Table</strong> and create a table with the number of columns you need (e.g., 3 columns for 3 signers, 1 row).</li>
-          <li>Type the label in each cell ("Signature", "Printed Name", "Date").</li>
-          <li>Select all cells, right-click, go to <strong>Table Properties → Borders and Shading</strong>.</li>
+          <li>Go to <strong>Insert → Table</strong> and create a table with 2 or 3 columns and 1 row.</li>
+          <li>Type the labels in each cell ("Signature", "Printed Name", "Date").</li>
+          <li>Select all cells, right-click, and open <strong>Table Properties → Borders and Shading</strong>.</li>
           <li>Remove all borders except the bottom border — this creates clean signature lines with perfect alignment.</li>
         </ol>
-
-        <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 10px; padding: 1rem 1.25rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.4rem; font-weight: 700; font-size: 0.9rem; color: var(--color-primary, #4f46e5);">💡 Quick Reference: How to Add a Signature Line in Word</p>
-          <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.875rem; line-height: 1.8;">
-            <li><strong>Insert → Signature Line</strong> — Formal placeholder (best for professional contracts)</li>
-            <li><strong>Type <code>---</code> + Enter</strong> — Instant horizontal line (fastest method)</li>
-            <li><strong>Insert → Table</strong> — Multiple aligned signature lines (best for multi-signer forms)</li>
-          </ul>
-        </div>
 
         <h2>How to Add a Signature Line in Google Docs</h2>
         <p>Google Docs does not have a dedicated "Signature Line" button like Word, but you can create one easily using two methods:</p>
@@ -1327,41 +1317,41 @@ Date: October 24, 2026
         <ol>
           <li>Click <strong>Insert → Drawing → New</strong>.</li>
           <li>Select the <strong>Line</strong> tool from the toolbar.</li>
-          <li>Hold down the <strong>Shift</strong> key while dragging to draw a perfectly straight line.</li>
+          <li>Hold down the <strong>Shift</strong> key while dragging to draw a straight line.</li>
           <li>Click <strong>Save and Close</strong> to place the signature line in your document.</li>
         </ol>
 
-        <h2>How to Sign a PDF Document Online (No Line Needed)</h2>
-        <p>If your document is already a PDF, you don't need a signature line at all. With <a href="/tools/sign-pdf-online">MyDigitSign's Free Online PDF Signer</a>, you can:</p>
+        <h2>How to Sign a Word Document or PDF Online (No Line Needed)</h2>
+        <p>If you need to <strong>sign a word document</strong> or PDF file quickly, you don't even need to draw a manual line first. You can paste a PNG <strong>image file</strong> of your autograph or draw directly using <a href="/tools/sign-pdf-online">MyDigitSign's Free Online Signer</a>:</p>
         <ul>
-          <li>Upload any PDF securely right in your web browser — nothing is sent to any server.</li>
-          <li>Draw or type your signature with custom fonts and smooth line control.</li>
-          <li>Place your signature on any position on any page, with or without a printed line.</li>
-          <li>Download the final signed document instantly with zero watermarks.</li>
+          <li>Upload any PDF securely right in your web browser — nothing is sent to any remote server.</li>
+          <li>Draw or type your signature using custom cursive fonts or mouse drawing tools.</li>
+          <li>Place your signature anywhere on any page, with or without a pre-existing printed line.</li>
+          <li>Download your final signed document instantly with zero watermarks.</li>
         </ul>
 
         <h2>Digital Signature Lines vs. Handwritten Signature Lines</h2>
-        <p>Historically, signature lines guided ink pens on paper. Today, signature lines on digital documents act as visual markers for placing electronic signature images.</p>
-        <p>Under global laws like the <strong>US ESIGN Act</strong> and <strong>EU eIDAS Regulation</strong>, an electronic signature placed over a digital signature line carries the exact same legal validity as a traditional wet-ink signature.</p>
+        <p>Historically, signature lines guided ink pens on paper. Today, signature lines on digital forms act as visual targets for placing electronic signature overlays.</p>
+        <p>Under global laws like the <strong>US ESIGN Act</strong> and <strong>EU eIDAS Regulation</strong>, an electronic signature placed on a digital signature line carries full legal validity when a <strong>legally authorized</strong> individual completes the agreement.</p>
 
         <h2>Frequently Asked Questions</h2>
         <h3>What does "Its" stand for on a signature line?</h3>
         <p>"Its" stands for "In Its Capacity As" or "Its Title". It indicates the official title or capacity (such as CEO, Vice President, or Member) of the individual signing on behalf of a company.</p>
 
         <h3>What does "By" mean on a signature line?</h3>
-        <p>"By" marks the line where the authorized individual places their physical or digital signature to sign on behalf of themselves or an organization.</p>
+        <p>"By" marks the line where the <strong>person signing</strong> places their physical or digital signature to execute the agreement on behalf of themselves or an organization.</p>
 
         <h3>What does the "X" on a signature line mean?</h3>
         <p>The "X" is simply a visual marker pointing to the exact spot where the signature should begin. It has no independent legal weight.</p>
 
         <h3>Does a contract need a signature line to be legally valid?</h3>
-        <p>No. A formal line is not legally mandatory. As long as both parties sign the document and their intent to be bound is clear, the agreement is generally valid under contract law.</p>
+        <p>No. A formal line is not legally mandatory. As long as the parties sign and their intent to be bound is clear when <strong>signing the contract</strong>, the agreement is valid under contract law.</p>
 
         <h3>Can I type my name on a signature line?</h3>
         <p>Yes. Under electronic signature laws, typing your name on a signature line is legally binding if done with the clear intent to sign.</p>
 
         <h3>How do I make a signature line in Google Docs?</h3>
-        <p>You can create a signature line in Google Docs by inserting a 2x1 table and giving the top cell a bottom border, or by using <strong>Insert > Drawing > Line</strong>.</p>
+        <p>You can create a signature line in Google Docs by inserting a 2x1 table and giving the bottom border of the cell a 1pt black line, or by using <strong>Insert → Drawing → Line</strong>.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign your document?</p>
@@ -1376,7 +1366,7 @@ Date: October 24, 2026
         },
         {
           question: "What does 'By' mean on a signature line?",
-          answer: "'By' marks the line where the authorized individual places their physical or digital signature to sign on behalf of themselves or an organization."
+          answer: "'By' marks the line where the person signing places their physical or digital signature to sign on behalf of themselves or an organization."
         },
         {
           question: "How do you add a signature line in Word?",

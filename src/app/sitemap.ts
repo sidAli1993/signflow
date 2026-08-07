@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-08-05');
+  const lastModDate = new Date('2026-08-07');
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -13,8 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-27' },
     { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-22' },
     { slug: 'how-to-sign-nda-online-free', modified: '2026-07-22' },
-    { slug: 'how-to-add-signature-in-word', modified: '2026-07-27' },
-    { slug: 'what-is-a-signature-line', modified: '2026-07-27' },
+    { slug: 'how-to-add-signature-in-word', modified: '2026-08-07' },
+    { slug: 'what-is-a-signature-line', modified: '2026-08-07' },
     { slug: 'how-to-ask-someone-to-sign-nda', modified: '2026-07-27' },
     { slug: 'can-you-notarize-your-own-signature', modified: '2026-07-27' },
   ];

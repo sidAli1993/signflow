@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     'docusign competitor',
     'e-signature software free',
     'sign pdf free alternative',
+    'how much does docusign cost',
+    'docusign pricing',
+    'docusign alternative for small business',
   ],
   alternates: {
     canonical: 'https://mydigitsign.com/compare/docusign-alternative',
@@ -133,6 +136,99 @@ export default function DocuSignAlternativePage() {
           <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
             By eliminating the need for massive, power-hungry cloud servers to process simple PDF operations, MyDigitSign significantly reduces the carbon footprint of digital document management. Local computing is not only faster and more secure; it is a greener approach to modern web applications.
           </p>
+
+          {/* NEW: DocuSign Pricing Section — targeting 'how much does docusign cost' */}
+          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginTop: '3rem', marginBottom: '1rem' }}>
+            How Much Does DocuSign Cost?
+          </h2>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.25rem' }}>
+            DocuSign is one of the most well-known e-signature platforms, but it comes with a significant price tag. Here is the full DocuSign pricing breakdown for 2026:
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1.5rem' }}>
+            <thead>
+              <tr style={{ background: 'rgba(79,70,229,0.08)' }}>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Plan</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Price/month</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Envelopes</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Key Limitation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Personal</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>$15</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>5/month</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Single user, basic features only</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Standard</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>$45</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Unlimited</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Up to 5 users per team</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Business Pro</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>$65</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Unlimited</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Advanced features, workflow automation</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Enhanced Plans</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>Custom</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Unlimited</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Enterprise-wide deployments</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.25rem' }}>
+            So the minimum you will pay for DocuSign is <strong>$15/month ($180/year)</strong> — for just 5 documents per month. If you sign more than 5 documents in a month, you have to upgrade to the $45/month Standard plan.
+          </p>
+
+          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            What DocuSign Alternatives Offer Transparent Pricing with No Envelope Limits?
+          </h2>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.25rem' }}>
+            The frustration with DocuSign's pricing is the <strong>envelope cap</strong>. An "envelope" is DocuSign's unit for one signed document transaction. On the cheapest plan, you only get 5 envelopes per month — after which you must upgrade or pay overage fees.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.25rem' }}>
+            <strong>MyDigitSign has no envelope limits.</strong> You can sign 1 document or 1,000 documents in a month — completely free. There is no tier system, no overage charge, and no credit card required. Because all processing happens in your browser, there is no server cost for us, which means there is no subscription cost for you.
+          </p>
+          <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '1.5rem' }}>
+            <thead>
+              <tr style={{ background: 'rgba(79,70,229,0.08)' }}>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Tool</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Price</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Envelope Limit</th>
+                <th style={{ padding: '12px', textAlign: 'left', border: '1px solid rgba(0,0,0,0.1)' }}>Files Uploaded?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ background: 'rgba(79,70,229,0.04)' }}>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>MyDigitSign</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>Free</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>Unlimited</strong></td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}><strong>Never</strong></td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>DocuSign</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>$15–$65+/mo</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>5/mo on base plan</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Yes</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>HelloSign</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>$15–$25/mo</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>3/mo free tier</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Yes</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>PandaDoc</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>$19+/mo</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Unlimited (paid)</td>
+                <td style={{ padding: '10px', border: '1px solid rgba(0,0,0,0.1)' }}>Yes</td>
+              </tr>
+            </tbody>
+          </table>
 
           <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2rem', background: '#f8fafc', borderRadius: '12px' }}>
             <h4 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem', color: '#0f172a' }}>Ready to make the switch?</h4>

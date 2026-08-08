@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-08-07');
+  const lastModDate = new Date('2026-08-08');
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -13,10 +13,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-27' },
     { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-22' },
     { slug: 'how-to-sign-nda-online-free', modified: '2026-07-22' },
-    { slug: 'how-to-add-signature-in-word', modified: '2026-08-07' },
-    { slug: 'what-is-a-signature-line', modified: '2026-08-07' },
+    { slug: 'how-to-add-signature-in-word', modified: '2026-08-08' }, // Updated Aug 8
+    { slug: 'what-is-a-signature-line', modified: '2026-07-27' },
     { slug: 'how-to-ask-someone-to-sign-nda', modified: '2026-07-27' },
     { slug: 'can-you-notarize-your-own-signature', modified: '2026-07-27' },
+    // New posts — August 8, 2026
+    { slug: 'how-to-fill-out-uber-inspection-form', modified: '2026-08-08' },
+    { slug: 'voided-check-example', modified: '2026-08-08' },
+    { slug: 'what-is-a-wet-signature', modified: '2026-08-08' },
+    { slug: 'docusign-vs-mydigitsign-honest-review', modified: '2026-08-08' },
+    { slug: 'electronic-signature-for-small-business', modified: '2026-08-08' },
+    { slug: 'digital-signature-for-freelancers', modified: '2026-08-08' },
+    { slug: 'esignature-for-realtors', modified: '2026-08-08' },
+    { slug: 'sign-lease-agreement-online-free', modified: '2026-08-08' },
+    { slug: 'best-smallpdf-alternatives-free', modified: '2026-08-08' },
   ];
 
   // Dedicated micro-tools suite

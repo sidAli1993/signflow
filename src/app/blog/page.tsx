@@ -145,6 +145,30 @@ const posts = [
     slug: 'best-smallpdf-alternatives-free',
     excerpt: 'Looking to compress, edit, or sign PDFs without SmallPDF\'s daily limits? Try these 5 free, private browser-based alternatives.',
     date: 'August 8, 2026',
+  },
+  {
+    title: 'What Is a Digit Sign? The Complete 2026 Legal & Technical Guide',
+    slug: 'what-is-a-digit-sign',
+    excerpt: 'A complete breakdown of digital signatures (digit signs), how they work cryptographically, and how to create them free.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'Where & How to Get a Digital Signature Certificate (DSC Guide)',
+    slug: 'where-to-get-digital-signature-certificate',
+    excerpt: 'Learn where to get a digital signature certificate (DSC) for free or paid, including OpenSSL and accredited CA options.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'PDF Editor with Signature: Top 5 Free PDF Signature Tools in 2026',
+    slug: 'pdf-editor-with-signature-free',
+    excerpt: 'Reviewing the best 5 free PDF editors that support secure digital and electronic signatures without watermarks.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'Digital Signature Laws by Country: The Ultimate 2026 Global Legal Guide',
+    slug: 'digital-signature-laws-by-country',
+    excerpt: 'Understand the legal frameworks (ESIGN, UETA, eIDAS) governing electronic and digital signatures globally.',
+    date: 'August 8, 2026',
   }
 ];
 

@@ -120,35 +120,58 @@ export default function PandaDocAlternativePage() {
         </section>
 
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>
-          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>When MyDigitSign Makes More Sense Than PandaDoc</h2>
+          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>
+            Why PandaDoc's Sales-Heavy System Might Be Overkill for Your Business
+          </h2>
           <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            PandaDoc is a document workflow platform built for sales teams — with CRM integrations, proposal builders, and e-signature tracking. That&apos;s great if you&apos;re a sales department closing 50 deals a month. But if you&apos;re a freelancer signing client contracts, a landlord collecting tenant signatures, or an individual signing a one-off agreement, PandaDoc is massive overkill.
+            PandaDoc is widely marketed as a document automation tool. It is packed with features like customizable proposal builders, direct CRM integrations, real-time activity feeds, and catalog/payment processors. 
           </p>
           <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            MyDigitSign is designed for exactly these simpler, everyday signing needs. You get a fast, private, free experience without a subscription, without onboarding, and without uploading your sensitive documents to a third-party server.
+            While these features are helpful for large, outbound sales departments that need to track precisely when a lead opens a quote, they are a massive distraction and cost center for general business use. If you are an individual, small team, or freelancer who just wants to sign a PDF, create a clean e-signature, or fill out a form, PandaDoc's user onboarding is slow, complex, and expensive.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            <strong>MyDigitSign</strong> offers a fast, local-first alternative. No subscription plans, no user seats, and no forced registration. Just a clean browser interface that lets you complete your document signing in under a minute.
           </p>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>PandaDoc Pricing in 2026</h2>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1rem' }}>
-            PandaDoc is an enterprise-grade platform with pricing to match:
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            1. Pricing: The $19/User Seat Catch
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            PandaDoc's pricing tiers in 2026 are heavily gated. If you want more than basic visual signing, you are pushed into their subscription model:
           </p>
           <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li><strong>Free eSign Plan:</strong> Unlimited e-signatures, but requires account registration. No document creation or templates.</li>
-            <li><strong>Essentials Plan:</strong> $19/user/month — adds templates, rich media editor, and real-time tracking.</li>
-            <li><strong>Business Plan:</strong> $49/user/month — adds CRM integrations, approval workflows, and bulk send.</li>
-            <li><strong>Enterprise Plan:</strong> Custom pricing — Salesforce integration, SSO, and advanced analytics.</li>
+            <li><strong>Free eSign Plan:</strong> Unlimited signatures, but document templates and form field editing are completely locked. Requires register/log in.</li>
+            <li><strong>Essentials Plan:</strong> $19/user/month (billed annually). Adds the drag-and-drop document builder and template libraries.</li>
+            <li><strong>Business Plan:</strong> $49/user/month (billed annually). Adds CRM sync (Salesforce, HubSpot) and custom branding.</li>
           </ul>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            Even PandaDoc&apos;s free tier requires account creation and uploads your documents to their cloud. MyDigitSign costs $0, requires no account, and processes your files 100% locally.
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            If you need 3 team members to have access, you will pay at least **$684 per year** on the Essentials plan, or **$1,764 per year** on the Business plan. MyDigitSign offers unlimited signing, form filling, merging, and compression for **$0/month** for your entire team.
           </p>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Who Should Use MyDigitSign Instead of PandaDoc?</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            2. Cloud Data Storage vs. Browser-Based Local Processing
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            When you sign a PDF with PandaDoc, your file is uploaded and processed on their cloud servers. While PandaDoc implements enterprise security standards, having your sensitive contracts, financial agreements, and employee records stored on a remote server introduces risk:
+          </p>
+          <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Security Risk:</strong> Any centralized cloud storage is a target for malicious hackers.</li>
+            <li><strong>Regulatory Compliance:</strong> Certain industries (such as healthcare and legal) have strict rules regarding where data is stored. Processing contracts in the cloud can violate data residency laws.</li>
+            <li><strong>Data Ownership:</strong> If you cancel your subscription, accessing your historical signed documents on PandaDoc can become difficult.</li>
+          </ul>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            <strong>MyDigitSign is completely client-side.</strong> When you upload a PDF to MyDigitSign, the file is processed entirely in your browser's WebAssembly sandbox. It is never uploaded to our servers. Once you click download, the signed PDF is saved directly to your local computer, and the browser memory is cleared. **No data is stored, no files are cached, and zero server uploads are performed.**
+          </p>
+
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            3. Audience Match: Who Benefits More from MyDigitSign?
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { icon: '💼', title: 'Freelancers & Consultants', desc: 'Sign client contracts, SOWs, and invoices without the enterprise overhead of a PandaDoc subscription.' },
-              { icon: '🏡', title: 'Property Managers', desc: 'Collect tenant signatures on lease agreements instantly. No $49/month plan needed for a simple rental contract.' },
-              { icon: '📝', title: 'Small Teams', desc: 'Sign NDAs, vendor agreements, and onboarding forms for free — when you don\'t need PandaDoc\'s CRM integrations.' },
-              { icon: '🔒', title: 'Privacy-Conscious Users', desc: 'Keep sensitive contracts on your local device. Unlike PandaDoc, MyDigitSign never stores your files on a server.' },
+              { icon: '💼', title: 'Freelancers & Consultants', desc: 'Sign client contracts, SOWs, and invoices instantly without complex onboarding or contract tracking tools.' },
+              { icon: '🏡', title: 'Landlords & Property Managers', desc: 'Get residential or commercial lease agreements signed free. Skip expensive monthly payments for simple leasing.' },
+              { icon: '📝', title: 'Accountants & Law Firms', desc: 'Maintain complete data residency and client confidentiality by processing financial forms 100% locally.' },
+              { icon: '🔒', title: 'Privacy-Conscious Individuals', desc: 'Sign personal agreements, letters, and forms securely. Never upload your ID or check scans to the cloud.' },
             ].map((item, i) => (
               <div key={i} style={{ background: '#fffbeb', border: '1px solid #fde68a', borderRadius: '10px', padding: '1.25rem' }}>
                 <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{item.icon}</div>
@@ -158,19 +181,37 @@ export default function PandaDocAlternativePage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>The Privacy Difference</h2>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            PandaDoc stores your signed documents in their cloud — your contracts, NDAs, and sensitive business documents live on their servers, subject to their data retention policies. In the event of a data breach, your confidential agreements are at risk.
-          </p>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            MyDigitSign operates on a fundamentally different model: zero-server processing. When you upload a PDF to sign, it loads directly into your browser memory using JavaScript. The signing process, page rendering, and final PDF compilation all happen on your device. The signed file is returned directly to your browser download — our servers never see it.
-          </p>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            Pros and Cons Comparison
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', margin: '2rem 0' }}>
+            <div style={{ background: '#f0fdf4', padding: '1.5rem', borderRadius: '12px', border: '1px solid #bbf7d0' }}>
+              <h4 style={{ margin: '0 0 1rem 0', color: '#166534', fontWeight: 700 }}>MyDigitSign Pros</h4>
+              <ul style={{ margin: 0, paddingLeft: '1.25rem', lineHeight: 1.8, color: '#14532d' }}>
+                <li>100% Free with no daily signing limits</li>
+                <li>Zero server uploads (processed in browser)</li>
+                <li>No account or log in required</li>
+                <li>Includes PDF editor, merger, and compressor</li>
+                <li>HIPAA & GDPR compliant by design</li>
+              </ul>
+            </div>
+            <div style={{ background: '#fffbeb', padding: '1.5rem', borderRadius: '12px', border: '1px solid #fde68a' }}>
+              <h4 style={{ margin: '0 0 1rem 0', color: '#b45309', fontWeight: 700 }}>PandaDoc Pros</h4>
+              <ul style={{ margin: 0, paddingLeft: '1.25rem', lineHeight: 1.8, color: '#78350f' }}>
+                <li>Interactive document/proposal editor</li>
+                <li>Payment gateway integration (Stripe)</li>
+                <li>CRM integrations (Salesforce, HubSpot)</li>
+                <li>Document open and view tracking analytics</li>
+                <li>Audit trails for complex compliance</li>
+              </ul>
+            </div>
+          </div>
 
-          <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2rem', background: '#fffbeb', borderRadius: '12px', border: '1px solid #fde68a' }}>
-            <h4 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem', color: '#0f172a' }}>No subscription needed</h4>
-            <p style={{ color: '#475569', marginBottom: '1.5rem' }}>Sign your first PDF free — right now, no account required.</p>
-            <a href="/tools/sign-pdf-online" style={{ display: 'inline-block', background: '#d97706', color: 'white', padding: '0.75rem 1.75rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>
-              Try MyDigitSign Free →
+          <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2.5rem 2rem', background: '#fff9db', borderRadius: '16px', border: '1px solid #ffe066' }}>
+            <h4 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem', color: '#0f172a' }}>Looking for a free, simple PandaDoc alternative?</h4>
+            <p style={{ color: '#475569', marginBottom: '1.5rem', fontSize: '1.05rem' }}>Get your documents signed and compiled locally without monthly fees or server uploads.</p>
+            <a href="/tools/sign-pdf-online" style={{ display: 'inline-block', background: '#f59f00', color: 'white', padding: '0.85rem 2rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', boxShadow: '0 4px 6px rgba(245,159,0,0.2)' }}>
+              ✍️ Sign Document Free
             </a>
           </div>
 

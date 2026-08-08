@@ -120,37 +120,60 @@ export default function HelloSignAlternativePage() {
         </section>
 
         <section className={styles.contentSection} style={{ maxWidth: '900px', margin: '3rem auto 4rem', padding: '0 1rem' }}>
-          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>Why HelloSign Users Are Moving On</h2>
+          <h2 style={{ fontSize: '1.85rem', fontWeight: 700, marginBottom: '1rem' }}>
+            Why HelloSign (Dropbox Sign) Users Are Migrating to Local-First Platforms
+          </h2>
           <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            HelloSign was once a beloved independent e-signature tool known for its clean interface and affordable pricing. After Dropbox acquired and rebranded it as &quot;Dropbox Sign,&quot; the free plan was gutted — dropping to just 3 signature requests per month — and a Dropbox account became mandatory.
+            HelloSign was once one of the most popular independent e-signature tools on the market. It was celebrated for its clean, non-bloated user interface, simple setup, and highly affordable price point. 
           </p>
           <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            For users who just want to occasionally sign a document, this is a regression. MyDigitSign provides what HelloSign used to offer: a clean, fast, no-friction signing experience with no account and no limits.
+            However, after Dropbox acquired HelloSign and rebranded it as **Dropbox Sign**, the direction of the product shifted. The free tier was heavily restricted—capping users at just 3 document signature requests per month. A Dropbox account became mandatory, forcing users into the Dropbox ecosystem and setting up background syncing that automatically copies documents onto the cloud.
+          </p>
+          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
+            For freelancers, landlords, and individual users who just need to sign occasional client contracts, lease agreements, or invoices, these changes introduced unnecessary hurdles. **MyDigitSign** restores the original promise of early HelloSign: a lightweight, friction-free, 100% free document signing experience with no accounts, no software dependencies, and no daily limits.
           </p>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>HelloSign / Dropbox Sign Pricing in 2026</h2>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1rem' }}>
-            After the Dropbox acquisition, HelloSign&apos;s pricing shifted significantly:
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            1. Pricing Breakdown: Dropbox Sign vs. MyDigitSign
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            Following the corporate rebranding, Dropbox Sign structure became heavily commercialized:
           </p>
           <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li><strong>Free Plan:</strong> Limited to 3 document signatures per month. A Dropbox account is required.</li>
-            <li><strong>Essentials Plan:</strong> $15/month — unlimited signatures but still cloud-dependent with Dropbox storage.</li>
-            <li><strong>Standard Plan:</strong> $25/user/month — adds team features and branding.</li>
-            <li><strong>Premium Plan:</strong> Custom enterprise pricing — advanced integrations and API access.</li>
+            <li><strong>Free Tier:</strong> Max 3 signatures per month. Gated behind a mandatory account creation.</li>
+            <li><strong>Essentials Plan:</strong> $15/month (billed annually). Allows unlimited signing for 1 user, with basic PDF templates.</li>
+            <li><strong>Standard Plan:</strong> $25/user/month (billed annually). Includes team management, custom branding, and usage reports.</li>
           </ul>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            <strong>MyDigitSign cost:</strong> $0. Always. No document limits, no account requirement, no Dropbox dependency.
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            If you run a small business with 3 team members, Dropbox Sign will cost you **$900 per year** just to sign documents. MyDigitSign delivers the same core e-signature capabilities—plus PDF merge, editing, and compression—for **$0/month** for your entire team.
           </p>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>Who Should Use MyDigitSign Instead of HelloSign?</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            2. The Security & Data Sovereignty Argument: Dropbox Cloud Sync vs. Local Sandbox
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            Dropbox's business model revolves around cloud storage. When you sign a document on Dropbox Sign, your PDF is stored on their remote servers and synced with your Dropbox drive. While convenient for storage, this introduces several security vulnerabilities:
+          </p>
+          <ul style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+            <li><strong>Hack Target:</strong> Cloud databases holding billions of customer records are constant targets for ransomware and data exfiltration.</li>
+            <li><strong>Regulatory Compliance:</strong> GDPR, HIPAA, and CCPA require strict knowledge of where client data is located. Sending contract data to third-party cloud servers requires complex business agreements.</li>
+            <li><strong>Client Trust:</strong> Clients are increasingly hesitant to have their financial details or NDAs stored on a third-party server.</li>
+          </ul>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1.5rem' }}>
+            <strong>MyDigitSign bypasses the cloud entirely.</strong> Our system uses client-side JavaScript to render and compile PDFs. When you select a document to sign, the process occurs locally inside your browser's sandboxed memory. **We do not have databases storing your signed files, and our servers never see your documents.** This is the ultimate compliance and security model: what is never uploaded can never be leaked.
+          </p>
+
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            3. Who Benefits Most from Switching to MyDigitSign?
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
             {[
-              { icon: '💼', title: 'Freelancers', desc: 'Sign client contracts, invoices, and service agreements without paying $15/month for a few signatures.' },
-              { icon: '🏠', title: 'Landlords & Tenants', desc: 'Sign lease agreements and rental contracts directly in the browser. No Dropbox account required.' },
-              { icon: '📋', title: 'HR Professionals', desc: 'Send offer letters for signature without uploading sensitive employee documents to Dropbox cloud.' },
-              { icon: '🤝', title: 'Small Business Owners', desc: 'Handle vendor agreements, NDAs, and purchase orders quickly without a monthly subscription.' },
+              { icon: '💼', title: 'Freelancers & Consultants', desc: 'Sign client contracts, NDAs, and project proposals without subscription fees or monthly signature caps.' },
+              { icon: '🏠', title: 'Landlords & Property Managers', desc: 'Sign rental leases and lease renewal forms instantly. No Dropbox account or cloud syncing required.' },
+              { icon: '📋', title: 'HR & Operations teams', desc: 'Send employment offer letters and vendor agreements free of charge, keeping sensitive data locally protected.' },
+              { icon: '🤝', title: 'Startups & Founders', desc: 'Get initial funding agreements and partnership documents signed quickly without administrative bloat.' },
             ].map((item, i) => (
-              <div key={i} style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '10px', padding: '1.25rem' }}>
+              <div key={i} style={{ background: '#f3e8ff', border: '1px solid #e9d5ff', borderRadius: '10px', padding: '1.25rem' }}>
                 <div style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>{item.icon}</div>
                 <h3 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.4rem', color: '#0f172a' }}>{item.title}</h3>
                 <p style={{ fontSize: '0.875rem', color: '#475569', lineHeight: 1.65, margin: 0 }}>{item.desc}</p>
@@ -158,23 +181,37 @@ export default function HelloSignAlternativePage() {
             ))}
           </div>
 
-          <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>How to Switch from HelloSign to MyDigitSign</h2>
-          <ol style={{ lineHeight: 2, color: '#334155', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
-            <li>Download any existing signed PDFs from your Dropbox Sign account to your local device.</li>
-            <li>Open <a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>MyDigitSign&apos;s free PDF signer</a> in your browser.</li>
-            <li>Draw, type, or upload your signature — takes under 30 seconds.</li>
-            <li>Upload the PDF you need to sign. Processing happens entirely in your browser.</li>
-            <li>Place your signature, download the clean signed PDF. Done.</li>
-          </ol>
-          <p style={{ lineHeight: 1.7, color: '#334155', marginBottom: '1.5rem' }}>
-            For documents you need to send to others for their signature, export the unsigned PDF and share it with a link to MyDigitSign. Each party can sign their copy independently and send the signed version back to you.
-          </p>
+          <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginTop: '2.5rem', marginBottom: '1rem' }}>
+            Pros and Cons Comparison
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', margin: '2rem 0' }}>
+            <div style={{ background: '#f0fdf4', padding: '1.5rem', borderRadius: '12px', border: '1px solid #bbf7d0' }}>
+              <h4 style={{ margin: '0 0 1rem 0', color: '#166534', fontWeight: 700 }}>MyDigitSign Pros</h4>
+              <ul style={{ margin: 0, paddingLeft: '1.25rem', lineHeight: 1.8, color: '#14532d' }}>
+                <li>100% Free with no daily signature caps</li>
+                <li>No account or registration required</li>
+                <li>Zero server uploads (processed in browser)</li>
+                <li>Includes PDF merger, compressor, and editor</li>
+                <li>Works offline after initial page load</li>
+              </ul>
+            </div>
+            <div style={{ background: '#faf5ff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e9d5ff' }}>
+              <h4 style={{ margin: '0 0 1rem 0', color: '#6b21a8', fontWeight: 700 }}>Dropbox Sign Pros</h4>
+              <ul style={{ margin: 0, paddingLeft: '1.25rem', lineHeight: 1.8, color: '#581c87' }}>
+                <li>Direct integration with Dropbox files</li>
+                <li>Native cloud document storage</li>
+                <li>Signature templates for standard forms</li>
+                <li>API support for custom apps</li>
+                <li>Audit trails for complex compliance</li>
+              </ul>
+            </div>
+          </div>
 
-          <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2rem', background: '#f5f3ff', borderRadius: '12px', border: '1px solid #ddd6fe' }}>
-            <h4 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '1rem', color: '#0f172a' }}>No Dropbox. No account. Just sign.</h4>
-            <p style={{ color: '#475569', marginBottom: '1.5rem' }}>Get the simple e-signing experience HelloSign used to offer — for free.</p>
-            <a href="/tools/sign-pdf-online" style={{ display: 'inline-block', background: '#4f46e5', color: 'white', padding: '0.75rem 1.75rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none' }}>
-              Sign PDF Free →
+          <div style={{ textAlign: 'center', marginTop: '3rem', padding: '2.5rem 2rem', background: '#faf5ff', borderRadius: '16px', border: '1px solid #e9d5ff' }}>
+            <h4 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '0.75rem', color: '#581c87' }}>Switch to a lightweight HelloSign alternative</h4>
+            <p style={{ color: '#475569', marginBottom: '1.5rem', fontSize: '1.05rem' }}>Experience the freedom of 100% private, client-side, unlimited document signing in your browser.</p>
+            <a href="/tools/sign-pdf-online" style={{ display: 'inline-block', background: '#7c3aed', color: 'white', padding: '0.85rem 2rem', borderRadius: '8px', fontWeight: 600, textDecoration: 'none', boxShadow: '0 4px 6px rgba(124,58,237,0.2)' }}>
+              ✍5 Sign PDF Free Now
             </a>
           </div>
 

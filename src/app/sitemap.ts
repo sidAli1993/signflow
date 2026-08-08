@@ -27,6 +27,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'esignature-for-realtors', modified: '2026-08-08' },
     { slug: 'sign-lease-agreement-online-free', modified: '2026-08-08' },
     { slug: 'best-smallpdf-alternatives-free', modified: '2026-08-08' },
+    { slug: 'what-is-a-digit-sign', modified: '2026-08-08' },
+    { slug: 'where-to-get-digital-signature-certificate', modified: '2026-08-08' },
+    { slug: 'pdf-editor-with-signature-free', modified: '2026-08-08' },
+    { slug: 'digital-signature-laws-by-country', modified: '2026-08-08' },
   ];
 
   // Dedicated micro-tools suite
@@ -44,6 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pdf-to-jpg',
     'jpg-to-pdf',
     'split-pdf-online',
+    'fill-pdf-form',
+    'word-to-pdf',
+    'unlock-pdf',
     // Phase 4 new tools
     'sign-word-document',
   ];

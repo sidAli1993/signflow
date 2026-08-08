@@ -85,6 +85,66 @@ const posts = [
     slug: 'ultimate-guide-signing-pdf-securely',
     excerpt: 'Discover best practices for embedding signatures into PDFs to ensure document integrity and prevent tampering.',
     date: 'June 15, 2026',
+  },
+  {
+    title: 'How to Sign an NDA Online for Free (Legally Binding)',
+    slug: 'how-to-sign-nda-online-free',
+    excerpt: 'Sign your Non-Disclosure Agreements securely without printing. Learn how to sign NDAs online for free with full legal compliance.',
+    date: 'July 15, 2026',
+  },
+  {
+    title: 'How to Fill Out & Sign the Uber Vehicle Inspection Form',
+    slug: 'how-to-fill-out-uber-inspection-form',
+    excerpt: 'A complete guide for rideshare drivers on how to get the Uber inspection form filled, digitally signed by a mechanic, and submitted fast.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'Voided Check Example: What It Is & When You Need One',
+    slug: 'voided-check-example',
+    excerpt: 'Learn what a voided check looks like, why employers and banks ask for one, and how to securely send it online.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'What Is a Wet Signature? (Wet vs Electronic vs Digital)',
+    slug: 'what-is-a-wet-signature',
+    excerpt: 'Understand the difference between wet ink signatures and digital signatures, and when you still legally need a physical pen.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'DocuSign vs MyDigitSign: The Honest 2026 Comparison',
+    slug: 'docusign-vs-mydigitsign-honest-review',
+    excerpt: 'Comparing pricing, privacy, and envelope limits between DocuSign and the completely free, client-side MyDigitSign platform.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'Electronic Signature for Small Business: Free Tools',
+    slug: 'electronic-signature-for-small-business',
+    excerpt: 'How small businesses can adopt electronic signatures to close deals faster without paying expensive monthly software subscriptions.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'Digital Signature for Freelancers: Protecting Your Contracts',
+    slug: 'digital-signature-for-freelancers',
+    excerpt: 'A freelancer guide to sending professional contracts and getting paid faster using secure digital signatures.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'eSignature for Realtors: Secure Real Estate Contracts',
+    slug: 'esignature-for-realtors',
+    excerpt: 'How real estate agents can securely and legally sign lease agreements and buyer contracts online for free.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: 'How to Sign a Lease Agreement Online for Free',
+    slug: 'sign-lease-agreement-online-free',
+    excerpt: 'Step-by-step instructions for landlords and tenants to safely sign a residential or commercial lease agreement online.',
+    date: 'August 8, 2026',
+  },
+  {
+    title: '5 Best SmallPDF Alternatives That Are Completely Free',
+    slug: 'best-smallpdf-alternatives-free',
+    excerpt: 'Looking to compress, edit, or sign PDFs without SmallPDF\'s daily limits? Try these 5 free, private browser-based alternatives.',
+    date: 'August 8, 2026',
   }
 ];
 

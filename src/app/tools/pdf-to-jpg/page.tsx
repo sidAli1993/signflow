@@ -132,6 +132,14 @@ export default function PdfToJpgPage() {
             For sharing report pages, presentation slides, or invoices, JPG works perfectly. For documents with sharp text that need to remain readable at any zoom level, PNG is preferable.
           </p>
 
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>What to Do with Your JPG Images After Conversion</h3>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Share directly:</strong> JPG images can be shared via WhatsApp, Slack, or email without any special software to open them.</li>
+            <li><strong>Convert back to PDF:</strong> Need to create a PDF again after editing? Use our <a href="/tools/jpg-to-pdf" style={{color: 'var(--color-primary)'}}>JPG to PDF tool →</a></li>
+            <li><strong>Embed in presentations:</strong> Paste the JPG into PowerPoint, Google Slides, or Keynote as a slide image.</li>
+            <li><strong>Compress large images:</strong> If the JPG file is very large, resize it using any image editing app before sharing.</li>
+          </ul>
+
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Frequently Asked Questions</h3>
           {faqItems.map((faq, i) => (
             <div key={i} style={{ background: '#f8fafc', padding: '1.25rem', borderRadius: '10px', marginBottom: '1rem', border: '1px solid #e2e8f0' }}>

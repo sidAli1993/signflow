@@ -193,7 +193,7 @@ const getPostData = (slug: string): Post | null => {
         <p>Yes. After placing a signature on one page, navigate to the next page using the page controls and place additional signatures. Download once you're done with all pages.</p>
 
         <h3>Is there a file size limit?</h3>
-        <p>MyDigitSign supports files up to 10MB. For larger PDFs, consider compressing your file first using a free PDF compressor tool, then sign it here.</p>
+        <p>MyDigitSign supports files up to 10MB. For larger PDFs, <a href="/tools/compress-pdf-online">compress your PDF first using our free compressor</a>, then sign it here.</p>
 
         <hr />
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; text-align: center;">
@@ -638,8 +638,12 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center;">
           <h3 style="margin-top: 0; color: var(--color-primary);">Ready to sign your first document legally and securely?</h3>
-          <p style="margin-bottom: 1.5rem;">Use MyDigitSign's 100% private, free online signing tool. No account, no uploads, no watermarks.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">Sign PDF Online Free →</a>
+          <p style="margin-bottom: 1.25rem;">Use MyDigitSign's 100% private, free online signing tool. No account, no uploads, no watermarks.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">Sign PDF Free →</a>
+            <a href="/tools/edit-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">Edit PDF →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold;">Compress PDF →</a>
+          </div>
         </div>
 
         <hr />
@@ -755,19 +759,20 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
         <p>Only use signing tools hosted on HTTPS (the padlock icon in your browser's address bar). HTTP connections are vulnerable to man-in-the-middle attacks where a third party can intercept and modify data in transit.</p>
 
         <h3>4. Store Signed Copies Securely</h3>
-        <p>Once you've signed a PDF, save a backup in a secure location — an encrypted cloud folder, a password-protected drive, or a secure document management system. Never overwrite the original signed file.</p>
+        <p>Once you've signed a PDF, save a backup in a secure location. Before sharing, consider <a href="/tools/protect-pdf-online">password-protecting your signed PDF</a> so only authorized recipients can open it. Never overwrite the original signed file.</p>
 
         <h3>5. Send Via Secure Channel Immediately</h3>
-        <p>After signing, send the document via encrypted email or a secure file transfer service. This creates a timestamp and delivery record that can be used as evidence if the signature is ever disputed.</p>
+        <p>After signing, send the document via encrypted email or a secure file transfer service. If your PDF is large, <a href="/tools/compress-pdf-online">compress it first</a> to avoid email bounce-backs. This creates a timestamp and delivery record that can be used as evidence if the signature is ever disputed.</p>
 
         <h2>How to Sign a PDF Securely with MyDigitSign (Complete Guide)</h2>
         <ol>
           <li>Open <a href="/">mydigitsign.com</a> in a modern browser (Chrome, Firefox, Safari, Edge).</li>
           <li>Create your signature using one of three methods: <a href="/tools/draw-signature-online">draw</a>, <a href="/tools/type-signature-online">type</a>, or upload.</li>
           <li>Upload your PDF or image file using the document panel. The file is read by your browser — not uploaded to any server.</li>
+          <li>Need to fill in fields or add dates first? Use our <a href="/tools/edit-pdf-online">free PDF editor</a> before signing.</li>
           <li>Drag your signature overlay to the correct field. Use the resize handle to scale it appropriately.</li>
           <li>Click Download to save the signed PDF directly to your device.</li>
-          <li>Send the signed document via secure email with a date and time stamp for your records.</li>
+          <li>After downloading, <a href="/tools/protect-pdf-online">password-protect the signed PDF</a> before emailing for extra security.</li>
         </ol>
 
         <h2>Mobile PDF Signing: Is It Secure?</h2>
@@ -782,9 +787,13 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
         <p>Yes. MyDigitSign works entirely in your browser — no downloads, no plugins, no app installations required. Just open the website and start signing immediately.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; text-align: center;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1.1rem;">Ready to sign your document?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: var(--color-text-secondary);">Use our free, 100% private PDF signing tool. No upload. No account. No watermark.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.6rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1.1rem;">Complete secure PDF toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem; color: var(--color-text-secondary);">Sign, compress, and password-protect your documents. No upload, no account, no watermark.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.6rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;">Sign PDF Free →</a>
+            <a href="/tools/protect-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.6rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700;">Protect PDF →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.6rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700;">Compress PDF →</a>
+          </div>
         </div>
 
         <hr />
@@ -1391,9 +1400,13 @@ Date: October 24, 2026
         <p>You can create a signature line in Google Docs by inserting a 2x1 table and giving the bottom border of the cell a 1pt black line, or by using <strong>Insert → Drawing → Line</strong>.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign your document?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Place your signature on any PDF instantly with our 100% private, free online tool.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Full document signing toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign, draw your signature, edit PDF content, and merge documents. No account required.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+            <a href="/tools/draw-signature-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Draw Signature →</a>
+            <a href="/tools/edit-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Edit PDF →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -1521,9 +1534,13 @@ Date: October 24, 2026
         <p>If someone outright refuses to sign a standard mutual NDA without giving a reasonable legal justification (such as a conflicting prior agreement), it is usually a red flag. In most cases, you should decline to share the confidential information.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(99,102,241,0.05)); border: 1px solid rgba(79,70,229,0.25); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Ready to sign?</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Don't print that NDA. Sign it digitally for free.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign NDA Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Complete NDA signing toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign, draw your signature, and protect your NDA. No account, no upload, no watermarks.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign NDA Free →</a>
+            <a href="/tools/draw-signature-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Draw Signature →</a>
+            <a href="/tools/protect-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Protect PDF →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -1928,12 +1945,16 @@ Date: October 24, 2026
 
         <h2>Can You Replace a Wet Signature with an Electronic One?</h2>
         <p>For most everyday documents, yes. The US ESIGN Act (2000) and UETA, the EU eIDAS Regulation, and equivalent laws in the UK, Australia, Canada, and India all recognize electronic signatures as legally equivalent to wet signatures for commercial and personal contracts.</p>
-        <p>If you're unsure whether your specific document requires a wet signature, check with a qualified attorney in your jurisdiction. But for the typical freelancer, small business owner, or professional signing contracts, NDAs, and agreements — an e-signature is all you need.</p>
+        <p>If you're unsure whether your specific document requires a wet signature, check with a qualified attorney in your jurisdiction. But for the typical freelancer, small business owner, or professional signing contracts, NDAs, and agreements — an e-signature is all you need. You can also <a href="/tools/draw-signature-online">create a drawn signature online</a> that looks identical to your handwritten wet signature, or <a href="/tools/type-signature-online">generate a typed cursive signature</a> in seconds.</p>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Switch from wet to digital today</p>
           <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign documents online in seconds — free, no account, files never leave your browser.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+            <a href="/tools/draw-signature-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Draw Signature →</a>
+            <a href="/tools/type-signature-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Type Signature →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -2030,9 +2051,13 @@ Date: October 24, 2026
         </ul>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Try MyDigitSign — free, forever</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">No account. No credit card. No envelope limits. Sign any document in under 60 seconds.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">✍️ Try MyDigitSign — the full PDF toolkit, free forever</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">No account. No credit card. No envelope limits. Sign PDFs, merge documents, compress for email, and protect with passwords.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+            <a href="/tools/edit-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Edit PDF →</a>
+            <a href="/tools" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">All Tools →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -2085,6 +2110,8 @@ Date: October 24, 2026
         </ul>
         <p>The rare exceptions: wills, real estate deeds, and some government forms still require wet (physical) signatures.</p>
 
+        <p>💡 <strong>Tip for small businesses:</strong> Before you sign a contract, make sure it's ready. You can <a href="/tools/edit-pdf-online">edit and annotate the PDF</a> to add dates, checkmarks, or text fields — then sign it. After signing, <a href="/tools/protect-pdf-online">password-protect your final contract</a> for extra security before emailing it to clients.</p>
+
         <h2>Top Use Cases for Small Business E-Signatures</h2>
 
         <h3>1. Client Contracts & Service Agreements</h3>
@@ -2129,9 +2156,13 @@ Date: October 24, 2026
         </table>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Sign your business contracts today — free</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">No subscription. No account. No watermarks. Sign any PDF in under 2 minutes.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Complete PDF toolkit — free for your business</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign, edit, compress, merge, and protect business documents. All free, no account, no watermarks.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+            <a href="/tools/edit-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Edit PDF →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Compress PDF →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -2213,12 +2244,18 @@ Date: October 24, 2026
           <li><strong>Include a kill fee</strong> — if the client cancels, you're compensated for time spent</li>
           <li><strong>Specify payment terms</strong> — Net 14 or Net 30, with late fee clauses</li>
           <li><strong>Keep copies</strong> — store signed PDFs in a dedicated client folder</li>
+          <li><strong>Compress before emailing</strong> — large PDFs sometimes bounce. Use our <a href="/tools/compress-pdf-online">free PDF compressor</a> to reduce file size before sending to a client.</li>
+          <li><strong>Protect sensitive contracts</strong> — <a href="/tools/protect-pdf-online">password-protect your signed PDF</a> if it contains financial or confidential terms.</li>
         </ul>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Sign your next contract in 60 seconds</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Free, no account, legally binding. Your documents never leave your browser.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Complete freelance document toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign contracts, compress for email, protect with passwords. All free, no account, no watermarks.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Compress PDF →</a>
+            <a href="/tools/protect-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Protect PDF →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -2296,14 +2333,20 @@ Date: October 24, 2026
           <li><strong>Export the document as a PDF</strong> — most MLS systems, transaction management platforms, and form libraries provide PDF export.</li>
           <li><strong>Open <a href="/tools/sign-pdf-online">MyDigitSign</a></strong> — no account or download required.</li>
           <li><strong>Create your signature</strong> — draw, type, or upload a photo of your handwritten signature.</li>
-          <li><strong>Place your signature</strong> on each required field in the document.</li>
+          <li><strong>Place your signature</strong> on each required field in the document. Need to add dates or checkmarks first? Use our <a href="/tools/edit-pdf-online">PDF Editor</a> to annotate the form before signing.</li>
           <li><strong>Download the signed PDF</strong> — email it to the other party or upload it to your transaction management system.</li>
+          <li><strong>Compress before emailing</strong> — multi-page real estate PDFs can be large. Use our <a href="/tools/compress-pdf-online">PDF Compressor</a> to reduce the file size without quality loss.</li>
+          <li><strong>Merge multiple documents</strong> — if you have several disclosure forms, use our <a href="/tools/merge-pdf-online">PDF Merger</a> to combine them into a single file before sending.</li>
         </ol>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Sign real estate documents in seconds</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Free, no account, works on any device. Files are never uploaded to any server.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Online Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📋 Complete real estate PDF toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign, edit, merge, compress, and protect real estate documents — all free, no account required.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign PDF Free →</a>
+            <a href="/tools/merge-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Merge PDFs →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Compress PDF →</a>
+          </div>
         </div>
       `,
       faq: [
@@ -2376,13 +2419,19 @@ Date: October 24, 2026
           <li><strong>Always keep a signed copy</strong> — save the signed PDF in a secure location (Google Drive, email archive, etc.)</li>
           <li><strong>Request the landlord's countersigned copy</strong> — you should receive a copy with both signatures</li>
           <li><strong>Note the move-in inspection procedure</strong> — document any existing damage before moving in</li>
-          <li><strong>Check for addenda</strong> — some leases have attachments (pet addendum, parking addendum) that also require signatures</li>
+          <li><strong>Check for addenda</strong> — some leases have attachments (pet addendum, parking addendum) that also require signatures. Use our <a href="/tools/merge-pdf-online">free PDF merger</a> to combine addenda with the main lease into a single document.</li>
+          <li><strong>Large lease file?</strong> — Multi-page leases with photos or floor plans can be large. <a href="/tools/compress-pdf-online">Compress your lease PDF</a> before emailing to avoid attachment size limits.</li>
+          <li><strong>Protect the final document</strong> — <a href="/tools/protect-pdf-online">add a password to your signed lease</a> before sharing so only the right people can open it.</li>
         </ul>
 
         <div style="background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(99,102,241,0.04)); border: 1px solid rgba(79,70,229,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;">
-          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📄 Sign your lease agreement online — free</p>
-          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">No account, no watermarks. Legally binding e-signature in under 2 minutes.</p>
-          <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign Lease Free →</a>
+          <p style="margin: 0 0 0.5rem; font-weight: 700; color: var(--color-primary, #4f46e5);">📄 Complete lease document toolkit — free</p>
+          <p style="margin: 0 0 0.75rem; font-size: 0.95rem;">Sign, merge, compress, and protect your lease agreement. No account, no watermarks.</p>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <a href="/tools/sign-pdf-online" style="display: inline-block; background: var(--color-primary, #4f46e5); color: #fff; padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Sign Lease Free →</a>
+            <a href="/tools/merge-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Merge PDFs →</a>
+            <a href="/tools/compress-pdf-online" style="display: inline-block; background: transparent; color: var(--color-primary, #4f46e5); border: 1px solid var(--color-primary, #4f46e5); padding: 0.5rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Compress PDF →</a>
+          </div>
         </div>
       `,
       faq: [

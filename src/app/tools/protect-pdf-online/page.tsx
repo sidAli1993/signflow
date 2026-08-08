@@ -192,10 +192,24 @@ export default function ProtectPdfOnlinePage() {
             <li><strong>Test the File:</strong> Before sending the encrypted document to your recipient, attempt to open it yourself. Ensure the password works and the document is fully locked.</li>
           </ul>
 
-          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>
-            Frequently Asked Questions
-          </h3>
-          {faqItems.map((faq, i) => (
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>Protect First, Then Do More</h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '0.75rem' }}>Password protection is the last step in a document workflow. Before protecting, make sure your document is complete:</p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li>Need to add a signature first? Use our <a href="/tools/sign-pdf-online" style={{color: 'var(--color-primary)'}}>free PDF signer →</a></li>
+            <li>Need to fill in form fields or add text? Use our <a href="/tools/edit-pdf-online" style={{color: 'var(--color-primary)'}}>free PDF editor →</a></li>
+            <li>Need to reduce file size before sending? Use our <a href="/tools/compress-pdf-online" style={{color: 'var(--color-primary)'}}>PDF compressor →</a></li>
+            <li>Need to merge multiple documents into one before protecting? Use our <a href="/tools/merge-pdf-online" style={{color: 'var(--color-primary)'}}>PDF merger →</a></li>
+          </ul>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Frequently Asked Questions</h3>
+          {[
+            { question: 'Is my PDF uploaded to a server for encryption?', answer: 'The protection uses a secure serverless endpoint where your file is processed in volatile RAM memory only and is never written to disk or stored. The connection is protected by TLS 1.3. Your file is never accessible after the session ends.' },
+            { question: 'What encryption standard is used?', answer: 'MyDigitSign uses AES-256 bit encryption, the same standard used by governments, banks, and enterprise security systems worldwide. The resulting protected PDF is compatible with Adobe Acrobat and all major PDF readers.' },
+            { question: 'Can I remove the password from a PDF I protected?', answer: 'Yes. To remove a password from a PDF you own, open it in Adobe Acrobat Reader, enter the password, go to File → Properties → Security → No Security, and save the file.' },
+            { question: 'Can I set different passwords for opening and editing?', answer: 'Currently, MyDigitSign sets a single open/view password. For advanced two-password protection (separate view and edit passwords), Adobe Acrobat Pro is required.' },
+            { question: 'What happens to my password after the PDF is protected?', answer: 'Your password is used solely for the encryption operation and is never logged, stored, or associated with your account. Once the protected PDF is delivered, your password is gone from our systems.' },
+            { question: 'Will the protected PDF work on mobile devices?', answer: 'Yes. AES-256 encrypted PDFs are supported by iOS built-in PDF viewer, Adobe Acrobat Mobile, and Android PDF readers. The recipient will be prompted to enter the password when they open the file.' },
+          ].map((faq, i) => (
             <div key={i} style={{ background: '#f8fafc', padding: '1.25rem', borderRadius: '10px', marginBottom: '1rem', border: '1px solid #e2e8f0' }}>
               <h4 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem', color: '#0f172a' }}>{faq.question}</h4>
               <p style={{ color: '#475569', margin: 0, fontSize: '0.95rem' }}>{faq.answer}</p>

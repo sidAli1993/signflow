@@ -141,23 +141,32 @@ export default function JpgToPdfPage() {
             <li>After converting, use our <a href="/tools/compress-pdf-online" style={{ color: '#4f46e5' }}>PDF compressor</a> if you need to reduce the file size for email.</li>
           </ul>
 
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>After Converting: What to Do with Your PDF</h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '0.75rem' }}>
+            Once your images are in PDF format, you have access to our full PDF toolkit:
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Sign it:</strong> Need a signature on the document? Use our <a href="/tools/sign-pdf-online" style={{color: 'var(--color-primary)'}}>free PDF signer →</a></li>
+            <li><strong>Fill it in:</strong> Need to add text, dates, or checkmarks? Use our <a href="/tools/edit-pdf-online" style={{color: 'var(--color-primary)'}}>PDF editor →</a></li>
+            <li><strong>Combine with other files:</strong> Use our <a href="/tools/merge-pdf-online" style={{color: 'var(--color-primary)'}}>PDF merger</a> to combine your new PDF with other documents into one file.</li>
+            <li><strong>Reduce file size:</strong> If the converted PDF is large, <a href="/tools/compress-pdf-online" style={{color: 'var(--color-primary)'}}>compress it</a> before emailing or uploading to a portal.</li>
+            <li><strong>Protect it:</strong> For sensitive documents, <a href="/tools/protect-pdf-online" style={{color: 'var(--color-primary)'}}>add a password</a> before sharing.</li>
+          </ul>
+
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>Frequently Asked Questions</h3>
-          {faqItems.map((faq, i) => (
+          {[
+            { question: 'Can I convert multiple images into one PDF?', answer: 'Yes. Select multiple JPG, PNG, or JPEG images at once. You can then drag to reorder them before converting — each image becomes one page in the final PDF.' },
+            { question: 'Does my image get uploaded to a server?', answer: 'No. The entire JPG to PDF conversion happens locally inside your browser using client-side JavaScript. Your images never leave your device.' },
+            { question: 'What image formats does this tool support?', answer: 'JPG, JPEG, and PNG formats are all supported. GIF and WebP images are not currently supported — convert them to JPG or PNG first.' },
+            { question: 'Will the quality of my image be reduced in the PDF?', answer: 'No. Images are embedded into the PDF at their original resolution. The conversion does not compress or degrade image quality.' },
+            { question: 'Can I convert a photo of a document and then sign it?', answer: 'Yes! Convert your photo to PDF using this tool, then open the result in our free PDF signer to add your electronic signature. The entire workflow takes under 3 minutes.' },
+            { question: 'Is there a limit on how many images I can convert?', answer: 'No hard limit. You can combine as many images as your browser can handle. For very large sets of images, uploading in batches and using the PDF merger to combine the results is recommended.' },
+          ].map((faq, i) => (
             <div key={i} style={{ background: '#f8fafc', padding: '1.25rem', borderRadius: '10px', marginBottom: '1rem', border: '1px solid #e2e8f0' }}>
               <h4 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem', color: '#0f172a' }}>{faq.question}</h4>
               <p style={{ color: '#475569', margin: 0, fontSize: '0.95rem' }}>{faq.answer}</p>
             </div>
           ))}
-
-          <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid #e2e8f0' }}>
-            <p style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>Related tools:</p>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><a href="/tools/pdf-to-jpg" style={{ color: '#4f46e5' }}>PDF to JPG →</a></li>
-              <li><a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>Sign PDF Online →</a></li>
-              <li><a href="/tools/merge-pdf-online" style={{ color: '#4f46e5' }}>Merge PDF →</a></li>
-              <li><a href="/tools/compress-pdf-online" style={{ color: '#4f46e5' }}>Compress PDF →</a></li>
-            </ul>
-          </div>
         </section>
       </main>
 
@@ -165,3 +174,4 @@ export default function JpgToPdfPage() {
     </>
   );
 }
+

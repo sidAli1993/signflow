@@ -149,10 +149,83 @@ export default function EditPdfOnlinePage() {
             Unlike traditional PDF tools (such as Smallpdf, iLovePDF, or Adobe Acrobat Web) that require sending your file over the internet to a third-party server, MyDigitSign runs on WebAssembly and client-side JavaScript. Your file stays inside your computer or smartphone at all times. This provides total privacy compliance for GDPR, HIPAA, and corporate security guidelines.
           </p>
 
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Who Uses the Free PDF Editor?
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            Our free PDF editor is used by people across dozens of professions and use cases every day:
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Freelancers &amp; Contractors:</strong> Fill in client name, date, and project details on invoice templates and sign contracts in under 2 minutes — no Adobe Acrobat subscription needed.</li>
+            <li><strong>Job Seekers:</strong> Add your signature to digital offer letters, employment agreements, and tax forms (W-4, W-9) without printing anything.</li>
+            <li><strong>Renters &amp; Landlords:</strong> Fill out lease agreements, move-in inspection forms, and rental applications digitally. <a href="/tools/sign-pdf-online" style={{color: 'var(--color-primary)'}}>Sign and download in minutes →</a></li>
+            <li><strong>Small Business Owners:</strong> Annotate purchase orders, approve vendor contracts, and countersign client agreements. After editing, <a href="/tools/protect-pdf-online" style={{color: 'var(--color-primary)'}}>password-protect the final PDF</a> before emailing.</li>
+            <li><strong>Students &amp; Academics:</strong> Complete university application forms, student loan documents, and internship contracts without a printer.</li>
+            <li><strong>Healthcare Workers:</strong> Fill and sign consent forms, patient intake documents, and release forms in a HIPAA-friendly, zero-upload environment.</li>
+          </ul>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Edit and Sign PDF: What Can You Add?
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
+            The MyDigitSign PDF editor lets you add the following elements to any PDF page:
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>✏️ Text Boxes:</strong> Click anywhere to type custom text — perfect for filling in blank lines on forms, adding names, dates, addresses, or reference numbers.</li>
+            <li><strong>✍️ E-Signatures:</strong> Draw, type in cursive, or upload a signature image. Place on the signature line and resize precisely.</li>
+            <li><strong>✅ Checkmarks &amp; Crosses:</strong> Tap checkboxes to mark them. Toggle between ✓ check, ✗ cross, and ○ circle symbols.</li>
+            <li><strong>📅 Date Stamps:</strong> Insert today's date automatically or type a custom date in any format.</li>
+            <li><strong>🔲 Highlight &amp; Redact:</strong> Highlight text in yellow or apply a black redaction bar to sensitive information before sharing.</li>
+            <li><strong>📐 Drawing Tools:</strong> Add freehand annotations, arrows, and underlines for review and markup workflows.</li>
+          </ul>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            Free PDF Editor vs. Paid Alternatives
+          </h3>
+          <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+              <thead>
+                <tr style={{ background: 'rgba(0,0,0,0.04)' }}>
+                  <th style={{ padding: '10px', textAlign: 'left', border: '1px solid #e2e8f0' }}>Feature</th>
+                  <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>MyDigitSign</th>
+                  <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>Adobe Acrobat</th>
+                  <th style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>SmallPDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style={{ padding: '10px', border: '1px solid #e2e8f0' }}>Free to use</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Always</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>❌ $19.99/mo</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>⚠️ Limited</td></tr>
+                <tr><td style={{ padding: '10px', border: '1px solid #e2e8f0' }}>No file upload to server</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ 100% local</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>❌ Cloud upload</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>❌ Cloud upload</td></tr>
+                <tr><td style={{ padding: '10px', border: '1px solid #e2e8f0' }}>No account required</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Yes</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>❌ Required</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>⚠️ Optional</td></tr>
+                <tr><td style={{ padding: '10px', border: '1px solid #e2e8f0' }}>No watermarks</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Always</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Paid only</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>❌ Free adds watermark</td></tr>
+                <tr><td style={{ padding: '10px', border: '1px solid #e2e8f0' }}>E-signature included</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Yes</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>✅ Paid only</td><td style={{ padding: '10px', textAlign: 'center', border: '1px solid #e2e8f0' }}>⚠️ Limited</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
+            What to Do After Editing Your PDF
+          </h3>
+          <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '0.75rem' }}>
+            Once you've filled and signed your PDF, here are the next steps depending on your use case:
+          </p>
+          <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
+            <li><strong>Sending via email:</strong> Large PDFs can bounce. Use our <a href="/tools/compress-pdf-online" style={{color: 'var(--color-primary)'}}>free PDF compressor</a> to reduce the file size before attaching.</li>
+            <li><strong>Sharing sensitive documents:</strong> <a href="/tools/protect-pdf-online" style={{color: 'var(--color-primary)'}}>Password-protect your edited PDF</a> so only the intended recipient can open it.</li>
+            <li><strong>Combining multiple forms:</strong> Use our <a href="/tools/merge-pdf-online" style={{color: 'var(--color-primary)'}}>PDF merger</a> to combine several completed forms into one submission-ready package.</li>
+            <li><strong>Signing after editing:</strong> If you edited the form and need a clean signature now, use our dedicated <a href="/tools/sign-pdf-online" style={{color: 'var(--color-primary)'}}>PDF signing tool</a> for the best experience.</li>
+          </ul>
+
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '2rem', marginBottom: '1rem' }}>
             Frequently Asked Questions
           </h3>
-          {faqItems.map((faq, i) => (
+          {[
+            { question: 'Is this PDF editor really 100% free with no limits?', answer: 'Yes. MyDigitSign PDF Editor is free forever. There are no document limits, watermarks, or subscription paywalls. You can edit and sign as many PDFs as you need.' },
+            { question: 'Are my PDF files uploaded to any external server?', answer: 'No. All PDF parsing, text editing, and signature rendering happen locally in your web browser memory via client-side JavaScript. Your document never leaves your device.' },
+            { question: 'Can I fill out form fields and sign contract PDFs?', answer: 'Yes. You can click anywhere on the page to insert text, fill out blank fields, add dates, and place electronic signatures. Works on both standard PDFs and fillable PDF forms.' },
+            { question: 'Can I edit a PDF on my phone?', answer: 'Yes. The MyDigitSign PDF editor is fully responsive. Open mydigitsign.com/tools/edit-pdf-online in your mobile browser (Safari on iPhone, Chrome on Android), upload your PDF, and edit it with touch controls.' },
+            { question: 'What is the file size limit?', answer: 'You can edit PDFs up to 50MB. Since processing is done entirely in your browser, there are no server-side upload restrictions. Very large files may take a moment to render depending on your device speed.' },
+            { question: 'Can I use this instead of Adobe Acrobat to fill PDF forms?', answer: 'Yes, for the vast majority of everyday tasks — filling out forms, adding signatures, inserting dates, and annotating documents — MyDigitSign is a fully capable free alternative. Unlike Adobe Acrobat, it requires no installation, no subscription, and no account.' },
+          ].map((faq, i) => (
             <div key={i} style={{ background: '#f8fafc', padding: '1.25rem', borderRadius: '10px', marginBottom: '1rem', border: '1px solid #e2e8f0' }}>
               <h4 style={{ fontSize: '1.05rem', fontWeight: 600, marginBottom: '0.4rem', color: '#0f172a' }}>{faq.question}</h4>
               <p style={{ color: '#475569', margin: 0, fontSize: '0.95rem' }}>{faq.answer}</p>
@@ -165,3 +238,4 @@ export default function EditPdfOnlinePage() {
     </>
   );
 }
+

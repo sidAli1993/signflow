@@ -231,12 +231,21 @@ export default function SmallPdfAlternativePage() {
 
           {/* Internal Links */}
           <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid #e2e8f0' }}>
-            <p style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>Related comparisons &amp; guides:</p>
+            <p style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>Related tools &amp; comparisons:</p>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><a href="/compare/docusign-alternative" style={{ color: '#4f46e5' }}>DocuSign Alternative Free →</a></li>
               <li><a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>Sign PDF Online Free →</a></li>
+              <li><a href="/tools/edit-pdf-online" style={{ color: '#4f46e5' }}>Edit PDF Fields →</a></li>
+              <li><a href="/tools/draw-signature-online" style={{ color: '#4f46e5' }}>Draw Signature →</a></li>
+              <li><a href="/tools/type-signature-online" style={{ color: '#4f46e5' }}>Type Signature →</a></li>
+              <li><a href="/tools/sign-image-online" style={{ color: '#4f46e5' }}>Sign Image →</a></li>
+              <li><a href="/tools/jpg-to-pdf" style={{ color: '#4f46e5' }}>JPG to PDF →</a></li>
               <li><a href="/tools/compress-pdf-online" style={{ color: '#4f46e5' }}>Compress PDF Free →</a></li>
-              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: '#4f46e5' }}>Are E-Signatures Legal? →</a></li>
+              <li><a href="/compare/docusign-alternative" style={{ color: '#4f46e5' }}>DocuSign Alternative →</a></li>
+              <li><a href="/compare/adobe-sign-alternative" style={{ color: '#4f46e5' }}>Adobe Sign Alternative →</a></li>
+              <li><a href="/compare/hellosign-alternative" style={{ color: '#4f46e5' }}>HelloSign Alternative →</a></li>
+              <li><a href="/compare/pandadoc-alternative" style={{ color: '#4f46e5' }}>PandaDoc Alternative →</a></li>
+              <li><a href="/compare/signwell-alternative" style={{ color: '#4f46e5' }}>SignWell Alternative →</a></li>
+              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: '#4f46e5' }}>Are E-Signatures Legally Binding? →</a></li>
               <li><a href="/blog/free-digital-signature-certificate" style={{ color: '#4f46e5' }}>Free Digital Signature Certificate →</a></li>
             </ul>
           </div>

@@ -481,15 +481,12 @@ export default function SignPdfOnlineTool() {
                   <Star key={i} size={18} fill="#f59e0b" stroke="#f59e0b" />
                 ))}
               </div>
-              <strong style={{ fontSize: '1.1rem', color: '#0f172a' }}>4.9 / 5</strong>
-              <span style={{ fontSize: '0.875rem', color: '#64748b' }}>· 47 user reviews</span>
+              <strong style={{ fontSize: '1.1rem', color: '#0f172a' }}>5.0 / 5</strong>
+              <span style={{ fontSize: '0.875rem', color: '#64748b' }}>· 1 user review</span>
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
               {[
-                { name: 'Sarah M.', role: 'Freelance Designer', text: 'Signed a client contract in under 2 minutes. No watermark, no account. This is exactly what I needed.', stars: 5 },
-                { name: 'James K.', role: 'Small Business Owner', text: 'I use it every week for vendor agreements. Files stay on my computer — that matters to me.', stars: 5 },
-                { name: 'Priya T.', role: 'HR Manager', text: 'Our team switched from DocuSign. MyDigitSign handles our daily offer letters fast and for free.', stars: 5 },
-                { name: 'Omar R.', role: 'Landlord', text: 'Perfect for lease agreements. My tenants sign on their phones and it works every time.', stars: 4 },
+                { name: 'Doc Strange', role: 'Verified Google Review', text: 'wonderful experience by visiting their site, its completely free and serverless app.', stars: 5 },
               ].map((review, i) => (
                 <div key={i} style={{ background: '#ffffff', padding: '1.1rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
                   <div style={{ display: 'flex', gap: '2px', marginBottom: '0.5rem' }}>

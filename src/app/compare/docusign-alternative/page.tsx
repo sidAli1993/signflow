@@ -114,10 +114,10 @@ export default function DocuSignAlternativePage() {
             Just because MyDigitSign is free doesn't mean it lacks enterprise features. Our built-in tools allow you to:
           </p>
           <ul style={{ lineHeight: 1.8, color: '#475569', paddingLeft: '1.25rem', marginBottom: '1.5rem' }}>
-            <li><strong>Draw Custom Signatures:</strong> Use your mouse, trackpad, or touchscreen to draw fluid, anti-aliased signatures.</li>
-            <li><strong>Type in Cursive:</strong> Generate beautiful, professional calligraphy signatures by typing your name.</li>
-            <li><strong>Add Cryptographic Certificates:</strong> Lock your document from future tampering using self-signed digital certificates.</li>
-            <li><strong>Fill Out Forms:</strong> Easily add text, dates, and checkmarks to complex PDF forms before signing.</li>
+            <li><strong><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Custom Signatures</a>:</strong> Use your mouse, trackpad, or touchscreen to draw fluid, anti-aliased signatures.</li>
+            <li><strong><a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Type in Cursive</a>:</strong> Generate beautiful, professional calligraphy signatures by typing your name.</li>
+            <li><strong><a href="/blog/free-digital-signature-certificate" style={{ color: 'var(--color-primary, #4f46e5)' }}>Add Cryptographic Certificates</a>:</strong> Lock your document from future tampering using self-signed digital certificates.</li>
+            <li><strong><a href="/tools/edit-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Fill Out Forms</a>:</strong> Easily add text, dates, and checkmarks to complex PDF forms before signing.</li>
           </ul>
 
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
@@ -127,7 +127,7 @@ export default function DocuSignAlternativePage() {
             Yes. The legality of an electronic signature does not depend on paying for a premium subscription. Under the U.S. Electronic Signatures in Global and National Commerce (ESIGN) Act, the Uniform Electronic Transactions Act (UETA), and the European Union's eIDAS regulation, an electronic signature carries the same legal weight as a handwritten signature in most business and personal contexts.
           </p>
           <p style={{ lineHeight: 1.7, color: '#475569', marginBottom: '1rem' }}>
-            MyDigitSign allows you to express your clear intent to sign a document, logically associates your signature with the PDF file, and preserves the document accurately for future reference—satisfying the core legal requirements for digital agreements.
+            MyDigitSign allows you to express your clear intent to sign a document, logically associates your signature with the PDF file, and preserves the document accurately for future reference—satisfying the core legal requirements for digital agreements. For a complete analysis, see <a href="/blog/are-electronic-signatures-legally-binding" style={{ color: 'var(--color-primary, #4f46e5)' }}>are electronic signatures legally binding</a>.
           </p>
           
           <h3 style={{ fontSize: '1.35rem', fontWeight: 600, marginTop: '1.75rem', marginBottom: '0.5rem' }}>
@@ -247,6 +247,24 @@ export default function DocuSignAlternativePage() {
               <p style={{ color: '#475569', margin: 0, fontSize: '0.95rem' }}>{faq.answer}</p>
             </div>
           ))}
+
+          <div style={{ marginTop: '2.5rem', paddingTop: '1.5rem', borderTop: '1px solid #e2e8f0' }}>
+            <p style={{ fontSize: '0.875rem', color: '#64748b', marginBottom: '0.5rem' }}>Related tools &amp; comparisons:</p>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
+              <li><a href="/tools/sign-pdf-online" style={{ color: '#4f46e5' }}>Sign PDF Online Free →</a></li>
+              <li><a href="/tools/edit-pdf-online" style={{ color: '#4f46e5' }}>Edit PDF Fields →</a></li>
+              <li><a href="/tools/draw-signature-online" style={{ color: '#4f46e5' }}>Draw Signature →</a></li>
+              <li><a href="/tools/type-signature-online" style={{ color: '#4f46e5' }}>Type Signature →</a></li>
+              <li><a href="/tools/sign-image-online" style={{ color: '#4f46e5' }}>Sign Image →</a></li>
+              <li><a href="/tools/jpg-to-pdf" style={{ color: '#4f46e5' }}>JPG to PDF →</a></li>
+              <li><a href="/compare/adobe-sign-alternative" style={{ color: '#4f46e5' }}>Adobe Sign Alternative →</a></li>
+              <li><a href="/compare/smallpdf-alternative" style={{ color: '#4f46e5' }}>SmallPDF Alternative →</a></li>
+              <li><a href="/compare/hellosign-alternative" style={{ color: '#4f46e5' }}>HelloSign Alternative →</a></li>
+              <li><a href="/compare/pandadoc-alternative" style={{ color: '#4f46e5' }}>PandaDoc Alternative →</a></li>
+              <li><a href="/compare/signwell-alternative" style={{ color: '#4f46e5' }}>SignWell Alternative →</a></li>
+              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: '#4f46e5' }}>Are E-Signatures Legally Binding? →</a></li>
+            </ul>
+          </div>
         </section>
       </main>
 

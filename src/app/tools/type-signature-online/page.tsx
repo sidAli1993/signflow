@@ -208,36 +208,90 @@ export default function TypeSignatureTool() {
               <div className={styles.seoStepNum} aria-hidden="true">1</div>
               <h3>Type Your Name</h3>
               <p>
-                Enter your name in the text field above. The generator will render live previews of your digital signature across multiple script fonts.
+                Enter your full name or initials in the generator text box above. Our tool renders your input in real-time across multiple professional handwriting styles and script fonts.
               </p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum} aria-hidden="true">2</div>
-              <h3>Select Font &amp; Color</h3>
+              <h3>Choose Font &amp; Color</h3>
               <p>
-                Choose from standard colors (Black, Blue, Red) and pick the cursive handwriting style that best matches your personal preferences.
+                Select your preferred cursive script style (Dancing Script, Pacifico, Great Vibes, or Caveat) and pick a signature color (classic black, document blue, or red).
               </p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum} aria-hidden="true">3</div>
               <h3>Download or Apply</h3>
               <p>
-                Click adopt to sign a contract instantly on our client-side editor, or download a transparent PNG file to insert into Word or Google Docs files.
+                Click 'Download' to save a transparent high-resolution PNG, or click 'Adopt' to insert the signature directly onto a PDF contract inside our secure, client-side editor.
               </p>
             </article>
+          </div>
+
+          <div style={{ marginTop: '3rem' }}>
+            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
+              How to Use Your Downloaded PNG Signature
+            </h2>
+            <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.6, marginBottom: '1.25rem' }}>
+              When you download your signature, it is saved as a transparent PNG image file. This format allows you to insert it cleanly over colored lines and document backgrounds without any white box borders.
+            </p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+              <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.75rem' }}>📝 Microsoft Word</h4>
+                <ol style={{ paddingLeft: '1.25rem', fontSize: '0.9rem', color: '#475569', lineHeight: 1.6 }}>
+                  <li>Go to <strong>Insert → Pictures → This Device</strong> and select the downloaded PNG file.</li>
+                  <li>Click on the image, and go to the <strong>Picture Format</strong> menu.</li>
+                  <li>Click <strong>Wrap Text → In Front of Text</strong> so you can drag the signature freely.</li>
+                  <li>Position it perfectly over the signature line and resize using the corner handles.</li>
+                </ol>
+                <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.75rem' }}>
+                  Read our full guide on <a href="/blog/how-to-add-signature-in-word" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 500 }}>how to add a signature in Word</a>.
+                </p>
+              </div>
+
+              <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.75rem' }}>🌐 Google Docs</h4>
+                <ol style={{ paddingLeft: '1.25rem', fontSize: '0.9rem', color: '#475569', lineHeight: 1.6 }}>
+                  <li>Open your document and place your cursor where you need the signature.</li>
+                  <li>Click <strong>Insert → Image → Upload from computer</strong>.</li>
+                  <li>Click on the inserted image and choose the <strong>In front of text</strong> layout option.</li>
+                  <li>Resize and slide the signature block over the document signature line.</li>
+                </ol>
+              </div>
+
+              <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <h4 style={{ fontSize: '1.1rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.75rem' }}>✉️ Email Signatures</h4>
+                <ol style={{ paddingLeft: '1.25rem', fontSize: '0.9rem', color: '#475569', lineHeight: 1.6 }}>
+                  <li>Open your email settings (Gmail, Outlook, or Apple Mail).</li>
+                  <li>Find the signature creation section and click the <strong>Insert Image</strong> icon.</li>
+                  <li>Upload your transparent PNG signature file.</li>
+                  <li>Resize to 'Small' or 'Medium' so it fits naturally at the end of your emails.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.seoCompare} style={{ marginTop: '2.5rem' }}>
+            <h2 className={styles.seoCompareTitle}>Why Use a Typed Cursive Signature vs. Drawing?</h2>
+            <p className={styles.seoCompareDesc}>
+              Drawing a signature with a mouse, trackpad, or finger can be incredibly frustrating. The results are often shaky, jagged, and unprofessional. A <strong>cursive signature maker</strong> provides a clean, elegant, and consistent autograph every single time.
+            </p>
+            <p className={styles.seoCompareDesc} style={{ marginTop: '1rem' }}>
+              Typed signatures are highly accessible, fast, and look like genuine pen-and-paper handwriting. They are particularly useful for desktop users who lack touchscreens or styluses. If you prefer drawing, you can easily switch to our <a href="/tools/draw-signature-online">Draw Signature Online tool</a>, or upload a photo using our <a href="/tools/sign-image-online">Sign Image Online tool</a>.
+            </p>
           </div>
 
           <div className={styles.seoCompare} style={{ marginTop: '2.5rem' }}>
             <h2 className={styles.seoCompareTitle}>Is a Typed Signature Legally Valid?</h2>
             <p className={styles.seoCompareDesc}>
-              Absolutely. In the modern business world, you don't need a messy drawn signature for a contract to be binding. Under the <strong>ESIGN Act (USA)</strong> and <strong>eIDAS (EU)</strong>, a typed electronic signature holds the exact same legal weight as a wet-ink signature.
+              Yes, absolutely. Under the federal <strong>ESIGN Act (2000)</strong> and the <strong>Uniform Electronic Transactions Act (UETA)</strong> in the United States, as well as the <strong>eIDAS</strong> regulations in the European Union, typed signatures carry the exact same legal weight as handwritten wet-ink signatures.
             </p>
             <p className={styles.seoCompareDesc} style={{ marginTop: '1rem' }}>
-              The most important factor in legal validity is <em>intent</em>. By typing your name, selecting a signature style, and choosing to apply it to a contract or NDA, you are clearly demonstrating your intent to sign. Our <strong>signature generator</strong> allows you to do this quickly and beautifully without printing anything.
+              Legally, an electronic signature is defined as "any electronic sound, symbol, or process attached to or logically associated with a contract and executed with the intent to sign." Typing your name and choosing to place it on a document fully satisfies this definition. For a complete legal analysis, read our guide on <a href="/blog/are-electronic-signatures-legally-binding">are electronic signatures legally binding</a>.
             </p>
           </div>
 
-          <div className={styles.seoFaq}>
+          <div className={styles.seoFaq} style={{ marginTop: '3rem' }}>
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
             <div className={styles.seoFaqGrid}>
               <div className={styles.faqItem}>
@@ -256,6 +310,22 @@ export default function TypeSignatureTool() {
                 <h3>Does the signature generator store my name?</h3>
                 <p>No. Our tool works 100% in your browser. Your typed name is never sent to our servers. The transparent PNG is generated entirely on your own device ensuring total privacy.</p>
               </div>
+              <div className={styles.faqItem}>
+                <h3>How do I make my signature look like real handwriting?</h3>
+                <p>Our cursive signature maker uses high-quality handwriting fonts designed by typographers to mimic real signatures. Using the dark blue or black ink color options makes it look like it was signed with a physical pen.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>Can I sign PDFs on my phone using typed signatures?</h3>
+                <p>Yes. The tool is fully responsive and touch-optimized. You can type your name on your phone, choose a font, and use the Adopt tool to edit and sign PDFs directly in Safari or Chrome. Read our <a href="/blog/how-to-sign-pdf-on-iphone-android-free">how to sign PDFs on iPhone & Android guide</a> for details.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>How do I type my signature on a Word document?</h3>
+                <p>You can type your name directly in Word and apply a cursive font like Segoe Script. However, to prevent unauthorized edits, it is best to export the Word file as a PDF and sign it using MyDigitSign. Review <a href="/blog/how-to-add-signature-in-word">how to add a signature in Word</a>.</p>
+              </div>
+              <div className={styles.faqItem}>
+                <h3>What is the difference between an e-signature and a digital certificate?</h3>
+                <p>An e-signature is a visual representation of your agreement on a page (like a typed or drawn signature). A digital certificate is a cryptographic file that locks the document data to prevent tampering. Learn more in our <a href="/blog/free-digital-signature-certificate">free digital signature certificate guide</a>.</p>
+              </div>
             </div>
           </div>
 
@@ -266,8 +336,12 @@ export default function TypeSignatureTool() {
               <li><a href="/tools/draw-signature-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Draw Signature Online →</a></li>
               <li><a href="/tools/sign-image-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Image Online →</a></li>
               <li><a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF Online Free →</a></li>
+              <li><a href="/tools/sign-word-document" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Word Document Online →</a></li>
+              <li><a href="/tools/edit-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Edit PDF Fields Online →</a></li>
               <li><a href="/blog/how-to-sign-nda-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>How to Sign an NDA Online →</a></li>
+              <li><a href="/blog/how-to-ask-someone-to-sign-nda" style={{ color: 'var(--color-primary, #4f46e5)' }}>How to Ask Someone to Sign an NDA →</a></li>
               <li><a href="/blog/create-digital-signature-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>Create Digital Signature Free →</a></li>
+              <li><a href="/blog/how-to-sign-pdf-on-iphone-android-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF on iPhone &amp; Android →</a></li>
               <li><a href="/how-it-works" style={{ color: 'var(--color-primary, #4f46e5)' }}>How It Works →</a></li>
             </ul>
           </div>

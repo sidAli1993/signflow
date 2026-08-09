@@ -173,10 +173,44 @@ const posts = [
 ];
 
 export default function BlogIndex() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://mydigitsign.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://mydigitsign.com/blog' },
+    ],
+  };
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': 'Digital Signature Blog — PDF Signing Guides & Tips',
+    'description': 'Guides on digital signatures, how to sign PDFs online, e-signature legality, and document security — from the MyDigitSign team.',
+    'url': 'https://mydigitsign.com/blog',
+    'mainEntity': {
+      '@type': 'ItemList',
+      'itemListElement': posts.map((post, i) => ({
+        '@type': 'ListItem',
+        'position': i + 1,
+        'url': `https://mydigitsign.com/blog/${post.slug}`,
+        'name': post.title,
+      })),
+    },
+  };
+
   return (
     <>
       <Navbar />
       <main className={styles.blogContainer}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
         <header className={styles.blogHeader}>
           <h1 className={styles.blogTitle}>The Signature Hub</h1>
           <p className={styles.blogSubtitle}>Insights, guides, and tips for document security.</p>

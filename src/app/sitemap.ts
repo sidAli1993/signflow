@@ -2,35 +2,35 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-08-08');
+  const lastModDate = new Date('2026-08-09');
 
   // Real blog posts that have actual page content
   const blogPosts = [
-    { slug: 'free-digital-signature-certificate', modified: '2026-07-22' },
-    { slug: 'create-digital-signature-online-free', modified: '2026-07-22' },
-    { slug: 'are-electronic-signatures-legally-binding', modified: '2026-07-22' },
-    { slug: 'ultimate-guide-signing-pdf-securely', modified: '2026-07-22' },
-    { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-07-27' },
-    { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-07-22' },
-    { slug: 'how-to-sign-nda-online-free', modified: '2026-07-22' },
-    { slug: 'how-to-add-signature-in-word', modified: '2026-08-08' }, // Updated Aug 8
-    { slug: 'what-is-a-signature-line', modified: '2026-07-27' },
-    { slug: 'how-to-ask-someone-to-sign-nda', modified: '2026-07-27' },
-    { slug: 'can-you-notarize-your-own-signature', modified: '2026-07-27' },
+    { slug: 'free-digital-signature-certificate', modified: '2026-08-09' },
+    { slug: 'create-digital-signature-online-free', modified: '2026-08-09' },
+    { slug: 'are-electronic-signatures-legally-binding', modified: '2026-08-09' },
+    { slug: 'ultimate-guide-signing-pdf-securely', modified: '2026-08-09' },
+    { slug: 'how-to-sign-a-document-online-free-pdf-editor', modified: '2026-08-09' },
+    { slug: 'how-to-sign-pdf-on-iphone-android-free', modified: '2026-08-09' },
+    { slug: 'how-to-sign-nda-online-free', modified: '2026-08-09' },
+    { slug: 'how-to-add-signature-in-word', modified: '2026-08-09' },
+    { slug: 'what-is-a-signature-line', modified: '2026-08-09' },
+    { slug: 'how-to-ask-someone-to-sign-nda', modified: '2026-08-09' },
+    { slug: 'can-you-notarize-your-own-signature', modified: '2026-08-09' },
     // New posts — August 8, 2026
-    { slug: 'how-to-fill-out-uber-inspection-form', modified: '2026-08-08' },
-    { slug: 'voided-check-example', modified: '2026-08-08' },
-    { slug: 'what-is-a-wet-signature', modified: '2026-08-08' },
-    { slug: 'docusign-vs-mydigitsign-honest-review', modified: '2026-08-08' },
-    { slug: 'electronic-signature-for-small-business', modified: '2026-08-08' },
-    { slug: 'digital-signature-for-freelancers', modified: '2026-08-08' },
-    { slug: 'esignature-for-realtors', modified: '2026-08-08' },
-    { slug: 'sign-lease-agreement-online-free', modified: '2026-08-08' },
-    { slug: 'best-smallpdf-alternatives-free', modified: '2026-08-08' },
-    { slug: 'what-is-a-digit-sign', modified: '2026-08-08' },
-    { slug: 'where-to-get-digital-signature-certificate', modified: '2026-08-08' },
-    { slug: 'pdf-editor-with-signature-free', modified: '2026-08-08' },
-    { slug: 'digital-signature-laws-by-country', modified: '2026-08-08' },
+    { slug: 'how-to-fill-out-uber-inspection-form', modified: '2026-08-09' },
+    { slug: 'voided-check-example', modified: '2026-08-09' },
+    { slug: 'what-is-a-wet-signature', modified: '2026-08-09' },
+    { slug: 'docusign-vs-mydigitsign-honest-review', modified: '2026-08-09' },
+    { slug: 'electronic-signature-for-small-business', modified: '2026-08-09' },
+    { slug: 'digital-signature-for-freelancers', modified: '2026-08-09' },
+    { slug: 'esignature-for-realtors', modified: '2026-08-09' },
+    { slug: 'sign-lease-agreement-online-free', modified: '2026-08-09' },
+    { slug: 'best-smallpdf-alternatives-free', modified: '2026-08-09' },
+    { slug: 'what-is-a-digit-sign', modified: '2026-08-09' },
+    { slug: 'where-to-get-digital-signature-certificate', modified: '2026-08-09' },
+    { slug: 'pdf-editor-with-signature-free', modified: '2026-08-09' },
+    { slug: 'digital-signature-laws-by-country', modified: '2026-08-09' },
   ];
 
   // Dedicated micro-tools suite
@@ -48,9 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pdf-to-jpg',
     'jpg-to-pdf',
     'split-pdf-online',
-    'fill-pdf-form',
-    'word-to-pdf',
-    'unlock-pdf',
     // Phase 4 new tools
     'sign-word-document',
   ];

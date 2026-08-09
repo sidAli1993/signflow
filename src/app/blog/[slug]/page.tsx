@@ -30,11 +30,17 @@ export async function generateStaticParams() {
     { slug: 'esignature-for-realtors' },
     { slug: 'sign-lease-agreement-online-free' },
     { slug: 'best-smallpdf-alternatives-free' },
+    // New posts — August 8 (batch 2)
+    { slug: 'what-is-a-digit-sign' },
+    { slug: 'where-to-get-digital-signature-certificate' },
+    { slug: 'pdf-editor-with-signature-free' },
+    { slug: 'digital-signature-laws-by-country' },
   ];
 }
 
 interface Post {
   title: string;
+  description?: string;
   date: string;
   lastModified: string;
   author: string;
@@ -48,6 +54,7 @@ const getPostData = (slug: string): Post | null => {
   const posts: Record<string, Post> = {
     'how-to-sign-a-document-online-free-pdf-editor': {
       title: 'How to Legally Sign a Document Online: The Complete 2026 Guide',
+      description: 'Learn how to legally sign any document online for free. This guide covers the ESIGN Act, types of electronic signatures, and step-by-step instructions for secure signing.',
       date: 'July 6, 2026',
       lastModified: 'July 27, 2026',
       author: 'MyDigitSign Editorial',
@@ -217,6 +224,7 @@ const getPostData = (slug: string): Post | null => {
     },
     'free-digital-signature-certificate': {
       title: 'How to Get a Free Digital Signature Certificate in 2026',
+      description: 'Generate a free digital signature certificate (.pfx) on Windows, macOS, or Linux. Step-by-step guide using PowerShell, Keychain Access, and OpenSSL.',
       date: 'July 4, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -362,6 +370,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'create-digital-signature-online-free': {
       title: 'How to Create a Digital Signature Online for Free in 2026',
+      description: 'Create a professional digital signature online in seconds. Draw, type, or upload your signature for free — no app downloads, no account required.',
       date: 'June 25, 2026',
       lastModified: 'July 18, 2026',
       author: 'MyDigitSign Team',
@@ -465,6 +474,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'are-electronic-signatures-legally-binding': {
       title: 'Are Electronic Signatures Legally Binding & Acceptable in 2026? A Complete Global Legal Guide',
+      description: 'Yes, electronic signatures are legally binding under the ESIGN Act (US), eIDAS (EU), and laws in 180+ countries. Learn the exceptions and compliance requirements.',
       date: 'June 20, 2026',
       lastModified: 'July 27, 2026',
       author: 'MyDigitSign Legal Team',
@@ -664,6 +674,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'ultimate-guide-signing-pdf-securely': {
       title: 'The Ultimate Guide to Signing PDFs Securely in 2026',
+      description: 'Sign PDFs securely without uploading files to the cloud. This guide covers client-side signing, cryptographic certificates, and best practices for tamper-proof documents.',
       date: 'June 15, 2026',
       lastModified: 'July 18, 2026',
       author: 'MyDigitSign Security',
@@ -818,6 +829,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'how-to-sign-pdf-on-iphone-android-free': {
       title: 'How to Sign a PDF on iPhone, iPad & Android for Free (2026)',
+      description: 'Sign PDFs on your iPhone, iPad, or Android phone for free. Use built-in Markup tools or a browser-based signer — no app downloads or accounts needed.',
       date: 'July 10, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -990,6 +1002,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'how-to-sign-nda-online-free': {
       title: 'How to Sign an NDA Online Free — No Account, No Uploads (2026)',
+      description: 'Sign your NDA online for free in under 2 minutes. Use a client-side e-signature tool that keeps your confidential agreement private — never uploaded to a server.',
       date: 'July 21, 2026',
       lastModified: 'July 21, 2026',
       author: 'MyDigitSign Editorial',
@@ -1130,6 +1143,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'how-to-add-signature-in-word': {
       title: 'How to Add a Signature to a Word Document (2026 Complete Guide)',
+      description: 'Learn 3 easy methods to add a signature in Microsoft Word: built-in signature lines, drawing tools, and converting to PDF for free electronic signing.',
       date: 'August 5, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -1312,6 +1326,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
     },
     'what-is-a-signature-line': {
       title: 'What is a Signature Line? How to Add One in Word, Google Docs & PDF',
+      description: 'A signature line is the designated space on a document where you sign. Learn what By and Its mean, and how to insert signature lines in Word, Google Docs, and PDFs.',
       date: 'August 5, 2026',
       lastModified: 'August 5, 2026',
       author: 'MyDigitSign Editorial',
@@ -1505,6 +1520,7 @@ Date: October 24, 2026
     },
     'how-to-ask-someone-to-sign-nda': {
       title: 'How to Ask Someone to Sign an NDA (3 Email Templates + Tips)',
+      description: 'Professionally request an NDA signature with 3 copy-paste email templates. Learn the right tone, timing, and free signing tools to make it easy for both parties.',
       date: 'July 27, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -1640,6 +1656,7 @@ Date: October 24, 2026
     },
     'can-you-notarize-your-own-signature': {
       title: 'Can You Notarize Your Own Signature? (The Honest Legal Answer)',
+      description: 'No, you cannot legally notarize your own signature. Learn why self-notarization is illegal in all 50 states, the penalties, and what alternatives you have.',
       date: 'July 27, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -1798,6 +1815,7 @@ Date: October 24, 2026
 
     'how-to-fill-out-uber-inspection-form': {
       title: 'How to Fill Out & Sign the Uber Vehicle Inspection Form (Free, Online)',
+      description: 'Fill out and sign the Uber vehicle inspection form online for free. Step-by-step guide covering what gets inspected, who can sign, and how to avoid common rejections.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -1915,6 +1933,7 @@ Date: October 24, 2026
 
     'voided-check-example': {
       title: 'Voided Check Example: What It Is, When You Need One & How to Fill Bank Forms',
+      description: 'See a clear voided check example. Learn what a voided check looks like, why employers and banks request one for direct deposit, and how to send it securely online.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -2031,6 +2050,7 @@ Date: October 24, 2026
 
     'what-is-a-wet-signature': {
       title: 'What Is a Wet Signature? (2026 Legal & Technical Guide)',
+      description: 'A wet signature is a physical ink-on-paper signature. Learn when wet signatures are still legally required, how they differ from electronic and digital signatures, and when you can go paperless.',
       date: 'August 8, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
@@ -2200,6 +2220,7 @@ Date: October 24, 2026
 
     'docusign-vs-mydigitsign-honest-review': {
       title: 'DocuSign vs MyDigitSign: The Honest 2026 Comparison (Free vs Paid)',
+      description: 'Compare DocuSign and MyDigitSign side by side. See how a free, privacy-first browser tool stacks up against paid cloud-based signing with envelope limits.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -2396,6 +2417,7 @@ Date: October 24, 2026
 
     'electronic-signature-for-small-business': {
       title: 'Electronic Signature for Small Business: The Complete 2026 Guide',
+      description: 'How small businesses can adopt electronic signatures to close deals faster, reduce costs, and stay legally compliant — without expensive monthly subscriptions.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -2558,6 +2580,7 @@ Date: October 24, 2026
 
     'digital-signature-for-freelancers': {
       title: 'Digital Signature for Freelancers: The Ultimate 2026 Guide to Free Signing',
+      description: 'A practical guide for freelancers to sign contracts, proposals, and NDAs securely using free digital signature tools. Get paid faster with professional-looking documents.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -2726,6 +2749,7 @@ Date: October 24, 2026
 
     'esignature-for-realtors': {
       title: 'eSignature for Realtors: The Ultimate 2026 Free Transaction Guide',
+      description: 'How real estate agents can use free e-signatures to close deals faster. Sign purchase agreements, listing contracts, and disclosures online without paid software.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -2882,6 +2906,7 @@ Date: October 24, 2026
 
     'sign-lease-agreement-online-free': {
       title: 'How to Sign a Lease Agreement Online for Free: The Ultimate 2026 Guide',
+      description: 'Sign your lease agreement online for free as a landlord or tenant. Step-by-step instructions for residential and commercial leases using secure browser-based tools.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -3012,6 +3037,7 @@ Date: October 24, 2026
 
     'best-smallpdf-alternatives-free': {
       title: '5 Best SmallPDF Alternatives That Are Free & Don\'t Upload Your Files (2026)',
+      description: 'Looking for a SmallPDF alternative without daily limits or file uploads? Compare 5 free, privacy-first PDF tools for editing, signing, compressing, and converting PDFs.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'MyDigitSign Editorial',
@@ -3254,6 +3280,7 @@ Date: October 24, 2026
 
     'what-is-a-digit-sign': {
       title: 'What Is a Digit Sign? The Complete 2026 Legal & Technical Guide',
+      description: 'A digit sign is a cryptographic seal that verifies document authenticity and integrity. Learn how digital signatures work, their legal standing, and how to create one for free.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'Ali Mirza',
@@ -3425,6 +3452,7 @@ Date: October 24, 2026
 
     'where-to-get-digital-signature-certificate': {
       title: 'Where & How to Get a Digital Signature Certificate (Free & Paid 2026 Guide)',
+      description: 'Get a digital signature certificate for free using OpenSSL or buy one from accredited CAs like SSL.com and GlobalSign. Complete guide with setup instructions.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'Ali Mirza',
@@ -3558,6 +3586,7 @@ Date: October 24, 2026
 
     'pdf-editor-with-signature-free': {
       title: 'PDF Editor with Signature: Top 5 Free PDF Signature Tools in 2026',
+      description: 'The 5 best free PDF editors with built-in signature support. Compare features, privacy, and limitations across MyDigitSign, Xodo, PDF24, DocHub, and Sejda.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'Ali Mirza',
@@ -3696,6 +3725,7 @@ Date: October 24, 2026
 
     'digital-signature-laws-by-country': {
       title: 'Digital Signature Laws by Country: The Ultimate 2026 Global Legal Guide',
+      description: 'Understand e-signature laws in the US (ESIGN Act), EU (eIDAS), UK, Canada, Australia, India, and 10+ more countries. Know when digital signatures are legally valid.',
       date: 'August 8, 2026',
       lastModified: 'August 8, 2026',
       author: 'Ali Mirza',
@@ -3848,22 +3878,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Post Not Found' };
   }
 
-  const plainTextDescription = post.content
+  const metaDescription = post.description || post.content
     .replace(/<[^>]*>/g, '')
+    .replace(/[⚡🔒✍️📝⭐]/g, '')
+    .replace(/Quick Answer/g, '')
     .replace(/\s+/g, ' ')
     .trim()
     .substring(0, 155) + '...';
 
   return {
     title: post.title,
-    description: plainTextDescription,
+    description: metaDescription,
     keywords: post.keywords,
     alternates: {
       canonical: `/blog/${resolvedParams.slug}`,
     },
     openGraph: {
       title: post.title,
-      description: plainTextDescription,
+      description: metaDescription,
       type: 'article',
       publishedTime: post.date,
       modifiedTime: post.lastModified,
@@ -3881,7 +3913,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: plainTextDescription,
+      description: metaDescription,
       creator: '@mydigitsign',
       images: ['/og-image.png'],
     },

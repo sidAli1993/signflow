@@ -22,9 +22,10 @@ Unlike DocuSign, Adobe Sign, SmallPDF, HelloSign, and other tools that upload yo
 - Merge PDF — combine multiple PDFs into one
 - Rotate PDF — fix sideways or upside-down pages
 - Protect PDF — AES-256 password encryption
-- Split PDF — extract specific pages (coming soon)
-- PDF to JPG — convert pages to images (coming soon)
-- JPG to PDF — convert images to PDF (coming soon)
+- Split PDF — extract specific pages
+- PDF to JPG — convert PDF pages to images
+- JPG to PDF — convert images to PDF documents
+- Sign Word Documents — add signatures to .docx files
 - Download signed documents instantly
 - No account or registration required
 - Supports files up to 50MB
@@ -35,14 +36,17 @@ Unlike DocuSign, Adobe Sign, SmallPDF, HelloSign, and other tools that upload yo
 - Homepage: https://mydigitsign.com
 - Features: https://mydigitsign.com/features
 - How It Works: https://mydigitsign.com/how-it-works
+- About: https://mydigitsign.com/about
 - Blog: https://mydigitsign.com/blog
 - Tools Hub: https://mydigitsign.com/tools
+- Compare Alternatives Hub: https://mydigitsign.com/compare
 
 ## Signature Tools
+- Sign PDF Online: https://mydigitsign.com/tools/sign-pdf-online
 - Draw Signature Online: https://mydigitsign.com/tools/draw-signature-online
 - Type Signature Online: https://mydigitsign.com/tools/type-signature-online
 - Sign Image Online: https://mydigitsign.com/tools/sign-image-online
-- Sign PDF Online: https://mydigitsign.com/tools/sign-pdf-online
+- Sign Word Document: https://mydigitsign.com/tools/sign-word-document
 
 ## PDF Tools
 - Edit PDF Online: https://mydigitsign.com/tools/edit-pdf-online
@@ -68,6 +72,22 @@ Unlike DocuSign, Adobe Sign, SmallPDF, HelloSign, and other tools that upload yo
 - How to Ask Someone to Sign NDA: https://mydigitsign.com/blog/how-to-ask-someone-to-sign-nda
 - Can You Notarize Your Own Signature: https://mydigitsign.com/blog/can-you-notarize-your-own-signature
 - Free Digital Signature Certificate: https://mydigitsign.com/blog/free-digital-signature-certificate
+- Create Digital Signature Online Free: https://mydigitsign.com/blog/create-digital-signature-online-free
 - Are Electronic Signatures Legally Binding: https://mydigitsign.com/blog/are-electronic-signatures-legally-binding
+- Ultimate Guide to Signing PDFs Securely: https://mydigitsign.com/blog/ultimate-guide-signing-pdf-securely
+- How to Sign a Document Online Free: https://mydigitsign.com/blog/how-to-sign-a-document-online-free-pdf-editor
 - How to Sign PDF on iPhone & Android Free: https://mydigitsign.com/blog/how-to-sign-pdf-on-iphone-android-free
 - How to Sign an NDA Online Free: https://mydigitsign.com/blog/how-to-sign-nda-online-free
+- How to Fill Out Uber Inspection Form: https://mydigitsign.com/blog/how-to-fill-out-uber-inspection-form
+- Voided Check Example: https://mydigitsign.com/blog/voided-check-example
+- What Is a Wet Signature: https://mydigitsign.com/blog/what-is-a-wet-signature
+- DocuSign vs MyDigitSign Review: https://mydigitsign.com/blog/docusign-vs-mydigitsign-honest-review
+- Electronic Signature for Small Business: https://mydigitsign.com/blog/electronic-signature-for-small-business
+- Digital Signature for Freelancers: https://mydigitsign.com/blog/digital-signature-for-freelancers
+- eSignature for Realtors: https://mydigitsign.com/blog/esignature-for-realtors
+- Sign Lease Agreement Online Free: https://mydigitsign.com/blog/sign-lease-agreement-online-free
+- Best SmallPDF Alternatives Free: https://mydigitsign.com/blog/best-smallpdf-alternatives-free
+- What Is a Digit Sign: https://mydigitsign.com/blog/what-is-a-digit-sign
+- Where to Get Digital Signature Certificate: https://mydigitsign.com/blog/where-to-get-digital-signature-certificate
+- PDF Editor with Signature Free: https://mydigitsign.com/blog/pdf-editor-with-signature-free
+- Digital Signature Laws by Country: https://mydigitsign.com/blog/digital-signature-laws-by-country

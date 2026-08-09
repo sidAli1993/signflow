@@ -55,6 +55,9 @@ export const Navbar: React.FC = () => {
             <Link href="/tools" className={styles.navLink}>
               Tools
             </Link>
+            <Link href="/compare" className={styles.navLink}>
+              Compare
+            </Link>
             <Link href="/blog" className={styles.navLink}>
               Blog
             </Link>

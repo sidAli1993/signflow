@@ -61,6 +61,7 @@ export const Footer: React.FC = () => {
             <Link href="/tools/pdf-to-jpg" className={styles.link}>PDF to JPG Converter</Link>
             <Link href="/tools/jpg-to-pdf" className={styles.link}>JPG to PDF Converter</Link>
             <Link href="/tools/split-pdf-online" className={styles.link}>Split PDF Online</Link>
+            <Link href="/tools/sign-word-document" className={styles.link}>Sign Word Document</Link>
           </div>
           
           <div className={styles.linksCol}>
@@ -86,6 +87,11 @@ export const Footer: React.FC = () => {
             <Link href="/blog/how-to-sign-a-document-online-free-pdf-editor" className={styles.link}>Sign Document Online Free</Link>
             <Link href="/blog/ultimate-guide-signing-pdf-securely" className={styles.link}>Secure PDF Signing Guide</Link>
             <Link href="/blog/create-digital-signature-online-free" className={styles.link}>Create Digital Signature Free</Link>
+            <Link href="/blog/how-to-add-signature-in-word" className={styles.link}>Add Signature in Word</Link>
+            <Link href="/blog/how-to-fill-out-uber-inspection-form" className={styles.link}>Uber Inspection Form Guide</Link>
+            <Link href="/blog/what-is-a-digit-sign" className={styles.link}>What Is a Digit Sign?</Link>
+            <Link href="/blog/what-is-a-wet-signature" className={styles.link}>Wet vs Digital Signature</Link>
+            <Link href="/blog/what-is-a-signature-line" className={styles.link}>What Is a Signature Line?</Link>
           </div>
           
           <div className={styles.linksCol}>

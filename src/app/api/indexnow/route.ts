@@ -32,6 +32,20 @@ function getAllUrls(): string[] {
     'what-is-a-signature-line',
     'how-to-ask-someone-to-sign-nda',
     'can-you-notarize-your-own-signature',
+    // New posts — August 8, 2026
+    'how-to-fill-out-uber-inspection-form',
+    'voided-check-example',
+    'what-is-a-wet-signature',
+    'docusign-vs-mydigitsign-honest-review',
+    'electronic-signature-for-small-business',
+    'digital-signature-for-freelancers',
+    'esignature-for-realtors',
+    'sign-lease-agreement-online-free',
+    'best-smallpdf-alternatives-free',
+    'what-is-a-digit-sign',
+    'where-to-get-digital-signature-certificate',
+    'pdf-editor-with-signature-free',
+    'digital-signature-laws-by-country',
   ];
 
   const tools = [
@@ -42,18 +56,28 @@ function getAllUrls(): string[] {
     'protect-pdf-online',
     'rotate-pdf-online',
     'draw-signature-online',
-    'sign-image-online',
     'type-signature-online',
+    'sign-image-online',
     'pdf-to-jpg',
     'jpg-to-pdf',
     'split-pdf-online',
     'sign-word-document',
   ];
 
+  const comparisons = [
+    'docusign-alternative',
+    'smallpdf-alternative',
+    'adobe-sign-alternative',
+    'pandadoc-alternative',
+    'hellosign-alternative',
+    'signwell-alternative',
+  ];
+
   return [
     baseUrl,
     `${baseUrl}/tools`,
-    `${baseUrl}/compare/docusign-alternative`,
+    `${baseUrl}/compare`,
+    ...comparisons.map((cmp) => `${baseUrl}/compare/${cmp}`),
     `${baseUrl}/features`,
     `${baseUrl}/how-it-works`,
     `${baseUrl}/blog`,

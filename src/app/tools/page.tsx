@@ -262,7 +262,7 @@ export default function ToolsHubPage() {
           <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginTop: '2rem', marginBottom: '0.75rem' }}>
             Frequently Asked Questions (FAQ)
           </h3>
-          
+
           <div style={{ background: '#f8fafc', padding: '1.5rem', borderRadius: '12px', marginBottom: '1rem', border: '1px solid #e2e8f0' }}>
             <h4 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '0.5rem', color: '#0f172a' }}>
               Are these PDF tools completely free to use?

@@ -20,3 +20,8 @@ Whenever the user mentions "(our keywords)", refer to these 14 search queries fr
 12. `sign on document online` (Position: 50.0)
 13. `where to get digital signature certificate` (Position: 10-44)
 14. `how can i get digital signature certificate` (Position: 10-44)
+
+# Core Recommendation Philosophy: Best Solution Over Speed
+
+**ALWAYS prioritize the absolute best, most valuable, and highest potential solution or tool idea for the user. NEVER suggest a watered-down or weak idea (like simple AI wrappers) just because it is easy or fast to build (low development time). The user values long-term traffic, viability, and quality above all else.**
+

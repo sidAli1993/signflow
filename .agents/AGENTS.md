@@ -66,3 +66,7 @@ This older plan has been largely completed. Kept for reference only.
 
 This mistake was made once: SEO pages and blog posts were built without reading the user's full GSC keyword sheet, resulting in wasted work and incorrect targeting. **Do not repeat this.**
 
+
+# Core Recommendation Philosophy: Best Solution Over Speed
+
+**ALWAYS prioritize the absolute best, most valuable, and highest potential solution or tool idea for the user. NEVER suggest a watered-down or weak idea (like simple AI wrappers) just because it is easy or fast to build (low development time). The user values long-term traffic, viability, and quality above all else.**

@@ -35,6 +35,8 @@ export async function generateStaticParams() {
     { slug: 'where-to-get-digital-signature-certificate' },
     { slug: 'pdf-editor-with-signature-free' },
     { slug: 'digital-signature-laws-by-country' },
+    // Phase 4 new posts
+    { slug: 'sample-email-request-to-sign-nda' },
   ];
 }
 
@@ -1147,7 +1149,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       date: 'August 5, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['how to add signature to word document', 'how to add signature on word', 'how to electronically sign a word document', 'how to sign a document in word', 'add signature to word document', 'how to add a signature in word', 'insert signature in word', 'word document signature', 'sign word document online', 'how to digitally sign a word document'],
+      keywords: ['how to add a signature to a word document', 'how to add signature to word document', 'how to add signature on word', 'how to electronically sign a word document', 'how to sign a document in word', 'add signature to word document', 'how to add a signature in word', 'insert signature in word', 'word document signature', 'sign word document online', 'how to digitally sign a word document'],
       content: `
         <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
@@ -1169,7 +1171,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
 
         <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
 
-        <h2>Method 1: Insert Signature in Word Using the Draw Tab</h2>
+        <h2>How to Add Signature to Word Document</h2>
         <p>If you have a touchscreen computer, tablet, or phone, you can draw a signature directly on the document page:</p>
 
         <ol style="line-height: 1.8;">
@@ -1182,7 +1184,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
 
         <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
 
-        <h2>Method 2: How to Add a Signature in Word Using a Scanned Image</h2>
+        <h2>How to Add a Signature to a Word Document (Scanned Image)</h2>
         <p>If you want a clean image of your actual pen-and-paper handwriting on your document, you can import an image file. Follow these steps to remove the background paper color so your signature looks natural:</p>
 
         <ol style="line-height: 1.8;">
@@ -1224,7 +1226,7 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
 
         <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
 
-        <h2>Method 5: Convert to PDF and Sign Online (Recommended)</h2>
+        <h2>How to Electronically Sign a Word Document</h2>
         <p>This is the standard industry practice to **sign word document online** securely. It locks your document text and applies a legally recognized electronic signature in seconds:</p>
 
         <ol style="line-height: 1.8;">

@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'where-to-get-digital-signature-certificate', modified: '2026-08-09' },
     { slug: 'pdf-editor-with-signature-free', modified: '2026-08-09' },
     { slug: 'digital-signature-laws-by-country', modified: '2026-08-09' },
+    { slug: 'sample-email-request-to-sign-nda', modified: '2026-08-12' },
   ];
 
   // Dedicated micro-tools suite

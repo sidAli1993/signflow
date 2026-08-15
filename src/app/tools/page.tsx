@@ -152,6 +152,24 @@ const toolsList = [
     icon: '📝✍️',
     searchKeywords: ['sign word document', 'add signature to word', 'sign docx online', 'word document signature'],
   },
+  {
+    slug: 'generate-signature-line',
+    title: 'Signature Line Generator',
+    badge: 'New',
+    category: 'Signature',
+    description: 'Generate professional "Sign Here" signature lines for contracts, NDAs, and agreements. Learn what /s/, By:, and Its: mean on signature blocks.',
+    icon: '📋',
+    searchKeywords: ['signature line', 'signature line generator', 'line for signature', 'what does /s/ mean'],
+  },
+  {
+    slug: 'sign-nda-online',
+    title: 'Sign NDA Online Free',
+    badge: 'New',
+    category: 'Signature',
+    description: 'Sign any Non-Disclosure Agreement PDF online in under 60 seconds. Your NDA never leaves your browser — zero server uploads, zero risk.',
+    icon: '🔏',
+    searchKeywords: ['sign nda online', 'sign nda free', 'esign nda', 'electronic signature nda'],
+  },
 ];
 
 export default function ToolsHubPage() {

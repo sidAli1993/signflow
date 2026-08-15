@@ -475,12 +475,12 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       `
     },
     'are-electronic-signatures-legally-binding': {
-      title: 'Are Electronic Signatures Legally Binding & Acceptable in 2026? A Complete Global Legal Guide',
-      description: 'Yes, electronic signatures are legally binding under the ESIGN Act (US), eIDAS (EU), and laws in 180+ countries. Learn the exceptions and compliance requirements.',
+      title: 'Are Electronic Signatures Legally Binding? (Yes — Here\'s the Law)',
+      description: 'Electronic signatures are legally binding in 180+ countries under the ESIGN Act, UETA, and eIDAS. We cover court cases, exceptions for wills & real estate, and how to make your e-signature hold up in court.',
       date: 'June 20, 2026',
       lastModified: 'July 27, 2026',
       author: 'MyDigitSign Legal Team',
-      keywords: ['electronic signature legal', 'are electronic signatures acceptable', 'electronic signatures legally binding', 'e signature pdf online', 'sign document for free', 'sign a document online'],
+      keywords: ['electronic signature legal', 'are electronic signatures acceptable', 'electronic signatures legally binding', 'e signature pdf online', 'sign document for free', 'sign a document online', 'e-signature legality', 'court admissible electronic signatures', 'e-signature compliance', 'are digital signatures valid in court'],
       faq: [
         {
           question: "Do e-signatures hold up in court?",
@@ -1144,12 +1144,12 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       `
     },
     'how-to-add-signature-in-word': {
-      title: 'How to Add a Signature to a Word Document (2026 Complete Guide)',
-      description: 'Learn 3 easy methods to add a signature in Microsoft Word: built-in signature lines, drawing tools, and converting to PDF for free electronic signing.',
+      title: 'How to Add a Signature in Word — 3 Free Methods (With Pictures)',
+      description: 'Insert a signature in Microsoft Word in under 2 minutes. Three free methods: Word\'s built-in signature line, pasting an image signature, or converting to PDF and signing online. Step-by-step with screenshots.',
       date: 'August 5, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['how to add a signature to a word document', 'how to add signature to word document', 'how to add signature on word', 'how to electronically sign a word document', 'how to sign a document in word', 'add signature to word document', 'how to add a signature in word', 'insert signature in word', 'word document signature', 'sign word document online', 'how to digitally sign a word document'],
+      keywords: ['how to add a signature to a word document', 'how to add signature to word document', 'how to add signature on word', 'how to electronically sign a word document', 'how to sign a document in word', 'add signature to word document', 'how to add a signature in word', 'insert signature in word', 'word document signature', 'sign word document online', 'how to digitally sign a word document', 'how to create a signature line in word', 'how to insert signature line'],
       content: `
         <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
@@ -1327,12 +1327,12 @@ openssl pkcs12 -export -out signature_cert.p12 -inkey key.pem -in cert.pem</pre>
       ]
     },
     'what-is-a-signature-line': {
-      title: 'What is a Signature Line? How to Add One in Word, Google Docs & PDF',
-      description: 'A signature line is the designated space on a document where you sign. Learn what By and Its mean, and how to insert signature lines in Word, Google Docs, and PDFs.',
+      title: 'What Is a Signature Line? Definition, /s/ Meaning & How to Insert One',
+      description: 'A signature line is the "sign here" space on any document. Learn what /s/, "By:", and "Its:" mean on signature blocks, plus step-by-step instructions to add signature lines in Word, Google Docs & PDFs.',
       date: 'August 5, 2026',
       lastModified: 'August 5, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['signature line', 'what is a signature line', 'document signature line', 'document with signature line', 'sig lines', 'what does its mean on a signature line', 'what does by mean on a signature line', 'signature line in word', 'how to add a signature line in word', 'how to insert a signature line in word', 'how to make a signature line in word', 'how to add signature line in word', 'how to put a line for signature on word', 'signature line in google docs', 'add signature line to pdf', 'digital signature line'],
+      keywords: ['signature line', 'what is a signature line', 'document signature line', 'document with signature line', 'sig lines', 'what does its mean on a signature line', 'what does by mean on a signature line', 'signature line in word', 'how to add a signature line in word', 'how to insert a signature line in word', 'how to make a signature line in word', 'how to add signature line in word', 'how to put a line for signature on word', 'signature line in google docs', 'add signature line to pdf', 'digital signature line', 'signature line definition', 'electronic signature line', 'what does /s/ mean on a signature line', 'signature line on document'],
       content: `
         <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
@@ -2051,12 +2051,12 @@ Date: October 24, 2026
     },
 
     'what-is-a-wet-signature': {
-      title: 'What Is a Wet Signature? (2026 Legal & Technical Guide)',
-      description: 'A wet signature is a physical ink-on-paper signature. Learn when wet signatures are still legally required, how they differ from electronic and digital signatures, and when you can go paperless.',
+      title: 'What Is a Wet Signature? Meaning, Legal Requirements & Digital Alternative',
+      description: 'A wet signature is your handwritten ink-on-paper signature. But do you still need one in 2026? We break down when wet signatures are legally required, when electronic is accepted, and how to go fully paperless.',
       date: 'August 8, 2026',
       lastModified: 'August 9, 2026',
       author: 'MyDigitSign Editorial',
-      keywords: ['what is a wet signature', 'wet signature', 'wet signature vs electronic signature', 'wet signature meaning', 'wet ink signature', 'wet signature definition', 'when is a wet signature required'],
+      keywords: ['what is a wet signature', 'wet signature', 'wet signature vs electronic signature', 'wet signature meaning', 'wet ink signature', 'wet signature definition', 'when is a wet signature required', 'wet sign', 'what does wet sign mean', 'physical wet signature meaning'],
       content: `
         <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
           <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
@@ -3860,6 +3860,117 @@ Date: October 24, 2026
         {
           question: "What documents cannot be signed electronically?",
           answer: "Documents that generally cannot be signed electronically include wills, testaments, codicils, power of attorney documents (in some jurisdictions), divorce or adoption agreements, and court-issued orders."
+        }
+      ]
+    },
+
+    'sample-email-request-to-sign-nda': {
+      title: 'Sample Email Request to Sign NDA (5 Copy-Paste Templates)',
+      description: 'Ask anyone to sign your NDA professionally with 5 ready-to-use email templates. Copy, paste, and send. Covers first-time asks, follow-ups, freelancer NDAs, and mutual NDAs.',
+      date: 'August 15, 2026',
+      lastModified: 'August 15, 2026',
+      author: 'MyDigitSign Editorial',
+      keywords: ['sample email request to sign nda', 'nda email template', 'how to ask someone to sign an nda', 'how to ask someone to sign a document', 'request to sign nda email sample', 'non disclosure agreement email template'],
+      content: `
+        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
+          <p style="margin: 0; font-size: 0.975rem; line-height: 1.6;">When asking someone to sign an NDA, be direct, polite, and explain <strong>why</strong> the NDA is necessary. Keep the email short and provide a secure, easy way to sign the document online (such as a link to <a href="/tools/sign-nda-online" style="color: #0369a1; font-weight: 600;">Sign NDA Online Free</a>). Choose from our 5 copy-paste templates below depending on your situation.</p>
+        </div>
+
+        <p>Sending a Non-Disclosure Agreement (NDA) can sometimes feel awkward. You want to protect your intellectual property, but you don't want to come across as overly aggressive or untrusting before a business relationship even begins.</p>
+        <p>The secret is in the delivery. A professional, clear email request sets the right tone and dramatically speeds up the turnaround time. Below are <strong>5 copy-paste email templates</strong> you can use to request an NDA signature in various scenarios.</p>
+
+        <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
+
+        <h2>Template 1: The Standard Professional Request (Best for General Business)</h2>
+        <p>Use this template for new clients, potential partners, or vendors. It's polite, clear, and explains the reason for the NDA without being defensive.</p>
+        
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+          <p style="margin-top: 0;"><strong>Subject:</strong> Non-Disclosure Agreement for [Project Name / Upcoming Discussion]</p>
+          <p>Hi [Name],</p>
+          <p>I'm looking forward to our upcoming discussion about [briefly mention the project or topic].</p>
+          <p>Before we dive into the details and share proprietary information, could you please review and sign the attached Non-Disclosure Agreement (NDA)? This is a standard procedure on our end that allows us to speak freely about our internal processes.</p>
+          <p>You can securely sign the attached PDF online for free using this tool: <a href="https://mydigitsign.com/tools/sign-nda-online">https://mydigitsign.com/tools/sign-nda-online</a> (no account required).</p>
+          <p>Please let me know if you have any questions about the agreement.</p>
+          <p>Best regards,<br/>[Your Name]</p>
+        </div>
+
+        <h2>Template 2: Mutual NDA (Best for Strategic Partnerships)</h2>
+        <p>When both parties will be sharing confidential information, a mutual NDA is required. This email emphasizes that the protection goes both ways.</p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+          <p style="margin-top: 0;"><strong>Subject:</strong> Mutual NDA for [Partnership / Discussion]</p>
+          <p>Hi [Name],</p>
+          <p>To ensure both of our companies are protected as we explore this potential partnership, I've attached a Mutual Non-Disclosure Agreement for your review.</p>
+          <p>Since we'll both be sharing sensitive information, this agreement ensures confidentiality on both sides. I have already signed my portion.</p>
+          <p>If the terms look good to you, please add your signature and send it back. If you prefer to sign electronically without printing, you can use <a href="https://mydigitsign.com/tools/sign-nda-online">MyDigitSign's free NDA signer</a>.</p>
+          <p>Looking forward to our conversation.</p>
+          <p>Best,<br/>[Your Name]</p>
+        </div>
+
+        <h2>Template 3: Freelancer or Contractor Request</h2>
+        <p>This is a slightly more casual template suited for freelancers, consultants, or independent contractors before you hand over access to your systems or codebase.</p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+          <p style="margin-top: 0;"><strong>Subject:</strong> NDA for [Project Name] Onboarding</p>
+          <p>Hi [Name],</p>
+          <p>We're excited to get you onboarded and started on [Project Name]!</p>
+          <p>As a final step before I grant you access to our [codebase / client list / internal systems], I just need you to sign our standard contractor NDA. It simply states that you won't share our internal data publicly.</p>
+          <p>Could you please sign the attached document and return it to me by [Date]? You can sign it right in your browser here: <a href="https://mydigitsign.com/tools/sign-nda-online">Sign NDA Online</a>.</p>
+          <p>Thanks,<br/>[Your Name]</p>
+        </div>
+
+        <h2>Template 4: The Gentle Follow-Up</h2>
+        <p>If a few days have passed and they haven't signed, use this template. It assumes they are busy, not malicious, and gives them a gentle nudge.</p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+          <p style="margin-top: 0;"><strong>Subject:</strong> Following up: NDA for [Project Name]</p>
+          <p>Hi [Name],</p>
+          <p>I hope you're having a great week.</p>
+          <p>I'm just following up on the NDA I sent over on [Date]. I know things get buried in the inbox, so I've re-attached it here for your convenience.</p>
+          <p>Let me know if you have any questions or concerns about the terms. Once we get this signed, we can move forward with [next step].</p>
+          <p>Best,<br/>[Your Name]</p>
+        </div>
+
+        <h2>Template 5: Post-Verbal Agreement Confirmation</h2>
+        <p>Sometimes you agree to an NDA verbally during a call, and you just need to formalize it over email immediately afterward.</p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+          <p style="margin-top: 0;"><strong>Subject:</strong> NDA Document (As Discussed)</p>
+          <p>Hi [Name],</p>
+          <p>Great chatting with you today! I'm really looking forward to working together.</p>
+          <p>As discussed on our call, I've attached the standard NDA for you to sign before I send over the [spec sheet / financials / pitch deck].</p>
+          <p>Please sign and return at your earliest convenience. You can easily add an e-signature using <a href="https://mydigitsign.com/tools/sign-nda-online">MyDigitSign</a> if you don't have a printer handy.</p>
+          <p>Talk soon,<br/>[Your Name]</p>
+        </div>
+
+        <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
+
+        <h2>3 Tips for Getting Your NDA Signed Faster</h2>
+        
+        <h3>1. Remove the Friction of Printing and Scanning</h3>
+        <p>The number one reason people delay signing an NDA is that they don't have a printer or scanner readily available. By providing a link to a free, secure electronic signature tool like <a href="/tools/sign-nda-online">MyDigitSign's NDA Signer</a>, you remove that friction entirely.</p>
+        
+        <h3>2. Explain the "Why"</h3>
+        <p>Don't just demand a signature. Explain that the NDA is necessary so you can "speak freely," "grant system access," or "share the technical specs." When people understand the reason, they are much less likely to push back.</p>
+
+        <h3>3. Keep It Standard</h3>
+        <p>If your NDA is full of incredibly restrictive, non-standard clauses (like unreasonable non-competes), the recipient will likely send it to their legal team, delaying the process by weeks. Use a standard, reasonable NDA template to ensure quick turnaround times.</p>
+        
+        <p>For more advice on the mechanics of getting the document signed, check out our guide on <a href="/blog/how-to-ask-someone-to-sign-nda">How to Ask Someone to Sign an NDA</a>.</p>
+      `,
+      faq: [
+        {
+          question: "How do I politely ask someone to sign an NDA?",
+          answer: "Be direct, professional, and explain the reason for the NDA (e.g., 'so we can speak freely about our proprietary processes'). Provide a link to a free electronic signature tool so they don't have to print and scan the document."
+        },
+        {
+          question: "Can I send an NDA via email?",
+          answer: "Yes, sending an NDA via email as a PDF attachment is the standard business practice. The recipient can sign it electronically and email it back. Under the ESIGN Act, electronically signed NDAs sent via email are legally binding."
+        },
+        {
+          question: "What happens if they refuse to sign the NDA?",
+          answer: "If someone refuses to sign an NDA, you should politely decline to share the confidential information. Ask them specifically which clauses they object to; sometimes it's just a misunderstanding that can be resolved by modifying a single paragraph."
         }
       ]
     }

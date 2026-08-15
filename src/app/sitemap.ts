@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
-  const lastModDate = new Date('2026-08-09');
+  const lastModDate = new Date('2026-08-15');
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'split-pdf-online',
     // Phase 4 new tools
     'sign-word-document',
+    'generate-signature-line',
+    'sign-nda-online',
   ];
 
   return [

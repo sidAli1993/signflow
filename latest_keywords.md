@@ -1,0 +1,54 @@
+# 📊 Latest GSC Keywords Report (August 2026)
+
+| Top queries | Clicks | Impressions | CTR | Position |
+|---|---|---|---|---|
+| sign image online | 1 | 6 | 0.1667 | 18.17 |
+| signature line | 0 | 61 | 0.0 | 19.43 |
+| legally binding electronic signatures | 0 | 55 | 0.0 | 94.36 |
+| court admissible electronic signatures | 0 | 35 | 0.0 | 79.6 |
+| pandadoc alternatives | 0 | 33 | 0.0 | 86.33 |
+| e-signature legality | 0 | 32 | 0.0 | 88.09 |
+| are digital signatures valid in court | 0 | 31 | 0.0 | 81.52 |
+| hellosign vs signnow | 0 | 28 | 0.0 | 85.61 |
+| draw signature | 0 | 21 | 0.0 | 76.1 |
+| pandadoc vs hellosign features comparison | 0 | 20 | 0.0 | 77.0 |
+| adobe sign legal alternative | 0 | 19 | 0.0 | 72.32 |
+| pandadoc alternative | 0 | 19 | 0.0 | 82.11 |
+| adobe sign alternative | 0 | 17 | 0.0 | 81.88 |
+| sign nda free | 0 | 16 | 0.0 | 74.31 |
+| easy esign nda | 0 | 14 | 0.0 | 80.5 |
+| e-signature compliance | 0 | 14 | 0.0 | 84.0 |
+| how to add signature in word | 0 | 13 | 0.0 | 52.54 |
+| signed digital scoresheet | 0 | 13 | 0.0 | 61.38 |
+| hellosign alternative | 0 | 13 | 0.0 | 77.69 |
+| best pandadoc alternatives for esignatures | 0 | 13 | 0.0 | 78.23 |
+| fill and sign pdf online | 0 | 12 | 0.0 | 42.58 |
+| draw signature online | 0 | 11 | 0.0 | 83.18 |
+| electronic signature legal | 0 | 11 | 0.0 | 89.18 |
+| electronic signature legally binding | 0 | 11 | 0.0 | 92.64 |
+| free digital signature certificate | 0 | 10 | 0.0 | 50.6 |
+| hellosign pricing | 0 | 10 | 0.0 | 74.6 |
+| sample email request to sign nda | 0 | 9 | 0.0 | 24.78 |
+| what is signature line | 0 | 9 | 0.0 | 24.89 |
+| how to sign pdf on iphone | 0 | 9 | 0.0 | 44.33 |
+| iphone pdf 署名 無料 | 0 | 9 | 0.0 | 49.89 |
+| wet signature meaning | 0 | 9 | 0.0 | 51.67 |
+| adobe sign alternatives | 0 | 9 | 0.0 | 85.11 |
+| how to insert signature in word | 0 | 8 | 0.0 | 46.75 |
+| sign nda online | 0 | 8 | 0.0 | 67.12 |
+| free docusign alternatives | 0 | 8 | 0.0 | 87.62 |
+| signature line meaning | 0 | 7 | 0.0 | 7.29 |
+| signature date line | 0 | 7 | 0.0 | 40.29 |
+| sign word documents online | 0 | 7 | 0.0 | 48.29 |
+| how to sign a secured pdf | 0 | 7 | 0.0 | 50.0 |
+| digital signature certificate | 0 | 7 | 0.0 | 74.43 |
+| docusign alternatives free | 0 | 7 | 0.0 | 84.71 |
+| pandadoc vs hellosign | 0 | 7 | 0.0 | 84.71 |
+| hellosign competitors | 0 | 7 | 0.0 | 86.14 |
+| what makes an electronic signature legal | 0 | 7 | 0.0 | 89.71 |
+| hellosign vs docusign | 0 | 7 | 0.0 | 90.0 |
+| are esignatures valid | 0 | 7 | 0.0 | 96.29 |
+| electronic signature legality | 0 | 7 | 0.0 | 96.29 |
+| how to sign an nda | 0 | 6 | 0.0 | 50.5 |
+| add signature to word | 0 | 6 | 0.0 | 51.67 |
+| wet signature | 0 | 6 | 0.0 | 54.0 |

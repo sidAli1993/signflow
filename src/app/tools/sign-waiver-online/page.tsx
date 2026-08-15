@@ -3,43 +3,25 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
-import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
-import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
+import { Shield, Zap, Lock, FileCheck, Users, Star, ArrowRight } from 'lucide-react';
+import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema } from '@/lib/seo-schemas';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Waiver Online Free — Electronic Signature for Waivers | MyDigitSign',
-  description:
-    'Sign any waiver or liability release form online for free. Upload your waiver PDF, add your electronic signature, and download instantly. 100% browser-based — your waiver never leaves your device.',
-  keywords: [
-    'sign waiver online',
-    'sign waiver online free',
-    'electronic signature waiver',
-    'esign liability waiver',
-    'sign release form online',
-    'digital signature waiver',
-    'sign liability release online',
-    'sign waiver pdf free',
-    'waiver electronic signature',
-    'sign liability waiver free',
-  ],
+  title: 'Sign Waiver Online Free — E-Sign Release Forms | MyDigitSign',
+  description: 'Sign liability waivers and release forms online for free. Secure electronic signature tool for events, gyms, and activity waivers.',
+  keywords: ["sign waiver online", "electronic signature liability waiver", "sign release form online free", "e-sign waiver", "gym waiver signature"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-waiver-online',
   },
   openGraph: {
-    title: 'Sign Waiver Online Free — Electronic Signature for Waivers | MyDigitSign',
-    description: 'Sign any liability waiver or release form online for free. 100% private — your waiver never leaves your browser.',
+    title: 'Sign Waiver Online Free — E-Sign Release Forms | MyDigitSign',
+    description: 'Sign liability waivers and release forms online for free. Secure electronic signature tool for events, gyms, and activity waivers.',
     url: 'https://mydigitsign.com/tools/sign-waiver-online',
     siteName: 'MyDigitSign',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign — Sign Waiver Online Free' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign' }],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sign Waiver Online Free — No Account | MyDigitSign',
-    description: 'Sign any liability waiver online for free. 100% browser-based, files never leave your device.',
-    creator: '@mydigitsign',
-    images: ['/og-image.png'],
   },
 };
 
@@ -51,151 +33,160 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
 const howToSchema = getHowToSchema({
   name: 'How to Sign a Waiver Online for Free',
-  description: 'Sign any liability waiver or release form electronically in your browser. No account needed, no files uploaded.',
+  description: 'Apply a legally binding electronic signature to your waiver securely in your browser.',
   url: 'https://mydigitsign.com/tools/sign-waiver-online',
   steps: [
     {
       name: 'Create Your Signature',
-      text: 'Type your full legal name, draw your signature with your mouse or finger, or upload a scan of your handwritten signature. Click Adopt to confirm.',
+      text: 'Type your full name, draw your signature, or upload your company seal. Click Adopt to save your mark.',
       url: 'https://mydigitsign.com/tools/sign-waiver-online',
     },
     {
-      name: 'Upload Your Waiver PDF',
-      text: 'Drag and drop your liability waiver or release form PDF into the uploader. The file is processed entirely in your browser — never uploaded to any server.',
+      name: 'Upload Your Document',
+      text: 'Drag and drop your waiver PDF. It is processed entirely locally for maximum privacy.',
       url: 'https://mydigitsign.com/tools/sign-waiver-online',
     },
     {
-      name: 'Place Your Signature on the Waiver',
-      text: 'Navigate to the participant or signatory signature line. Drag your signature to the correct position and resize to fit naturally.',
+      name: 'Place Your Signature',
+      text: 'Navigate to the signature block, drag your signature to the line, and add optional text or dates.',
       url: 'https://mydigitsign.com/tools/sign-waiver-online',
     },
     {
-      name: 'Download Your Signed Waiver',
-      text: 'Click Download to save the signed waiver to your device. Email it to the event organizer, gym, tour operator, or organization requesting the form.',
+      name: 'Download & Send',
+      text: 'Click Download to save the signed contract. Email it back to the requesting party instantly.',
       url: 'https://mydigitsign.com/tools/sign-waiver-online',
     },
   ],
 });
 
 const softwareSchema = getSoftwareAppSchema({
-  name: 'MyDigitSign Waiver Signing Tool',
-  description: 'Sign liability waivers and release forms online for free. Add electronic signatures to waiver PDFs directly in your browser with zero server uploads.',
+  name: 'MyDigitSign Waiver Signer',
+  description: 'Sign liability waivers and release forms online for free. Secure electronic signature tool for events, gyms, and activity waivers.',
   url: 'https://mydigitsign.com/tools/sign-waiver-online',
   applicationCategory: 'BusinessApplication',
 });
 
-export default function SignWaiverOnlineTool() {
+const faqItems = [
+  {
+    question: "Are electronic signatures on waivers legally binding?",
+    answer: "Yes, electronic signatures on liability waivers and release forms are fully enforceable and legally binding under ESIGN and UETA regulations."
+  },
+  {
+    question: "Can I add a date to the waiver?",
+    answer: "Yes, our tool allows you to add text and date fields to the document alongside your electronic signature."
+  },
+  {
+    question: "Do I need to create an account to sign this document?",
+    answer: "No. MyDigitSign is completely free and requires no account registration or credit card to sign your documents."
+  },
+  {
+    question: "Is a drawn signature better than a typed one?",
+    answer: "Both are legally valid electronic signatures. Drawing your signature mimics your natural handwriting, while typing uses cursive typography. Choose whichever you prefer."
+  }
+];
+
+const faqSchema = getFAQSchema(faqItems);
+
+export default function SignDocumentTool() {
   return (
     <div className={styles.appWrapper}>
       <Navbar />
 
-      <section className={styles.seoHero} aria-label="About Sign Waiver Online Tool">
+      <section className={styles.seoHero}>
         <div className={styles.seoHeroInner}>
           <div className={styles.seoHeroBadge}>
             <Star size={14} aria-hidden="true" />
-            <span>Free Waiver Signer · No Account · 100% Private</span>
+            <span>Free Contract Signer · No Account · 100% Private</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign Waiver Online <span className={styles.seoHeroGradient}>Free & Instant</span>
+            Sign Liability Waivers <span className={styles.seoHeroGradient}>Instantly</span>
           </h1>
-          <p className={styles.seoHeroDesc}>
-            Need to <strong>sign a waiver</strong> before an activity, event, or service? Upload your liability waiver PDF, create your electronic signature, place it on the participant signature line, and download the signed form — all in under 60 seconds. No account, no uploads, no watermarks.
-          </p>
-
-          <ul className={styles.seoTrustPills} role="list" aria-label="Key features">
-            <li><Shield size={14} aria-hidden="true" /><span>Waiver Stays in Your Browser</span></li>
-            <li><Lock size={14} aria-hidden="true" /><span>Zero Server Uploads</span></li>
-            <li><FileCheck size={14} aria-hidden="true" /><span>ESIGN Act Compliant</span></li>
-            <li><Zap size={14} aria-hidden="true" /><span>Done in Under 60 Seconds</span></li>
-            <li><Users size={14} aria-hidden="true" /><span>No Account Required</span></li>
+          <p className={styles.seoHeroDesc} dangerouslySetInnerHTML={{ __html: 'Participating in an event or joining a gym? Upload your <strong>liability waiver or release form</strong> and sign it electronically for free. Complete your paperwork before you even arrive.' }} />
+          <ul className={styles.seoTrustPills} role="list">
+            <li><Shield size={14} /><span>In-Browser Processing</span></li>
+            <li><Lock size={14} /><span>Complete Privacy</span></li>
+            <li><FileCheck size={14} /><span>ESIGN Compliant</span></li>
+            <li><Users size={14} /><span>No Signup Required</span></li>
           </ul>
         </div>
       </section>
 
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
-
       <HomeClient
         initialTab="type"
         titleOverride="Sign Your <span>Waiver</span>"
-        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload the liability waiver or release form PDF you need to sign."
+        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload your PDF."
       />
 
-      <section className={styles.seoExplainer} aria-label="How to sign a waiver online">
+      <section className={styles.seoExplainer}>
         <div className={styles.seoExplainerInner}>
-          <h2 className={styles.seoExplainerTitle}>How to Sign a Waiver Online (Step-by-Step)</h2>
+          <h2 className={styles.seoExplainerTitle}>
+            How to Sign Your Waiver in 4 Steps
+          </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">1</div>
-              <h3>Create Your Signature</h3>
-              <p>Type your full name, draw freehand, or upload a photo of your signature. Click Adopt to save.</p>
+              <div className={styles.seoStepNum}>1</div>
+              <h3>Create Signature</h3>
+              <p>Type or draw your signature in the creator panel and adopt it.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">2</div>
-              <h3>Upload Your Waiver PDF</h3>
-              <p>Drag and drop your waiver or release form. It stays in your browser&apos;s local memory — never sent to any server.</p>
+              <div className={styles.seoStepNum}>2</div>
+              <h3>Upload PDF</h3>
+              <p>Drop your <strong>waiver</strong> into the secure browser workspace.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">3</div>
-              <h3>Sign & Download</h3>
-              <p>Place your signature on the participant signature line, add the date, and click Download to save.</p>
+              <div className={styles.seoStepNum}>3</div>
+              <h3>Place on Line</h3>
+              <p>Drag the signature, add dates, and position them on the document.</p>
+            </article>
+            <article className={styles.seoStep}>
+              <div className={styles.seoStepNum}>4</div>
+              <h3>Download</h3>
+              <p>Save the signed file to your device instantly.</p>
             </article>
           </div>
 
-          <div style={{ marginTop: '3rem' }}>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
-              Are Electronic Signatures on Waivers Legally Binding?
-            </h2>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-              Yes. Under the US <strong>ESIGN Act (2000)</strong> and <strong>UETA</strong>, electronically signed waivers and liability release forms are legally enforceable. Courts have repeatedly upheld e-signed waivers as valid. The key requirement is that the signer had clear intent to agree to the terms — placing your signature on the waiver&apos;s designated line satisfies this.
-            </p>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-              Common uses include: gym membership waivers, sports and adventure activity releases, event participation forms, medical procedure releases, photo/video release forms, and contractor liability waivers.
+          <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
+            <h2 className={styles.seoArticleTitle}>The Convenient Way to Sign Waivers and Release Forms</h2>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Whether you are signing up for a marathon, joining a fitness center, or renting equipment, you will likely need to sign a liability waiver. You can <strong>sign waiver online</strong> to skip the line and handle the paperwork from your device.' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Electronic signatures on waivers are legally enforceable and widely accepted by businesses and event organizers to mitigate liability and confirm participant consent.' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Simply upload the PDF waiver, add your signature and the current date, and download the signed copy to email back to the organizer. It’s fast, free, and works entirely in your browser.' }} />
+            
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Use Client-Side Signing?
+            </h3>
+            <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Unlike other free tools that upload your sensitive documents to remote servers to apply the signature, MyDigitSign uses WebAssembly and advanced canvas rendering to process your <strong>waiver</strong> locally on your machine. This guarantees that your confidential data cannot be intercepted or stored by third parties.
             </p>
           </div>
 
-          <div className={styles.seoFaq} style={{ marginTop: '3rem' }}>
+          <div className={styles.seoFaq} style={{ marginTop: '4rem' }}>
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
             <div className={styles.seoFaqGrid}>
-              <div className={styles.faqItem}>
-                <h3>Can I sign a liability waiver online for free?</h3>
-                <p>Yes. Upload your waiver PDF, create your electronic signature, place it on the signature line, and download — completely free, no account required.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Is a digitally signed waiver legally valid?</h3>
-                <p>Yes. Under ESIGN and UETA, electronic signatures on waivers are legally valid. Courts consistently uphold e-signed waivers as binding contracts when the signer clearly agreed to the terms.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>My gym emailed me a waiver PDF — can I sign it here?</h3>
-                <p>Yes. Download the PDF from the email, upload it here, sign it, and email the signed version back to your gym or service provider.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Is my personal information safe?</h3>
-                <p>Your waiver, including your personal details and health information, never leaves your device. All processing happens locally in your browser.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Can I sign on my mobile phone?</h3>
-                <p>Yes. Open this tool in Safari (iPhone) or Chrome (Android), upload your waiver, draw your signature with your finger, and download the signed form.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>What types of waivers can I sign here?</h3>
-                <p>Any waiver or release form in PDF format — gym waivers, sports activity releases, event waivers, photography releases, medical releases, contractor liability waivers, and more.</p>
-              </div>
+              {faqItems.map((faq, index) => (
+                <div key={index} className={styles.faqItem}>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
-            <p style={{ fontSize: '0.875rem', opacity: 0.9, marginBottom: '0.5rem' }}>Related tools & guides:</p>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF Online Free →</a></li>
-              <li><a href="/tools/sign-consent-form-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Consent Form Online →</a></li>
-              <li><a href="/tools/sign-medical-form-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Medical Form Online →</a></li>
-              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: 'var(--color-primary, #4f46e5)' }}>Are E-Signatures Legal? →</a></li>
+          <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Tools & Guides</h3>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.95rem' }}>
+              <li><Link href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign PDF Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/draw-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Draw Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/blog/electronic-signature-for-small-business" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Small Business E-Signatures <ArrowRight size={14}/></Link></li>
             </ul>
           </div>
         </div>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Footer />
     </div>

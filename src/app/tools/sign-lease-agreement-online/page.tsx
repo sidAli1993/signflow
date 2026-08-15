@@ -3,44 +3,25 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
-import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
-import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
+import { Shield, Zap, Lock, FileCheck, Users, Star, ArrowRight } from 'lucide-react';
+import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema } from '@/lib/seo-schemas';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Lease Agreement Online Free — No Account, No Upload | MyDigitSign',
-  description:
-    'Sign any residential or commercial lease agreement online for free. Upload your lease PDF, add your electronic signature, and download instantly. 100% browser-based — your lease never leaves your device.',
-  keywords: [
-    'sign lease agreement online',
-    'sign lease online free',
-    'electronic signature lease',
-    'sign rental agreement online',
-    'esign lease agreement',
-    'sign lease pdf free',
-    'landlord tenant esign',
-    'sign tenancy agreement online',
-    'lease agreement signature',
-    'sign rental contract online',
-  ],
+  title: 'Sign Lease Agreement Online Free — Electronic Signature | MyDigitSign',
+  description: 'Sign your residential or commercial lease agreement online for free. Upload your rental contract, add your electronic signature securely, and download instantly.',
+  keywords: ["sign lease agreement online", "electronic signature for lease", "sign rental agreement online", "free lease signing online", "digital signature lease agreement"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
   },
   openGraph: {
-    title: 'Sign Lease Agreement Online Free — No Account, No Upload | MyDigitSign',
-    description:
-      'Sign any lease or rental agreement online for free. 100% private — your lease PDF never leaves your browser.',
+    title: 'Sign Lease Agreement Online Free — Electronic Signature | MyDigitSign',
+    description: 'Sign your residential or commercial lease agreement online for free. Upload your rental contract, add your electronic signature securely, and download instantly.',
     url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
     siteName: 'MyDigitSign',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign — Sign Lease Agreement Online Free' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign' }],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sign Lease Agreement Online Free — No Account, No Upload | MyDigitSign',
-    description: 'Sign any lease agreement online for free. 100% browser-based, files never leave your device.',
-    creator: '@mydigitsign',
-    images: ['/og-image.png'],
   },
 };
 
@@ -52,168 +33,160 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
 const howToSchema = getHowToSchema({
   name: 'How to Sign a Lease Agreement Online for Free',
-  description: 'Sign any residential or commercial lease agreement electronically in your browser. No account needed, no files uploaded.',
+  description: 'Apply a legally binding electronic signature to your lease agreement securely in your browser.',
   url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
   steps: [
     {
       name: 'Create Your Signature',
-      text: 'Type your full legal name in cursive, draw your signature with your mouse or finger, or upload a photo of your handwritten signature. Click Adopt to confirm.',
+      text: 'Type your full name, draw your signature, or upload your company seal. Click Adopt to save your mark.',
       url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
     },
     {
-      name: 'Upload Your Lease Agreement PDF',
-      text: 'Drag and drop your lease PDF into the uploader. The file is processed entirely in your browser — it is never sent to any server.',
+      name: 'Upload Your Document',
+      text: 'Drag and drop your lease agreement PDF. It is processed entirely locally for maximum privacy.',
       url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
     },
     {
-      name: 'Place Your Signature on the Lease',
-      text: 'Navigate to the signature page of your lease. Drag your signature to the tenant signature line, resize it, and add the date if required.',
+      name: 'Place Your Signature',
+      text: 'Navigate to the signature block, drag your signature to the line, and add optional text or dates.',
       url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
     },
     {
-      name: 'Download & Send Your Signed Lease',
-      text: 'Click Download to save the signed lease PDF to your device. Email it to your landlord or property manager to complete the agreement.',
+      name: 'Download & Send',
+      text: 'Click Download to save the signed contract. Email it back to the requesting party instantly.',
       url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
     },
   ],
 });
 
 const softwareSchema = getSoftwareAppSchema({
-  name: 'MyDigitSign Lease Agreement Signing Tool',
-  description: 'Sign residential and commercial lease agreements online for free. Add electronic signatures to lease PDFs directly in your browser with zero server uploads.',
+  name: 'MyDigitSign Lease Agreement Signer',
+  description: 'Sign your residential or commercial lease agreement online for free. Upload your rental contract, add your electronic signature securely, and download instantly.',
   url: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
   applicationCategory: 'BusinessApplication',
 });
 
-export default function SignLeaseAgreementOnlineTool() {
+const faqItems = [
+  {
+    question: "Is an electronically signed lease agreement legally binding?",
+    answer: "Yes. Electronic signatures on lease agreements hold the same legal weight as wet-ink signatures under federal and international e-signature laws."
+  },
+  {
+    question: "Can I sign a lease agreement on my phone?",
+    answer: "Absolutely. You can upload the PDF lease to MyDigitSign on your smartphone, draw your signature using your touchscreen, and download the signed contract instantly."
+  },
+  {
+    question: "Do I need to create an account to sign this document?",
+    answer: "No. MyDigitSign is completely free and requires no account registration or credit card to sign your documents."
+  },
+  {
+    question: "Is a drawn signature better than a typed one?",
+    answer: "Both are legally valid electronic signatures. Drawing your signature mimics your natural handwriting, while typing uses cursive typography. Choose whichever you prefer."
+  }
+];
+
+const faqSchema = getFAQSchema(faqItems);
+
+export default function SignDocumentTool() {
   return (
     <div className={styles.appWrapper}>
       <Navbar />
 
-      <section className={styles.seoHero} aria-label="About Sign Lease Agreement Online Tool">
+      <section className={styles.seoHero}>
         <div className={styles.seoHeroInner}>
           <div className={styles.seoHeroBadge}>
             <Star size={14} aria-hidden="true" />
-            <span>Free Lease Signer · No Account · 100% Private</span>
+            <span>Free Contract Signer · No Account · 100% Private</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign Lease Agreement Online <span className={styles.seoHeroGradient}>Free & Instant</span>
+            Sign Lease Agreements <span className={styles.seoHeroGradient}>Securely</span>
           </h1>
-          <p className={styles.seoHeroDesc}>
-            Need to <strong>sign a lease agreement</strong> quickly? Upload your rental or tenancy PDF, create your electronic signature, place it on the signature line, and download the signed document — all in under 60 seconds. Your lease never leaves your browser. No account, no uploads, no watermarks.
-          </p>
-
-          <ul className={styles.seoTrustPills} role="list" aria-label="Key features">
-            <li><Shield size={14} aria-hidden="true" /><span>Lease Stays in Your Browser</span></li>
-            <li><Lock size={14} aria-hidden="true" /><span>Zero Server Uploads</span></li>
-            <li><FileCheck size={14} aria-hidden="true" /><span>ESIGN Act Compliant</span></li>
-            <li><Zap size={14} aria-hidden="true" /><span>Done in Under 60 Seconds</span></li>
-            <li><Users size={14} aria-hidden="true" /><span>No Account Required</span></li>
+          <p className={styles.seoHeroDesc} dangerouslySetInnerHTML={{ __html: 'Need to finalize a <strong>residential or commercial lease agreement</strong>? Upload your rental PDF, apply your legally binding electronic signature, and send it to your landlord or tenant in seconds. 100% free and private.' }} />
+          <ul className={styles.seoTrustPills} role="list">
+            <li><Shield size={14} /><span>In-Browser Processing</span></li>
+            <li><Lock size={14} /><span>Complete Privacy</span></li>
+            <li><FileCheck size={14} /><span>ESIGN Compliant</span></li>
+            <li><Users size={14} /><span>No Signup Required</span></li>
           </ul>
         </div>
       </section>
 
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
-
       <HomeClient
         initialTab="type"
         titleOverride="Sign Your <span>Lease Agreement</span>"
-        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload the lease PDF you need to sign."
+        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload your PDF."
       />
 
-      <section className={styles.seoExplainer} aria-label="How to sign a lease agreement online">
+      <section className={styles.seoExplainer}>
         <div className={styles.seoExplainerInner}>
-          <h2 className={styles.seoExplainerTitle}>How to Sign a Lease Agreement Online (Step-by-Step)</h2>
+          <h2 className={styles.seoExplainerTitle}>
+            How to Sign Your Lease Agreement in 4 Steps
+          </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">1</div>
-              <h3>Create Your Signature</h3>
-              <p>Type your full legal name, draw freehand, or upload a photo of your signature. Click Adopt to save.</p>
+              <div className={styles.seoStepNum}>1</div>
+              <h3>Create Signature</h3>
+              <p>Type or draw your signature in the creator panel and adopt it.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">2</div>
-              <h3>Upload Your Lease PDF</h3>
-              <p>Drag and drop your lease agreement. It stays in your browser&apos;s local memory — never sent to any server.</p>
+              <div className={styles.seoStepNum}>2</div>
+              <h3>Upload PDF</h3>
+              <p>Drop your <strong>lease agreement</strong> into the secure browser workspace.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">3</div>
-              <h3>Sign & Download</h3>
-              <p>Navigate to the tenant signature page, place your signature, add the date, and click Download.</p>
+              <div className={styles.seoStepNum}>3</div>
+              <h3>Place on Line</h3>
+              <p>Drag the signature, add dates, and position them on the document.</p>
+            </article>
+            <article className={styles.seoStep}>
+              <div className={styles.seoStepNum}>4</div>
+              <h3>Download</h3>
+              <p>Save the signed file to your device instantly.</p>
             </article>
           </div>
 
-          <div style={{ marginTop: '3rem' }}>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
-              Are Electronically Signed Lease Agreements Legal?
-            </h2>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-              Yes. Under the US <strong>ESIGN Act (2000)</strong> and state-level <strong>UETA</strong> laws, electronically signed lease and rental agreements carry the same legal weight as ink signatures. The EU&apos;s <strong>eIDAS</strong> regulation provides equivalent recognition across all EU member states. The key requirements are mutual intent to sign and a clear association between the signature and the document — both of which are met when you place your signature on the designated tenant signature line.
-            </p>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '2rem' }}>
-              Most landlords, property managers, and real estate agencies now routinely accept e-signed lease agreements. If your landlord uses DocuSign, HelloSign, or similar tools and charges for them — our tool is 100% free and produces an identical legally binding result.
+          <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
+            <h2 className={styles.seoArticleTitle}>The Ultimate Guide to Signing a Lease Agreement Online</h2>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Moving into a new apartment or securing a commercial office space requires finalizing a lease agreement. Traditionally, this involved printing dozens of pages, signing them by hand, and scanning them back. Today, you can <strong>sign lease agreement online</strong> for free using standard electronic signatures.' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Under the ESIGN Act (US) and eIDAS (EU), electronic signatures on lease and rental agreements are completely legally binding. This ensures both landlords and tenants can execute contracts instantly without geographical barriers.' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Using MyDigitSign to execute your rental contract ensures maximum privacy. Since our signature engine runs entirely within your browser, your sensitive financial terms and personal information are never uploaded to a third-party server.' }} />
+            
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Use Client-Side Signing?
+            </h3>
+            <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Unlike other free tools that upload your sensitive documents to remote servers to apply the signature, MyDigitSign uses WebAssembly and advanced canvas rendering to process your <strong>lease agreement</strong> locally on your machine. This guarantees that your confidential data cannot be intercepted or stored by third parties.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
-            <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.75rem' }}>🔒 Protect Your Signed Lease</h3>
-              <p style={{ fontSize: '0.95rem', color: '#475569', lineHeight: 1.5, marginBottom: 0 }}>
-                After signing, encrypt your lease PDF with a password before emailing it. Use our <a href="/tools/protect-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 500 }}>Protect PDF tool</a> to add AES-256 encryption — right in your browser.
-              </p>
-            </div>
-            <div style={{ background: '#ffffff', padding: '1.5rem', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 600, color: '#0f172a', marginBottom: '0.75rem' }}>📄 Need Multiple Signatures?</h3>
-              <p style={{ fontSize: '0.95rem', color: '#475569', lineHeight: 1.5, marginBottom: 0 }}>
-                For co-tenants who also need to sign: download your signed copy, email it to the co-tenant, and they can add their signature using this same tool — completely free.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.seoFaq} style={{ marginTop: '3rem' }}>
+          <div className={styles.seoFaq} style={{ marginTop: '4rem' }}>
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
             <div className={styles.seoFaqGrid}>
-              <div className={styles.faqItem}>
-                <h3>Can I sign a lease agreement online for free?</h3>
-                <p>Yes. MyDigitSign lets you sign any lease PDF for free — no account, no uploads, no watermarks. Upload your lease, create your signature, place it, and download the signed document instantly.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Is my lease safe when I sign it online?</h3>
-                <p>With MyDigitSign, your lease agreement never leaves your device. Unlike DocuSign or HelloSign, we process everything entirely in your browser&apos;s local memory. Zero server contact means zero risk of your personal rental information being exposed.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Do both the landlord and tenant need to sign at the same time?</h3>
-                <p>No. Sign your portion, download the PDF, and email it to the other party. The landlord or co-tenant opens it in MyDigitSign, adds their signature, and downloads the fully signed lease.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>What types of leases can I sign with this tool?</h3>
-                <p>Any lease in PDF format — residential leases, commercial leases, month-to-month agreements, fixed-term tenancies, sublease agreements, and roommate agreements. If it&apos;s a PDF, you can sign it here.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Can I sign a lease on my phone?</h3>
-                <p>Yes. Open this tool in Safari (iPhone) or Chrome (Android), upload your lease PDF, draw your signature with your finger, and download the signed document. Fully responsive on all mobile devices.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Do I need to print the lease after signing?</h3>
-                <p>Usually no — a digitally signed PDF is legally sufficient in most jurisdictions. However, some landlords may request a printed and physically signed copy. Check your local laws or ask your landlord before proceeding with only an e-signature.</p>
-              </div>
+              {faqItems.map((faq, index) => (
+                <div key={index} className={styles.faqItem}>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
-            <p style={{ fontSize: '0.875rem', opacity: 0.9, marginBottom: '0.5rem' }}>Related tools & guides:</p>
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>
-              <li><a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign PDF Online Free →</a></li>
-              <li><a href="/tools/sign-nda-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign NDA Online →</a></li>
-              <li><a href="/tools/protect-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Protect PDF with Password →</a></li>
-              <li><a href="/tools/sign-real-estate-contract-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Sign Real Estate Contract →</a></li>
-              <li><a href="/blog/sign-lease-agreement-online-free" style={{ color: 'var(--color-primary, #4f46e5)' }}>Guide: Sign Lease Online →</a></li>
-              <li><a href="/blog/are-electronic-signatures-legally-binding" style={{ color: 'var(--color-primary, #4f46e5)' }}>Are E-Signatures Legal? →</a></li>
+          <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Tools & Guides</h3>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.95rem' }}>
+              <li><Link href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign PDF Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/draw-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Draw Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/blog/electronic-signature-for-small-business" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Small Business E-Signatures <ArrowRight size={14}/></Link></li>
             </ul>
           </div>
         </div>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Footer />
     </div>

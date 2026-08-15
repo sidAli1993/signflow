@@ -3,43 +3,25 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
-import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
-import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
+import { Shield, Zap, Lock, FileCheck, Users, Star, ArrowRight } from 'lucide-react';
+import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema } from '@/lib/seo-schemas';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Real Estate Contract Online Free — Electronic Signature | MyDigitSign',
-  description:
-    'Sign real estate contracts, purchase agreements, and disclosure forms online for free. Upload your contract PDF, add your electronic signature, and download instantly.',
-  keywords: [
-    'sign real estate contract online',
-    'sign purchase agreement online',
-    'electronic signature real estate',
-    'esign property contract',
-    'sign real estate forms free',
-    'digital signature for realtors',
-    'sign property disclosure form',
-    'sign closing documents online',
-    'real estate contract signature',
-    'esign real estate documents',
-  ],
+  title: 'Sign Real Estate Contract Online Free — Property Agreements | MyDigitSign',
+  description: 'Sign real estate contracts, purchase agreements, and property disclosures online for free. Secure, legally binding e-signatures for real estate transactions.',
+  keywords: ["sign real estate contract online", "electronic signature purchase agreement", "sign property disclosure online", "esign real estate documents"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
   },
   openGraph: {
-    title: 'Sign Real Estate Contract Online Free | MyDigitSign',
-    description: 'Sign real estate contracts and purchase agreements online for free. 100% private.',
+    title: 'Sign Real Estate Contract Online Free — Property Agreements | MyDigitSign',
+    description: 'Sign real estate contracts, purchase agreements, and property disclosures online for free. Secure, legally binding e-signatures for real estate transactions.',
     url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
     siteName: 'MyDigitSign',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign — Sign Real Estate Contract Online Free' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign' }],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Sign Real Estate Contract Online Free | MyDigitSign',
-    description: 'Sign real estate contracts securely. 100% browser-based, files never leave your device.',
-    creator: '@mydigitsign',
-    images: ['/og-image.png'],
   },
 };
 
@@ -51,129 +33,160 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
 const howToSchema = getHowToSchema({
   name: 'How to Sign a Real Estate Contract Online for Free',
-  description: 'Sign purchase agreements, offers, and property disclosures electronically in your browser.',
+  description: 'Apply a legally binding electronic signature to your real estate contract securely in your browser.',
   url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
   steps: [
     {
       name: 'Create Your Signature',
-      text: 'Type your full legal name, draw your signature, or upload a scan. Click Adopt to save.',
+      text: 'Type your full name, draw your signature, or upload your company seal. Click Adopt to save your mark.',
       url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
     },
     {
-      name: 'Upload Your Contract PDF',
-      text: 'Drag and drop your real estate contract. It is processed securely in your browser.',
+      name: 'Upload Your Document',
+      text: 'Drag and drop your real estate contract PDF. It is processed entirely locally for maximum privacy.',
       url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
     },
     {
-      name: 'Place Your Signatures and Initials',
-      text: 'Navigate to the signature blocks. Drag your signature to the lines, resize, and add dates or initials to the margins.',
+      name: 'Place Your Signature',
+      text: 'Navigate to the signature block, drag your signature to the line, and add optional text or dates.',
       url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
     },
     {
       name: 'Download & Send',
-      text: 'Click Download to save the signed contract. Email it to your real estate agent, broker, or the other party.',
+      text: 'Click Download to save the signed contract. Email it back to the requesting party instantly.',
       url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
     },
   ],
 });
 
 const softwareSchema = getSoftwareAppSchema({
-  name: 'MyDigitSign Real Estate Contract Signing Tool',
-  description: 'Sign real estate contracts and documents online for free securely in your browser.',
+  name: 'MyDigitSign Real Estate Contract Signer',
+  description: 'Sign real estate contracts, purchase agreements, and property disclosures online for free. Secure, legally binding e-signatures for real estate transactions.',
   url: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
   applicationCategory: 'BusinessApplication',
 });
 
-export default function SignRealEstateContractOnlineTool() {
+const faqItems = [
+  {
+    question: "Are e-signatures valid for buying a house?",
+    answer: "Yes, electronic signatures are legally binding for purchase agreements, disclosures, and most real estate contracts, though final mortgage notes or deeds may require notarization."
+  },
+  {
+    question: "Does this tool work with large real estate PDFs?",
+    answer: "Yes, because the PDF is processed locally in your browser memory, there are no server upload limits, allowing you to sign massive 100+ page property packets easily."
+  },
+  {
+    question: "Do I need to create an account to sign this document?",
+    answer: "No. MyDigitSign is completely free and requires no account registration or credit card to sign your documents."
+  },
+  {
+    question: "Is a drawn signature better than a typed one?",
+    answer: "Both are legally valid electronic signatures. Drawing your signature mimics your natural handwriting, while typing uses cursive typography. Choose whichever you prefer."
+  }
+];
+
+const faqSchema = getFAQSchema(faqItems);
+
+export default function SignDocumentTool() {
   return (
     <div className={styles.appWrapper}>
       <Navbar />
 
-      <section className={styles.seoHero} aria-label="About Sign Real Estate Contract Tool">
+      <section className={styles.seoHero}>
         <div className={styles.seoHeroInner}>
           <div className={styles.seoHeroBadge}>
             <Star size={14} aria-hidden="true" />
             <span>Free Contract Signer · No Account · 100% Private</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign Real Estate Contracts <span className={styles.seoHeroGradient}>Free & Fast</span>
+            Sign Real Estate Contracts <span className={styles.seoHeroGradient}>Securely</span>
           </h1>
-          <p className={styles.seoHeroDesc}>
-            Need to <strong>sign a real estate contract</strong>, purchase agreement, or offer letter? Upload the PDF, create your electronic signature and initials, and place them on the document. Our browser-based tool is secure, ESIGN compliant, and requires no account or cloud upload.
-          </p>
-
-          <ul className={styles.seoTrustPills} role="list" aria-label="Key features">
-            <li><Shield size={14} aria-hidden="true" /><span>Contract Stays in Your Browser</span></li>
-            <li><Lock size={14} aria-hidden="true" /><span>Zero Server Uploads</span></li>
-            <li><FileCheck size={14} aria-hidden="true" /><span>ESIGN Act Compliant</span></li>
-            <li><Zap size={14} aria-hidden="true" /><span>Done in Under 60 Seconds</span></li>
-            <li><Users size={14} aria-hidden="true" /><span>No Account Required</span></li>
+          <p className={styles.seoHeroDesc} dangerouslySetInnerHTML={{ __html: 'Closing on a property or signing a disclosure? Upload your <strong>real estate contract</strong> and apply a legally binding electronic signature. Keep your real estate transaction private.' }} />
+          <ul className={styles.seoTrustPills} role="list">
+            <li><Shield size={14} /><span>In-Browser Processing</span></li>
+            <li><Lock size={14} /><span>Complete Privacy</span></li>
+            <li><FileCheck size={14} /><span>ESIGN Compliant</span></li>
+            <li><Users size={14} /><span>No Signup Required</span></li>
           </ul>
         </div>
       </section>
 
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script id="howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script id="software-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
-
       <HomeClient
         initialTab="type"
         titleOverride="Sign Your <span>Real Estate Contract</span>"
-        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload the contract PDF."
+        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload your PDF."
       />
 
       <section className={styles.seoExplainer}>
         <div className={styles.seoExplainerInner}>
-          <h2 className={styles.seoExplainerTitle}>How to Sign a Real Estate Contract Online (Step-by-Step)</h2>
+          <h2 className={styles.seoExplainerTitle}>
+            How to Sign Your Real Estate Contract in 4 Steps
+          </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">1</div>
-              <h3>Create Your Signature</h3>
-              <p>Type your full name, draw freehand, or upload your signature. Click Adopt to save.</p>
+              <div className={styles.seoStepNum}>1</div>
+              <h3>Create Signature</h3>
+              <p>Type or draw your signature in the creator panel and adopt it.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">2</div>
-              <h3>Upload Your Contract</h3>
-              <p>Drag and drop your PDF. It stays securely in your browser&apos;s local memory — never sent to a server.</p>
+              <div className={styles.seoStepNum}>2</div>
+              <h3>Upload PDF</h3>
+              <p>Drop your <strong>real estate contract</strong> into the secure browser workspace.</p>
             </article>
             <article className={styles.seoStep}>
-              <div className={styles.seoStepNum} aria-hidden="true">3</div>
-              <h3>Sign, Initial & Download</h3>
-              <p>Place your signature and any necessary initials, add dates, and download the signed contract.</p>
+              <div className={styles.seoStepNum}>3</div>
+              <h3>Place on Line</h3>
+              <p>Drag the signature, add dates, and position them on the document.</p>
+            </article>
+            <article className={styles.seoStep}>
+              <div className={styles.seoStepNum}>4</div>
+              <h3>Download</h3>
+              <p>Save the signed file to your device instantly.</p>
             </article>
           </div>
 
-          <div style={{ marginTop: '3rem' }}>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 700, color: '#0f172a', marginBottom: '1rem' }}>
-              Are Electronic Signatures Valid for Real Estate?
-            </h2>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-              Yes. The ESIGN Act specifically established the legal validity of electronic signatures for real estate transactions across the US. Almost all real estate agents, brokers, title companies, and lenders accept electronically signed purchase agreements, counter-offers, and disclosures. 
-            </p>
-            <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.7, marginBottom: '1.25rem' }}>
-              However, note that <strong>final closing documents</strong> (like deeds and certain loan documents) often require physical notarization or a specialized Remote Online Notary (RON), depending on state law. Standard contracts and offers can be signed instantly here.
+          <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
+            <h2 className={styles.seoArticleTitle}>Executing Real Estate Contracts with Electronic Signatures</h2>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'The real estate industry has fully embraced digital transformation. Buyers, sellers, and agents frequently need to <strong>sign real estate contract online</strong> to speed up negotiations, escrow, and closing processes.' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Under the ESIGN Act, electronic signatures are legally binding for almost all real estate documents, including purchase agreements, property disclosures, and agency representations (though some final closing documents may still require a physical notary).' }} />
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Real estate documents are often massive PDF files containing sensitive financial details. MyDigitSign handles large PDFs with ease and processes everything locally, ensuring your transaction details remain strictly confidential.' }} />
+            
+            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Use Client-Side Signing?
+            </h3>
+            <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Unlike other free tools that upload your sensitive documents to remote servers to apply the signature, MyDigitSign uses WebAssembly and advanced canvas rendering to process your <strong>real estate contract</strong> locally on your machine. This guarantees that your confidential data cannot be intercepted or stored by third parties.
             </p>
           </div>
 
-          <div className={styles.seoFaq} style={{ marginTop: '3rem' }}>
+          <div className={styles.seoFaq} style={{ marginTop: '4rem' }}>
             <h2 className={styles.seoFaqTitle}>Frequently Asked Questions</h2>
             <div className={styles.seoFaqGrid}>
-              <div className={styles.faqItem}>
-                <h3>Can I sign an offer or purchase agreement here?</h3>
-                <p>Yes. If your agent emailed you a PDF of the offer or contract, you can upload it, sign it, and email it back directly.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>How do I add initials to each page?</h3>
-                <p>You can create a separate "Initials" signature in our tool, place it on the pages that require initials, and then use your full signature on the final page.</p>
-              </div>
-              <div className={styles.faqItem}>
-                <h3>Is my financial information secure?</h3>
-                <p>Absolutely. Your contract is processed entirely on your local device. We never upload your PDF to our servers, ensuring your price and terms remain private.</p>
-              </div>
+              {faqItems.map((faq, index) => (
+                <div key={index} className={styles.faqItem}>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
             </div>
+          </div>
+
+          <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Tools & Guides</h3>
+            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.95rem' }}>
+              <li><Link href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign PDF Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/draw-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Draw Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/blog/electronic-signature-for-small-business" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Small Business E-Signatures <ArrowRight size={14}/></Link></li>
+            </ul>
           </div>
         </div>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Footer />
     </div>

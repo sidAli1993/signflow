@@ -53,6 +53,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sign-word-document',
     'generate-signature-line',
     'sign-nda-online',
+    // 10 new document-type tools
+    'sign-lease-agreement-online',
+    'sign-employment-contract-online',
+    'sign-offer-letter-online',
+    'sign-invoice-online',
+    'sign-waiver-online',
+    'sign-medical-form-online',
+    'sign-consent-form-online',
+    'sign-real-estate-contract-online',
+    'sign-freelance-contract-online',
+    'sign-business-agreement-online',
   ];
 
   return [

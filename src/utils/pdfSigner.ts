@@ -5,7 +5,7 @@ export interface SignOptions {
   pdfBytes: Uint8Array;
   p12Buffer: ArrayBuffer;
   passphrase?: string;
-  visualOptions: {
+  visualOptions?: {
     page: number;
     x: number;
     y: number;
@@ -81,20 +81,6 @@ export async function signPdfWithCertificate({
   // 2. Load PDF document
   const pdfDoc = await PDFDocument.load(pdfBytes);
   const pages = pdfDoc.getPages();
-  const pageIndex = visualOptions.page - 1;
-  if (pageIndex < 0 || pageIndex >= pages.length) {
-    throw new Error('Invalid page number specified for signature placement.');
-  }
-  const page = pages[pageIndex];
-
-  // Load the visual signature image if provided
-  let embeddedImage;
-  if (visualOptions.signatureUrl) {
-    const response = await fetch(visualOptions.signatureUrl);
-    const imgBytes = await response.arrayBuffer();
-    embeddedImage = await pdfDoc.embedPng(imgBytes);
-  }
-
   // Create AcroForm if not exists
   let acroForm = pdfDoc.catalog.get(PDFName.of('AcroForm')) as PDFDict | undefined;
   if (!acroForm) {
@@ -116,59 +102,98 @@ export async function signPdfWithCertificate({
   });
   const sigDictRef = pdfDoc.context.register(sigDict);
 
-  // Create signature widget annotation
-  const widgetDict = pdfDoc.context.obj({
-    Type: 'Annot',
-    Subtype: 'Widget',
-    FT: 'Sig',
-    T: PDFString.of(`Signature-${Date.now()}`),
-    F: 4, // Print flag
-    Rect: [
-      visualOptions.x,
-      visualOptions.y,
-      visualOptions.x + visualOptions.width,
-      visualOptions.y + visualOptions.height,
-    ],
-    V: sigDictRef,
-    P: page.ref,
-  });
+  let widgetRef;
 
-  // If a visual signature overlay image was supplied, use it as appearance
-  if (embeddedImage) {
-    const xobjectProperties = {
-      Type: 'XObject',
-      Subtype: 'Form',
-      BBox: [0, 0, visualOptions.width, visualOptions.height],
-      Resources: {
-        XObject: {
-          Image: embeddedImage.ref,
-        },
-      },
-    };
-    const streamContent = `
-      q
-      ${visualOptions.width} 0 0 ${visualOptions.height} 0 0 cm
-      /Image Do
-      Q
-    `;
-    const xobjectStream = pdfDoc.context.stream(streamContent, xobjectProperties);
-    const xobjectRef = pdfDoc.context.register(xobjectStream);
+  if (visualOptions) {
+    const pageIndex = visualOptions.page - 1;
+    if (pageIndex < 0 || pageIndex >= pages.length) {
+      throw new Error('Invalid page number specified for signature placement.');
+    }
+    const page = pages[pageIndex];
 
-    const apDict = pdfDoc.context.obj({
-      N: xobjectRef,
+    // Load the visual signature image if provided
+    let embeddedImage;
+    if (visualOptions.signatureUrl) {
+      const response = await fetch(visualOptions.signatureUrl);
+      const imgBytes = await response.arrayBuffer();
+      embeddedImage = await pdfDoc.embedPng(imgBytes);
+    }
+
+    // Create signature widget annotation
+    const widgetDict = pdfDoc.context.obj({
+      Type: 'Annot',
+      Subtype: 'Widget',
+      FT: 'Sig',
+      T: PDFString.of(`Signature-${Date.now()}`),
+      F: 4, // Print flag
+      Rect: [
+        visualOptions.x,
+        visualOptions.y,
+        visualOptions.x + visualOptions.width,
+        visualOptions.y + visualOptions.height,
+      ],
+      V: sigDictRef,
+      P: page.ref,
     });
-    widgetDict.set(PDFName.of('AP'), apDict);
-  }
 
-  const widgetRef = pdfDoc.context.register(widgetDict);
+    // If a visual signature overlay image was supplied, use it as appearance
+    if (embeddedImage) {
+      const xobjectProperties = {
+        Type: 'XObject',
+        Subtype: 'Form',
+        BBox: [0, 0, visualOptions.width, visualOptions.height],
+        Resources: {
+          XObject: {
+            Image: embeddedImage.ref,
+          },
+        },
+      };
+      const streamContent = `
+        q
+        ${visualOptions.width} 0 0 ${visualOptions.height} 0 0 cm
+        /Image Do
+        Q
+      `;
+      const xobjectStream = pdfDoc.context.stream(streamContent, xobjectProperties);
+      const xobjectRef = pdfDoc.context.register(xobjectStream);
 
-  // Add widget annotation to page's /Annots
-  let annots = page.node.get(PDFName.of('Annots')) as PDFArray | undefined;
-  if (!annots) {
-    annots = pdfDoc.context.obj([]) as PDFArray;
-    page.node.set(PDFName.of('Annots'), annots);
+      const apDict = pdfDoc.context.obj({
+        N: xobjectRef,
+      });
+      widgetDict.set(PDFName.of('AP'), apDict);
+    }
+
+    widgetRef = pdfDoc.context.register(widgetDict);
+
+    // Add widget annotation to page's /Annots
+    let annots = page.node.get(PDFName.of('Annots')) as PDFArray | undefined;
+    if (!annots) {
+      annots = pdfDoc.context.obj([]) as PDFArray;
+      page.node.set(PDFName.of('Annots'), annots);
+    }
+    annots.push(widgetRef);
+  } else {
+    // Invisible signature
+    const widgetDict = pdfDoc.context.obj({
+      Type: 'Annot',
+      Subtype: 'Widget',
+      FT: 'Sig',
+      T: PDFString.of(`Signature-${Date.now()}`),
+      F: 0,
+      Rect: [0, 0, 0, 0],
+      V: sigDictRef,
+      P: pages[0].ref, // Associate with the first page
+    });
+    widgetRef = pdfDoc.context.register(widgetDict);
+    
+    // Add widget annotation to first page's /Annots
+    let annots = pages[0].node.get(PDFName.of('Annots')) as PDFArray | undefined;
+    if (!annots) {
+      annots = pdfDoc.context.obj([]) as PDFArray;
+      pages[0].node.set(PDFName.of('Annots'), annots);
+    }
+    annots.push(widgetRef);
   }
-  annots.push(widgetRef);
 
   // Add widget to AcroForm /Fields
   let fields = acroForm.get(PDFName.of('Fields')) as PDFArray | undefined;

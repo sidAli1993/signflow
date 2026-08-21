@@ -34,9 +34,12 @@ export async function GET(request: Request) {
     const metaKeywordsMatch = html.match(/<meta name="keywords" content="([^"]*)"/i);
     if (metaKeywordsMatch && metaKeywordsMatch[1]) {
       const metaTags = metaKeywordsMatch[1].split(',').map(t => t.trim()).filter(Boolean);
-      // Sometimes generic tags are returned like "video, sharing, camera phone"
-      if (metaTags.length > 3 && !metaTags.includes("camera phone")) {
-        tags = metaTags;
+      // Remove the old generic YouTube tags if they happen to be injected
+      const genericTags = ["video", "sharing", "camera phone", "video phone", "free", "upload"];
+      const filteredTags = metaTags.filter(t => !genericTags.includes(t.toLowerCase()));
+      
+      if (filteredTags.length > 0) {
+        tags = filteredTags;
       }
     }
 

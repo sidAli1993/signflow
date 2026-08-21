@@ -260,6 +260,15 @@ const toolsList = [
     icon: '🤝',
     searchKeywords: ['sign business agreement online', 'sign vendor contract'],
   },
+  {
+    slug: 'youtube-tag-extractor',
+    title: 'YouTube Tag Extractor',
+    badge: 'New',
+    category: 'SEO Tools',
+    description: 'Extract hidden SEO tags and keywords from any public YouTube video instantly to boost your video rankings.',
+    icon: '▶️',
+    searchKeywords: ['youtube tag extractor', 'youtube tags extractor', 'extract youtube tags', 'youtube seo'],
+  },
 ];
 
 export default function ToolsHubPage() {

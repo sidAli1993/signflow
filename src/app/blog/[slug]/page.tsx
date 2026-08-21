@@ -37,6 +37,7 @@ export async function generateStaticParams() {
     { slug: 'digital-signature-laws-by-country' },
     // Phase 4 new posts
     { slug: 'sample-email-request-to-sign-nda' },
+    { slug: 'how-to-extract-youtube-tags' },
   ];
 }
 
@@ -54,6 +55,74 @@ interface Post {
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string): Post | null => {
   const posts: Record<string, Post> = {
+    'how-to-extract-youtube-tags': {
+      title: 'How to Extract Tags from Any YouTube Video (Free Tool)',
+      description: 'Learn how to find and extract hidden SEO tags from any YouTube video manually or using our free YouTube Tag Extractor tool.',
+      date: 'August 21, 2026',
+      lastModified: 'August 21, 2026',
+      author: 'MyDigitSign SEO Team',
+      keywords: ['youtube tag extractor', 'youtube tags extractor', 'tag extractor youtube', 'extract youtube tags', 'youtube video tag extractor', 'youtube video tags extractor'],
+      content: `
+        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
+          <p style="margin: 0; font-size: 0.975rem; line-height: 1.6;">You can extract hidden YouTube tags manually by right-clicking a video page, selecting <strong>View Page Source</strong>, and searching for <code>&lt;meta name="keywords"&gt;</code>. Alternatively, use our free <strong><a href="/tools/youtube-tag-extractor">YouTube Tag Extractor tool</a></strong> to instantly extract and copy all tags with one click.</p>
+        </div>
+        
+        <p>If you are trying to grow a YouTube channel, understanding how your competitors optimize their videos is crucial. One of the best ways to do this is by looking at the <strong>tags</strong> they use. However, YouTube hides these tags from the public interface. In this guide, we will show you how to extract YouTube tags using both a manual method and a free automated tool.</p>
+
+        <h2>Why Extract YouTube Tags?</h2>
+        <p>While YouTube has stated that tags play a smaller role today than they did in the past, they are still important for SEO. Tags help YouTube's algorithm understand the context of your video, especially if your topic is prone to misspellings or has multiple variations.</p>
+        <p>By using a <strong>youtube tag extractor</strong> to see what top-ranking videos are using, you can discover new long-tail keywords, optimize your own metadata, and increase your chances of appearing in the "Suggested Videos" section next to them.</p>
+
+        <h2>Method 1: Use a Free YouTube Tag Extractor Tool (Fastest)</h2>
+        <p>The easiest and fastest way to get tags is by using an automated <strong>tag extractor youtube</strong> tool. This eliminates the need to dig through messy HTML code.</p>
+        
+        <div style="background: var(--color-primary, #4f46e5); color: #fff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; box-shadow: 0 10px 25px -5px rgba(79,70,229,0.3);">
+          <p style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.25rem;">🚀 Extract Tags Instantly</p>
+          <p style="margin: 0 0 1.25rem; font-size: 1rem; opacity: 0.9;">Paste any YouTube URL and get the hidden tags in 1 second.</p>
+          <a href="/tools/youtube-tag-extractor" style="display: inline-block; background: #fff; color: var(--color-primary, #4f46e5); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Open Free Tag Extractor</a>
+        </div>
+
+        <h3>How to use the tool:</h3>
+        <ol>
+          <li>Find the YouTube video you want to analyze and copy its URL.</li>
+          <li>Go to our free <a href="/tools/youtube-tag-extractor">YouTube Tag Extractor</a>.</li>
+          <li>Paste the URL into the search bar and click <strong>Extract Tags</strong>.</li>
+          <li>The tool will instantly display all hidden tags. Click <strong>Copy All Tags</strong> to copy them to your clipboard as a comma-separated list.</li>
+        </ol>
+
+        <h2>Method 2: Extract Tags Manually via Page Source (No Tools Required)</h2>
+        <p>If you prefer not to use a tool, you can act as your own <strong>youtube video tag extractor</strong> by inspecting the webpage's source code. Here is how:</p>
+        
+        <ol>
+          <li>Open the target YouTube video in a web browser like Chrome or Firefox on your computer.</li>
+          <li>Right-click anywhere on the blank space of the page and select <strong>View Page Source</strong> (or press <code>Ctrl+U</code> / <code>Cmd+Option+U</code>).</li>
+          <li>A new tab will open with a lot of HTML code. Press <code>Ctrl+F</code> (Windows) or <code>Cmd+F</code> (Mac) to open the search bar.</li>
+          <li>Type <code>"keywords"</code> into the search bar.</li>
+          <li>Look for a line of code that looks like this: <code>&lt;meta name="keywords" content="tag1, tag2, tag3"&gt;</code>.</li>
+          <li>The text inside the <code>content="..."</code> attribute is the list of tags the creator used.</li>
+        </ol>
+
+        <p>While this method works, it can be tedious if you are researching multiple videos, which is why an automated <strong>youtube video tags extractor</strong> is recommended for serious SEO research.</p>
+
+        <h2>Best Practices for Using Extracted Tags</h2>
+        <p>Once you have extracted tags from successful competitors, don't just copy and paste them blindly. Follow these best practices:</p>
+        <ul>
+          <li><strong>Relevance is Key:</strong> Only use tags that accurately describe your video. Irrelevant tags can hurt your ranking.</li>
+          <li><strong>Mix Broad and Specific:</strong> Use a combination of broad category tags and specific, long-tail keyword tags.</li>
+          <li><strong>Put Important Tags First:</strong> YouTube places slightly more weight on the first few tags in your list.</li>
+        </ul>
+
+        <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #cbd5e1;" />
+        <h2>Explore Our Other Free Tools</h2>
+        <p>While optimizing your YouTube channel, you might also need to handle business documents, NDAs, and contracts. MyDigitSign offers a full suite of free, 100% private client-side tools:</p>
+        <ul>
+          <li><a href="/tools/sign-pdf-online">Sign PDF Online Free</a></li>
+          <li><a href="/tools/type-signature-online">Type Signature Generator</a></li>
+          <li><a href="/tools/generate-signature-line">Signature Line Generator</a></li>
+        </ul>
+      `
+    },
     'how-to-sign-a-document-online-free-pdf-editor': {
       title: 'How to Legally Sign a Document Online: The Complete 2026 Guide',
       description: 'Learn how to legally sign any document online for free. This guide covers the ESIGN Act, types of electronic signatures, and step-by-step instructions for secure signing.',

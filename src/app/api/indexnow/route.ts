@@ -46,6 +46,7 @@ function getAllUrls(): string[] {
     'where-to-get-digital-signature-certificate',
     'pdf-editor-with-signature-free',
     'digital-signature-laws-by-country',
+    'how-to-extract-youtube-tags',
   ];
 
   const tools = [
@@ -62,6 +63,8 @@ function getAllUrls(): string[] {
     'jpg-to-pdf',
     'split-pdf-online',
     'sign-word-document',
+    'generate-signature-line',
+    'youtube-tag-extractor',
   ];
 
   const comparisons = [

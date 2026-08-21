@@ -269,6 +269,15 @@ const toolsList = [
     icon: '▶️',
     searchKeywords: ['youtube tag extractor', 'youtube tags extractor', 'extract youtube tags', 'youtube seo'],
   },
+  {
+    slug: 'youtube-title-strength-checker',
+    title: 'YouTube Title Tester',
+    badge: 'New',
+    category: 'SEO Tools',
+    description: 'Score your YouTube video title for CTR potential. Analyze length, power words, sentiment, and psychology.',
+    icon: '📊',
+    searchKeywords: ['youtube title strength checker', 'youtube title tester', 'youtube video title analyzer'],
+  },
 ];
 
 export default function ToolsHubPage() {

@@ -55,6 +55,112 @@ interface Post {
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string): Post | null => {
   const posts: Record<string, Post> = {
+    'how-to-write-strong-youtube-titles': {
+      title: 'How to Write Strong YouTube Titles That Get Clicks (2026)',
+      description: 'Learn the secrets of writing high-CTR YouTube titles. Discover how to use power words, optimal lengths, and our free Title Strength Checker to boost your views.',
+      date: 'August 21, 2026',
+      lastModified: 'August 21, 2026',
+      author: 'MyDigitSign SEO Team',
+      keywords: ['youtube title strength checker', 'youtube title tester', 'youtube video title analyzer', 'how to write youtube titles', 'youtube title generator', 'high ctr youtube titles'],
+      content: `
+        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
+          <p style="margin: 0; font-size: 0.975rem; line-height: 1.6;">The perfect YouTube title is 50-70 characters long, includes a number, uses emotional power words, and accurately represents the video content. To test your title's potential Click-Through Rate (CTR) before publishing, use our free <strong><a href="/tools/youtube-title-strength-checker">YouTube Title Strength Checker</a></strong>.</p>
+        </div>
+
+        <p>If you want to grow on YouTube, there is one undeniable truth you must accept: <strong>If they don't click, they don't watch.</strong></p>
+        <p>You can spend 40 hours scripting, filming, and editing a masterpiece, but if your video title and thumbnail fail to capture attention in the first 2 seconds, the YouTube algorithm will bury your video. Your Click-Through Rate (CTR) is the gatekeeper to your success.</p>
+        <p>In this guide, we are going to break down the anatomy of a perfect YouTube title. We will cover the psychological triggers that make people click, the structural rules you must follow, and how you can use a <strong>youtube title strength checker</strong> to score your titles before you ever hit publish.</p>
+
+        <h2>Section 1: The Anatomy of a Perfect YouTube Title</h2>
+        <p>Writing a great title is not about clickbait; it is about creating a "curiosity gap." You want to give the viewer just enough information to understand what the video is about, but withhold enough information to make them feel like they <em>need</em> to click to find out more.</p>
+        <p>Here are the 5 core elements of a high-performing YouTube title:</p>
+
+        <h3>1. The Golden Length (50-70 Characters)</h3>
+        <p>YouTube gives you 100 characters for your title. A common mistake new creators make is trying to use all 100 characters to stuff as many keywords as possible. However, on mobile devices (where over 70% of YouTube consumption happens), titles that are longer than 70 characters get truncated. They end in an ellipsis (...), which can cut off your most compelling hook.</p>
+        <p>The sweet spot is between 50 and 70 characters. This is long enough to include a primary keyword (like "youtube video title analyzer") and an emotional hook, but short enough to be read at a glance on a small screen.</p>
+
+        <h3>2. The Power of Numbers</h3>
+        <p>The human brain loves structure and predictability. When we are endlessly scrolling, a number stands out visually against a wall of text. Titles with numbers consistently outperform those without.</p>
+        <ul>
+          <li><strong>Bad:</strong> How to Grow on YouTube</li>
+          <li><strong>Good:</strong> 5 Proven Ways to Grow on YouTube in 2026</li>
+        </ul>
+        <p>You can use numbers for listicles ("7 Tips"), timelines ("in 24 Hours"), percentages ("100% Guaranteed"), or years ("(2026 Guide)").</p>
+
+        <h3>3. Emotional "Power Words"</h3>
+        <p>Your title needs to evoke an emotion. Whether it is excitement, fear, curiosity, or urgency, emotion drives action. This is where "Power Words" come in. Words like <strong>Secret, Ultimate, Insane, Exposed, Warning, and Guaranteed</strong> instantly elevate a boring title into a compelling one.</p>
+        <p>When you run your title through a <strong>youtube title tester</strong>, the algorithm actively looks for these high-impact adjectives. If your title is purely descriptive ("How to Sign a PDF"), it will score lower than an emotionally charged alternative ("The Secret to Signing PDFs Instantly for Free").</p>
+
+        <h2>Section 2: How to Test Your Titles Before Publishing</h2>
+        <p>Instead of guessing what works, you can use data to predict your CTR. We have built a completely free tool that analyzes your titles based on the criteria used by the world's top creators.</p>
+
+        <div style="background: var(--color-primary, #4f46e5); color: #fff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; box-shadow: 0 10px 25px -5px rgba(79,70,229,0.3);">
+          <p style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.25rem;">💯 Score Your YouTube Title</p>
+          <p style="margin: 0 0 1.25rem; font-size: 1rem; opacity: 0.9;">Analyze your title for length, power words, and psychology to get a CTR score out of 100.</p>
+          <a href="/tools/youtube-title-strength-checker" style="display: inline-block; background: #fff; color: var(--color-primary, #4f46e5); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Open Title Strength Checker</a>
+        </div>
+
+        <h3>How the Title Checker Works:</h3>
+        <ol>
+          <li><strong>Input:</strong> Type or paste your drafted title into the analyzer.</li>
+          <li><strong>Real-time Scoring:</strong> The tool instantly calculates a score from 0 to 100. A score of 80+ is considered excellent.</li>
+          <li><strong>Actionable Feedback:</strong> The tool breaks down exactly where you lost points. If your title is too long, lacks numbers, or is missing emotional power words, it will tell you exactly what to fix.</li>
+        </ol>
+
+        <h2>Section 3: Advanced Title Strategies (Brackets & Capitalization)</h2>
+        <p>Once you have the basics down, you can use structural formatting to make your title pop even more.</p>
+
+        <h3>Visual Grouping with Brackets</h3>
+        <p>Adding brackets <code>[ ]</code> or parentheses <code>( )</code> to the end of a title is a proven CTR hack. It visually breaks up the text and provides a secondary, often highly emotional, hook.</p>
+        <p>For example, instead of writing "I Survived 50 Hours in Antarctica," MrBeast style formatting would use "I Survived 50 Hours in Antarctica [I Almost Froze]." The bracketed text acts as a mini-subtitle that seals the deal.</p>
+
+        <h3>Strategic Capitalization</h3>
+        <p>Writing your entire title in ALL CAPS is a bad idea. It looks like spam, feels like you are shouting at the viewer, and violates YouTube's community guidelines on clickbait. However, capitalizing ONE or TWO specific words can effectively emphasize the emotional core of the video.</p>
+        <ul>
+          <li><strong>Example:</strong> "Why You Should NEVER Buy This Camera."</li>
+        </ul>
+        <p>The capitalization of "NEVER" draws the eye and emphasizes the warning.</p>
+
+        <h2>Section 4: Synergy Between Title and Thumbnail</h2>
+        <p>Your title does not exist in a vacuum. It sits directly next to your thumbnail. If your title and thumbnail say the exact same thing, you are wasting valuable real estate. They should complement each other, not repeat each other.</p>
+        <p><strong>The Rule of Thumb:</strong> The thumbnail catches the eye and presents the visual context. The title provides the specific details and the hook.</p>
+        <p>For example, if your thumbnail has big text that says "DO NOT SIGN THIS!", your title should not be "Do Not Sign This Contract." Instead, your title should provide the context: "The Hidden Trap in Standard Employment Contracts." The thumbnail creates the emotion (fear/curiosity), and the title explains exactly what the video is about.</p>
+
+        <h2>Section 5: YouTube Search vs. Suggested Videos</h2>
+        <p>When using a <strong>youtube video title analyzer</strong>, you need to know what your goal is. Are you trying to rank in YouTube search results, or are you trying to go viral in the "Suggested" feed?</p>
+
+        <h3>Search-Optimized Titles</h3>
+        <p>If you have a small channel, Search is your best friend. Search titles are highly literal and keyword-dense. They answer a specific question that people are actively typing into the search bar.</p>
+        <ul>
+          <li><em>Example:</em> "How to Sign a PDF Online for Free (No Watermark)"</li>
+        </ul>
+        <p>To optimize for search, you should also use a <a href="/tools/youtube-tag-extractor">YouTube Tag Extractor</a> to find out what tags your competitors are using and include those exact phrases in your title and description.</p>
+
+        <h3>Suggested-Optimized Titles</h3>
+        <p>If you have a larger channel or are making highly entertaining content (like vlogs or challenges), you want to optimize for the Suggested feed. These titles are broader, more dramatic, and heavily rely on the curiosity gap rather than specific keywords.</p>
+        <ul>
+          <li><em>Example:</em> "I Tried the Internet's Hardest Puzzle"</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Writing a great YouTube title is a mix of art and science. By following the 50-70 character rule, injecting numbers and power words, and ensuring your title complements your thumbnail, you will see a massive increase in your Click-Through Rate.</p>
+        <p>Don't leave your video's success to chance. Always run your ideas through a <strong>youtube title strength checker</strong> to ensure you are hitting all the psychological triggers before you publish. Happy creating!</p>
+
+        <hr style="margin: 3rem 0 2rem; border: 0; border-top: 1px solid #cbd5e1;" />
+        
+        <h2>Need Tools for Your Creator Business?</h2>
+        <p>Managing a YouTube channel often means dealing with sponsorships, brand deals, and contracts. MyDigitSign offers a completely free suite of client-side document tools to help you manage your business professionally, without paying for expensive software subscriptions:</p>
+        
+        <ul style="line-height: 1.8; margin-bottom: 2rem;">
+          <li><strong><a href="/tools/sign-pdf-online">Sign PDF Online Free</a>:</strong> Securely sign sponsorship contracts in your browser. No server uploads required.</li>
+          <li><strong><a href="/tools/type-signature-online">Type Signature Generator</a>:</strong> Create a beautiful, professional cursive signature by simply typing your name.</li>
+          <li><strong><a href="/tools/sign-nda-online">Sign an NDA Online</a>:</strong> Keep your video ideas safe by having freelancers or collaborators sign Non-Disclosure Agreements instantly.</li>
+          <li><strong><a href="/tools/generate-signature-line">Signature Line Generator</a>:</strong> Create professional signature blocks for the invoices you send to brands.</li>
+          <li><strong><a href="/tools/edit-pdf-online">Free PDF Editor</a>:</strong> Annotate and highlight PDF briefs or scripts directly in your browser.</li>
+        </ul>
+      `
+    },
     'how-to-extract-youtube-tags': {
       title: 'How to Extract Tags from Any YouTube Video (Free Tool)',
       description: 'Learn how to find and extract hidden SEO tags from any YouTube video manually or using our free YouTube Tag Extractor tool.',

@@ -47,6 +47,7 @@ function getAllUrls(): string[] {
     'pdf-editor-with-signature-free',
     'digital-signature-laws-by-country',
     'how-to-extract-youtube-tags',
+    'how-to-write-strong-youtube-titles',
   ];
 
   const tools = [
@@ -65,6 +66,7 @@ function getAllUrls(): string[] {
     'sign-word-document',
     'generate-signature-line',
     'youtube-tag-extractor',
+    'youtube-title-strength-checker',
   ];
 
   const comparisons = [

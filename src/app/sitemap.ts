@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'digital-signature-laws-by-country', modified: '2026-08-09' },
     { slug: 'sample-email-request-to-sign-nda', modified: '2026-08-12' },
     { slug: 'how-to-extract-youtube-tags', modified: '2026-08-21' },
+    { slug: 'how-to-write-strong-youtube-titles', modified: '2026-08-21' },
   ];
 
   // Dedicated micro-tools suite
@@ -66,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sign-freelance-contract-online',
     'sign-business-agreement-online',
     'youtube-tag-extractor',
+    'youtube-title-strength-checker',
   ];
 
   return [

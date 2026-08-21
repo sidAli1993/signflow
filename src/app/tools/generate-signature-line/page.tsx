@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
-import HomeClient from '../../HomeClient';
+import SignatureLineGeneratorClient from '@/components/tools/SignatureLineGeneratorClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
 import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
@@ -140,11 +140,14 @@ export default function GenerateSignatureLineTool() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      <HomeClient 
-        initialTab="type" 
-        titleOverride="Place Your <span>Signature</span>" 
-        descriptionOverride="Create your digital signature below, then upload the document where you need to place it on the signature line."
-      />
+      <SignatureLineGeneratorClient />
+      
+      <div style={{ textAlign: 'center', marginTop: '2rem', marginBottom: '1rem' }}>
+        <p style={{ color: '#475569', fontSize: '1rem' }}>
+          Have a PDF that needs signing? Use our <a href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 600, textDecoration: 'underline' }}>Free PDF Signer</a> instead. 
+          Want to just create a transparent signature? Try the <a href="/tools/type-signature-online" style={{ color: 'var(--color-primary, #4f46e5)', fontWeight: 600, textDecoration: 'underline' }}>Typed Signature Generator</a>.
+        </p>
+      </div>
 
       <section className={styles.seoExplainer} aria-label="What is a signature line">
         <div className={styles.seoExplainerInner}>

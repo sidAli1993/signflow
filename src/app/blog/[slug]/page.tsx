@@ -4199,7 +4199,7 @@ Date: October 24, 2026
           answer: "If someone refuses to sign an NDA, you should politely decline to share the confidential information. Ask them specifically which clauses they object to; sometimes it's just a misunderstanding that can be resolved by modifying a single paragraph."
         }
       ]
-,
+    },
     'what-is-ssl-email': {
       title: "What is SSL Email & Why You Need Digital Certificates (2026)",
       description: "Learn what SSL email encryption is, how digital certificates secure your inbox, and why you should combine encrypted email with secure document signing.",
@@ -4971,7 +4971,6 @@ Date: October 24, 2026
   <li><strong><a href="/tools/protect-pdf-online">Password Protect PDF</a>:</strong> Add AES-256 encryption to your contracts before emailing them to your broker.</li>
 </ul>
 `
-    }
     }
   };
 

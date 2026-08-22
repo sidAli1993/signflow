@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     'create signature line',
     'generate signature line',
     'sign here line',
+    'how to add a signature line in word',
+    'how to insert a signature line in word',
+    'how to make a signature line in word',
   ],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/generate-signature-line',
@@ -252,8 +255,8 @@ export default function GenerateSignatureLineTool() {
                 <p>The /s/ notation means &ldquo;signed.&rdquo; It indicates that a person typed their name as an electronic signature instead of signing with ink. For example, &ldquo;/s/ John Doe&rdquo; means John Doe electronically signed the document. This is legally valid under the ESIGN Act and UETA for most transactions.</p>
               </div>
               <div className={styles.faqItem}>
-                <h3>How do I insert a signature line in Microsoft Word?</h3>
-                <p>In Word, go to Insert → Signature Line (in the Text group). However, this requires a digital certificate. A simpler method is to upload your Word document to our free tool, create your signature, and place it on the signature line — no certificate needed.</p>
+                <h3>How to add a signature line in Microsoft Word?</h3>
+                <p>If you are wondering how to add a signature line in Word (or how to insert a signature line in Word), the official way is to go to Insert → Signature Line (in the Text group). However, this requires a digital certificate. If you just want to know how to make a signature line in Word quickly, you can type three underscores and press Enter. A simpler method is to upload your Word document to our free tool, create your signature, and place it on the signature line — no certificate needed.</p>
               </div>
               <div className={styles.faqItem}>
                 <h3>Can I create a signature line in Google Docs?</h3>

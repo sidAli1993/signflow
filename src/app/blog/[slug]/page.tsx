@@ -4927,7 +4927,7 @@ Date: October 24, 2026
 
 <h3>The Exceptions: Deeds and Notarizations</h3>
 <p>While the ESIGN Act covers contracts, it generally does not cover the <em>transfer of title</em> or documents that require official notarization (depending on the state).</p>
-<p><strong>Warranty Deeds, Quitclaim Deeds, and Promissory Notes</strong> often still require a "wet signature" (physical ink) in the physical presence of a Notary Public. While some states have legalized Remote Online Notarization (RON), the county clerk offices that record these deeds are often archaic and will reject electronically signed deeds.</p>
+<p><strong>Warranty Deeds, Quitclaim Deeds, and Promissory Notes</strong> often still require a "wet signature" (physical ink) in the physical presence of a Notary Public. While some states have legalized <a href="https://onenotary.com/">Remote Online Notarization</a> (RON), the county clerk offices that record these deeds are often archaic and will reject electronically signed deeds.</p>
 <p>Always consult your closing attorney or escrow officer before attempting to eSign a deed.</p>
 
 <h2>Section 3: How to Securely Sign a Real Estate Contract Online</h2>

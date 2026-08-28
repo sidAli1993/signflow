@@ -7,13 +7,14 @@ import templates from '@/data/templates.json';
 import categories from '@/data/categories.json';
 
 interface Props {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }
 
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const category = categories.find((c) => c.slug === params.category);
+  const resolvedParams = await params;
+  const category = categories.find((c) => c.slug === resolvedParams.category);
   if (!category) return {};
 
   return {
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CategoryPage({ params }: Props) {
-  const category = categories.find((c) => c.slug === params.category);
+export default async function CategoryPage({ params }: Props) {
+  const resolvedParams = await params;
+  const category = categories.find((c) => c.slug === resolvedParams.category);
   if (!category) {
     notFound();
   }

@@ -7,13 +7,14 @@ import templates from '@/data/templates.json';
 import categories from '@/data/categories.json';
 
 interface Props {
-  params: { category: string; slug: string };
+  params: Promise<{ category: string; slug: string }>;
 }
 
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const template = templates.find((t) => t.slug === params.slug && t.category === params.category);
+  const resolvedParams = await params;
+  const template = templates.find((t) => t.slug === resolvedParams.slug && t.category === resolvedParams.category);
   if (!template) return {};
 
   return {
@@ -23,9 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function TemplateItemPage({ params }: Props) {
-  const template = templates.find((t) => t.slug === params.slug && t.category === params.category);
-  const category = categories.find((c) => c.slug === params.category);
+export default async function TemplateItemPage({ params }: Props) {
+  const resolvedParams = await params;
+  const template = templates.find((t) => t.slug === resolvedParams.slug && t.category === resolvedParams.category);
+  const category = categories.find((c) => c.slug === resolvedParams.category);
 
   if (!template || !category) {
     notFound();

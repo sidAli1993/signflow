@@ -38,14 +38,14 @@ export async function generateStaticParams() {
     // Phase 4 new posts
     { slug: 'sample-email-request-to-sign-nda' },
     { slug: 'how-to-extract-youtube-tags' },
-      { slug: 'what-is-ssl-email' },
-      { slug: 'what-is-dsign' },
-      { slug: 'can-you-change-your-signature' },
-      { slug: 'signature-and-date-line' },
-      { slug: 'esignature-in-georgia' },
-      { slug: 'how-to-create-transparent-signature-png' },
-      { slug: 'how-to-add-digital-signature-to-google-docs' },
-      { slug: 'sign-real-estate-contract-online' },
+    { slug: 'what-is-ssl-email' },
+    { slug: 'what-is-dsign' },
+    { slug: 'can-you-change-your-signature' },
+    { slug: 'signature-and-date-line' },
+    { slug: 'esignature-in-georgia' },
+    { slug: 'how-to-create-transparent-signature-png' },
+    { slug: 'how-to-add-digital-signature-to-google-docs' },
+    { slug: 'sign-real-estate-contract-online' },
   ];
 }
 
@@ -63,6 +63,129 @@ interface Post {
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string): Post | null => {
   const posts: Record<string, Post> = {
+    'what-does-s-and-lts-mean-signature-line': {
+      title: 'What Does /s/ and lts Mean on a Signature Line? (Contract Terms Explained)',
+      description: 'Have you seen /s/ or lts on a contract signature line? Learn exactly what these legal terms mean, how to use a conformed signature, and why they matter for electronic contracts.',
+      date: 'August 28, 2026',
+      lastModified: 'August 28, 2026',
+      author: 'MyDigitSign Legal Desk',
+      keywords: ["what is a signature line", "lts line on contract", "/s/ meaning signature", "what does its stand for in a contract", "what does the by line mean on a contract", "signature line meaning", "conformed signature"],
+      faq: [
+        {
+          "question": "What does /s/ mean before a signature?",
+          "answer": "The /s/ stands for 'signature' and indicates a conformed signature. It is used on electronic or printed copies of a document to show that the original physical document was legally signed by the person whose name is typed next to it."
+        },
+        {
+          "question": "What does lts mean on a contract signature line?",
+          "answer": "L.T.S. stands for 'Legal Title/Seal' or 'Locus Sigilli' (the place of the seal). Historically, it indicated where a wax seal should be placed. Today, it simply marks the official spot where a signature must be applied to make the contract legally binding."
+        },
+        {
+          "question": "What does the 'by' line mean on a contract?",
+          "answer": "The 'by' line is used when an individual is signing on behalf of a company or another person as an authorized representative. You sign your name on the 'by' line to indicate you are executing the contract in your capacity as an agent, not holding yourself personally liable."
+        },
+        {
+          "question": "Is an /s/ signature legally binding?",
+          "answer": "Yes, an /s/ signature is legally binding when it is used in electronic filings (like federal court documents) or when both parties have agreed to accept electronic or conformed signatures under the ESIGN Act."
+        },
+        {
+          "question": "Can I use /s/ for any document?",
+          "answer": "While /s/ is widely accepted in legal filings and B2B contracts, certain highly regulated documents like wills, property deeds, and notarized affidavits may still require a wet-ink signature or a cryptographic digital certificate."
+        }
+      ],
+      content: `
+
+        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
+          <p style="margin: 0; font-size: 0.975rem; line-height: 1.6;">The <strong>/s/</strong> on a signature line stands for 'signature' and denotes a conformed signature, meaning the original document was physically signed. <strong>L.T.S.</strong> (or L.S.) stands for 'Locus Sigilli' (the place of the seal), indicating the exact spot where the signature must be placed to make the contract legally binding. The <strong>By</strong> line is used when you are signing on behalf of a company as an authorized representative.</p>
+        </div>
+
+        <p>If you have recently reviewed a business contract, a legal filing, or a corporate lease agreement, you might have noticed strange abbreviations near the signature block. Terms like <strong>/s/</strong>, <strong>lts</strong>, and <strong>By:</strong> are common in the legal world, but confusing for everyday signers.</p>
+        <p>What exactly is a signature line, and what do these abbreviations mean? More importantly, if you are signing a document electronically using a tool like <a href="/tools/sign-pdf-online">MyDigitSign</a>, how should you format your signature to ensure the contract remains legally bulletproof?</p>
+        <p>In this comprehensive guide, we will decode the terminology of the modern signature line, explain the history behind these legal abbreviations, and show you exactly how to sign your next contract.</p>
+
+        <h2>Section 1: What is a Signature Line?</h2>
+        <p>A signature line is the designated space at the end of a contract, agreement, or legal document where the parties must affix their signatures to indicate their consent and intent to be bound by the terms of the document. Without a signature on this line, the contract is generally considered an unexecuted draft.</p>
+        <p>A standard signature block usually contains more than just a blank line. It typically includes:</p>
+        <ul>
+          <li><strong>The Signature Line:</strong> Where the physical or electronic signature goes.</li>
+          <li><strong>The Printed Name:</strong> The legal name of the person signing, printed clearly below the line.</li>
+          <li><strong>The Title:</strong> The signer's official role (e.g., CEO, Managing Member) if they are signing on behalf of a company.</li>
+          <li><strong>The Date Line:</strong> The exact date the signature was applied.</li>
+        </ul>
+        <p>However, in formal legal documents, you will often see additional notations like <code>/s/</code> or <code>lts</code> added to these lines. Let's break down what they mean.</p>
+
+        <h2>Section 2: What Does /s/ Mean on a Signature Line?</h2>
+        <p>The notation <strong>/s/</strong> (often typed as <code>s/</code> or <code>/s/</code>) stands for "signature." It is known as a <strong>conformed signature</strong>.</p>
+        <p>A conformed signature is used on a copy of a document to indicate that the original physical document was actually signed by the person whose name is typed next to the /s/. You will most commonly see this in federal court filings, SEC documents, and corporate records where the original wet-ink document is kept in a physical file, but an electronic text version is uploaded to a database.</p>
+        
+        <h3>How to properly format an /s/ signature:</h3>
+        <p>When using a conformed signature, the standard format is to place the /s/ immediately before the typed name on the signature line. For example:</p>
+        <pre style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: monospace;">
+Signature: /s/ John Doe
+Name: John Doe
+Title: Chief Executive Officer
+Date: August 28, 2026
+        </pre>
+
+        <h3>Is an /s/ signature legally binding?</h3>
+        <p>Yes. Under the federal ESIGN Act and state UETA laws, electronic signatures—including conformed /s/ signatures—are legally binding as long as both parties consent to doing business electronically. In the US Federal Court system (PACER), attorneys are actually required to use the /s/ format when filing documents electronically on behalf of their clients.</p>
+        <p>However, if you are signing a standard B2B contract or a freelance agreement, it is much more professional (and legally robust) to use an actual visual electronic signature. You can easily <a href="/tools/type-signature-online">generate a typed cursive signature</a> for free using MyDigitSign and apply it to your PDF.</p>
+
+        <h2>Section 3: What Does lts or L.S. Mean on a Contract?</h2>
+        <p>If you are looking at a real estate lease, a deed, or a highly formal contract, you might see the letters <strong>lts</strong> or <strong>L.S.</strong> at the very end of the signature line.</p>
+        <p><strong>L.S.</strong> stands for <em>Locus Sigilli</em>, which is Latin for "the place of the seal." <strong>lts</strong> is a modern variation standing for "Legal Title/Seal."</p>
+        <p>Historically, a signature alone was not enough to make a contract legally binding; it required a physical wax seal stamped with the signer's unique family or corporate crest. The L.S. notation was printed on the document to tell the signer exactly where to drip the hot wax.</p>
+        
+        <h3>Does L.S. still matter today?</h3>
+        <p>In modern law, the requirement for a physical wax seal has been abolished in almost all jurisdictions for standard contracts. The presence of L.S. or lts on a modern contract is largely ceremonial and a holdover from historical legal boilerplate templates.</p>
+        <p>However, in some states, a contract "under seal" (which can simply mean the contract has the letters L.S. next to the signature) carries a longer statute of limitations for breach of contract claims compared to a standard unsealed contract. When you see lts on a signature line, you simply sign your name directly over or next to those letters.</p>
+
+        <h2>Section 4: What Does the "By" Line Mean on a Contract?</h2>
+        <p>The <strong>By:</strong> line is one of the most critical elements of corporate contracting. If you sign a contract incorrectly without a "By" line, you could be held personally liable for a multi-million dollar corporate debt.</p>
+        <p>The "By" line is used when an individual is acting as an <strong>authorized agent</strong> or representative for a corporate entity (like an LLC or a Corporation). It indicates that the company is the party entering into the contract, and the human being is simply signing <em>by</em> their authority to execute it.</p>
+
+        <h3>The Correct Way to Sign on Behalf of a Company:</h3>
+        <p>A proper corporate signature block should look like this:</p>
+        <pre style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; font-family: monospace;">
+COMPANY: Acme Corporation, Inc.
+
+By: ______________________ [Your Signature Here]
+Name: Jane Smith
+Title: President
+        </pre>
+        <p>When you place your signature on the "By:" line, you are legally declaring: "I am Jane Smith, I am the President of Acme Corp, and I am signing this to bind the company, not myself personally." If the "By" line is missing, and you just sign your name under the company name, a court could interpret that as a personal guarantee.</p>
+
+        <h2>Section 5: How to Generate and Sign Contracts Online</h2>
+        <p>Understanding contract terminology is only half the battle. When it comes time to actually execute the document, you need a secure, fast way to place your signature on the digital page.</p>
+        
+        <div style="background: var(--color-primary, #4f46e5); color: #fff; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; box-shadow: 0 10px 25px -5px rgba(79,70,229,0.3);">
+          <p style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.25rem;">📝 Need to Sign a Contract?</p>
+          <p style="margin: 0 0 1.25rem; font-size: 1rem; opacity: 0.9;">Sign PDFs instantly in your browser. No account required, and your files never leave your device.</p>
+          <a href="/tools/sign-pdf-online" style="display: inline-block; background: #fff; color: var(--color-primary, #4f46e5); padding: 0.75rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Sign Your Contract Free</a>
+        </div>
+
+        <p>MyDigitSign provides a complete suite of free tools to handle modern electronic signatures:</p>
+        <ul>
+          <li><strong>If you need an /s/ signature:</strong> You can simply type "/s/ Your Name" using our <a href="/tools/edit-pdf-online">PDF Text Editor tool</a> directly onto the PDF.</li>
+          <li><strong>If you need a formal signature:</strong> Use our <a href="/tools/draw-signature-online">Draw Signature</a> tool to create a smooth, freehand signature with your mouse, or use the <a href="/tools/type-signature-online">Type Signature</a> tool to generate a professional cursive script.</li>
+          <li><strong>If you need to create a signature line:</strong> Use our <a href="/tools/generate-signature-line">Signature Line Generator</a> to create a professional signature block (complete with "By:" and Date lines) to add to your own outgoing contracts.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>The legal world is full of archaic terminology, but you don't need a law degree to understand your contracts. When you see an <strong>/s/</strong>, you know it represents a conformed signature. When you see <strong>lts</strong> or <strong>L.S.</strong>, you know it's the historic "place of the seal." And most importantly, when you see a <strong>By:</strong> line, you know you are signing as a corporate agent, protecting your personal liability.</p>
+        <p>The next time you receive a contract, you can sign it with confidence. And when you do, skip the printer and use a secure, client-side electronic signature tool to get the deal done in seconds.</p>
+
+        <hr style="margin: 3rem 0 2rem; border: 0; border-top: 1px solid #cbd5e1;" />
+        <h2>Explore Our Free Document Tools</h2>
+        <ul style="line-height: 1.8; margin-bottom: 2rem;">
+          <li><strong><a href="/tools/sign-pdf-online">Sign PDF Online Free</a>:</strong> Securely sign contracts in your browser. No server uploads required.</li>
+          <li><strong><a href="/tools/sign-word-document">Sign Word Documents</a>:</strong> Easily add electronic signatures to .doc and .docx files online for free.</li>
+          <li><strong><a href="/tools/sign-image-online">Sign Image Online</a>:</strong> Place transparent signature overlays on PNG and JPG files.</li>
+        </ul>
+
+      `
+    },
+
     'how-to-write-strong-youtube-titles': {
       title: 'How to Write Strong YouTube Titles That Get Clicks (2026)',
       description: 'Learn the secrets of writing high-CTR YouTube titles. Discover how to use power words, optimal lengths, and our free Title Strength Checker to boost your views.',
@@ -4319,7 +4442,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'what-is-dsign': {
       title: "What is Dsign? The Ultimate Guide to Digital Signing (2026)",
       description: "Curious about Dsign? Learn how digital signatures work, the difference between electronic and digital signatures, and how to securely sign documents online.",
@@ -4418,7 +4541,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'can-you-change-your-signature': {
       title: "Can You Change Your Signature? Legal Rules & How to Do It (2026)",
       description: "Wondering if you can legally change your signature? Yes, you can. Learn the legal requirements for changing your signature on contracts, IDs, and banking documents.",
@@ -4512,7 +4635,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'signature-and-date-line': {
       title: "Signature and Date Line: Legal Requirements & Formatting Examples",
       description: "Learn how to format a legally binding signature and date line on any contract. Explore best practices, common mistakes, and how to generate signature blocks automatically.",
@@ -4612,14 +4735,28 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'esignature-in-georgia': {
-      title: "Regulatory Mandates for eSignature in Georgia (2026 Guide)",
+      title: "Are eSignatures Legal in Georgia? (Regulatory Mandates 2026)",
       description: "Are electronic signatures legal in Georgia? Learn the regulatory mandates for eSignatures in the State of Georgia, including UETA compliance and real estate rules.",
       date: 'August 22, 2026',
       lastModified: 'August 22, 2026',
       author: 'MyDigitSign Editorial',
       keywords: ["regulatory mandates for esignature in georgia", "georgia electronic signature law", "are electronic signatures legal in georgia", "georgia ueta", "georgia real estate esignature"],
+      faq: [
+        {
+          "question": "Are electronic signatures legally binding in Georgia?",
+          "answer": "Yes, electronic signatures are completely legally binding in the State of Georgia. Georgia has adopted the Uniform Electronic Transactions Act (UETA), which dictates that an electronic signature carries the exact same legal weight as a traditional wet-ink signature for almost all business and commercial transactions."
+        },
+        {
+          "question": "What are the regulatory mandates for eSignature in Georgia?",
+          "answer": "The primary regulatory mandate is governed by the Georgia Uniform Electronic Transactions Act (O.C.G.A. Title 10, Chapter 12). To be valid, an eSignature must show a clear intent to sign, both parties must consent to do business electronically, the signature must be logically associated with the document, and the final document must be retained and accessible to all parties."
+        },
+        {
+          "question": "Can I sign real estate documents electronically in Georgia?",
+          "answer": "Yes, you can sign purchase agreements, residential leases, and commercial leases electronically in Georgia. However, documents that transfer the actual title of a property (like a warranty deed) typically require a physical signature in the presence of a notary public and a witness, as Georgia is strict about in-person ink notarization for closings."
+        }
+      ],
       content: `
 <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
   <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer</p>
@@ -4686,6 +4823,26 @@ Date: October 24, 2026
   <li><strong>Download and Share:</strong> Download the signed PDF and email it to the counterparty, satisfying the record retention requirement of Georgia UETA.</li>
 </ol>
 
+<h2>Frequently Asked Questions</h2>
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem;">
+  <h3 itemprop="name" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Are electronic signatures legally binding in Georgia?</h3>
+  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <p itemprop="text">Yes, electronic signatures are completely legally binding in the State of Georgia. Georgia has adopted the Uniform Electronic Transactions Act (UETA), which dictates that an electronic signature carries the exact same legal weight as a traditional wet-ink signature for almost all business and commercial transactions.</p>
+  </div>
+</div>
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem;">
+  <h3 itemprop="name" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">What are the regulatory mandates for eSignature in Georgia?</h3>
+  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <p itemprop="text">The primary regulatory mandate is governed by the Georgia Uniform Electronic Transactions Act (O.C.G.A. Title 10, Chapter 12). To be valid, an eSignature must show a clear intent to sign, both parties must consent to do business electronically, the signature must be logically associated with the document, and the final document must be retained and accessible to all parties.</p>
+  </div>
+</div>
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" style="margin-bottom: 1.5rem;">
+  <h3 itemprop="name" style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Can I sign real estate documents electronically in Georgia?</h3>
+  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <p itemprop="text">Yes, you can sign purchase agreements, residential leases, and commercial leases electronically in Georgia. However, documents that transfer the actual title of a property (like a warranty deed) typically require a physical signature in the presence of a notary public and a witness, as Georgia is strict about in-person ink notarization for closings.</p>
+  </div>
+</div>
+
 <h2>Conclusion</h2>
 <p>The State of Georgia is fully open for digital business. Thanks to the Uniform Electronic Transactions Act, regulatory mandates for eSignatures in Georgia strongly protect and enforce digital contracts.</p>
 <p>Whether you are a freelance graphic designer signing a client NDA, a landlord executing a lease, or a small business hiring a new employee, you can safely, legally, and confidently use electronic signatures to run your Georgia business.</p>
@@ -4700,7 +4857,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'how-to-create-transparent-signature-png': {
       title: "How to Create a Transparent Signature PNG (2026 Guide)",
       description: "Learn how to create a high-quality, transparent signature PNG file. Use our free tool to draw or type your signature and download it with a clear background.",
@@ -4789,7 +4946,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'how-to-add-digital-signature-to-google-docs': {
       title: "How to Add a Digital Signature to Google Docs (2026 Guide)",
       description: "Learn three simple methods to add a digital signature to Google Docs. Use the built-in drawing tool, an add-on, or insert a transparent PNG signature.",
@@ -4888,7 +5045,7 @@ Date: October 24, 2026
 </ul>
 `
     }
-,
+    ,
     'sign-real-estate-contract-online': {
       title: "How to Sign a Real Estate Contract Online (2026 Guide)",
       description: "Learn how to securely and legally sign a real estate contract online. Understand the legal requirements for eSignatures on leases, purchase agreements, and deeds.",

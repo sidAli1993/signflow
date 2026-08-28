@@ -1,0 +1,61 @@
+[
+  {
+    "id": "tpl-001",
+    "title": "Non-Disclosure Agreement (NDA) Template",
+    "slug": "non-disclosure-agreement-nda",
+    "category": "business",
+    "description": "A comprehensive Non-Disclosure Agreement template to protect your confidential information and business secrets.",
+    "seoKeywords": ["free nda template", "non disclosure agreement pdf", "sign nda online"],
+    "thumbnailUrl": "/templates/thumbnails/nda-preview.webp",
+    "pdfUrl": "/templates/pdfs/nda-template.pdf",
+    "content": "A Non-Disclosure Agreement (NDA), also known as a confidentiality agreement, is a legal contract between at least two parties that outlines confidential material, knowledge, or information that the parties wish to share with one another for certain purposes, but wish to restrict access to or by third parties. Use this free template to get started instantly.",
+    "faqs": [
+      {
+        "question": "Is this NDA template legally binding?",
+        "answer": "Yes, once signed by all parties, this NDA constitutes a legally binding contract."
+      },
+      {
+        "question": "Do I need a lawyer to sign an NDA?",
+        "answer": "No, you do not need a lawyer to sign an NDA, but it is always recommended to have legal counsel review any binding agreements."
+      }
+    ]
+  },
+  {
+    "id": "tpl-002",
+    "title": "SCORE Business Plan Template",
+    "slug": "score-business-plan-template",
+    "category": "business",
+    "description": "The official SCORE business plan template for startups and small businesses to define their strategy, market, and financials.",
+    "seoKeywords": ["score business plan template", "free business plan template pdf", "startup business plan pdf"],
+    "thumbnailUrl": "/templates/thumbnails/score-business-plan-preview.webp",
+    "pdfUrl": "/templates/pdfs/score-business-plan.pdf",
+    "content": "A business plan is an essential roadmap for business success. This SCORE Business Plan template is a widely recognized standard that guides you through the crucial steps of starting and running a business. It covers the executive summary, company description, products and services, marketing plan, operational plan, management and organization, and financial plan.",
+    "faqs": [
+      {
+        "question": "What is the SCORE Business Plan Template?",
+        "answer": "The SCORE Business Plan Template is a free, comprehensive document designed by SCORE (Service Corps of Retired Executives) to help entrepreneurs structure and write a complete business plan."
+      },
+      {
+        "question": "Can I edit this template online?",
+        "answer": "Yes! With SignFlow, you can instantly fill out, edit, and sign this business plan template online without downloading any software."
+      }
+    ]
+  },
+  {
+    "id": "tpl-003",
+    "title": "Standard Residential Lease Agreement",
+    "slug": "standard-residential-lease-agreement",
+    "category": "real-estate",
+    "description": "A standard residential lease agreement template for landlords and tenants to outline rental terms.",
+    "seoKeywords": ["free residential lease agreement", "rental agreement template pdf", "landlord tenant lease pdf"],
+    "thumbnailUrl": "/templates/thumbnails/residential-lease-preview.webp",
+    "pdfUrl": "/templates/pdfs/residential-lease.pdf",
+    "content": "A Residential Lease Agreement is a contract between a landlord and tenant that outlines the terms of the rental, including rent amount, lease duration, and responsibilities. This free, standardized template is easy to use and covers all basic rental requirements.",
+    "faqs": [
+      {
+        "question": "Is this lease agreement valid in my state?",
+        "answer": "This is a general template. While it covers standard terms, real estate laws vary by state. It is advisable to ensure it complies with local regulations."
+      }
+    ]
+  }
+]

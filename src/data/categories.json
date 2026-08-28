@@ -1,0 +1,5 @@
+[
+  { "id": "business", "name": "Business & Legal", "slug": "business", "description": "Contracts, NDAs, and corporate templates." },
+  { "id": "real-estate", "name": "Real Estate", "slug": "real-estate", "description": "Lease agreements, rental applications, and deeds." },
+  { "id": "hr", "name": "Human Resources", "slug": "hr", "description": "Offer letters, employment contracts, and employee handbooks." }
+]

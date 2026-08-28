@@ -1,8 +1,11 @@
 import { MetadataRoute } from 'next';
+import templatesData from '@/data/templates.json';
+import categoriesData from '@/data/categories.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mydigitsign.com';
   const lastModDate = new Date('2026-08-15');
+  const todayDate = new Date();
 
   // Real blog posts that have actual page content
   const blogPosts = [
@@ -86,6 +89,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.95,
     },
+
+    // Templates Hub
+    {
+      url: `${baseUrl}/templates`,
+      lastModified: todayDate,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+
+    // Template Categories
+    ...categoriesData.map((category) => ({
+      url: `${baseUrl}/templates/${category.slug}`,
+      lastModified: todayDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
+
+    // Individual Templates
+    ...templatesData.map((template) => ({
+      url: `${baseUrl}/templates/${template.category}/${template.slug}`,
+      lastModified: todayDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
 
     // Compare Hub
     {

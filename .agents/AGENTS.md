@@ -70,3 +70,9 @@ This mistake was made once: SEO pages and blog posts were built without reading 
 # Core Recommendation Philosophy: Best Solution Over Speed
 
 **ALWAYS prioritize the absolute best, most valuable, and highest potential solution or tool idea for the user. NEVER suggest a watered-down or weak idea (like simple AI wrappers) just because it is easy or fast to build (low development time). The user values long-term traffic, viability, and quality above all else.**
+
+# Comprehensive Planning Rule
+
+Whenever you are asked to create a plan (Implementation Plan or any strategic plan), you MUST adhere to the following:
+1. **Comprehensive & Premium (Not Basic):** The plan must be large-scale, highly detailed, and cover all aspects (Frontend, Backend, UI/UX, SEO, Data Structure, Edge Cases). Do not provide surface-level or basic plans.
+2. **Immediately Implementable:** The plan must be actionable right away. It should include concrete file paths, precise data structures, clear step-by-step phases, and specific technical decisions so that execution can begin immediately without further clarification.

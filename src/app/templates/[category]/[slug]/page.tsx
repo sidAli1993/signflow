@@ -10,6 +10,8 @@ interface Props {
   params: { category: string; slug: string };
 }
 
+export const dynamicParams = true;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const template = templates.find((t) => t.slug === params.slug && t.category === params.category);
   if (!template) return {};

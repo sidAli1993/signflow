@@ -133,9 +133,9 @@ export default function SignImageTool() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
-      <HomeClient 
-        initialTab="type" 
-        titleOverride="Sign Your <span>Image Document</span>" 
+      <HomeClient
+        initialTab="type"
+        titleOverride="Sign Your <span>Image Document</span>"
         descriptionOverride="Create or adopt your digital signature. Once adopted, you can upload the PNG or JPG image document you need to sign."
       />
 

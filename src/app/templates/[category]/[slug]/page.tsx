@@ -158,9 +158,10 @@ export default function TemplateItemPage({ params }: Props) {
                 <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#0f172a', marginBottom: '20px' }}>
                   About this Template
                 </h2>
-                <div style={{ color: '#475569', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                  {template.content}
-                </div>
+                <div 
+                  style={{ color: '#475569', fontSize: '1.1rem', lineHeight: 1.8 }}
+                  dangerouslySetInnerHTML={{ __html: template.content }}
+                />
               </div>
 
               {/* FAQs */}

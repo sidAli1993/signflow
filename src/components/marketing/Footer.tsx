@@ -49,6 +49,7 @@ export const Footer: React.FC = () => {
           <div className={styles.linksCol}>
             <h4 className={styles.colTitle}>Free Tools Suite</h4>
             <Link href="/tools" className={styles.link} style={{ fontWeight: 700, color: 'var(--color-primary, #4f46e5)' }}>All Tools Hub →</Link>
+            <Link href="/templates" className={styles.link} style={{ fontWeight: 700, color: 'var(--color-primary, #4f46e5)' }}>Templates Library →</Link>
             <Link href="/tools/sign-pdf-online" className={styles.link}>Sign PDF Online Free</Link>
             <Link href="/tools/edit-pdf-online" className={styles.link}>Edit PDF Online</Link>
             <Link href="/tools/merge-pdf-online" className={styles.link}>Merge PDF Online</Link>

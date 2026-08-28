@@ -308,6 +308,13 @@ export default function RootLayout({
         </Script>
         <Script id="ezoic-analytics" strategy="lazyOnload" src="https://ezoicanalytics.com/analytics.js" />
         <Script id="ahrefs-analytics" strategy="lazyOnload" src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" />
+        {/* Google AdSense */}
+        <Script
+          id="google-adsense"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2946390705770489"
+        />
         {/* Google Analytics Tag */}
         <Script
           id="google-gtag"

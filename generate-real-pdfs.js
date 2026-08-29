@@ -7,27 +7,83 @@ async function createPDF(title, filename, contentLines) {
   const font = await doc.embedFont(StandardFonts.Helvetica);
   const boldFont = await doc.embedFont(StandardFonts.HelveticaBold);
   
-  let page = doc.addPage();
+  let page = doc.addPage([595.28, 841.89]); // A4 Size
   const { width, height } = page.getSize();
   
-  let y = height - 50;
+  let y = height - 80;
+  const marginX = 60;
   
-  // Draw Title
-  page.drawText(title, { x: 50, y, size: 24, font: boldFont, color: rgb(0, 0, 0) });
-  y -= 40;
+  // Premium Top Border Line
+  page.drawRectangle({
+    x: 0,
+    y: height - 8,
+    width: width,
+    height: 8,
+    color: rgb(0.145, 0.388, 0.922), // #2563eb
+  });
+  
+  // Center Title
+  const titleSize = 24;
+  const titleWidth = boldFont.widthOfTextAtSize(title, titleSize);
+  page.drawText(title, { 
+    x: (width - titleWidth) / 2, 
+    y, 
+    size: titleSize, 
+    font: boldFont, 
+    color: rgb(0.06, 0.09, 0.16) // #0f172a
+  });
+  
+  // Footer
+  page.drawText('Generated via MyDigitSign.com', {
+    x: marginX,
+    y: 30,
+    size: 9,
+    font: font,
+    color: rgb(0.6, 0.6, 0.6)
+  });
+
+  y -= 50;
   
   for (const line of contentLines) {
-    if (y < 50) {
-      page = doc.addPage();
-      y = height - 50;
+    if (y < 70) {
+      page = doc.addPage([595.28, 841.89]);
+      y = height - 80;
+      
+      page.drawRectangle({
+        x: 0,
+        y: height - 8,
+        width: width,
+        height: 8,
+        color: rgb(0.145, 0.388, 0.922),
+      });
+
+      page.drawText('Generated via MyDigitSign.com', {
+        x: marginX,
+        y: 30,
+        size: 9,
+        font: font,
+        color: rgb(0.6, 0.6, 0.6)
+      });
     }
     
     if (line.startsWith('## ')) {
-       y -= 10;
-       page.drawText(line.replace('## ', ''), { x: 50, y, size: 16, font: boldFont, color: rgb(0, 0, 0) });
+       y -= 15;
+       page.drawText(line.replace('## ', ''), { 
+         x: marginX, 
+         y, 
+         size: 14, 
+         font: boldFont, 
+         color: rgb(0.12, 0.16, 0.23) 
+       });
        y -= 25;
     } else {
-       page.drawText(line, { x: 50, y, size: 12, font: font, color: rgb(0.2, 0.2, 0.2) });
+       page.drawText(line, { 
+         x: marginX, 
+         y, 
+         size: 11, 
+         font: font, 
+         color: rgb(0.2, 0.25, 0.33) 
+       });
        y -= 20;
     }
   }

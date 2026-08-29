@@ -68,7 +68,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare, onReq
 
   const [history, setHistory] = useState<HistoryState>({
     past: [],
-    present: [{ id: 'init', type: 'signature', pageNum: 1, x: 30, y: 50, width: 150, height: 75 }],
+    present: [],
     future: []
   });
   

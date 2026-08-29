@@ -48,7 +48,7 @@ export function ImageEditor({ file, signatureUrl, onStartOver, onShare }: ImageE
 
   const [history, setHistory] = useState<HistoryState>({
     past: [],
-    present: [{ id: 'init', type: 'signature', x: 30, y: 30, width: 150, height: 75 }],
+    present: [],
     future: []
   });
 

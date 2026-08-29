@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SignatureCreator } from '@/components/signing/SignatureCreator';
 import { DocumentEditor } from '@/components/editor/DocumentEditor';
 import { ImageEditor } from '@/components/editor/ImageEditor';
@@ -13,17 +13,32 @@ interface HomeClientProps {
   initialTab?: 'type' | 'draw' | 'upload';
   titleOverride?: string;
   descriptionOverride?: string;
+  templateUrl?: string;
 }
 
 export default function HomeClient({
   initialTab,
   titleOverride,
   descriptionOverride,
+  templateUrl,
 }: HomeClientProps = {}) {
   const [step, setStep]         = useState<1 | 2>(1);
   const [signature, setSignature] = useState<string | null>(null);
   const [file, setFile]         = useState<File | null>(null);
   const [isDragOver, setIsDragOver] = useState(false);
+
+  useEffect(() => {
+    if (templateUrl && !file) {
+      fetch(templateUrl)
+        .then(res => res.blob())
+        .then(blob => {
+          const filename = templateUrl.split('/').pop() || 'template.pdf';
+          const newFile = new File([blob], filename, { type: blob.type || 'application/pdf' });
+          setFile(newFile);
+        })
+        .catch(err => console.error('Failed to load template', err));
+    }
+  }, [templateUrl, file]);
 
   const handleSignatureSave = (dataUrl: string) => {
     trackEvent('signature_created');

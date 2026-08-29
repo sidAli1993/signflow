@@ -181,7 +181,7 @@
 /* ─── Signature Overlay ───────────────────────────── */
 .sigOverlay {
   position: absolute;
-  border: 2px dashed var(--color-primary);
+  border: 2px solid transparent;
   cursor: move;
   padding: 4px;
   box-sizing: border-box;
@@ -189,23 +189,84 @@
   align-items: center;
   justify-content: center;
   user-select: none;
-  background: rgba(79, 70, 229, 0.04);
   border-radius: var(--radius-sm);
-  transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .sigOverlay:hover {
-  border-color: var(--color-accent);
-  background: rgba(79, 70, 229, 0.08);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  border-color: rgba(79, 70, 229, 0.3);
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.sigOverlay.selected {
+  border-color: var(--color-primary);
+  background: rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
 }
 
 .dragging {
-  border-style: solid;
-  border-color: var(--color-accent);
-  background: rgba(79, 70, 229, 0.1);
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15), var(--shadow-lg);
   cursor: grabbing;
+  box-shadow: var(--shadow-lg);
+}
+
+.textOverlay {
+  background: rgba(37, 99, 235, 0.08);
+}
+.textOverlay.selected {
+  background: rgba(37, 99, 235, 0.15);
+}
+
+.textareaInput {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-sans);
+  resize: none;
+  line-height: 1.2;
+}
+.textareaInput::placeholder {
+  color: rgba(0,0,0,0.3);
+}
+
+.checkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.floatingControls {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  background: white;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  z-index: 20;
+}
+
+.iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+.iconBtn:hover {
+  background: var(--color-bg-secondary);
+  color: #ef4444;
 }
 
 .sigImage {
@@ -230,6 +291,14 @@
   z-index: 100;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sigOverlay.selected .resizeHandle,
+.sigOverlay:hover .resizeHandle {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .resizeHandle:hover {

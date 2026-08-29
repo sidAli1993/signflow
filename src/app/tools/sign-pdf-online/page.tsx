@@ -146,7 +146,14 @@ const faqSchema = {
 
 // ─── Component ──────────────────────────────────────────────────────────────
 
-export default function SignPdfOnlineTool() {
+interface Props {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function SignPdfOnlineTool({ searchParams }: Props) {
+  const resolvedSearchParams = await searchParams;
+  const templateUrl = typeof resolvedSearchParams?.templateUrl === 'string' ? resolvedSearchParams.templateUrl : undefined;
+
   return (
     <div className={styles.appWrapper}>
       <Navbar />
@@ -207,6 +214,7 @@ export default function SignPdfOnlineTool() {
         initialTab="draw"
         titleOverride="Sign Your <span>PDF Document</span>"
         descriptionOverride="Create your signature below — draw, type, or upload. Once adopted, you'll be prompted to upload the PDF you want to sign."
+        templateUrl={templateUrl}
       />
 
       {/* ── SEO Content Sections ── */}

@@ -21,7 +21,7 @@ const Toast = ({ message, type }: { message: string, type: 'success'|'error' }) 
   </div>
 );
 
-type PlacementType = 'signature' | 'text' | 'date';
+type PlacementType = 'signature' | 'text' | 'date' | 'check';
 
 interface Placement {
   id: string;
@@ -32,6 +32,8 @@ interface Placement {
   width: number;
   height: number;
   value?: string;
+  fontSize?: number;
+  color?: string;
 }
 
 interface HistoryState {
@@ -102,6 +104,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   
   const [draggedPlacementId, setDraggedPlacementId] = useState<string | null>(null);
   const [resizedPlacementId, setResizedPlacementId] = useState<string | null>(null);
+  const [selectedPlacementId, setSelectedPlacementId] = useState<string | null>(null);
   const [livePlacements, setLivePlacements] = useState<Placement[]>(history.present);
 
   useEffect(() => {
@@ -111,18 +114,21 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   }, [history.present, draggedPlacementId, resizedPlacementId]);
 
   const addPlacement = (type: PlacementType) => {
-    const newValue = type === 'date' ? new Date().toLocaleDateString() : (type === 'text' ? 'Type text...' : undefined);
+    const newValue = type === 'date' ? new Date().toLocaleDateString() : (type === 'text' ? '' : (type === 'check' ? '✓' : undefined));
     const newPlacement: Placement = {
       id: Math.random().toString(36).substr(2, 9),
       type,
       pageNum,
       x: 10,
       y: 10,
-      width: type === 'signature' ? 150 : 120,
-      height: type === 'signature' ? 75 : 30,
-      value: newValue
+      width: type === 'signature' ? 150 : (type === 'check' ? 30 : 160),
+      height: type === 'signature' ? 75 : (type === 'check' ? 30 : 40),
+      value: newValue,
+      fontSize: 14,
+      color: '#0f172a'
     };
     pushState([...history.present, newPlacement]);
+    setSelectedPlacementId(newPlacement.id);
   };
 
   const removePlacement = (id: string) => {
@@ -240,7 +246,9 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
   const handleMouseDown = (e: React.MouseEvent, id: string, p: Placement) => {
     if (isSigned) return;
     e.preventDefault();
+    e.stopPropagation();
     setDraggedPlacementId(id);
+    setSelectedPlacementId(id);
     dragStart.current = { x: e.clientX, y: e.clientY };
     originalRect.current = { x: p.x, y: p.y, w: p.width, h: p.height };
   };
@@ -250,14 +258,17 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
     e.stopPropagation();
     e.preventDefault();
     setResizedPlacementId(id);
+    setSelectedPlacementId(id);
     resizeStart.current = { x: e.clientX, y: e.clientY };
     originalRect.current = { x: p.x, y: p.y, w: p.width, h: p.height };
   };
 
   const handleTouchStart = (e: React.TouchEvent, id: string, p: Placement) => {
     if (isSigned) return;
+    e.stopPropagation();
     const touch = e.touches[0];
     setDraggedPlacementId(id);
+    setSelectedPlacementId(id);
     dragStart.current = { x: touch.clientX, y: touch.clientY };
     originalRect.current = { x: p.x, y: p.y, w: p.width, h: p.height };
   };
@@ -267,6 +278,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
     e.stopPropagation();
     const touch = e.touches[0];
     setResizedPlacementId(id);
+    setSelectedPlacementId(id);
     resizeStart.current = { x: touch.clientX, y: touch.clientY };
     originalRect.current = { x: p.x, y: p.y, w: p.width, h: p.height };
   };
@@ -375,12 +387,38 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
         }
         page.drawImage(embeddedSigImage, { x: finalX, y: finalY, width: finalWidth, height: finalHeight });
       } else if (p.type === 'text' || p.type === 'date') {
-        page.drawText(p.value || '', {
-          x: finalX,
-          y: finalY + (finalHeight / 4),
-          size: finalHeight * 0.7,
+        const textLines = (p.value || '').split('\n');
+        const fSize = (p.fontSize || 14) * (pdfHeight / containerHeight); // Approximate scaling for font size
+        
+        // Parse hex color
+        const hex = p.color || '#000000';
+        const r = parseInt(hex.slice(1, 3), 16) / 255;
+        const g = parseInt(hex.slice(3, 5), 16) / 255;
+        const b = parseInt(hex.slice(5, 7), 16) / 255;
+
+        for (let i = 0; i < textLines.length; i++) {
+          page.drawText(textLines[i], {
+            x: finalX,
+            y: finalY + finalHeight - fSize - (i * fSize * 1.2), // Adjust y for each line
+            size: fSize,
+            font: font,
+            color: rgb(r, g, b),
+          });
+        }
+      } else if (p.type === 'check') {
+        // Parse hex color
+        const hex = p.color || '#000000';
+        const r = parseInt(hex.slice(1, 3), 16) / 255;
+        const g = parseInt(hex.slice(3, 5), 16) / 255;
+        const b = parseInt(hex.slice(5, 7), 16) / 255;
+        
+        const fSize = Math.min(finalWidth, finalHeight) * 0.8;
+        page.drawText('X', { // We use X as checkmark substitute in standard font if checkmark isn't supported, or rely on a checkmark character
+          x: finalX + (finalWidth - fSize) / 2,
+          y: finalY + (finalHeight - fSize) / 2 + (fSize * 0.1),
+          size: fSize,
           font: font,
-          color: rgb(0, 0, 0),
+          color: rgb(r, g, b),
         });
       }
     }
@@ -552,7 +590,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
       <div className={styles.editorMain}>
         <div className={styles.workspace}>
           {/* We removed the CSS scale transform and instead rely on actual render resolution from zoom state */}
-          <div className={styles.canvasWrapper} ref={containerRef}>
+          <div className={styles.canvasWrapper} ref={containerRef} onMouseDown={() => setSelectedPlacementId(null)}>
             <canvas ref={canvasRef} className={styles.pdfCanvas} />
 
             {isRendering && (
@@ -565,7 +603,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
             {!isSigned && !isRendering && livePlacements.filter(p => p.pageNum === pageNum).map(p => (
               <div
                 key={p.id}
-                className={`${styles.sigOverlay} ${draggedPlacementId === p.id ? styles.dragging : ''}`}
+                className={`${styles.sigOverlay} ${draggedPlacementId === p.id ? styles.dragging : ''} ${selectedPlacementId === p.id ? styles.selected : ''} ${p.type === 'text' || p.type === 'date' ? styles.textOverlay : ''}`}
                 style={{
                   left: `${p.x}%`,
                   top: `${p.y}%`,
@@ -575,23 +613,35 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
                 onMouseDown={(e) => handleMouseDown(e, p.id, p)}
                 onTouchStart={(e) => handleTouchStart(e, p.id, p)}
               >
-                <div style={{position: 'absolute', top: -14, right: -14, cursor: 'pointer', background: '#ef4444', color: 'white', borderRadius: '50%', padding: 4, display: 'flex', opacity: 0.9, zIndex: 10}} onClick={(e) => { e.stopPropagation(); removePlacement(p.id); }}>
-                    <Trash2 size={12} />
-                </div>
+                {selectedPlacementId === p.id && (
+                  <div className={styles.floatingControls} onMouseDown={e => e.stopPropagation()}>
+                    <button className={styles.iconBtn} onClick={() => removePlacement(p.id)} title="Delete"><Trash2 size={14} /></button>
+                  </div>
+                )}
                 
                 {p.type === 'signature' && <img src={signatureUrl} alt="Signature" className={styles.sigImage} draggable={false} />}
                 {(p.type === 'text' || p.type === 'date') && (
-                  <input 
-                    type="text" 
-                    value={p.value} 
+                  <textarea 
+                    value={p.value}
+                    placeholder={p.type === 'text' ? 'Type text...' : 'Date'}
                     onChange={e => {
                         const newV = e.target.value;
                         setLivePlacements(prev => prev.map(x => x.id === p.id ? { ...x, value: newV } : x));
                     }}
                     onBlur={(e) => updatePlacement(p.id, { value: e.target.value })}
-                    style={{width: '100%', height: '100%', background: 'transparent', border: 'none', outline: 'none', fontSize: p.height * 0.7, fontFamily: 'Helvetica, Arial, sans-serif', color: '#1a1a2e'}}
+                    className={styles.textareaInput}
+                    style={{
+                      fontSize: `${p.fontSize || 14}px`, 
+                      color: p.color || '#0f172a'
+                    }}
                   />
                 )}
+                {p.type === 'check' && (
+                  <div className={styles.checkIcon} style={{ color: p.color || '#0f172a' }}>
+                    <Check size={Math.min(p.width, p.height) * 0.8} strokeWidth={3} />
+                  </div>
+                )}
+
                 
                 <div
                   className={styles.resizeHandle}
@@ -606,12 +656,61 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
         <div className={styles.sidebarPanel}>
           <div className={styles.panelSection}>
              <h4 className={styles.panelTitle}>Add Field</h4>
-             <div style={{display: 'flex', gap: 8, marginTop: 8}}>
+             <div style={{display: 'flex', gap: 8, marginTop: 8, flexWrap: 'wrap'}}>
                  <Button variant="outline" size="sm" onClick={() => addPlacement('signature')} leftIcon={<PenLine size={14}/>}>Signature</Button>
                  <Button variant="outline" size="sm" onClick={() => addPlacement('text')} leftIcon={<Type size={14}/>}>Text</Button>
                  <Button variant="outline" size="sm" onClick={() => addPlacement('date')} leftIcon={<Calendar size={14}/>}>Date</Button>
+                 <Button variant="outline" size="sm" onClick={() => addPlacement('check')} leftIcon={<Check size={14}/>}>Check</Button>
              </div>
           </div>
+          
+          {selectedPlacementId && (
+            <div className={styles.panelSection}>
+              <h4 className={styles.panelTitle}>Field Properties</h4>
+              {(() => {
+                const selectedP = livePlacements.find(p => p.id === selectedPlacementId);
+                if (!selectedP) return null;
+                return (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 8 }}>
+                    {(selectedP.type === 'text' || selectedP.type === 'date') && (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        <label style={{ fontSize: 12, fontWeight: 600, color: '#475569' }}>Font Size ({selectedP.fontSize || 14}px)</label>
+                        <input 
+                          type="range" 
+                          min="8" max="48" 
+                          value={selectedP.fontSize || 14} 
+                          onChange={(e) => {
+                            const newSize = parseInt(e.target.value);
+                            updatePlacement(selectedP.id, { fontSize: newSize });
+                          }}
+                          style={{ accentColor: 'var(--color-primary)' }}
+                        />
+                      </div>
+                    )}
+                    {(selectedP.type === 'text' || selectedP.type === 'date' || selectedP.type === 'check') && (
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        <label style={{ fontSize: 12, fontWeight: 600, color: '#475569' }}>Color</label>
+                        <div style={{ display: 'flex', gap: 8 }}>
+                          {['#0f172a', '#2563eb', '#dc2626'].map(color => (
+                            <button
+                              key={color}
+                              onClick={() => updatePlacement(selectedP.id, { color })}
+                              style={{
+                                width: 24, height: 24, borderRadius: '50%', backgroundColor: color,
+                                border: (selectedP.color || '#0f172a') === color ? '2px solid #fff' : '2px solid transparent',
+                                outline: (selectedP.color || '#0f172a') === color ? `2px solid ${color}` : 'none',
+                                cursor: 'pointer'
+                              }}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+            </div>
+          )}
 
           <div className={styles.panelSection}>
             <h4 className={styles.panelTitle}>

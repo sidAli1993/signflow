@@ -152,7 +152,7 @@ export default async function TemplateItemPage({ params }: Props) {
                     Edit & Sign Now (Free)
                   </button>
                 </Link>
-                <a href={template.pdfUrl} download style={{ textDecoration: 'none' }}>
+                <a href={template.pdfUrl} download={template.pdfUrl.split('/').pop() || 'template.pdf'} style={{ textDecoration: 'none' }}>
                   <button style={{ width: '100%', padding: '16px', backgroundColor: 'white', color: '#0f172a', border: '2px solid #e2e8f0', borderRadius: '12px', fontSize: '1.1rem', fontWeight: 600, cursor: 'pointer', transition: 'background-color 0.2s' }}>
                     Download as PDF
                   </button>

@@ -26,6 +26,7 @@ export default function HomeClient({
   const [signature, setSignature] = useState<string | null>(null);
   const [file, setFile]         = useState<File | null>(null);
   const [isDragOver, setIsDragOver] = useState(false);
+  const [showSignatureModal, setShowSignatureModal] = useState(false);
 
   useEffect(() => {
     if (templateUrl && !file) {
@@ -35,6 +36,7 @@ export default function HomeClient({
           const filename = templateUrl.split('/').pop() || 'template.pdf';
           const newFile = new File([blob], filename, { type: blob.type || 'application/pdf' });
           setFile(newFile);
+          setStep(2);
         })
         .catch(err => console.error('Failed to load template', err));
     }
@@ -205,6 +207,7 @@ export default function HomeClient({
               signatureUrl={signature || ''}
               onStartOver={handleStartOver}
               onShare={handleShare}
+              onRequestSignature={() => setShowSignatureModal(true)}
             />
           ) : (
             <ImageEditor
@@ -224,6 +227,27 @@ export default function HomeClient({
 
   return (
     <main className={styles.mainContent}>
+      {showSignatureModal && (
+        <div style={{position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(0,0,0,0.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px'}}>
+          <div style={{background: 'white', padding: '32px', borderRadius: '24px', maxWidth: '600px', width: '100%', position: 'relative', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)'}}>
+            <button 
+              onClick={() => setShowSignatureModal(false)} 
+              style={{position: 'absolute', top: 16, right: 20, background: 'none', border: 'none', cursor: 'pointer', fontSize: 28, color: '#64748b'}}>
+              ×
+            </button>
+            <h3 style={{marginBottom: 20, fontSize: '1.5rem', color: '#0f172a', fontWeight: 700}}>Create your signature</h3>
+            <div className={styles.creatorWrapper}>
+              <SignatureCreator 
+                onSave={(dataUrl) => { 
+                  setSignature(dataUrl); 
+                  setShowSignatureModal(false); 
+                }} 
+                initialTab="draw" 
+              />
+            </div>
+          </div>
+        </div>
+      )}
       <div className={styles.container}>
 
         {/* Ad top */}

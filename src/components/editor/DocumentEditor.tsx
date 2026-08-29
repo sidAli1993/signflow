@@ -47,9 +47,10 @@ interface DocumentEditorProps {
   signatureUrl: string;
   onStartOver: () => void;
   onShare: (signedFile: File) => void;
+  onRequestSignature?: () => void;
 }
 
-export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: DocumentEditorProps) {
+export function DocumentEditor({ file, signatureUrl, onStartOver, onShare, onRequestSignature }: DocumentEditorProps) {
   const [pdfjsLib, setPdfjsLib] = useState<any>(null);
   const [pdfDoc, setPdfDoc] = useState<any>(null);
   const [pageNum, setPageNum] = useState(1);
@@ -113,7 +114,33 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
     }
   }, [history.present, draggedPlacementId, resizedPlacementId]);
 
+  const prevSignatureRef = useRef(signatureUrl);
+  useEffect(() => {
+    if (signatureUrl && !prevSignatureRef.current) {
+      const newPlacement: Placement = {
+        id: Math.random().toString(36).substr(2, 9),
+        type: 'signature',
+        pageNum,
+        x: 10,
+        y: 10,
+        width: 150,
+        height: 75,
+      };
+      setHistory(h => ({
+        past: [...h.past, h.present],
+        present: [...h.present, newPlacement],
+        future: []
+      }));
+      setSelectedPlacementId(newPlacement.id);
+    }
+    prevSignatureRef.current = signatureUrl;
+  }, [signatureUrl]); // intentionally omitting pageNum/setHistory
+
   const addPlacement = (type: PlacementType) => {
+    if (type === 'signature' && !signatureUrl) {
+       if (onRequestSignature) onRequestSignature();
+       return;
+    }
     const newValue = type === 'date' ? new Date().toLocaleDateString() : (type === 'text' ? '' : (type === 'check' ? '✓' : undefined));
     const newPlacement: Placement = {
       id: Math.random().toString(36).substr(2, 9),

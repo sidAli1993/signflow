@@ -183,6 +183,7 @@ export function DocumentEditor({ file, signatureUrl, onStartOver, onShare }: Doc
       } catch (err) {
         console.error('Error loading PDF:', err);
         showToast('Failed to parse PDF document.', 'error');
+        setIsRendering(false);
       }
     };
     loadPdf();

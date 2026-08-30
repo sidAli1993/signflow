@@ -17,38 +17,43 @@ self.onmessage = function (e) {
   }
 
   function processImage() {
-    try {
-      // 1. Read image data into cv.Mat
+      // 1. Read image data into cv.Mat (RGBA by default)
       let src = self.cv.matFromImageData(originalImageData);
       let mask = self.cv.matFromImageData(maskImageData);
-      let dst = new self.cv.Mat();
+      
+      // Convert src from RGBA to RGB (inpaint requires 1 or 3 channel image)
+      let srcRgb = new self.cv.Mat();
+      self.cv.cvtColor(src, srcRgb, self.cv.COLOR_RGBA2RGB, 0);
 
       // 2. Convert mask to Grayscale (single channel) as required by inpaint
       let maskGray = new self.cv.Mat();
-      self.cv.cvtColor(mask, maskGray, self.cv.COLOR_RGBA2GRAY);
+      self.cv.cvtColor(mask, maskGray, self.cv.COLOR_RGBA2GRAY, 0);
 
       // We need the mask to be purely 0 (background) and 255 (watermark)
-      // The canvas mask we sent has white (255) for the brush strokes.
-      // Threshold to ensure binary mask
       self.cv.threshold(maskGray, maskGray, 10, 255, self.cv.THRESH_BINARY);
 
       // 3. Inpaint
-      // inpaint radius: 3 (standard), algorithm: cv.INPAINT_TELEA
-      self.cv.inpaint(src, maskGray, dst, 3, self.cv.INPAINT_TELEA);
+      let dstRgb = new self.cv.Mat();
+      self.cv.inpaint(srcRgb, maskGray, dstRgb, 3, self.cv.INPAINT_TELEA);
+
+      // Convert back to RGBA so we can create an ImageData object
+      let dstRgba = new self.cv.Mat();
+      self.cv.cvtColor(dstRgb, dstRgba, self.cv.COLOR_RGB2RGBA, 0);
 
       // 4. Convert back to ImageData
-      // In JS, we can create a new ImageData from dst.data
       const resultImageData = new ImageData(
-        new Uint8ClampedArray(dst.data),
-        dst.cols,
-        dst.rows
+        new Uint8ClampedArray(dstRgba.data),
+        dstRgba.cols,
+        dstRgba.rows
       );
 
       // Cleanup memory (CRITICAL in WebAssembly)
       src.delete();
       mask.delete();
+      srcRgb.delete();
       maskGray.delete();
-      dst.delete();
+      dstRgb.delete();
+      dstRgba.delete();
 
       self.postMessage({ success: true, resultImageData });
     } catch (error) {

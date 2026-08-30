@@ -117,24 +117,6 @@ const toolsList = [
   },
   // Phase 3 new tools
   {
-    slug: 'remove-watermark-from-image',
-    title: 'Remove Watermark from Image',
-    badge: 'New',
-    category: 'Image Tools',
-    description: 'Erase watermarks, logos, or text from images instantly. 100% private client-side processing.',
-    icon: '🪄',
-    searchKeywords: ['remove watermark from image', 'erase logo', 'delete text from photo'],
-  },
-  {
-    slug: 'remove-watermark-from-pdf',
-    title: 'Remove Watermark from PDF',
-    badge: 'New',
-    category: 'PDF Tools',
-    description: 'Clean your PDF documents by removing unwanted watermarks or stamps. 100% private.',
-    icon: '✨',
-    searchKeywords: ['remove watermark from pdf', 'delete watermark pdf', 'clean pdf pages'],
-  },
-  {
     slug: 'pdf-to-jpg',
     title: 'PDF to JPG Free',
     badge: 'New',

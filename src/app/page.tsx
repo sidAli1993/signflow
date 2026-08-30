@@ -298,8 +298,6 @@ export default function Home() {
               <li><a href="/tools/pdf-to-jpg" style={{ color: 'var(--color-primary, #4f46e5)' }}>PDF to JPG →</a></li>
               <li><a href="/tools/jpg-to-pdf" style={{ color: 'var(--color-primary, #4f46e5)' }}>JPG to PDF →</a></li>
               <li><a href="/tools/split-pdf-online" style={{ color: 'var(--color-primary, #4f46e5)' }}>Split PDF Online →</a></li>
-              <li><a href="/tools/remove-watermark-from-image" style={{ color: 'var(--color-primary, #4f46e5)' }}>Remove Image Watermark →</a></li>
-              <li><a href="/tools/remove-watermark-from-pdf" style={{ color: 'var(--color-primary, #4f46e5)' }}>Remove PDF Watermark →</a></li>
             </ul>
             <p style={{ fontSize: '0.875rem', color: '#94a3b8', marginTop: '1rem' }}>Compare:</p>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.875rem' }}>

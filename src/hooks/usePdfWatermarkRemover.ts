@@ -2,9 +2,6 @@ import { useState, useCallback } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { PDFDocument } from 'pdf-lib';
 
-// Ensure worker is configured for pdf.js
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
-
 export function usePdfWatermarkRemover() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0); // 0 to 100
@@ -23,6 +20,11 @@ export function usePdfWatermarkRemover() {
     setResultPdfUrl(null);
 
     try {
+      // Ensure worker is configured on the client
+      if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+      }
+
       // 1. Load the original PDF with pdf.js
       const arrayBuffer = await originalFile.arrayBuffer();
       const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
@@ -105,7 +107,7 @@ export function usePdfWatermarkRemover() {
 
       // 4. Save and return the final PDF
       const pdfBytes = await newPdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blob = new Blob([pdfBytes as any], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
       
       setResultPdfUrl(url);
@@ -122,6 +124,11 @@ export function usePdfWatermarkRemover() {
 
   // Helper to extract the first page as an image URL for the masking UI
   const getFirstPageAsImage = async (file: File): Promise<string> => {
+    // Ensure worker is configured on the client
+    if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+    }
+
     const arrayBuffer = await file.arrayBuffer();
     const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
     const pdf = await loadingTask.promise;

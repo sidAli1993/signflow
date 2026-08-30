@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'sample-email-request-to-sign-nda', modified: '2026-08-12' },
     { slug: 'how-to-extract-youtube-tags', modified: '2026-08-21' },
     { slug: 'how-to-write-strong-youtube-titles', modified: '2026-08-21' },
+    { slug: 'when-is-a-w9-not-required', modified: '2026-08-30' },
   ];
 
   // Dedicated micro-tools suite

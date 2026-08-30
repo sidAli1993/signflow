@@ -3,17 +3,49 @@
 // Load OpenCV from CDN to avoid Next.js bundling issues
 self.importScripts('https://docs.opencv.org/4.8.0/opencv.js');
 
-self.onmessage = function (e) {
-  const { originalImageData, maskImageData } = e.data;
+let cvReady = false;
 
-  // We must wait for cv to be ready. 
-  // OpenCV.js from the official CDN sets cv as a promise/object that resolves.
-  if (self.cv.getBuildInformation) {
+// We must wait for cv to be ready. 
+// OpenCV.js from the official CDN sets cv as a promise/object that resolves.
+if (self.cv && self.cv.getBuildInformation) {
+  cvReady = true;
+} else if (self.cv) {
+  self.cv['onRuntimeInitialized'] = () => {
+    cvReady = true;
+  };
+}
+
+self.onmessage = function (e) {
+  const data = e.data;
+
+  if (data.action === 'init') {
+    if (cvReady || (self.cv && self.cv.getBuildInformation)) {
+      self.postMessage({ action: 'init', success: true });
+    } else {
+      // Keep checking every 500ms
+      const interval = setInterval(() => {
+        if (cvReady || (self.cv && self.cv.getBuildInformation)) {
+          clearInterval(interval);
+          cvReady = true;
+          self.postMessage({ action: 'init', success: true });
+        }
+      }, 500);
+    }
+    return;
+  }
+
+  const { originalImageData, maskImageData } = data;
+
+  if (cvReady || (self.cv && self.cv.getBuildInformation)) {
     processImage();
   } else {
-    self.cv['onRuntimeInitialized'] = () => {
-      processImage();
-    };
+    const interval = setInterval(() => {
+      if (cvReady || (self.cv && self.cv.getBuildInformation)) {
+        clearInterval(interval);
+        cvReady = true;
+        processImage();
+      }
+    }, 500);
   }
 
   function processImage() {

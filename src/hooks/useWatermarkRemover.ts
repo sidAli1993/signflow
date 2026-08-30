@@ -1,5 +1,16 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import imageCompression from 'browser-image-compression';
+
+let globalCvWorker: Worker | null = null;
+
+export const getCvWorker = () => {
+  if (typeof window === 'undefined') return null;
+  if (!globalCvWorker) {
+    globalCvWorker = new Worker('/workers/opencvWorker.js');
+    globalCvWorker.postMessage({ action: 'init' });
+  }
+  return globalCvWorker;
+};
 
 export function useWatermarkRemover() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -16,8 +27,11 @@ export function useWatermarkRemover() {
 
     try {
       return new Promise<void>((resolve, reject) => {
-        // Instantiate the worker
-        const worker = new Worker('/workers/opencvWorker.js');
+        const worker = getCvWorker();
+        if (!worker) {
+          reject(new Error("Worker not available"));
+          return;
+        }
 
         worker.onmessage = (e) => {
           const { success, resultImageData, error } = e.data;
@@ -40,7 +54,7 @@ export function useWatermarkRemover() {
           }
           
           setIsProcessing(false);
-          worker.terminate();
+          // Removed worker.terminate() to reuse singleton
           resolve();
         };
 
@@ -48,7 +62,6 @@ export function useWatermarkRemover() {
           console.error("Worker error:", err);
           setError("Failed to initialize processing engine.");
           setIsProcessing(false);
-          worker.terminate();
           reject(err);
         };
 
@@ -83,6 +96,11 @@ export function useWatermarkRemover() {
     }
     return file;
   };
+
+  useEffect(() => {
+    // Warm up the worker on mount
+    getCvWorker();
+  }, []);
 
   return {
     isProcessing,

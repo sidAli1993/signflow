@@ -1,6 +1,7 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { PDFDocument } from 'pdf-lib';
+import { getCvWorker } from './useWatermarkRemover';
 
 export function usePdfWatermarkRemover() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -37,7 +38,8 @@ export function usePdfWatermarkRemover() {
       // 3. Process pages in chunks to avoid memory crashes
       const CHUNK_SIZE = 5; 
       
-      const worker = new Worker('/workers/opencvWorker.js');
+      const worker = getCvWorker();
+      if (!worker) throw new Error("Worker not available");
 
       // Helper function to process a single page through OpenCV
       const processPageImage = (originalImageData: ImageData): Promise<ImageData> => {
@@ -103,7 +105,7 @@ export function usePdfWatermarkRemover() {
         setProgress(Math.round((i / numPages) * 100));
       }
 
-      worker.terminate();
+      // Removed worker.terminate() to reuse singleton
 
       // 4. Save and return the final PDF
       const pdfBytes = await newPdfDoc.save();
@@ -146,6 +148,11 @@ export function usePdfWatermarkRemover() {
     page.cleanup();
     return url;
   };
+
+  useEffect(() => {
+    // Warm up the worker on mount
+    getCvWorker();
+  }, []);
 
   return {
     isProcessing,

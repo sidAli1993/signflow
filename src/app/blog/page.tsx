@@ -27,6 +27,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'Are Electronic Signatures Legal in Georgia? (Code § 10-12-7 Guide)',
+    slug: 'are-electronic-signatures-legal-in-georgia',
+    excerpt: 'A complete 2026 guide to Georgia Code § 10-12-7. Learn if electronic signatures are legally binding in Georgia, exceptions to the rule, and how UETA works.',
+    date: 'August 30, 2026',
+  },
+  {
     title: 'When is a W-9 NOT Required? (Exemptions & Independent Contractor Rules)',
     slug: 'when-is-a-w9-not-required',
     excerpt: 'Learn exactly when a W-9 is not required, exceptions for corporate payments, credit card payments, and when you can legally refuse to sign one.',

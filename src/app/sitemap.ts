@@ -38,6 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'how-to-extract-youtube-tags', modified: '2026-08-21' },
     { slug: 'how-to-write-strong-youtube-titles', modified: '2026-08-21' },
     { slug: 'when-is-a-w9-not-required', modified: '2026-08-30' },
+    { slug: 'how-to-fill-out-w9-for-llc', modified: '2026-08-30' },
+    { slug: 'w9-exempt-payee-codes-request-letter', modified: '2026-08-30' },
   ];
 
   // Dedicated micro-tools suite

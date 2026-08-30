@@ -27,6 +27,30 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    title: 'When is a W-9 NOT Required? (Exemptions & Independent Contractor Rules)',
+    slug: 'when-is-a-w9-not-required',
+    excerpt: 'Learn exactly when a W-9 is not required, exceptions for corporate payments, credit card payments, and when you can legally refuse to sign one.',
+    date: 'August 30, 2026',
+  },
+  {
+    title: 'How to Fill Out a W9 for an LLC (Single Member, Partnership, & Corporate)',
+    slug: 'how-to-fill-out-w9-for-llc',
+    excerpt: 'Learn exactly how to fill out a W-9 for an LLC. Discover what a disregarded entity on a W-9 is, how to sign as a sole proprietor, and get single-member LLC examples.',
+    date: 'August 30, 2026',
+  },
+  {
+    title: 'What is a Disregarded Entity for Tax Purposes? (2026 Complete Guide)',
+    slug: 'what-is-a-disregarded-entity',
+    excerpt: 'Everything you need to know about what a disregarded entity is, how it affects your taxes, the pros and cons of single-member LLCs, and how to sign legal documents.',
+    date: 'August 30, 2026',
+  },
+  {
+    title: 'W-9 Exempt Payee Codes & How to Write a Form W-9 Request Letter',
+    slug: 'w9-exempt-payee-codes-request-letter',
+    excerpt: 'Master IRS Form W-9 exempt payee codes, learn exactly when to use an exemption payee code, and get free templates for a formal W-9 request letter.',
+    date: 'August 30, 2026',
+  },
+  {
     title: 'How to Add a Signature in Microsoft Word (3 Easy Methods — 2026)',
     slug: 'how-to-add-signature-in-word',
     excerpt: 'Learn 3 easy methods to add a signature in Microsoft Word, including built-in signature lines, drawing, and converting to PDF for secure online signing.',

@@ -40,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'when-is-a-w9-not-required', modified: '2026-08-30' },
     { slug: 'how-to-fill-out-w9-for-llc', modified: '2026-08-30' },
     { slug: 'w9-exempt-payee-codes-request-letter', modified: '2026-08-30' },
+    { slug: 'what-is-a-disregarded-entity', modified: '2026-08-30' },
   ];
 
   // Dedicated micro-tools suite

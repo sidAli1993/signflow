@@ -49,6 +49,7 @@ export async function generateStaticParams() {
     { slug: 'when-is-a-w9-not-required' },
     { slug: 'how-to-fill-out-w9-for-llc' },
     { slug: 'w9-exempt-payee-codes-request-letter' },
+    { slug: 'what-is-a-disregarded-entity' },
   ];
 }
 
@@ -66,6 +67,131 @@ interface Post {
 // This would normally come from a CMS or markdown files
 const getPostData = (slug: string): Post | null => {
   const posts: Record<string, Post> = {
+    'what-is-a-disregarded-entity': {
+      title: 'What is a Disregarded Entity for Tax Purposes? (2026 Complete Guide)',
+      description: 'Everything you need to know about what a disregarded entity is, how it affects your taxes, the pros and cons of single-member LLCs, and how to sign legal documents.',
+      date: 'August 30, 2026',
+      lastModified: 'August 30, 2026',
+      author: 'MyDigitSign Legal Desk',
+      keywords: ["disregarded entity", "disregarded entity for tax purpose", "single member llc tax", "schedule c", "pass-through taxation", "disregarded entity w9"],
+      content: `
+        <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border-left: 4px solid #0ea5e9; border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 0 0 2rem;">
+          <p style="margin: 0 0 0.5rem; font-weight: 700; font-size: 1rem; color: #0369a1;">⚡ Quick Answer: What is a Disregarded Entity?</p>
+          <p style="margin: 0; font-size: 0.975rem; line-height: 1.6;">A <strong>disregarded entity for tax purposes</strong> is a business that the IRS completely ignores as an entity separate from its owner. This means the business itself does not file a tax return or pay federal income tax. Instead, all profits and losses "pass through" directly to the owner's personal tax return (usually on Schedule C). The most common example of a disregarded entity is a standard <strong>Single-Member LLC</strong>.</p>
+        </div>
+
+        <p>When you start a new business, the legal and tax jargon can feel completely overwhelming. You might hire a lawyer to help you set up an LLC to protect your personal assets, only for your accountant to turn around and tell you that your brand new business is a <strong>"disregarded entity."</strong></p>
+
+        <p>Hearing that the IRS is going to "disregard" your business sounds terrifying. Did you do something wrong? Is your LLC invalid? Will you lose your liability protection?</p>
+
+        <p>Take a deep breath. Being classified as a <strong>disregarded entity for tax purposes</strong> is actually one of the most powerful, streamlined, and common ways to run a small business in the United States. In this comprehensive, 2000-word guide, we are going to demystify exactly what this term means, how it impacts your bottom line at tax time, the massive benefits it provides, and how you should handle legal contracts and W-9s as the owner of one.</p>
+
+        <h2>Part 1: The Definition of a Disregarded Entity</h2>
+        <p>To understand what a disregarded entity is, you have to understand the difference between <em>legal</em> structure and <em>tax</em> structure. In the United States, these are two completely different things.</p>
+
+        <h3>Legal Structure vs. Tax Structure</h3>
+        <p>When you register a Limited Liability Company (LLC) with your state, you are creating a <strong>legal barrier</strong> between yourself and your business. If someone sues your business, or if your business goes bankrupt, your personal assets (your house, your personal bank account, your car) are generally protected. This is the "limited liability" part.</p>
+
+        <p>However, the Internal Revenue Service (IRS) is a federal agency, and they do not have a specific tax category for an LLC. When tax season rolls around, the IRS looks at your LLC and says, "We don't know what this is, so you have to choose a different costume to wear for tax purposes."</p>
+
+        <p>If you are the only owner of the LLC (a Single-Member LLC) and you do not explicitly ask the IRS to tax you as a corporation, the IRS automatically applies the default classification: they treat your business as a <strong>disregarded entity</strong>.</p>
+
+        <h3>What Does "Disregarded" Actually Mean?</h3>
+        <p>It means that the IRS is choosing to look right through the legal wall of your LLC. For the purpose of assessing federal income taxes, the IRS treats the business and the owner as the exact same taxpayer. </p>
+        
+        <p>The business does not file a corporate tax return. The business does not pay corporate income tax. Instead, every single dollar the business earns, and every single deductible expense the business incurs, flows directly onto your personal Form 1040 tax return. </p>
+
+        <p><strong>Crucial Distinction:</strong> Being disregarded by the IRS for <em>tax purposes</em> does NOT mean you are disregarded by the state for <em>liability purposes</em>. You still enjoy the full legal protection of your LLC. It is truly the best of both worlds.</p>
+
+        <h2>Part 2: How a Disregarded Entity Pays Taxes</h2>
+        <p>If your business doesn't file its own tax return, how exactly do you pay your taxes? The process is known as <strong>pass-through taxation</strong>.</p>
+
+        <h3>Schedule C: Profit or Loss From Business</h3>
+        <p>As the owner of a disregarded entity, you will report your business income using <strong>Schedule C</strong>, which is attached to your personal Form 1040. </p>
+        
+        <ul>
+          <li><strong>Gross Receipts:</strong> You will tally up all the money your business made throughout the year.</li>
+          <li><strong>Deductible Expenses:</strong> You will subtract all your legitimate business expenses (e.g., software subscriptions, marketing costs, home office deductions, internet bills).</li>
+          <li><strong>Net Profit:</strong> The resulting number is your net profit. This net profit is added to any other income you have (like a W-2 from a day job), and you pay personal income tax on the grand total.</li>
+        </ul>
+
+        <h3>The Burden of Self-Employment Tax</h3>
+        <p>This is where being a disregarded entity catches many new business owners off guard. Because the IRS treats you and the business as the same entity, you are considered <strong>self-employed</strong>.</p>
+        
+        <p>When you work a traditional W-2 job, your employer pays half of your Medicare and Social Security taxes, and you pay the other half out of your paycheck. But when you are a disregarded entity, you are both the employer and the employee. Therefore, you are responsible for paying the entire 15.3% <strong>Self-Employment (SE) Tax</strong> on your net profit, in addition to your standard federal and state income taxes.</p>
+
+        <h2>Part 3: The Pros and Cons of Being a Disregarded Entity</h2>
+        <p>Why do millions of freelancers, real estate investors, and small business owners choose to remain disregarded entities rather than incorporating? Let's look at the massive advantages, as well as a few drawbacks.</p>
+
+        <h3>The Pros</h3>
+        <ol>
+          <li><strong>Incredible Simplicity:</strong> You only have to file one tax return per year (your personal Form 1040). You don't have to pay a CPA thousands of dollars to prepare a complex corporate tax return (Form 1120 or 1120S).</li>
+          <li><strong>No Double Taxation:</strong> C-Corporations suffer from "double taxation" (the corporation pays a flat tax on profits, and then the owners pay tax again on the dividends). As a disregarded entity, your money is only taxed once.</li>
+          <li><strong>Easy Money Management:</strong> While you <em>must</em> have a separate business bank account to maintain your liability protection, moving money from your business account to your personal account (an "owner's draw") is not a taxable event. The money was already taxed when the business earned it.</li>
+          <li><strong>Qualified Business Income (QBI) Deduction:</strong> Under current tax law, many disregarded entities qualify for the QBI deduction, which allows you to deduct up to 20% of your net business income right off the top before calculating your taxes.</li>
+        </ol>
+
+        <h3>The Cons</h3>
+        <ol>
+          <li><strong>Heavy Self-Employment Taxes:</strong> As mentioned, paying the full 15.3% SE tax on every dollar of profit can become brutally expensive once your business starts making over $80,000 to $100,000 a year in net profit.</li>
+          <li><strong>Raising Capital is Harder:</strong> If you plan to pitch to venture capitalists or angel investors, they almost exclusively prefer to invest in C-Corporations. Disregarded entities cannot issue traditional stock.</li>
+        </ol>
+
+        <h2>Part 4: Handling Contracts, W-9s, and Signatures</h2>
+        <p>Because you wear two hats—the LLC for legal matters and the individual for tax matters—filling out paperwork can get confusing.</p>
+
+        <h3>How to Fill Out a W-9 as a Disregarded Entity</h3>
+        <p>When a client asks you to fill out a W-9 so they can pay you, you must fill it out according to your <em>tax</em> structure, not your legal structure. This trips up thousands of business owners.</p>
+        
+        <ul>
+          <li><strong>Line 1 (Name):</strong> You must enter your <strong>personal name</strong> (the name on your personal tax return).</li>
+          <li><strong>Line 2 (Business Name):</strong> This is where you enter your LLC's name (the disregarded entity name).</li>
+          <li><strong>Line 3 (Classification):</strong> Check the box for "Individual/sole proprietor or single-member LLC."</li>
+          <li><strong>Part 1 (TIN):</strong> The IRS prefers that you use your personal Social Security Number (SSN), but using the LLC's Employer Identification Number (EIN) is widely accepted and preferred for privacy.</li>
+        </ul>
+
+        <h3>Signing Legal Contracts</h3>
+        <p>While taxes are personal, <strong>contracts are legal</strong>. When you sign a Non-Disclosure Agreement (NDA), a commercial lease, or a master service agreement, you want the liability protection of your LLC.</p>
+        
+        <p>Therefore, you should never sign a business contract simply as "John Doe." You should sign it as an authorized representative of the LLC. Your signature block should look something like this:</p>
+        
+        <p><em>John Doe<br>Managing Member, Doe Consulting LLC</em></p>
+
+        <p>If you need to sign a contract right now, you don't need a printer or a pen. You can securely upload the contract to our <a href="/tools/sign-pdf-online" style="color: #2563eb; text-decoration: underline;">Sign PDF Online</a> tool. Because MyDigitSign processes the document entirely in your local browser, your sensitive legal contracts are never uploaded to a remote server. You can draw your signature, add your LLC title using the <a href="/tools/edit-pdf-online" style="color: #2563eb; text-decoration: underline;">PDF Editor</a>, and download the finished file instantly.</p>
+
+        <h2>Part 5: When Should You Stop Being a Disregarded Entity?</h2>
+        <p>While being a disregarded entity is fantastic for freelancers and new businesses, there comes a tipping point where it no longer makes financial sense.</p>
+
+        <p>When your net profit (after all expenses) starts consistently exceeding $80,000 to $100,000 a year, that 15.3% Self-Employment tax becomes a massive financial burden. At this point, most accountants will advise you to file <strong>Form 2553</strong> with the IRS.</p>
+
+        <p>Filing this form tells the IRS: <em>"Stop disregarding my entity. I want my LLC to be taxed as an S-Corporation."</em></p>
+
+        <p>By electing S-Corp status, you put yourself on payroll and pay yourself a "reasonable salary." You still pay SE tax on that salary, but the remaining profit can be taken as a distribution, which is completely free from the 15.3% SE tax. This strategy can save highly profitable small businesses tens of thousands of dollars a year in taxes.</p>
+
+        <h2>Conclusion</h2>
+        <p>The phrase <strong>disregarded entity for tax purposes</strong> sounds intimidating, but it is actually a beautiful piece of tax code that allows small business owners to enjoy the legal protection of an LLC without the headache of filing complex corporate tax returns. </p>
+        
+        <p>By understanding how pass-through taxation works, how to properly fill out your W-9, and how to securely sign your contracts using client-side tools like MyDigitSign, you can confidently run your business, stay compliant with the IRS, and protect your personal assets.</p>
+      `,
+      faq: [
+        {
+          question: "What is a disregarded entity?",
+          answer: "A disregarded entity is a business entity that is separate from its owner for liability purposes, but completely ignored by the IRS for federal tax purposes. The business's profits and losses pass through directly to the owner's personal tax return."
+        },
+        {
+          question: "Is a Single-Member LLC a disregarded entity?",
+          answer: "Yes, by default, the IRS classifies all Single-Member LLCs as disregarded entities. You will remain a disregarded entity unless you actively file paperwork with the IRS to be taxed as a C-Corporation or S-Corporation."
+        },
+        {
+          question: "Do disregarded entities have to pay self-employment tax?",
+          answer: "Yes. Because the IRS treats you and the business as the same entity, you are considered self-employed and must pay the 15.3% Self-Employment tax on your net business profit."
+        },
+        {
+          question: "Whose name goes on a W-9 for a disregarded entity?",
+          answer: "The owner's personal legal name must go on Line 1 of the W-9. The LLC's name should be placed on Line 2 (Business name/disregarded entity name)."
+        }
+      ]
+    },
     'w9-exempt-payee-codes-request-letter': {
       title: 'W-9 Exempt Payee Codes & How to Write a Form W-9 Request Letter',
       description: 'Master IRS Form W-9 exempt payee codes, learn exactly when to use an exemption payee code, and get free templates for a formal W-9 request letter.',

@@ -106,10 +106,43 @@ const softwareSchema = {
   'applicationCategory': 'BusinessApplication',
   'operatingSystem': 'Windows, macOS, Linux, iOS, Android',
   'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
+  'brand': {
+    '@type': 'Brand',
+    'name': 'MyDigitSign'
+  },
   'offers': {
     '@type': 'Offer',
     'price': '0',
-    'priceCurrency': 'USD'
+    'priceCurrency': 'USD',
+    'availability': 'https://schema.org/OnlineOnly',
+    'hasMerchantReturnPolicy': {
+      '@type': 'MerchantReturnPolicy',
+      'applicableCountry': 'US',
+      'returnPolicyCategory': 'https://schema.org/MerchantReturnNotPermitted'
+    },
+    'shippingDetails': {
+      '@type': 'OfferShippingDetails',
+      'shippingRate': {
+        '@type': 'MonetaryAmount',
+        'value': '0',
+        'currency': 'USD'
+      },
+      'deliveryTime': {
+        '@type': 'ShippingDeliveryTime',
+        'handlingTime': {
+          '@type': 'QuantitativeValue',
+          'minValue': 0,
+          'maxValue': 0,
+          'unitCode': 'DAY'
+        },
+        'transitTime': {
+          '@type': 'QuantitativeValue',
+          'minValue': 0,
+          'maxValue': 0,
+          'unitCode': 'DAY'
+        }
+      }
+    }
   },
   'aggregateRating': {
     '@type': 'AggregateRating',

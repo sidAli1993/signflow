@@ -85,7 +85,9 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data — Tool-focused schemas
+// JSON-LD Structured Data — Global schemas (WebSite + SoftwareApplication + Organization)
+// NOTE: FAQPage schema has been moved to page.tsx (homepage only) to match visible FAQ content.
+// aggregateRating removed — only include when real visible reviews exist on-page.
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -106,13 +108,6 @@ const jsonLd = {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1250",
-        "bestRating": "5",
-        "worstRating": "1"
       },
       "featureList": [
         "Sign PDF files online for free",
@@ -147,100 +142,6 @@ const jsonLd = {
         },
         "query-input": "required name=search_term_string"
       }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://mydigitsign.com/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is MyDigitSign completely free to use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, MyDigitSign is a 100% free online PDF signer tool. There are no subscriptions, paywalls, or accounts needed. You can create a PDF signature free and place e-signatures instantly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are my documents uploaded to your servers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. MyDigitSign is 100% client-side. Your PDF and signature are processed entirely inside your browser. Nothing is ever sent to or stored on our servers."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What file formats does MyDigitSign support?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "MyDigitSign supports PDF documents and image files including PNG, JPG, and JPEG, up to 10MB in size."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is an electronic signature legally binding?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Electronic signatures are legally recognized under the ESIGN Act (USA), eIDAS (EU), and similar laws in most countries for the majority of business agreements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I sign a document online or create a digit sign with MyDigitSign?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "1) Draw, type, or upload your signature. 2) Upload your PDF or image locally. 3) Drag and resize your signature on the document page. 4) Download your signed document. It's a quick, free, and secure way to sign a document online or digit sign files."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use MyDigitSign as an online PDF editor signature tool?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! MyDigitSign functions as a lightweight online PDF editor signature tool. You can select, upload, and view PDFs, customize signature colors, place signatures on any page, and download the finished edited document securely."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Where can I download my digital signature PDF?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Once you have placed your signature on the PDF, simply click the Download button to download your signed digital signature PDF instantly to your device. There is no waiting time or email registration required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is DocuSign legally binding and how does it compare to MyDigitSign?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, DocuSign is legally binding. However, DocuSign requires paid plans and document uploads to their cloud. MyDigitSign provides a completely free alternative to generate a legally binding electronic signature without uploads, registration, or cost."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do e-signatures hold up in court?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, e-signatures hold up in court. Under laws like the ESIGN Act in the US and eIDAS regulations in the European Union, a legally binding electronic signature carries the same weight as a traditional pen-and-paper signature for most business, financial, and legal agreements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are electronic signatures acceptable for legal documents?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, electronic signatures are acceptable and legally recognized in over 180 countries. A secure, self-generated electronic signature is legal and valid for lease agreements, employee onboarding forms, freelance contracts, and sales agreements under laws like the ESIGN Act and eIDAS."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I sign a document for free on my phone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To sign a document for free on iPhone, iPad, or Android, navigate to MyDigitSign in your mobile browser. Draw or type your cursive signature, upload the PDF or image file, position the overlay, and tap Download to save your signed document privately."
-          }
-        }
-      ]
     },
     {
       "@type": "Organization",

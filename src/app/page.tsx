@@ -94,8 +94,9 @@ const organizationSchema = {
     'url': 'https://mydigitsign.com/og-image.png',
   },
   'sameAs': [
-    'https://twitter.com/alimirza00',
-    'https://github.com/sidAli1993/signflow'
+    'https://x.com/alimirza00',
+    'https://github.com/sidAli1993/signflow',
+    'https://www.linkedin.com/in/mirza-munawer-baig-3a0b15105/'
   ]
 };
 
@@ -115,32 +116,68 @@ const softwareSchema = {
     'price': '0',
     'priceCurrency': 'USD'
   },
-  'aggregateRating': {
-    '@type': 'AggregateRating',
-    'ratingValue': '4.9',
-    'ratingCount': '1250',
-    'bestRating': '5',
-    'worstRating': '1'
-  },
   'url': 'https://mydigitsign.com',
+};
+
+// Homepage FAQPage schema — matches the visible FAQ questions below
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': 'How do I sign a PDF online for free without creating an account?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Simply open MyDigitSign in your browser, draw or type your signature, upload your document, and place the signature overlay. You can download the completed document in seconds without registering. You can also sign an image online just as easily.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Can I sign a PDF document on an iPhone or mobile device?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes. Open MyDigitSign in Safari or Chrome on your mobile device. You can draw your signature using your finger on the touchscreen, place it on the PDF, and save the signed file directly to your device.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Are electronic signatures legally binding?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'Yes. Electronic signatures are legally enforceable under laws like the ESIGN Act and UETA in the United States and eIDAS in the European Union for most commercial, personal, and business contracts.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'How can I create a digital signature certificate for free?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'MyDigitSign includes a built-in cryptographic signature tool that lets you generate a self-signed digital certificate. You can attach this certificate directly to your PDF for enhanced document integrity verification.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'Are there any file size limits or restrictions?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'MyDigitSign supports PDF, PNG, JPG, and JPEG files up to 10MB. Because operations run locally, document loading and processing are instant.'
+      }
+    },
+    {
+      '@type': 'Question',
+      'name': 'How does MyDigitSign compare to DocuSign or Smallpdf?',
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': 'While DocuSign and Smallpdf require file uploads to third-party servers and charge for regular use, MyDigitSign is completely free, client-side, and privacy-first — your files are never uploaded anywhere.'
+      }
+    }
+  ]
 };
 
 export default function Home() {
   return (
     <div className={styles.appWrapper}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
-
       <Navbar />
 
       {/* ─── Server-rendered SEO Hero Section ───────────────────────────── */}
@@ -170,7 +207,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* JSON-LD Schemas */}
+      {/* JSON-LD Schemas — single set only, no duplicates */}
       <script
         id="breadcrumb-schema"
         type="application/ld+json"
@@ -185,6 +222,11 @@ export default function Home() {
         id="software-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* ─── Interactive Tool (client-side with Suspense for LCP optimization) ─ */}

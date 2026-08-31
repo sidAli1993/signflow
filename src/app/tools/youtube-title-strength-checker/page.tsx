@@ -24,36 +24,7 @@ export default function YoutubeTitleCheckerPage() {
     "offers": {
       "@type": "Offer",
       "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/OnlineOnly",
-      "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "US",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-      },
-      "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": "0",
-          "currency": "USD"
-        },
-        "deliveryTime": {
-          "@type": "ShippingDeliveryTime",
-          "handlingTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 0,
-            "unitCode": "DAY"
-          },
-          "transitTime": {
-            "@type": "QuantitativeValue",
-            "minValue": 0,
-            "maxValue": 0,
-            "unitCode": "DAY"
-          }
-        }
-      }
+      "priceCurrency": "USD"
     }
   };
 

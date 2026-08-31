@@ -42,43 +42,15 @@ export default async function TemplateItemPage({ params }: Props) {
       name: template.title,
       description: template.description,
       image: `https://mydigitsign.com${template.thumbnailUrl}`,
-      brand: {
-        '@type': 'Brand',
-        name: 'MyDigitSign'
+      "brand": {
+        "@type": "Brand",
+        "name": "MyDigitSign"
       },
-      offers: {
-        '@type': 'Offer',
-        price: '0.00',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-        hasMerchantReturnPolicy: {
-          '@type': 'MerchantReturnPolicy',
-          applicableCountry: 'US',
-          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted'
-        },
-        shippingDetails: {
-          '@type': 'OfferShippingDetails',
-          shippingRate: {
-            '@type': 'MonetaryAmount',
-            value: '0',
-            currency: 'USD'
-          },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 0,
-              maxValue: 0,
-              unitCode: 'DAY'
-            },
-            transitTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 0,
-              maxValue: 0,
-              unitCode: 'DAY'
-            }
-          }
-        }
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
       },
       aggregateRating: {
         '@type': 'AggregateRating',

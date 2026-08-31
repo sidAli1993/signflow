@@ -39,6 +39,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/tools/remove-watermark-from-image',
+        destination: '/tools',
+        permanent: true,
+      },
+      {
+        source: '/tools/remove-watermark-from-pdf',
+        destination: '/tools',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -43,10 +43,6 @@ export function getSoftwareAppSchema(opts: {
     url: opts.url,
     operatingSystem: 'Windows, macOS, Linux, iOS, Android',
     applicationCategory: opts.applicationCategory || 'BusinessApplication',
-    brand: {
-      '@type': 'Brand',
-      name: 'MyDigitSign',
-    },
     offers: {
       '@type': 'Offer',
       price: '0',

@@ -42,7 +42,7 @@ export async function generateStaticParams() {
     { slug: 'what-is-dsign' },
     { slug: 'can-you-change-your-signature' },
     { slug: 'signature-and-date-line' },
-    { slug: 'esignature-in-georgia' },
+    { slug: 'are-electronic-signatures-legal-in-georgia' },
     { slug: 'how-to-create-transparent-signature-png' },
     { slug: 'how-to-add-digital-signature-to-google-docs' },
     { slug: 'sign-real-estate-contract-online' },
@@ -702,7 +702,7 @@ const getPostData = (slug: string): Post | null => {
         }
       ]
     },
-    'esignature-in-georgia': {
+    'are-electronic-signatures-legal-in-georgia': {
       title: 'Are eSignatures Legal in Georgia? (Regulatory Mandates 2026)',
       description: 'A comprehensive 3000+ word guide on the legality of electronic signatures in the US State of Georgia and the Country of Georgia. Discover ESIGN, UETA, eIDAS, and 2026 regulatory mandates.',
       date: 'August 28, 2026',

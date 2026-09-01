@@ -50,7 +50,7 @@ function getAllUrls(): string[] {
     'what-is-dsign',
     'can-you-change-your-signature',
     'signature-and-date-line',
-    'esignature-in-georgia',
+    'are-electronic-signatures-legal-in-georgia',
     'how-to-create-transparent-signature-png',
     'how-to-add-digital-signature-to-google-docs',
     'sign-real-estate-contract-online',

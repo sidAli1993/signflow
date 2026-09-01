@@ -100,10 +100,6 @@ const jsonLd = {
       "applicationCategory": "UtilitiesApplication",
       "applicationSubCategory": "PDF & Document Signing Tool",
       "description": "Free online PDF signer and digital signature tool. Draw, type, or upload your signature and place it on any PDF or image. 100% browser-based — no uploads, no account.",
-      "brand": {
-        "@type": "Brand",
-        "name": "MyDigitSign"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0",

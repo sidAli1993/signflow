@@ -42,20 +42,11 @@ export default async function TemplateItemPage({ params }: Props) {
       name: template.title,
       description: template.description,
       image: `https://mydigitsign.com${template.thumbnailUrl}`,
-      "brand": {
-        "@type": "Brand",
-        "name": "MyDigitSign"
-      },
       "offers": {
         "@type": "Offer",
         "price": "0.00",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '124',
       }
     }
   };

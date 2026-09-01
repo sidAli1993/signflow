@@ -17,10 +17,6 @@ export default function YoutubeTitleCheckerPage() {
     "operatingSystem": "Any",
     "applicationCategory": "BusinessApplication",
     "description": "Analyze your YouTube video titles for CTR potential. Check length, power words, emotion, and sentiment to get a strength score out of 100.",
-    "brand": {
-      "@type": "Brand",
-      "name": "MyDigitSign"
-    },
     "offers": {
       "@type": "Offer",
       "price": "0",

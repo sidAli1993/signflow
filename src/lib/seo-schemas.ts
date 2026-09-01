@@ -48,13 +48,16 @@ export function getSoftwareAppSchema(opts: {
       price: '0',
       priceCurrency: 'USD'
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: opts.rating?.ratingValue || '4.8',
-      ratingCount: opts.rating?.ratingCount || '124',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // Only include aggregateRating when real visible user reviews exist on the page
+    ...(opts.rating ? {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: opts.rating.ratingValue,
+        ratingCount: opts.rating.ratingCount,
+        bestRating: '5',
+        worstRating: '1',
+      },
+    } : {}),
     publisher: {
       '@type': 'Organization',
       name: 'MyDigitSign',

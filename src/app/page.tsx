@@ -107,10 +107,6 @@ const softwareSchema = {
   'applicationCategory': 'BusinessApplication',
   'operatingSystem': 'Windows, macOS, Linux, iOS, Android',
   'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
-  'brand': {
-    '@type': 'Brand',
-    'name': 'MyDigitSign'
-  },
   'offers': {
     '@type': 'Offer',
     'price': '0',

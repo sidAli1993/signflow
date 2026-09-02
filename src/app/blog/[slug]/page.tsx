@@ -42,7 +42,7 @@ export async function generateStaticParams() {
     { slug: 'what-is-dsign' },
     { slug: 'can-you-change-your-signature' },
     { slug: 'signature-and-date-line' },
-    { slug: 'are-electronic-signatures-legal-in-georgia' },
+    { slug: 'esignature-in-georgia' },
     { slug: 'how-to-create-transparent-signature-png' },
     { slug: 'how-to-add-digital-signature-to-google-docs' },
     { slug: 'sign-real-estate-contract-online' },
@@ -702,7 +702,7 @@ const getPostData = (slug: string): Post | null => {
         }
       ]
     },
-    'are-electronic-signatures-legal-in-georgia': {
+    'esignature-in-georgia': {
       title: 'Are eSignatures Legal in Georgia? (Regulatory Mandates 2026)',
       description: 'A comprehensive 3000+ word guide on the legality of electronic signatures in the US State of Georgia and the Country of Georgia. Discover ESIGN, UETA, eIDAS, and 2026 regulatory mandates.',
       date: 'August 28, 2026',
@@ -6069,6 +6069,21 @@ export default async function BlogPost({ params }: Props) {
             className={styles.articleContent}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+
+          {/* SEO FAQ Section — MUST BE VISIBLE to comply with Google Guidelines for FAQPage schema */}
+          {post.faq && post.faq.length > 0 && (
+            <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.2)' }}>
+              <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--color-text)' }}>Frequently Asked Questions</h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                {post.faq.map((item, idx) => (
+                  <div key={idx} style={{ background: 'var(--color-bg-secondary, #f8fafc)', padding: '1.25rem', borderRadius: '8px', border: '1px solid var(--color-border, #e2e8f0)' }}>
+                    <h3 style={{ fontSize: '1.1rem', margin: '0 0 0.5rem', color: 'var(--color-text)' }}>{item.question}</h3>
+                    <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--color-text-secondary)', lineHeight: 1.6 }}>{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Author Bio — E-E-A-T trust signal for Google 2026 */}
           <footer style={{

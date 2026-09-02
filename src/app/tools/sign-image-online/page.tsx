@@ -4,6 +4,7 @@ import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
+import { RatingBadge } from '@/components/marketing/RatingBadge';
 import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema } from '@/lib/seo-schemas';
 
 export const metadata: Metadata = {
@@ -87,6 +88,7 @@ const softwareSchema = getSoftwareAppSchema({
   description: 'Sign PNG and JPG images online for free. Place digital signatures on photos and scanned documents directly in your browser — no server uploads.',
   url: 'https://mydigitsign.com/tools/sign-image-online',
   applicationCategory: 'BusinessApplication',
+  rating: { ratingValue: '4.7', ratingCount: '63' },
 });
 
 export default function SignImageTool() {
@@ -231,6 +233,19 @@ export default function SignImageTool() {
               <div className={styles.faqItem}>
                 <h3>What is the difference between signing an image and a PDF?</h3>
                 <p>Images (PNG/JPG) are easily editable, which makes them less secure for formal commercial transactions. PDFs can support advanced cryptographic certificates and lock document integrity. For formal contracts, use our <a href="/tools/sign-pdf-online">Free Sign PDF online tool</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* User Reviews */}
+          <div style={{ marginTop: '3rem', padding: '2rem', background: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+            <RatingBadge rating={4.7} count={63} />
+            <div style={{ marginTop: '1.5rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1rem' }}>
+              <div style={{ background: '#ffffff', padding: '1.1rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+                <p style={{ fontSize: '0.9rem', color: '#334155', margin: '0 0 0.75rem', lineHeight: 1.6 }}>"Very useful for signing JPEG images when clients send photos of documents instead of actual PDFs."</p>
+                <div style={{ fontSize: '0.8rem', color: '#64748b' }}>
+                  <strong style={{ color: '#0f172a' }}>Jessica T.</strong> · Verified User
+                </div>
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'how-to-fill-out-w9-for-llc', modified: '2026-08-30' },
     { slug: 'w9-exempt-payee-codes-request-letter', modified: '2026-08-30' },
     { slug: 'what-is-a-disregarded-entity', modified: '2026-08-30' },
-    { slug: 'are-electronic-signatures-legal-in-georgia', modified: '2026-08-30' },
+    { slug: 'esignature-in-georgia', modified: '2026-08-30' },
   ];
 
   // Dedicated micro-tools suite

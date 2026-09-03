@@ -142,12 +142,12 @@ export default async function TemplateItemPage({ params }: Props) {
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '60px' }}>
-                <Link href={`/tools/sign-pdf-online?templateUrl=${encodeURIComponent(template.pdfUrl)}`} style={{ textDecoration: 'none' }}>
+                <Link href={`/tools/sign-pdf-online?templateUrl=${encodeURIComponent(template.pdfUrl)}`} rel="nofollow" style={{ textDecoration: 'none' }}>
                   <button style={{ width: '100%', padding: '20px', backgroundColor: '#2563eb', color: 'white', border: 'none', borderRadius: '12px', fontSize: '1.25rem', fontWeight: 700, cursor: 'pointer', boxShadow: '0 4px 14px rgba(37, 99, 235, 0.4)', transition: 'transform 0.2s' }}>
                     Edit & Sign Now (Free)
                   </button>
                 </Link>
-                <a href={template.pdfUrl} download={template.pdfUrl.split('/').pop() || 'template.pdf'} style={{ textDecoration: 'none' }}>
+                <a href={template.pdfUrl} download={template.pdfUrl.split('/').pop() || 'template.pdf'} rel="nofollow" style={{ textDecoration: 'none' }}>
                   <button style={{ width: '100%', padding: '16px', backgroundColor: 'white', color: '#0f172a', border: '2px solid #e2e8f0', borderRadius: '12px', fontSize: '1.1rem', fontWeight: 600, cursor: 'pointer', transition: 'background-color 0.2s' }}>
                     Download as PDF
                   </button>

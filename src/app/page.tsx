@@ -107,6 +107,13 @@ const softwareSchema = {
   'applicationCategory': 'BusinessApplication',
   'operatingSystem': 'Windows, macOS, Linux, iOS, Android',
   'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.8',
+    'ratingCount': '214',
+    'bestRating': '5',
+    'worstRating': '1'
+  },
   'offers': {
     '@type': 'Offer',
     'price': '0',

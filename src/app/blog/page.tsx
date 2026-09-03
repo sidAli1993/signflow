@@ -27,12 +27,6 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    title: 'Are Electronic Signatures Legal in Georgia? (Code § 10-12-7 Guide)',
-    slug: 'are-electronic-signatures-legal-in-georgia',
-    excerpt: 'A complete 2026 guide to Georgia Code § 10-12-7. Learn if electronic signatures are legally binding in Georgia, exceptions to the rule, and how UETA works.',
-    date: 'August 30, 2026',
-  },
-  {
     title: 'When is a W-9 NOT Required? (Exemptions & Independent Contractor Rules)',
     slug: 'when-is-a-w9-not-required',
     excerpt: 'Learn exactly when a W-9 is not required, exceptions for corporate payments, credit card payments, and when you can legally refuse to sign one.',
@@ -55,6 +49,12 @@ const posts = [
     slug: 'w9-exempt-payee-codes-request-letter',
     excerpt: 'Master IRS Form W-9 exempt payee codes, learn exactly when to use an exemption payee code, and get free templates for a formal W-9 request letter.',
     date: 'August 30, 2026',
+  },
+  {
+    title: 'Are eSignatures Legal in Georgia? (Regulatory Mandates 2026)',
+    slug: 'esignature-in-georgia',
+    excerpt: 'A comprehensive 3000+ word guide on the legality of electronic signatures in the US State of Georgia and the Country of Georgia. Discover ESIGN, UETA, eIDAS, and 2026 regulatory mandates.',
+    date: 'August 28, 2026',
   },
   {
     title: 'How to Add a Signature in Microsoft Word (3 Easy Methods — 2026)',

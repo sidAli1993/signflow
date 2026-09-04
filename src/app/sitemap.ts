@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'w9-exempt-payee-codes-request-letter', modified: '2026-08-30' },
     { slug: 'what-is-a-disregarded-entity', modified: '2026-08-30' },
     { slug: 'esignature-in-georgia', modified: '2026-08-30' },
+    { slug: 'georgia-esignature-law-mandates-guide', modified: '2026-09-04' },
   ];
 
   // Dedicated micro-tools suite

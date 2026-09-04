@@ -96,6 +96,7 @@ export const Footer: React.FC = () => {
             <Link href="/blog/how-to-fill-out-w9-for-llc" className={styles.link}>How to Fill out W9 for LLC</Link>
             <Link href="/blog/w9-exempt-payee-codes-request-letter" className={styles.link}>W9 Exempt Payee Codes</Link>
             <Link href="/blog/what-is-a-disregarded-entity" className={styles.link}>What is a Disregarded Entity?</Link>
+            <Link href="/blog/georgia-esignature-law-mandates-guide" className={styles.link}>Georgia eSignature Laws</Link>
           </div>
           
           <div className={styles.linksCol}>

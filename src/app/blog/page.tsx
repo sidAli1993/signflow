@@ -199,6 +199,12 @@ const posts = [
     slug: 'digital-signature-laws-by-country',
     excerpt: 'Understand the legal frameworks (ESIGN, UETA, eIDAS) governing electronic and digital signatures globally.',
     date: 'August 8, 2026',
+  },
+  {
+    title: 'Navigating Regulatory Mandates for eSignature in Georgia (2026 Guide)',
+    slug: 'georgia-esignature-law-mandates-guide',
+    excerpt: 'A 3000-word deep dive into the regulatory mandates for esignature in georgia. Learn how to securely execute real estate and business contracts with UETA compliance.',
+    date: 'September 4, 2026',
   }
 ];
 

@@ -67,3 +67,6 @@ Contributions are welcome! If you want to improve the PDF editor signature capab
 
 check my other projects
 order block trading https://orderblocktrading.com
+
+
+<!-- Security scan triggered at 2026-09-05 07:21:21 -->

@@ -32,28 +32,28 @@ const breadcrumbSchema = getBreadcrumbSchema([
 ]);
 
 const howToSchema = getHowToSchema({
-  name: 'How to Sign a Invoice Online for Free',
-  description: 'Apply a legally binding electronic signature to your invoice securely in your browser.',
+  name: 'How to Authorize and Sign an Invoice Online',
+  description: 'Apply a legally binding electronic signature or corporate stamp to your invoice to authorize payment.',
   url: 'https://mydigitsign.com/tools/sign-invoice-online',
   steps: [
     {
-      name: 'Create Your Signature',
-      text: 'Type your full name, draw your signature, or upload your company seal. Click Adopt to save your mark.',
+      name: 'Create Your Payment Authorization',
+      text: 'Type your name, draw your signature, or upload your company seal or "Approved" stamp. Click Adopt.',
       url: 'https://mydigitsign.com/tools/sign-invoice-online',
     },
     {
-      name: 'Upload Your Document',
-      text: 'Drag and drop your invoice PDF. It is processed entirely locally for maximum privacy.',
+      name: 'Upload the Invoice PDF',
+      text: 'Drag and drop your invoice or purchase order. Financial data is processed locally to maintain accounting privacy.',
       url: 'https://mydigitsign.com/tools/sign-invoice-online',
     },
     {
-      name: 'Place Your Signature',
-      text: 'Navigate to the signature block, drag your signature to the line, and add optional text or dates.',
+      name: 'Place the Stamp or Signature',
+      text: 'Drag your signature to the authorization block. Use the text tool to add your department code or the current date.',
       url: 'https://mydigitsign.com/tools/sign-invoice-online',
     },
     {
-      name: 'Download & Send',
-      text: 'Click Download to save the signed contract. Email it back to the requesting party instantly.',
+      name: 'Download for Accounts Payable',
+      text: 'Export the signed invoice instantly. It is now ready to be processed by your finance department.',
       url: 'https://mydigitsign.com/tools/sign-invoice-online',
     },
   ],
@@ -61,7 +61,7 @@ const howToSchema = getHowToSchema({
 
 const softwareSchema = getSoftwareAppSchema({
   name: 'MyDigitSign Invoice Signer',
-  description: 'Sign invoices, billing statements, and purchase orders online for free. Add an authorized electronic signature or company seal to your billing documents.',
+  description: 'Sign invoices, billing statements, and purchase orders online for free. Add an authorized electronic signature or company seal.',
   url: 'https://mydigitsign.com/tools/sign-invoice-online',
   applicationCategory: 'BusinessApplication',
 });
@@ -69,19 +69,19 @@ const softwareSchema = getSoftwareAppSchema({
 const faqItems = [
   {
     question: "Why do some clients require a signed invoice?",
-    answer: "Certain corporate accounting policies and international tax regulations require invoices to be formally signed or stamped to prevent fraud and authorize the payout."
+    answer: "Many international tax regulations and corporate accounting departments require invoices to be formally signed or stamped to prevent fraud and legally authorize the payout."
   },
   {
-    question: "Can I add a company seal to my invoice?",
-    answer: "Yes, you can upload an image of your company seal as your signature and place it on your invoice PDF before downloading."
+    question: "Can I add a company seal or 'PAID' stamp to my invoice?",
+    answer: "Yes, you can upload a transparent PNG image of your company seal or a PAID stamp as your signature, and place it anywhere on your invoice PDF."
   },
   {
-    question: "Do I need to create an account to sign this document?",
-    answer: "No. MyDigitSign is completely free and requires no account registration or credit card to sign your documents."
+    question: "Are my financial details safe?",
+    answer: "Absolutely. Our tool processes the PDF strictly inside your browser. We never upload your invoices to our servers, keeping your financial figures completely private."
   },
   {
-    question: "Is a drawn signature better than a typed one?",
-    answer: "Both are legally valid electronic signatures. Drawing your signature mimics your natural handwriting, while typing uses cursive typography. Choose whichever you prefer."
+    question: "Can I sign multiple invoices at once?",
+    answer: "You must process them one file at a time, but since it's entirely client-side, the process is instantaneous and you can rapidly sign back-to-back invoices."
   }
 ];
 
@@ -96,66 +96,74 @@ export default function SignDocumentTool() {
         <div className={styles.seoHeroInner}>
           <div className={styles.seoHeroBadge}>
             <Star size={14} aria-hidden="true" />
-            <span>Free Contract Signer · No Account · 100% Private</span>
+            <span>Secure Billing · Client-Side Privacy</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
             Sign Invoices & Billing <span className={styles.seoHeroGradient}>Online</span>
           </h1>
-          <p className={styles.seoHeroDesc} dangerouslySetInnerHTML={{ __html: 'Need to authorize an <strong>invoice, purchase order, or billing statement</strong>? Add your electronic signature or company seal to your financial documents instantly for free.' }} />
+          <p className={styles.seoHeroDesc}>
+            Need to authorize an <strong>invoice, purchase order, or billing statement</strong>? Add your electronic signature, "PAID" stamp, or company seal to your financial documents instantly.
+          </p>
           <ul className={styles.seoTrustPills} role="list">
-            <li><Shield size={14} /><span>In-Browser Processing</span></li>
-            <li><Lock size={14} /><span>Complete Privacy</span></li>
+            <li><Shield size={14} /><span>Financials Kept Private</span></li>
+            <li><Lock size={14} /><span>No Server Uploads</span></li>
             <li><FileCheck size={14} /><span>ESIGN Compliant</span></li>
-            <li><Users size={14} /><span>No Signup Required</span></li>
+            <li><Users size={14} /><span>No Account Required</span></li>
           </ul>
         </div>
       </section>
 
       <HomeClient
         initialTab="type"
-        titleOverride="Sign Your <span>Invoice</span>"
-        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload your PDF."
+        titleOverride="Authorize <span>Invoice</span>"
+        descriptionOverride="Create your signature or upload a company stamp. Once adopted, upload your billing PDF."
       />
 
       <section className={styles.seoExplainer}>
         <div className={styles.seoExplainerInner}>
           <h2 className={styles.seoExplainerTitle}>
-            How to Sign Your Invoice in 4 Steps
+            How to Sign Your Invoice for Payment
           </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>1</div>
               <h3>Create Signature</h3>
-              <p>Type or draw your signature in the creator panel and adopt it.</p>
+              <p>Type your name, draw a signature, or upload a company seal PNG.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>2</div>
-              <h3>Upload PDF</h3>
-              <p>Drop your <strong>invoice</strong> into the secure browser workspace.</p>
+              <h3>Load Invoice</h3>
+              <p>Drop your <strong>invoice PDF</strong> securely into the browser workspace.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>3</div>
-              <h3>Place on Line</h3>
-              <p>Drag the signature, add dates, and position them on the document.</p>
+              <h3>Apply Authorization</h3>
+              <p>Position your signature or stamp on the document. Add payment dates if necessary.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>4</div>
-              <h3>Download</h3>
-              <p>Save the signed file to your device instantly.</p>
+              <h3>Export Document</h3>
+              <p>Download the finalized file and send it to Accounts Payable.</p>
             </article>
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>Streamline Your Billing: How to Sign Invoices Online</h2>
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'For freelancers, contractors, and corporate billing departments, authorizing payments quickly is essential for cash flow. When you <strong>sign invoice online free</strong>, you ensure that your billing documents look professional and authorized.' }} />
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Many international clients and corporate accounts payable departments require a formal signature or company stamp on an invoice before they can process payment. You can read more about <a href="/blog/electronic-signature-for-small-business" style="color:var(--color-primary);text-decoration:underline;">why small businesses use e-signatures</a> for invoicing.' }} />
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Our tool allows you to upload an image of your company seal or draw your authorized signature directly onto the invoice PDF using our <a href="/tools/draw-signature-online" style="color:var(--color-primary);text-decoration:underline;">drawing tool</a>. Your financial data is processed securely in your browser.' }} />
+            <h2 className={styles.seoArticleTitle}>Streamline Your Accounts Payable: Signing Invoices Online</h2>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              For freelancers, contractors, and corporate billing departments, authorizing payments quickly is essential for cash flow. When you <strong>sign invoice online free</strong>, you ensure that your billing documents look professional, legally sound, and ready for immediate processing.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Many international clients and corporate accounts payable (AP) departments require a formal signature or company stamp on an invoice before they can process a wire transfer or check. This serves as an anti-fraud measure, confirming that the services were rendered and the request is legitimate.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Because invoices contain sensitive banking details, client names, and financial figures, uploading them to standard free PDF editors is a massive privacy risk. MyDigitSign utilizes client-side architecture (WebAssembly and Canvas) to apply your signatures locally. Your financial data is never sent to our servers.
+            </p>
             
             <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Why Use Client-Side Signing?
+              Using Company Seals and PAID Stamps
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Unlike other free tools that upload your sensitive documents to remote servers to apply the signature, MyDigitSign uses WebAssembly and advanced canvas rendering to process your <strong>invoice</strong> locally on your machine. This guarantees that your confidential data cannot be intercepted or stored by third parties.
+              Beyond traditional signatures, our tool allows you to upload an image of your company seal or a red &quot;PAID&quot; stamp. By selecting the &quot;Upload&quot; option in the signature creator, you can drop your transparent PNG stamp directly onto the invoice, marking it clearly for internal accounting records.
             </p>
           </div>
 
@@ -175,8 +183,8 @@ export default function SignDocumentTool() {
             <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Tools & Guides</h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.95rem' }}>
               <li><Link href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign PDF Online <ArrowRight size={14}/></Link></li>
-              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Signature Online <ArrowRight size={14}/></Link></li>
-              <li><Link href="/tools/draw-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Draw Signature Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/sign-freelance-contract-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign Freelance Contract <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/sign-business-agreement-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign Business Agreement <ArrowRight size={14}/></Link></li>
               <li><Link href="/blog/electronic-signature-for-small-business" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Small Business E-Signatures <ArrowRight size={14}/></Link></li>
             </ul>
           </div>

@@ -8,15 +8,15 @@ import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Offer Letter Online Free — Accept Your Job Offer | MyDigitSign',
-  description: 'Accept your new job instantly. Sign your offer letter online for free with a secure, legally binding electronic signature.',
-  keywords: ["sign offer letter online free", "accept job offer electronically", "electronic signature offer letter", "sign HR letter online"],
+  title: 'Sign Offer Letter Online Free — Accept Job Offer | MyDigitSign',
+  description: 'Accept your new job instantly. Sign your employment offer letter online for free and send it back to HR. Secure, ESIGN compliant, and private.',
+  keywords: ["sign offer letter online", "accept job offer online", "sign job offer free", "electronic signature offer letter", "sign employment offer online"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-offer-letter-online',
   },
   openGraph: {
-    title: 'Sign Offer Letter Online Free — Accept Your Job Offer | MyDigitSign',
-    description: 'Accept your new job instantly. Sign your offer letter online for free with a secure, legally binding electronic signature.',
+    title: 'Sign Offer Letter Online Free — Accept Job Offer | MyDigitSign',
+    description: 'Accept your new job instantly. Sign your employment offer letter online for free and send it back to HR. Secure, ESIGN compliant, and private.',
     url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
     siteName: 'MyDigitSign',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MyDigitSign' }],
@@ -28,32 +28,32 @@ export const metadata: Metadata = {
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Tools', url: '/tools' },
-  { name: 'Sign Offer Letter Online', url: '/tools/sign-offer-letter-online' },
+  { name: 'Sign Offer Letter', url: '/tools/sign-offer-letter-online' },
 ]);
 
 const howToSchema = getHowToSchema({
-  name: 'How to Sign a Offer Letter Online for Free',
-  description: 'Apply a legally binding electronic signature to your offer letter securely in your browser.',
+  name: 'How to Sign and Accept an Offer Letter Online',
+  description: 'Apply your electronic signature to your new job offer letter securely and accept the position.',
   url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
   steps: [
     {
-      name: 'Create Your Signature',
-      text: 'Type your full name, draw your signature, or upload your company seal. Click Adopt to save your mark.',
+      name: 'Create Your Professional Signature',
+      text: 'Choose a cursive font to type your name, or draw your handwritten signature to create a professional impression.',
       url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
     },
     {
-      name: 'Upload Your Document',
-      text: 'Drag and drop your offer letter PDF. It is processed entirely locally for maximum privacy.',
+      name: 'Load the Offer Letter',
+      text: 'Drag and drop the PDF offer letter from HR into the browser. It processes locally, keeping your salary details completely private.',
       url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
     },
     {
-      name: 'Place Your Signature',
-      text: 'Navigate to the signature block, drag your signature to the line, and add optional text or dates.',
+      name: 'Sign and Date to Accept',
+      text: 'Place your signature on the Candidate Acceptance line. Use the text tool to add the current date and your confirmed start date.',
       url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
     },
     {
-      name: 'Download & Send',
-      text: 'Click Download to save the signed contract. Email it back to the requesting party instantly.',
+      name: 'Download and Return',
+      text: 'Click Download to save the signed acceptance letter. Email it promptly back to the recruiter or hiring manager to secure the role.',
       url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
     },
   ],
@@ -61,27 +61,27 @@ const howToSchema = getHowToSchema({
 
 const softwareSchema = getSoftwareAppSchema({
   name: 'MyDigitSign Offer Letter Signer',
-  description: 'Accept your new job instantly. Sign your offer letter online for free with a secure, legally binding electronic signature.',
+  description: 'Accept your new job instantly. Sign your employment offer letter online securely.',
   url: 'https://mydigitsign.com/tools/sign-offer-letter-online',
   applicationCategory: 'BusinessApplication',
 });
 
 const faqItems = [
   {
-    question: "Is typing my name on an offer letter a valid signature?",
-    answer: "Yes, typing your name or drawing it on an electronic document serves as a legally valid electronic signature for accepting an offer letter."
+    question: "Do companies accept an electronically signed offer letter?",
+    answer: "Yes, practically all companies and HR departments accept ESIGN-compliant digital signatures for offer letters and onboarding documents."
   },
   {
-    question: "Can I sign an offer letter for free?",
-    answer: "Yes, using MyDigitSign, you can apply a legally binding signature to your offer letter PDF completely free of charge, with no account required."
+    question: "Is it safe to upload a document containing my salary?",
+    answer: "With MyDigitSign, yes. Our tool processes the PDF locally on your device. We do not upload your offer letter to any external server, ensuring your compensation details remain confidential."
   },
   {
-    question: "Do I need to create an account to sign this document?",
-    answer: "No. MyDigitSign is completely free and requires no account registration or credit card to sign your documents."
+    question: "What if I need to counter-offer or change my start date?",
+    answer: "If you need to counter, do not sign the document yet. Email your recruiter first. If you just need to write in a different start date, you can use our Text tool to type it directly onto the PDF before signing."
   },
   {
-    question: "Is a drawn signature better than a typed one?",
-    answer: "Both are legally valid electronic signatures. Drawing your signature mimics your natural handwriting, while typing uses cursive typography. Choose whichever you prefer."
+    question: "Can I sign the offer letter on my phone?",
+    answer: "Absolutely. You can open MyDigitSign on your smartphone, upload the PDF, draw your signature with your finger, and email it back to HR immediately."
   }
 ];
 
@@ -96,66 +96,74 @@ export default function SignDocumentTool() {
         <div className={styles.seoHeroInner}>
           <div className={styles.seoHeroBadge}>
             <Star size={14} aria-hidden="true" />
-            <span>Free Contract Signer · No Account · 100% Private</span>
+            <span>Fast · Professional · 100% Private</span>
           </div>
           <h1 className={styles.seoHeroTitle}>
-            Sign Your Offer Letter <span className={styles.seoHeroGradient}>Instantly</span>
+            Sign Offer Letters <span className={styles.seoHeroGradient}>Online</span>
           </h1>
-          <p className={styles.seoHeroDesc} dangerouslySetInnerHTML={{ __html: 'Ready to accept your new role? Upload your <strong>offer letter</strong> and apply your electronic signature for free. Return the signed document to HR immediately and secure your start date.' }} />
+          <p className={styles.seoHeroDesc}>
+            Congratulations on the new job! Accept your role instantly. <strong>Sign your employment offer letter</strong> online and email it back to HR in seconds. Your compensation data remains entirely private on your device.
+          </p>
           <ul className={styles.seoTrustPills} role="list">
-            <li><Shield size={14} /><span>In-Browser Processing</span></li>
-            <li><Lock size={14} /><span>Complete Privacy</span></li>
-            <li><FileCheck size={14} /><span>ESIGN Compliant</span></li>
-            <li><Users size={14} /><span>No Signup Required</span></li>
+            <li><Shield size={14} /><span>Salary Data Kept Private</span></li>
+            <li><Lock size={14} /><span>Zero Server Processing</span></li>
+            <li><FileCheck size={14} /><span>HR Compliant</span></li>
+            <li><Users size={14} /><span>Free — No Account Needed</span></li>
           </ul>
         </div>
       </section>
 
       <HomeClient
         initialTab="type"
-        titleOverride="Sign Your <span>Offer Letter</span>"
-        descriptionOverride="Create your legally binding electronic signature. Once adopted, upload your PDF."
+        titleOverride="Accept Your <span>Job Offer</span>"
+        descriptionOverride="Create a professional signature. Once adopted, upload your offer letter."
       />
 
       <section className={styles.seoExplainer}>
         <div className={styles.seoExplainerInner}>
           <h2 className={styles.seoExplainerTitle}>
-            How to Sign Your Offer Letter in 4 Steps
+            How to Sign and Accept Your Job Offer
           </h2>
           <div className={styles.seoStepsGrid}>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>1</div>
-              <h3>Create Signature</h3>
-              <p>Type or draw your signature in the creator panel and adopt it.</p>
+              <h3>Generate Signature</h3>
+              <p>Type your name in a professional cursive style or draw it on-screen.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>2</div>
-              <h3>Upload PDF</h3>
-              <p>Drop your <strong>offer letter</strong> into the secure browser workspace.</p>
+              <h3>Load Offer Letter</h3>
+              <p>Drop your <strong>offer letter PDF</strong> securely into the browser workspace.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>3</div>
-              <h3>Place on Line</h3>
-              <p>Drag the signature, add dates, and position them on the document.</p>
+              <h3>Accept Terms</h3>
+              <p>Place your signature on the Candidate line and fill in the current date.</p>
             </article>
             <article className={styles.seoStep}>
               <div className={styles.seoStepNum}>4</div>
-              <h3>Download</h3>
-              <p>Save the signed file to your device instantly.</p>
+              <h3>Export & Email</h3>
+              <p>Download the finalized document and attach it in your reply to HR.</p>
             </article>
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>Accepting Your Job: How to Sign an Offer Letter Online</h2>
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Receiving a job offer is an exciting milestone. To officially accept the position, you must sign the offer letter and return it to HR. You can <strong>sign offer letter online free</strong> to confirm your acceptance without delay.' }} />
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'An offer letter outlines your starting salary, benefits, and start date. While not always a binding employment contract, signing it signifies your formal intent to join the company. If you need to type your name instead, try our <a href="/tools/type-signature-online" style="color:var(--color-primary);text-decoration:underline;">typed signature generator</a>.' }} />
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }} dangerouslySetInnerHTML={{ __html: 'Avoid the hassle of finding a scanner. Just upload the PDF, draw or type your signature, place it on the signature line, and email the finalized document directly back to your recruiter. This is powered by our core <a href="/tools/sign-pdf-online" style="color:var(--color-primary);text-decoration:underline;">PDF signer</a>.' }} />
+            <h2 className={styles.seoArticleTitle}>Secure the Role: Professionally Signing Your Offer Letter</h2>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Receiving an offer letter is an exciting moment, but the job isn&apos;t officially yours until the ink is dry. When you need to respond to a recruiter quickly, you can <strong>sign offer letter online</strong> without waiting to find a printer or scanner.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              In today&apos;s remote and fast-paced hiring environment, HR departments expect a rapid turnaround. Returning a professionally signed, digital PDF shows that you are responsive and tech-savvy. You can choose to type your name in an elegant cursive font or draw your actual signature to make it feel more personal.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Importantly, offer letters contain highly sensitive information regarding your base salary, bonus structure, equity grants, and start date. Uploading this document to a standard online PDF editor poses a significant privacy risk. MyDigitSign ensures your compensation details remain confidential by executing the signature merging entirely on your local machine.
+            </p>
             
             <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Why Use Client-Side Signing?
+              Confirming Your Start Date
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Unlike other free tools that upload your sensitive documents to remote servers to apply the signature, MyDigitSign uses WebAssembly and advanced canvas rendering to process your <strong>offer letter</strong> locally on your machine. This guarantees that your confidential data cannot be intercepted or stored by third parties.
+              Many offer letters include a blank field asking you to explicitly write in your anticipated start date alongside your signature. You can easily accomplish this using our suite of annotation tools. Simply select the Text Tool, type in your agreed-upon start date, and place it on the corresponding line before downloading the accepted offer.
             </p>
           </div>
 
@@ -172,12 +180,11 @@ export default function SignDocumentTool() {
           </div>
 
           <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid rgba(128,128,128,0.15)' }}>
-            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Tools & Guides</h3>
+            <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: 'var(--color-text)' }}>Explore Related Career Tools</h3>
             <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1rem', fontSize: '0.95rem' }}>
-              <li><Link href="/tools/sign-pdf-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign PDF Online <ArrowRight size={14}/></Link></li>
-              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Signature Online <ArrowRight size={14}/></Link></li>
-              <li><Link href="/tools/draw-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Draw Signature Online <ArrowRight size={14}/></Link></li>
-              <li><Link href="/blog/electronic-signature-for-small-business" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Small Business E-Signatures <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/sign-employment-contract-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign Employment Contract <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/sign-nda-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Sign NDA Online <ArrowRight size={14}/></Link></li>
+              <li><Link href="/tools/type-signature-online" style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '4px' }}>Type Professional Signature <ArrowRight size={14}/></Link></li>
             </ul>
           </div>
         </div>

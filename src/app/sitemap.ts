@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'what-is-a-disregarded-entity', modified: '2026-08-30' },
     { slug: 'esignature-in-georgia', modified: '2026-08-30' },
     { slug: 'georgia-esignature-law-mandates-guide', modified: '2026-09-04' },
+    { slug: 'how-to-save-outlook-email-as-pdf', modified: '2026-09-08' },
   ];
 
   // Dedicated micro-tools suite

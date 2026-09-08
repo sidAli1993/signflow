@@ -205,6 +205,12 @@ const posts = [
     slug: 'georgia-esignature-law-mandates-guide',
     excerpt: 'A 3000-word deep dive into the regulatory mandates for esignature in georgia. Learn how to securely execute real estate and business contracts with UETA compliance.',
     date: 'September 4, 2026',
+  },
+  {
+    title: 'How to Save Outlook Email as PDF (2026 Complete Guide)',
+    slug: 'how-to-save-outlook-email-as-pdf',
+    excerpt: 'Learn how to save outlook email as pdf in 2026. Discover multiple methods to convert an outlook message to PDF securely and fast.',
+    date: 'September 8, 2026',
   }
 ];
 

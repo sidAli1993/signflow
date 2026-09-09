@@ -8,9 +8,9 @@ import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Waiver Online Free — Liability & Release Forms | MyDigitSign',
-  description: 'Sign liability waivers, event releases, and fitness participation forms online for free. Provide legal consent securely without printing any documents.',
-  keywords: ["sign waiver online", "sign liability release", "event waiver signature", "fitness waiver online", "sign release form"],
+  title: 'Sign Waiver Online Free — Liability & Activity Waivers | MyDigitSign',
+  description: 'Sign liability waivers online for free. Understand what makes a waiver legally enforceable, gross negligence exceptions, state-specific laws, and real-world waiver scenarios for gyms, events, and sports.',
+  keywords: ["sign waiver online", "sign liability waiver online free", "activity waiver signature", "electronic signature waiver", "waiver enforceability", "gross negligence waiver", "gym liability waiver"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-waiver-online',
   },
@@ -68,20 +68,28 @@ const softwareSchema = getSoftwareAppSchema({
 
 const faqItems = [
   {
-    question: "Is an electronic signature valid for a liability waiver?",
-    answer: "Yes, electronic signatures on liability waivers and release forms are fully enforceable under the ESIGN Act, provided you have clearly indicated your intent to sign."
+    question: "Does signing a waiver mean I can never sue if I'm injured?",
+    answer: "Not necessarily. Waivers are generally enforceable for ordinary negligence, but they cannot waive claims for gross negligence, reckless conduct, or intentional harm. If an injury was caused by an operator's extreme carelessness — beyond what a reasonable person would expect — the waiver may not protect the defendant."
   },
   {
-    question: "How do I sign a waiver for my child?",
-    answer: "Simply create a signature with your own name, place it on the 'Parent/Guardian Signature' line, and use our Text tool to type your child's name in the participant section."
+    question: "Are waivers enforceable in all US states?",
+    answer: "No. California, Louisiana, Montana, New Mexico, and Virginia have statutes or strong court precedent that limit waiver enforceability, especially for physical activities. In these states, waivers are often narrowly interpreted against the drafter and may be voided for public policy reasons."
   },
   {
-    question: "Is this secure for entering my emergency contact info?",
-    answer: "Yes. Because our tool does not upload your documents to any external server, any emergency contact numbers or medical details you add remain completely private on your device."
+    question: "Can a parent sign a waiver on behalf of a minor child?",
+    answer: "In most US states, parental waivers for minors have limited enforceability — a parent generally cannot waive a minor's right to sue for injuries. California courts specifically held in Platzer v. Mammoth Mountain that a parental waiver cannot release a commercial operator's liability for a child's injuries."
   },
   {
-    question: "Can I sign a waiver on my smartphone before an event?",
-    answer: "Absolutely. You can open MyDigitSign in Safari or Chrome on your phone, upload the PDF, sign with your finger, and email it to the event coordinator right at the door."
+    question: "What makes a liability waiver legally valid?",
+    answer: "A legally enforceable waiver must: (1) clearly identify the parties, (2) specifically describe the risks being waived, (3) contain a clear expression of intent to release the operator from liability, (4) be signed voluntarily without coercion, (5) have conspicuous placement so the signer cannot miss it, and (6) use plain, unambiguous language."
+  },
+  {
+    question: "Does a waiver need to be notarized?",
+    answer: "In most contexts, no. Standard activity and liability waivers do not require notarization to be enforceable. An electronic signature is sufficient. Notarization is typically only required for real estate documents, certain contracts, and legal instruments like powers of attorney."
+  },
+  {
+    question: "Can I send a waiver to participants electronically before the event?",
+    answer: "Absolutely. Sending a PDF waiver in advance and asking participants to sign with an ESIGN-compliant tool is entirely valid. Courts have upheld electronically signed waivers in the same way as paper ones."
   }
 ];
 
@@ -148,22 +156,76 @@ export default function SignDocumentTool() {
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>Secure Electronic Signatures for Event and Fitness Waivers</h2>
+            <h2 className={styles.seoArticleTitle}>What Makes a Waiver Legally Enforceable? A Complete Guide</h2>
+
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Whether you are joining a new gym, participating in a marathon, or sending your child to a trampoline park, you will inevitably need to sign a liability release. Instead of dealing with the hassle of printing and scanning, you can <strong>sign waiver online</strong> instantly using your computer or smartphone.
+              Waivers are everywhere — you sign them before joining a gym, attending a concert, running a marathon, or taking a cooking class. Most people sign them without reading a single line. But before you <strong>sign waiver online</strong> or in person, understanding what a waiver actually does, what it cannot do, and how courts interpret them in your state can protect your rights significantly.
             </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              8 Elements Courts Look for When Evaluating Waiver Enforceability
+            </h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Not every waiver is automatically enforceable. Courts scrutinize waivers carefully. Here are the eight factors courts typically evaluate:
+            </p>
+            <div style={{ display: 'grid', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              {[
+                { n: '1', title: 'Clear Identification of Parties', detail: 'The waiver must name both the activity provider (or their entity) and the participant. Vague &quot;we/you&quot; language without proper identification weakens enforceability.' },
+                { n: '2', title: 'Specific Risk Description', detail: 'The waiver should explicitly describe the risks being assumed — not just &quot;any and all risks.&quot; Courts increasingly require that specific hazards relevant to the activity be named.' },
+                { n: '3', title: 'Clear Exculpatory Language', detail: 'The release of liability must be stated in clear, unambiguous terms. Courts interpret ambiguous language against the party who drafted the waiver (contra proferentem doctrine).' },
+                { n: '4', title: 'Conspicuous Placement', detail: 'Waivers buried in fine print or presented as an afterthought are vulnerable to challenge. Courts want to see that the signer had a reasonable opportunity to notice and read the release.' },
+                { n: '5', title: 'Voluntary Execution', detail: 'The signature must be given voluntarily. If you were told &quot;sign or you cannot participate&quot; with no time to read the document, courts may consider that coercive, especially for essential services.' },
+                { n: '6', title: 'Plain Language', detail: 'Legal jargon-heavy waivers are more frequently challenged. Modern courts and consumer protection advocates increasingly favor plain language that an average person can understand.' },
+                { n: '7', title: 'No Public Policy Violation', detail: 'Waivers cannot waive liability for activities that involve a public interest or public utility, such as hospitals, common carriers, or utilities. These are void as against public policy.' },
+                { n: '8', title: 'No Gross Negligence', detail: 'Even a perfectly drafted waiver cannot shield a defendant from liability for gross negligence, reckless conduct, or intentional harm. This is the most frequent successful challenge to waivers.' },
+              ].map((item, i) => (
+                <div key={i} style={{ display: 'flex', gap: '1rem', padding: '0.85rem 1rem', background: 'rgba(79,70,229,0.03)', borderRadius: '8px', border: '1px solid rgba(79,70,229,0.1)' }}>
+                  <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-primary)', opacity: 0.5, flexShrink: 0, lineHeight: 1, minWidth: '20px' }}>{item.n}</span>
+                  <div>
+                    <strong style={{ color: 'var(--color-text)', display: 'block', marginBottom: '0.2rem', fontSize: '0.95rem' }}>{item.title}</strong>
+                    <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: item.detail }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              State-Specific Waiver Laws: Where Your Waiver May Not Hold Up
+            </h3>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              A liability waiver is a legal contract where you acknowledge and assume the risks of an activity. Because they are binding contracts, the ESIGN Act guarantees that electronic signatures applied to these waivers are fully enforceable in court. 
+              Waiver enforceability varies dramatically by state. <strong>California, Louisiana, Montana, New Mexico, and Virginia</strong> have significant legal restrictions on liability waiver enforceability. California courts, in particular, apply a tough six-factor test from <em>Tunkl v. Regents of the University of California</em> to determine whether a waiver violates public policy. Activity providers in these states should consult legal counsel before relying solely on a waiver for liability protection.
             </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Real-World Scenarios: Gyms, Races, Trampolines, and Events
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1rem', marginBottom: '1.5rem' }}>
+              {[
+                { icon: '🏋️', scenario: 'Gym Membership', detail: 'Gym waivers are among the most litigated. They typically cover slip and fall injuries on premises and equipment malfunctions. Courts have voided them when equipment was obviously broken prior to the incident.' },
+                { icon: '🏃', scenario: 'Road Races & Marathons', detail: 'Race entry waivers are highly enforceable in most states because participation is voluntary and risks (physical exertion, weather, crowds) are well understood by runners.' },
+                { icon: '🎪', scenario: 'Trampoline Parks', detail: 'Some states have enacted specific statutes (e.g., Illinois) regulating trampoline park waivers, finding them unenforceable for operator negligence. Always check local law.' },
+                { icon: '🎤', scenario: 'Concerts & Events', detail: 'General admission ticket waivers typically cover crowd injury risks. They are generally enforceable for anticipated risks but not for operator failures like inadequate security.' },
+              ].map((item, i) => (
+                <div key={i} style={{ padding: '1.1rem', background: 'rgba(79,70,229,0.03)', borderRadius: '10px', border: '1px solid rgba(79,70,229,0.1)' }}>
+                  <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>{item.icon}</div>
+                  <strong style={{ color: 'var(--color-text)', fontSize: '0.95rem', display: 'block', marginBottom: '0.4rem' }}>{item.scenario}</strong>
+                  <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.875rem', lineHeight: 1.6 }}>{item.detail}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Can a Parent Waive Rights on Behalf of a Minor?
+            </h3>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              While signing a waiver seems routine, the forms often ask for your address, phone number, and emergency contact details. Submitting this personal information through generic online PDF editors exposes your data to third-party cloud storage. MyDigitSign processes the waiver entirely locally within your browser, ensuring your private contact details never leave your device.
+              This is one of the most contested areas of waiver law. In most US states, a parent can sign a waiver on behalf of a minor child, but courts are often reluctant to enforce it. California, in particular, has strong precedent (from <em>Platzer v. Mammoth Mountain Ski Area</em>) that parental waivers cannot waive a minor&apos;s own tort claims against a commercial operator. If you are a business requiring waivers for children&apos;s activities, consult a local attorney about your state&apos;s specific rules before relying on those signatures for legal protection.
             </p>
-            
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Signing for Minors (Parental Guardian Waivers)
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Local Signing Matters for Waivers
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              If you are authorizing a minor to participate in an activity, you will usually need to sign as the parent or legal guardian. Using our built-in Text Tool, you can easily type the minor&apos;s name into the "Participant Name" field, and then drag your own signature onto the "Guardian Signature" line to properly execute the release.
+              When signing a waiver for a health-related or physical activity, you may be disclosing personal medical conditions, fitness levels, or injury history in the accompanying intake form. These details deserve the same privacy protection as medical records. MyDigitSign processes your waiver and any associated documents entirely within your browser — your personal health disclosures and activity history are never uploaded to any server, keeping your sensitive information between you and the activity provider.
             </p>
           </div>
 

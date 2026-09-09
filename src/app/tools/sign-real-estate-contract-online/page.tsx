@@ -9,8 +9,8 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Sign Real Estate Contract Online Free — Property Agreements | MyDigitSign',
-  description: 'Sign real estate purchase agreements, closing disclosures, and realtor contracts online securely. Apply legally binding electronic signatures to property documents.',
-  keywords: ["sign real estate contract online", "sign purchase agreement online", "real estate electronic signature", "realtor contract signature", "sign closing disclosure"],
+  description: 'Sign real estate contracts online securely. Understand contingency clauses, earnest money, buyer vs seller signing obligations, and how to handle counter-offers before closing.',
+  keywords: ["sign real estate contract online", "sign purchase agreement online", "real estate contingency clause", "earnest money agreement", "sign closing disclosure", "buyer seller signature"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-real-estate-contract-online',
   },
@@ -68,20 +68,28 @@ const softwareSchema = getSoftwareAppSchema({
 
 const faqItems = [
   {
-    question: "Are electronic signatures legally binding for real estate purchases?",
-    answer: "Yes. Under the ESIGN Act and UETA, electronic signatures on real estate contracts, including purchase agreements and disclosures, carry the same legal weight as a wet-ink signature."
+    question: "What is a contingency clause and why does it matter?",
+    answer: "A contingency clause makes a real estate contract conditional on a specific event occurring — such as a satisfactory home inspection, mortgage approval, or an appraisal meeting the purchase price. If the contingency is not met, the buyer can legally walk away without forfeiting their earnest money. Never sign a purchase agreement without understanding which contingencies it includes."
   },
   {
-    question: "Do I need to sign every page of the contract?",
-    answer: "Standard practice often requires buyers and sellers to initial every page and sign the final page. You can easily do both using our tool by creating a signature and an initial stamp."
+    question: "What happens to earnest money if I back out?",
+    answer: "If you back out of a purchase for a reason covered by a contingency clause (e.g., failed inspection or financing), your earnest money is typically returned. If you back out without a valid contingency — simply changing your mind — the seller usually gets to keep the earnest money as liquidated damages."
   },
   {
-    question: "Will my real estate agent accept this?",
-    answer: "Yes, virtually all realtors and brokers accept ESIGN-compliant digital PDFs. You can download the signed document and email it directly to them."
+    question: "Are electronic signatures valid on real estate purchase agreements?",
+    answer: "Yes. Under the ESIGN Act and UETA, electronic signatures are legally binding for most real estate transactions including purchase agreements, disclosure forms, and addenda. The notable exception is deeds and other documents that legally transfer title, which typically require notarization and recording."
+  },
+  {
+    question: "Do I need to sign every page of a real estate contract?",
+    answer: "Standard real estate practice requires buyers and sellers to initial every page and sign the final page. This confirms both parties have read the full agreement. Our tool makes this easy — create a main signature and a separate initials stamp, then apply each where needed."
+  },
+  {
+    question: "Can I use this for a counter-offer addendum?",
+    answer: "Yes. When negotiating, the seller often signs a counter-offer addendum modifying specific terms (price, closing date, contingencies). You can sign the counter-offer, download it, and send it back to the listing agent immediately without printing."
   },
   {
     question: "Is this secure enough for closing disclosures containing my financial info?",
-    answer: "Absolutely. We designed this tool to run entirely client-side. Your closing disclosures are never uploaded to our cloud, guaranteeing your banking and property data stays on your machine."
+    answer: "Absolutely. Closing disclosures contain your mortgage terms, loan costs, and banking details. MyDigitSign processes these documents entirely locally in your browser — your financial and property data is never uploaded to our servers."
   }
 ];
 
@@ -148,22 +156,78 @@ export default function SignDocumentTool() {
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>Secure and Legal Signatures for Real Estate Transactions</h2>
+            <h2 className={styles.seoArticleTitle}>Real Estate Contracts Explained: Contingencies, Earnest Money, and Who Signs What</h2>
+
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              In real estate, timing is everything. Whether you are submitting an offer on a home or finalizing a commercial lease, you cannot afford to wait to print, sign, and scan documents. You need to <strong>sign real estate contract online</strong> instantly to lock in your deal before another buyer swoops in.
+              Real estate contracts are among the largest financial commitments most people will ever make. Before you <strong>sign real estate contract online</strong>, understanding the key components of a purchase agreement — particularly the contingency clauses and earnest money provisions — can protect you from losing tens of thousands of dollars if the deal does not proceed as expected.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              The 3 Essential Contingency Clauses Buyers Must Negotiate
+            </h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Contingency clauses are conditions that must be satisfied for the sale to proceed. Without them, backing out of a deal means losing your earnest money. Here are the three most critical contingencies every buyer should include:
+            </p>
+            <div style={{ display: 'grid', gap: '0.85rem', marginBottom: '1.5rem' }}>
+              {[
+                {
+                  num: '01',
+                  title: 'Inspection Contingency',
+                  detail: 'Gives you the right to hire a licensed home inspector and, if major defects are found, to negotiate repairs, request a price reduction, or walk away without losing your earnest money. Typically allows 7–14 days for the inspection. Never waive this contingency in a competitive market without fully understanding the risk.'
+                },
+                {
+                  num: '02',
+                  title: 'Financing Contingency',
+                  detail: 'Protects you if your mortgage lender ultimately declines your loan application. Without this contingency, you would lose your earnest money if your financing falls through. Most financing contingencies give you 21–30 days to obtain a formal loan commitment letter from your lender.'
+                },
+                {
+                  num: '03',
+                  title: 'Appraisal Contingency',
+                  detail: 'Protects you if the property appraises below the agreed purchase price. If the bank appraises the home at $450,000 and you agreed to pay $480,000, an appraisal contingency gives you the right to renegotiate the price, make up the difference in cash, or exit the deal. In competitive markets, some buyers waive this — a high-risk decision.'
+                },
+              ].map((item, i) => (
+                <div key={i} style={{ display: 'flex', gap: '1rem', padding: '1rem 1.25rem', background: 'rgba(79,70,229,0.04)', borderRadius: '8px', border: '1px solid rgba(79,70,229,0.12)' }}>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'var(--color-primary)', opacity: 0.5, flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
+                  <div>
+                    <strong style={{ color: 'var(--color-text)', display: 'block', marginBottom: '0.3rem' }}>{item.title}</strong>
+                    <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6 }}>{item.detail}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Earnest Money: What It Is and When You Lose It
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Earnest money (also called a good faith deposit) is a sum — typically 1–3% of the purchase price — that you put down when submitting an offer to demonstrate you are a serious buyer. It is held in escrow and applied toward your down payment at closing.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Under both the ESIGN Act and the Uniform Electronic Transactions Act (UETA), electronic signatures are fully legally binding for real estate purchases, property disclosures, and agent representation agreements. The real estate industry relies heavily on these digital executions to maintain the speed of the market.
+              If you back out of the deal for a reason <em>covered by a contingency</em> (inspection issues, financing failure, low appraisal), your earnest money is returned. If you walk away for any reason <em>not covered by a contingency</em> — simply changing your mind, finding a better house, or having buyer&apos;s remorse — the seller typically gets to keep your earnest money as liquidated damages for taking the home off the market.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Who Signs What: Buyer vs. Seller Obligations
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Real estate purchase agreements require signatures from both the buyer and the seller to create a binding contract. In practice, the process works as follows: the <strong>buyer signs first</strong>, submitting their offer with all terms, contingencies, and the earnest money amount. The seller can: (1) accept and sign, creating a binding contract; (2) reject outright; or (3) sign a <strong>counter-offer addendum</strong> modifying specific terms.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              However, these contracts contain highly sensitive information, including your home address, purchase price, earnest money deposit, and sometimes banking details. Uploading a closing disclosure to a third-party server poses a severe privacy risk. MyDigitSign processes the entire document locally in your browser. The cryptographic signature is applied using your machine&apos;s memory, meaning your transaction data is never intercepted by our servers.
+              Counter-offers involve a new signature cycle: the seller signs the counter-offer, the buyer signs accepting or countering again, and so on until both parties agree or negotiations collapse. With MyDigitSign, you can sign and return a counter-offer addendum in minutes without printing, scanning, or scheduling an in-person meeting.
             </p>
-            
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Handling Initial Lines and Dates
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Initialing Every Page: Why It Matters and How to Do It
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Standard real estate practice requires both buyer and seller to initial every page of the purchase agreement. This confirms that both parties have read the complete document and cannot later claim they were unaware of terms on any particular page. With MyDigitSign, you can create a primary full signature for the final execution page and a shorter &quot;initials&quot; stamp for each page, applying both quickly to the entire document before downloading.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Closing Disclosures Require Local-Only Signing
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Real estate purchase agreements are notoriously long, often requiring the buyer and seller to initial the bottom of every single page to acknowledge they have read the terms. With MyDigitSign, you can easily create a secondary &quot;Initial&quot; signature and quickly stamp it across all pages. You can also use our Text Tool to fill in required execution dates.
+              Your Closing Disclosure contains the most sensitive financial information in any residential transaction: your exact loan amount, interest rate, monthly payment, all closing cost line items, and your banking details for the wire transfer. Uploading this document to a cloud-based PDF signing service means your bank account routing number, loan terms, and purchase price reside on a third-party server. MyDigitSign&apos;s client-side architecture ensures your Closing Disclosure and all associated purchase documents are processed exclusively in your local browser memory — never transmitted to our servers, and never stored anywhere beyond your own device.
             </p>
           </div>
 

@@ -8,9 +8,9 @@ import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Sign Lease Agreement Online Free — Landlord & Tenant Signatures | MyDigitSign',
-  description: 'Sign residential or commercial lease agreements online for free. Landlords and tenants can securely apply legally binding electronic signatures to rental contracts.',
-  keywords: ["sign lease agreement online", "electronic signature for lease", "sign rental agreement online", "free lease signing online", "digital signature lease agreement", "landlord signature online"],
+  title: 'Sign Lease Agreement Online Free — Landlord & Tenant | MyDigitSign',
+  description: 'Sign lease agreements online for free. Know your tenant rights, identify illegal lease clauses, understand security deposit laws by state, and document move-in conditions before signing.',
+  keywords: ["sign lease agreement online", "electronic signature for lease", "sign rental agreement online", "tenant rights before signing", "illegal lease clauses", "security deposit law", "landlord tenant signature"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-lease-agreement-online',
   },
@@ -68,20 +68,28 @@ const softwareSchema = getSoftwareAppSchema({
 
 const faqItems = [
   {
+    question: "What clauses in a lease are typically illegal and unenforceable?",
+    answer: "Common illegal lease clauses include: waiver of the landlord's implied warranty of habitability, waiver of the tenant's right to a security deposit refund, prohibition on having guests without landlord approval, and clauses allowing the landlord to enter without proper notice (typically 24–48 hours under most state laws). An illegal clause does not void the entire lease — it simply means that specific clause cannot be enforced."
+  },
+  {
+    question: "How much can a landlord charge for a security deposit?",
+    answer: "Security deposit limits are set by state law and vary widely. California caps deposits at 1 month's rent (as of 2024). New York City limits deposits to 1 month's rent. Texas has no statutory cap. Florida limits deposits to no more than 2 months' rent. Always verify your specific state's current cap before signing."
+  },
+  {
+    question: "What should I document before signing and moving in?",
+    answer: "Take date-stamped photos and videos of every room, appliance, and fixture before moving your belongings in. Note any existing damage in writing and email it to your landlord within 24 hours of move-in. This documentation is your primary protection against wrongful security deposit deductions at move-out."
+  },
+  {
     question: "Is an electronically signed lease agreement legally binding in court?",
-    answer: "Yes. Electronic signatures on lease agreements hold the same legal weight as wet-ink signatures under federal laws (ESIGN Act) and state laws (UETA) in the United States."
+    answer: "Yes. Electronic signatures on lease agreements hold the same legal weight as wet-ink signatures under federal law (ESIGN Act) and state law (UETA) in the United States. Courts have consistently upheld e-signed leases."
   },
   {
-    question: "Can I use this for a commercial property lease?",
-    answer: "Absolutely. Both residential and commercial leases can be signed securely using this tool. For commercial leases, you can also use our Text tool to add your corporate title."
+    question: "Can multiple tenants sign the same lease PDF?",
+    answer: "Yes. Tenant A signs and downloads the PDF, then emails it to Tenant B, who uploads it and adds their signature. The process repeats for each tenant until all parties have signed. Each signer retains a full copy of the final executed lease."
   },
   {
-    question: "How do multiple tenants sign the same lease?",
-    answer: "Tenant A can upload the lease, sign it, and download it. Then, Tenant A emails the signed PDF to Tenant B. Tenant B uploads that PDF into our tool, adds their signature, and downloads the fully executed document."
-  },
-  {
-    question: "Can I sign an eviction notice or security deposit return with this?",
-    answer: "Yes, you can sign any property management document in PDF format, including lease addendums, condition reports, and termination notices."
+    question: "What is a lease addendum and do I need to sign it separately?",
+    answer: "A lease addendum modifies or supplements the original lease with specific terms — such as a pet policy, parking assignment, or short-term rental restriction. Addenda are typically separate documents that must be signed in addition to the main lease to be enforceable."
   }
 ];
 
@@ -148,22 +156,70 @@ export default function SignDocumentTool() {
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>The Ultimate Guide to Signing a Lease Agreement Online</h2>
+            <h2 className={styles.seoArticleTitle}>Tenant Rights Checklist: What to Verify Before You Sign a Lease Agreement</h2>
+
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Moving into a new apartment or securing a commercial office space requires finalizing a lease agreement. Traditionally, this involved printing dozens of pages, signing them by hand, and scanning them back. Today, property managers and tenants prefer to <strong>sign lease agreement online</strong> using standard electronic signatures.
+              A lease agreement is a binding contract that will govern your life for 12 months or longer. Before you <strong>sign lease agreement online</strong> or hand-deliver a signed copy, taking 30 minutes to review the document carefully can prevent months of disputes over security deposits, repairs, guests, rent increases, and lease terminations. Here is what every tenant should verify before signing.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Common Illegal Lease Clauses You Can Refuse to Honor
+            </h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Even a signed lease cannot override tenant protection laws. The following clauses are illegal in most US states and are not enforceable even if they appear in your signed agreement:
+            </p>
+            <div style={{ display: 'grid', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              {[
+                { clause: 'Waiver of the implied warranty of habitability', detail: 'Landlords are legally required to maintain rental units in habitable condition. Any clause saying &quot;tenant accepts the unit as-is&quot; and waives the right to repairs is void in most states.' },
+                { clause: 'No-notice entry by the landlord', detail: 'Most states require landlords to give 24–48 hours notice before entering a rental unit (except in emergencies). A lease clause granting the landlord the right to enter at any time is typically unenforceable.' },
+                { clause: 'Non-refundable security deposits', detail: 'In most states, security deposits must be refunded within a specific time after move-out (minus documented deductions for damage). A clause calling a security deposit &quot;non-refundable&quot; is usually illegal.' },
+                { clause: 'Waiver of tenant right to sue', detail: 'A clause requiring tenants to waive their right to sue the landlord for habitability issues or injuries caused by landlord negligence is void as against public policy in most states.' },
+                { clause: 'No guests allowed without written approval', detail: 'Blanket prohibitions on guests without prior landlord written consent may violate tenant privacy rights, depending on state law. Reasonable guest policies are permissible; absolute bans often are not.' },
+              ].map((item, i) => (
+                <div key={i} style={{ padding: '0.85rem 1rem', background: 'rgba(239,68,68,0.04)', borderRadius: '8px', border: '1px solid rgba(239,68,68,0.12)' }}>
+                  <strong style={{ color: 'var(--color-text)', fontSize: '0.95rem', display: 'block', marginBottom: '0.25rem' }} dangerouslySetInnerHTML={{ __html: item.clause }} />
+                  <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: item.detail }} />
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Security Deposit Laws: What Your State Allows
+            </h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Security deposit amounts are regulated by state law, not by the landlord. Always verify your state&apos;s current limit before signing:
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              {[
+                { state: 'California', rule: 'Max 1 month&apos;s rent (unfurnished) as of 2024' },
+                { state: 'New York City', rule: 'Max 1 month&apos;s rent' },
+                { state: 'Florida', rule: 'No statutory limit, but must be held in separate account' },
+                { state: 'Texas', rule: 'No statutory cap' },
+                { state: 'Illinois', rule: 'Max 1.5 months&apos; rent in many cities' },
+                { state: 'Massachusetts', rule: 'Max 1 month&apos;s rent' },
+              ].map((item, i) => (
+                <div key={i} style={{ padding: '0.75rem 1rem', background: 'rgba(79,70,229,0.04)', borderRadius: '8px', border: '1px solid rgba(79,70,229,0.1)' }}>
+                  <strong style={{ color: 'var(--color-text)', display: 'block', fontSize: '0.9rem' }}>{item.state}</strong>
+                  <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.85rem', lineHeight: 1.5 }} dangerouslySetInnerHTML={{ __html: item.rule }} />
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Documenting Move-In Condition: Your Best Protection
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              The single most effective thing a tenant can do to protect their security deposit is to document the unit&apos;s condition at move-in with timestamped photos and video. Walk through every room before bringing in any belongings. Photograph walls, floors, appliances, fixtures, and any pre-existing damage. Email the documentation to your landlord within 24 hours of taking possession and ask for written acknowledgement.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Under the ESIGN Act (US) and eIDAS (EU), electronic signatures on lease and rental agreements are completely legally binding. This ensures both landlords and out-of-state tenants can execute contracts instantly without geographical barriers.
+              At move-out, repeat the process. Having a before-and-after visual record dramatically reduces the likelihood of disputed deductions. If your landlord provides a move-in inspection checklist, fill it out thoroughly and retain a signed copy — this document is often legally required to be provided in states like California and Georgia.
             </p>
-            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Using MyDigitSign to execute your rental contract ensures maximum privacy. Because our signature engine runs entirely within your browser (using local machine RAM), your sensitive financial terms, security deposit amounts, and personal home address are never uploaded to a third-party server.
-            </p>
-            
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Handling Guarantors and Multi-Tenant Leases
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Your Lease Deserves Local-Only Signing
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              If your lease requires multiple signatures (such as a roommate or a financial guarantor), the process is simple. You sign your designated line using our tool, download the PDF, and email it to the next party. They repeat the process until all tenants and the landlord have applied their digital signatures to the final executed copy.
+              Your lease agreement contains your home address, monthly income (if included), credit references, and Social Security Number if you are completing a combined application-and-lease package. These are among the most identity-theft sensitive details you will ever commit to a document. Uploading your lease to a cloud-based PDF editor means those details reside on a third-party server. MyDigitSign keeps your entire rental agreement — from upload to signed download — strictly within your browser&apos;s local environment. Your personal address, financial details, and housing terms never leave your device.
             </p>
           </div>
 

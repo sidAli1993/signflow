@@ -315,44 +315,107 @@ export default function ToolsHubPage() {
           </p>
         </section>
 
-        {/* Tools Cards Grid */}
+        {/* Tools Cards Grid — Grouped by Category */}
         <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1rem 4rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.75rem' }}>
-            {toolsList.map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tools/${tool.slug}`}
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  background: 'var(--card-bg, #ffffff)',
-                  border: '1px solid rgba(226, 232, 240, 0.8)',
-                  borderRadius: '16px',
-                  padding: '1.75rem',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
-                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.03)',
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                  <span style={{ fontSize: '2.5rem' }}>{tool.icon}</span>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.6rem', borderRadius: '6px', background: tool.badge === 'Popular' ? '#eff6ff' : tool.badge === 'New' ? '#f0fdf4' : '#faf5ff', color: tool.badge === 'Popular' ? '#2563eb' : tool.badge === 'New' ? '#16a34a' : '#9333ea' }}>
-                    {tool.badge}
-                  </span>
-                </div>
-                <h2 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0f172a' }}>
-                  {tool.title}
-                </h2>
-                <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: 1.5, flexGrow: 1, marginBottom: '1.25rem' }}>
-                  {tool.description}
-                </p>
-                <div style={{ display: 'flex', alignItems: 'center', fontWeight: 600, color: '#4f46e5', fontSize: '0.9rem' }}>
-                  Open Tool <span style={{ marginLeft: '0.4rem' }}>→</span>
-                </div>
-              </Link>
-            ))}
+
+          {/* Section 1: Document Signing & PDF Tools */}
+          <div style={{ marginBottom: '3rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              <span style={{ fontSize: '1.5rem' }}>📝</span>
+              <div>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>Document Signing &amp; PDF Tools</h2>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', margin: '0.2rem 0 0' }}>Sign, fill, annotate, and manage legal PDF documents — 100% locally, nothing uploaded.</p>
+              </div>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.75rem' }}>
+              {toolsList.filter(t => t.category !== 'SEO Tools').map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/tools/${tool.slug}`}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    background: 'var(--card-bg, #ffffff)',
+                    border: '1px solid rgba(226, 232, 240, 0.8)',
+                    borderRadius: '16px',
+                    padding: '1.75rem',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.03)',
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <span style={{ fontSize: '2.5rem' }}>{tool.icon}</span>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.6rem', borderRadius: '6px', background: tool.badge === 'Popular' ? '#eff6ff' : tool.badge === 'New' ? '#f0fdf4' : '#faf5ff', color: tool.badge === 'Popular' ? '#2563eb' : tool.badge === 'New' ? '#16a34a' : '#9333ea' }}>
+                      {tool.badge}
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0f172a' }}>
+                    {tool.title}
+                  </h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: 1.5, flexGrow: 1, marginBottom: '1.25rem' }}>
+                    {tool.description}
+                  </p>
+                  <div style={{ display: 'flex', alignItems: 'center', fontWeight: 600, color: '#4f46e5', fontSize: '0.9rem' }}>
+                    Open Tool <span style={{ marginLeft: '0.4rem' }}>→</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
+
+          {/* Section 2: Video & SEO Tools — clearly labeled as separate category */}
+          <div style={{ borderTop: '1px solid rgba(226,232,240,0.8)', paddingTop: '2.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
+              <span style={{ fontSize: '1.5rem' }}>▶️</span>
+              <div>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-text)', margin: 0 }}>Video &amp; SEO Tools</h2>
+                <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)', margin: '0.2rem 0 0' }}>Free YouTube SEO tools to analyze, optimize, and grow your video content.</p>
+              </div>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--color-text-secondary)', marginBottom: '1.5rem', padding: '0.6rem 1rem', background: 'rgba(99,102,241,0.05)', borderRadius: '8px', borderLeft: '3px solid rgba(99,102,241,0.3)' }}>
+              <strong>Note:</strong> These are standalone YouTube SEO tools, separate from our PDF document signing suite above.
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.75rem' }}>
+              {toolsList.filter(t => t.category === 'SEO Tools').map((tool) => (
+                <Link
+                  key={tool.slug}
+                  href={`/tools/${tool.slug}`}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    background: 'var(--card-bg, #ffffff)',
+                    border: '1px solid rgba(226, 232, 240, 0.8)',
+                    borderRadius: '16px',
+                    padding: '1.75rem',
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    transition: 'transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease',
+                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.03)',
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                    <span style={{ fontSize: '2.5rem' }}>{tool.icon}</span>
+                    <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.7rem', fontWeight: 600, padding: '0.2rem 0.5rem', borderRadius: '5px', background: '#fef3c7', color: '#d97706' }}>Video SEO</span>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.6rem', borderRadius: '6px', background: '#f0fdf4', color: '#16a34a' }}>{tool.badge}</span>
+                    </div>
+                  </div>
+                  <h3 style={{ fontSize: '1.35rem', fontWeight: 700, marginBottom: '0.5rem', color: '#0f172a' }}>
+                    {tool.title}
+                  </h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748b', lineHeight: 1.5, flexGrow: 1, marginBottom: '1.25rem' }}>
+                    {tool.description}
+                  </p>
+                  <div style={{ display: 'flex', alignItems: 'center', fontWeight: 600, color: '#4f46e5', fontSize: '0.9rem' }}>
+                    Open Tool <span style={{ marginLeft: '0.4rem' }}>→</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
         </section>
 
         {/* 1,200 Words Rich Content SEO Section */}

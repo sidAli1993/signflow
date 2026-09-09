@@ -3,14 +3,14 @@ import { Navbar } from '@/components/marketing/Navbar';
 import { Footer } from '@/components/marketing/Footer';
 import HomeClient from '../../HomeClient';
 import styles from '../../page.module.css';
-import { Shield, Zap, Lock, FileCheck, Users, Star, ArrowRight } from 'lucide-react';
+import { Shield, Lock, FileCheck, Users, Star, ArrowRight, AlertTriangle, CheckCircle } from 'lucide-react';
 import { getSoftwareAppSchema, getBreadcrumbSchema, getHowToSchema, getFAQSchema } from '@/lib/seo-schemas';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Sign NDA Online Free — Non-Disclosure Agreement Signer | MyDigitSign',
-  description: 'Sign Non-Disclosure Agreements (NDAs) online securely. Protect your trade secrets by signing mutual or unilateral NDAs locally without uploading to the cloud.',
-  keywords: ["sign nda online", "sign nda free", "electronic signature nda", "sign non disclosure agreement", "confidentiality agreement signature"],
+  description: 'Sign Non-Disclosure Agreements (NDAs) online securely. Understand mutual vs unilateral NDAs, trade secret clauses, and NDA red flags before you sign. 100% private, no uploads.',
+  keywords: ["sign nda online", "sign nda free", "electronic signature nda", "sign non disclosure agreement", "confidentiality agreement signature", "mutual nda", "unilateral nda", "trade secret nda"],
   alternates: {
     canonical: 'https://mydigitsign.com/tools/sign-nda-online',
   },
@@ -69,19 +69,27 @@ const softwareSchema = getSoftwareAppSchema({
 const faqItems = [
   {
     question: "Is an electronically signed NDA enforceable in court?",
-    answer: "Yes. Electronic signatures on Non-Disclosure Agreements are fully enforceable in both US courts (ESIGN Act) and European courts (eIDAS) provided both parties intend to sign."
+    answer: "Yes. Electronic signatures on Non-Disclosure Agreements are fully enforceable in both US courts (ESIGN Act) and European courts (eIDAS) provided both parties intend to sign. Courts have repeatedly upheld e-signed NDAs in trade secret litigation cases."
   },
   {
-    question: "Can I sign a mutual NDA with this tool?",
-    answer: "Yes. For a mutual NDA, you can sign your portion, download it, and send it to the other party so they can counter-sign using the same tool."
+    question: "What is the difference between a mutual NDA and a unilateral NDA?",
+    answer: "A unilateral NDA only protects one party's information — typically when a company shares its roadmap with a vendor or employee. A mutual NDA protects both parties simultaneously, which is standard in merger discussions or joint ventures where both sides share sensitive data."
   },
   {
-    question: "Why shouldn't I upload my NDA to a cloud signer?",
-    answer: "NDAs often contain definitions of your highly confidential trade secrets. Uploading those definitions to a third-party server increases your surface area for data breaches."
+    question: "How long does an NDA typically last?",
+    answer: "Most NDAs specify a duration of 2 to 5 years. However, trade secret protections under the Defend Trade Secrets Act (DTSA) can survive the NDA's expiry indefinitely as long as the information remains genuinely secret and the owner takes reasonable protective measures."
   },
   {
-    question: "Can I fill in the blank lines on the NDA?",
-    answer: "Yes, you can use the built-in Text Tool to fill in the 'Effective Date', 'Disclosing Party', and 'Receiving Party' fields before placing your signature."
+    question: "Can I fill in blank fields in an NDA before signing?",
+    answer: "Yes, you can use the built-in Text Tool to fill in the 'Effective Date', 'Disclosing Party', and 'Receiving Party' fields before placing your signature. All editing happens locally — no content is ever sent to our servers."
+  },
+  {
+    question: "Can an NDA prevent someone from working for a competitor?",
+    answer: "No. That is the role of a non-compete clause, which is a separate legal instrument. An NDA only restricts the disclosure of specific confidential information. Non-compete enforceability varies significantly by US state — California, for instance, largely bans them."
+  },
+  {
+    question: "What should I do if someone breaches my NDA?",
+    answer: "Preserve all evidence immediately — emails, screenshots, and product filings. Then consult an attorney to issue a cease-and-desist letter. For ongoing breaches, a Temporary Restraining Order (TRO) can halt further disclosure. Under the DTSA, willful trade secret theft can result in double damages plus attorney fees."
   }
 ];
 
@@ -148,22 +156,91 @@ export default function SignDocumentTool() {
           </div>
 
           <div className={styles.seoArticle} style={{ marginTop: '4rem' }}>
-            <h2 className={styles.seoArticleTitle}>Securing Your Trade Secrets: The Safest Way to Sign an NDA</h2>
+            <h2 className={styles.seoArticleTitle}>The Complete Guide to NDAs: Mutual vs. Unilateral, Trade Secrets, Red Flags & What to Do When One Is Breached</h2>
+
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              Before sharing proprietary code, business models, or client lists with a potential partner or employee, you need legal protection. Being able to <strong>sign NDA online</strong> quickly ensures that discussions can proceed without delay, while still establishing a firm legal boundary regarding confidentiality.
+              A Non-Disclosure Agreement is one of the most commonly signed — and most frequently misunderstood — legal documents in business. Before you <strong>sign NDA online</strong>, it pays to understand exactly what you are agreeing to, what it genuinely protects, and what it does not. Signing without understanding could restrict your career, your next startup, or your consulting freedom for years.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Mutual NDAs vs. Unilateral NDAs — Which One Are You Signing?
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              The first thing to identify is whether the NDA is <strong>unilateral</strong> (one-way) or <strong>mutual</strong> (two-way). This changes the entire power dynamic of the agreement.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              However, the very nature of a Non-Disclosure Agreement means the document itself is often highly sensitive. It explicitly outlines what is considered a "trade secret" and names the parties involved. Uploading an unsigned NDA to a standard, free online PDF tool means you are transmitting your company&apos;s confidential strategies to a third-party server, creating a significant security vulnerability.
+              A <strong>unilateral NDA</strong> only protects information flowing in one direction. The most common example: a company asks a freelancer or new hire to sign before revealing their product roadmap or client list. Only the company&apos;s information is protected. You are bound, but your own information is not covered.
             </p>
             <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              MyDigitSign protects your intellectual property by employing a 100% client-side architecture. When you use our tool, the PDF is loaded directly into your local machine&apos;s memory. The rendering, text placement, and cryptographic signature merging all happen within your browser. Your NDA never touches our backend servers.
+              A <strong>mutual NDA</strong> protects both parties equally. These appear in M&amp;A due diligence, joint venture negotiations, and strategic partnerships where both companies share sensitive data. If you are disclosing anything about your own business in return, always push for mutual terms before you sign.
             </p>
-            
-            <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
-              Handling Mutual vs. Unilateral NDAs
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              What Legally Counts as a "Trade Secret"?
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Under the federal <strong>Defend Trade Secrets Act (DTSA)</strong> of 2016, a trade secret is information that: (1) derives economic value from not being publicly known, and (2) is subject to <em>reasonable efforts</em> to maintain its secrecy. Trade secrets can include algorithms, business strategies, customer databases, financial models, and source code.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              The phrase &quot;reasonable efforts&quot; is critical. If you share your secret formula without any controls, a court may not consider it a trade secret — even with a signed NDA. Using a tool that never uploads your document (like MyDigitSign) is itself a demonstration of reasonable protective effort during the signing process.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              5 Red Flags to Spot in an NDA Before Signing
+            </h3>
+            <div style={{ display: 'grid', gap: '0.85rem', marginBottom: '1.5rem' }}>
+              {[
+                { flag: 'Overly broad definition of &quot;confidential&quot;', detail: 'If the NDA calls everything ever discussed confidential — written or verbal — it is unreasonably broad. Look for specific, enumerated categories of protected information.' },
+                { flag: 'No expiration date', detail: 'An NDA lasting &quot;in perpetuity&quot; or &quot;forever&quot; is a red flag, especially for employees. A reasonable commercial NDA should define a term of 2 to 5 years.' },
+                { flag: 'Hidden non-compete clause', detail: 'Some NDAs bury non-compete or non-solicitation terms inside the confidentiality section. Read every clause — non-competes are governed by completely different laws with varying enforceability by state.' },
+                { flag: 'One-sided remedies', detail: 'If one party gets unlimited injunctive relief and punitive damages for any breach, but the other has no equivalent protection, the agreement is fundamentally imbalanced. Push for symmetrical remedies.' },
+                { flag: 'Jurisdiction far from your location', detail: 'A clause forcing all disputes into courts in a distant state creates a practical disadvantage. If you are in California and the NDA specifies New York courts, that is a red flag worth negotiating.' },
+              ].map((item, i) => (
+                <div key={i} style={{ display: 'flex', gap: '0.75rem', padding: '1rem', background: 'rgba(239,68,68,0.05)', borderRadius: '8px', border: '1px solid rgba(239,68,68,0.15)' }}>
+                  <AlertTriangle size={18} style={{ color: '#dc2626', flexShrink: 0, marginTop: '2px' }} />
+                  <div>
+                    <strong style={{ color: 'var(--color-text)', display: 'block', marginBottom: '0.25rem' }} dangerouslySetInnerHTML={{ __html: item.flag }} />
+                    <p style={{ margin: 0, color: 'var(--color-text-secondary)', fontSize: '0.92rem', lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: item.detail }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Step-by-Step: Executing a Mutual NDA Without Cloud Platforms
+            </h3>
+            <p style={{ marginBottom: '1rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              When both parties need to sign, here is the most private and efficient workflow using MyDigitSign:
+            </p>
+            <div style={{ display: 'grid', gap: '0.75rem', marginBottom: '1.5rem' }}>
+              {[
+                'Party A uploads the NDA, creates their signature, places it on their designated line, and fills in their name, title, and date using the Text Tool.',
+                'Party A downloads the partially signed PDF and emails it to Party B.',
+                'Party B opens MyDigitSign, uploads the received PDF, adds their own signature on their line, and downloads the fully executed copy.',
+                'Both parties retain the completed, bilaterally signed NDA. This PDF is your legal proof of the agreement.',
+              ].map((step, i) => (
+                <div key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                  <CheckCircle size={18} style={{ color: '#16a34a', flexShrink: 0, marginTop: '3px' }} />
+                  <p style={{ margin: 0, color: 'var(--color-text-secondary)', lineHeight: 1.6, fontSize: '0.95rem' }}>{step}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              What to Do When Someone Breaches Your NDA
+            </h3>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              The moment you discover a potential breach, your response speed matters. First, <strong>preserve all evidence</strong> immediately — emails, product screenshots, LinkedIn announcements, or any documentation showing what was disclosed and when. Courts require concrete evidence of both the breach and the resulting harm.
+            </p>
+            <p style={{ marginBottom: '1.25rem', lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
+              Your attorney can then pursue: a <strong>cease-and-desist letter</strong> (often resolves disputes without court), a <strong>Temporary Restraining Order (TRO)</strong> to halt ongoing disclosure immediately, or a civil lawsuit for actual damages. Under the DTSA, willful and malicious trade secret misappropriation can result in <em>double the actual damages</em>, plus attorney fees — making a properly signed NDA a powerful deterrent even before any dispute arises.
+            </p>
+
+            <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--color-text)', marginTop: '2.5rem', marginBottom: '1rem' }}>
+              Why Signing an NDA Locally Protects the Secret Itself
             </h3>
             <p style={{ lineHeight: 1.7, color: 'var(--color-text-secondary)' }}>
-              If you are signing a unilateral NDA (where only one party is receiving confidential info), only the receiving party needs to sign. If it is a mutual NDA, both parties must sign. You can easily apply your signature, download the PDF, and email it to the counterparty. They can then use MyDigitSign to safely add their own signature without risking data exposure.
+              There is a deep irony in uploading a Non-Disclosure Agreement to a cloud PDF editor to sign it. The NDA itself often names your trade secrets — your algorithms, your database schema, your financial projections. Transmitting that document to a third-party server during signing exposes those confidential details to the server operator&apos;s infrastructure. MyDigitSign eliminates this entirely. The PDF is processed inside your browser&apos;s sandboxed local memory using JavaScript and WebAssembly. Not a single byte of your NDA crosses the internet to our servers — maintaining the secrecy the agreement is designed to protect from the very moment of execution.
             </p>
           </div>
 

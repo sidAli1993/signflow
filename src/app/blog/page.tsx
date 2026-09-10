@@ -211,6 +211,12 @@ const posts = [
     slug: 'how-to-save-outlook-email-as-pdf',
     excerpt: 'Learn how to save outlook email as pdf in 2026. Discover multiple methods to convert an outlook message to PDF securely and fast.',
     date: 'September 8, 2026',
+  },
+  {
+    title: 'How to Make a PDF Black and White (Convert to Grayscale Guide)',
+    slug: 'how-to-make-a-pdf-black-and-white',
+    excerpt: 'Learn how to easily convert a color PDF to black and white, create a grayscale file, and save PDF as black and white for free.',
+    date: 'September 10, 2026',
   }
 ];
 

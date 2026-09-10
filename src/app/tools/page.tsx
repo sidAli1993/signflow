@@ -144,6 +144,15 @@ const toolsList = [
     searchKeywords: ['split pdf', 'extract pdf pages', 'separate pdf pages', 'pdf splitter free'],
   },
   {
+    slug: 'convert-pdf-to-black-and-white',
+    title: 'PDF to Black and White',
+    badge: 'New',
+    category: 'Convert',
+    description: 'Convert any color PDF document into grayscale. 100% browser-based with zero server uploads.',
+    icon: '⬛',
+    searchKeywords: ['convert color pdf to black and white', 'convert pdf to grayscale', 'black and white pdf', 'grayscale file'],
+  },
+  {
     slug: 'sign-word-document',
     title: 'Sign Word Document Online Free',
     badge: 'New',

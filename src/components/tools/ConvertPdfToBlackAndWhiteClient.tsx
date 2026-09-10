@@ -14,7 +14,7 @@ export default function ConvertPdfToBlackAndWhiteClient() {
   const [showReviewModal, setShowReviewModal] = useState(false);
 
   useEffect(() => {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs`;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs`;
   }, []);
 
   const formatSize = (bytes: number) => {
@@ -43,7 +43,7 @@ export default function ConvertPdfToBlackAndWhiteClient() {
 
     try {
       const buffer = await file.arrayBuffer();
-      const loadingTask = pdfjsLib.getDocument({ data: buffer });
+      const loadingTask = pdfjsLib.getDocument({ data: new Uint8Array(buffer) });
       const pdf = await loadingTask.promise;
       const totalPages = pdf.numPages;
       
@@ -54,11 +54,15 @@ export default function ConvertPdfToBlackAndWhiteClient() {
         const viewport = page.getViewport({ scale: 1.5 });
         
         const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d', { willReadFrequently: true });
+        const context = canvas.getContext('2d');
         if (!context) continue;
 
         canvas.width = viewport.width;
         canvas.height = viewport.height;
+
+        // Fill background with white to prevent transparency turning black
+        context.fillStyle = '#ffffff';
+        context.fillRect(0, 0, canvas.width, canvas.height);
 
         await page.render({ canvasContext: context, viewport }).promise;
         
@@ -99,9 +103,9 @@ export default function ConvertPdfToBlackAndWhiteClient() {
         setShowReviewModal(true);
       }, 1000);
       
-    } catch (err) {
-      alert('An error occurred while converting the PDF to black and white. Please try again.');
-      console.error(err);
+    } catch (err: any) {
+      alert(`An error occurred: ${err.message || 'Unknown error'}. Please try again.`);
+      console.error('PDF Conversion Error:', err);
     } finally {
       setIsProcessing(false);
     }

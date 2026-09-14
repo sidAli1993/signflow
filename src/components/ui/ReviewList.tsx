@@ -24,6 +24,11 @@ export function ReviewList({ reviews }: { reviews: Review[] }) {
     <div className={styles.listContainer}>
       {reviews.map((review) => (
         <article key={review.id} className={styles.reviewCard} itemScope itemType="https://schema.org/Review">
+          {/* Required itemReviewed property for Google Search Console */}
+          <div itemProp="itemReviewed" itemScope itemType="https://schema.org/SoftwareApplication" style={{ display: 'none' }}>
+            <meta itemProp="name" content="MyDigitSign" />
+            <meta itemProp="applicationCategory" content="BusinessApplication" />
+          </div>
           <div className={styles.header}>
             <div className={styles.author}>
               <div className={styles.avatar} aria-hidden="true">

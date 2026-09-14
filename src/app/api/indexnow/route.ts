@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { BLOG_SLUGS, TOOL_SLUGS, COMPARE_SLUGS } from '@/data/slugs';
 
 /**
  * IndexNow API Route
@@ -16,86 +17,22 @@ const INDEXNOW_KEY = 'a1b2c3d4e5f6789012345678abcdef01';
 const HOST = 'mydigitsign.com';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
-// All indexable URLs from the sitemap
+// All indexable URLs — derived from the single source of truth in slugs.ts
 function getAllUrls(): string[] {
   const baseUrl = `https://${HOST}`;
-
-  const blogPosts = [
-    'free-digital-signature-certificate',
-    'create-digital-signature-online-free',
-    'are-electronic-signatures-legally-binding',
-    'ultimate-guide-signing-pdf-securely',
-    'how-to-sign-a-document-online-free-pdf-editor',
-    'how-to-sign-pdf-on-iphone-android-free',
-    'how-to-sign-nda-online-free',
-    'how-to-add-signature-in-word',
-    'what-is-a-signature-line',
-    'how-to-ask-someone-to-sign-nda',
-    'can-you-notarize-your-own-signature',
-    // New posts — August 8, 2026
-    'how-to-fill-out-uber-inspection-form',
-    'voided-check-example',
-    'what-is-a-wet-signature',
-    'docusign-vs-mydigitsign-honest-review',
-    'electronic-signature-for-small-business',
-    'digital-signature-for-freelancers',
-    'esignature-for-realtors',
-    'sign-lease-agreement-online-free',
-    'best-smallpdf-alternatives-free',
-    'what-is-a-digit-sign',
-    'where-to-get-digital-signature-certificate',
-    'pdf-editor-with-signature-free',
-    'digital-signature-laws-by-country',
-    'what-is-ssl-email',
-    'what-is-dsign',
-    'can-you-change-your-signature',
-    'signature-and-date-line',
-    'esignature-in-georgia',
-    'how-to-create-transparent-signature-png',
-    'how-to-add-digital-signature-to-google-docs',
-    'sign-real-estate-contract-online',
-    'how-to-extract-youtube-tags',
-    'how-to-write-strong-youtube-titles',
-  ];
-
-  const tools = [
-    'sign-pdf-online',
-    'edit-pdf-online',
-    'merge-pdf-online',
-    'compress-pdf-online',
-    'protect-pdf-online',
-    'rotate-pdf-online',
-    'draw-signature-online',
-    'type-signature-online',
-    'sign-image-online',
-    'pdf-to-jpg',
-    'jpg-to-pdf',
-    'split-pdf-online',
-    'sign-word-document',
-    'generate-signature-line',
-    'youtube-tag-extractor',
-    'youtube-title-strength-checker',
-  ];
-
-  const comparisons = [
-    'docusign-alternative',
-    'smallpdf-alternative',
-    'adobe-sign-alternative',
-    'pandadoc-alternative',
-    'hellosign-alternative',
-    'signwell-alternative',
-  ];
 
   return [
     baseUrl,
     `${baseUrl}/tools`,
+    `${baseUrl}/templates`,
     `${baseUrl}/compare`,
-    ...comparisons.map((cmp) => `${baseUrl}/compare/${cmp}`),
+    ...COMPARE_SLUGS.map((slug) => `${baseUrl}/compare/${slug}`),
     `${baseUrl}/features`,
     `${baseUrl}/how-it-works`,
+    `${baseUrl}/about`,
     `${baseUrl}/blog`,
-    ...blogPosts.map((slug) => `${baseUrl}/blog/${slug}`),
-    ...tools.map((tool) => `${baseUrl}/tools/${tool}`),
+    ...BLOG_SLUGS.map(({ slug }) => `${baseUrl}/blog/${slug}`),
+    ...TOOL_SLUGS.map((tool) => `${baseUrl}/tools/${tool}`),
     `${baseUrl}/privacy-policy`,
     `${baseUrl}/cookie-policy`,
     `${baseUrl}/terms-of-service`,

@@ -1,11 +1,11 @@
 /**
  * SEO Schema Generators for MyDigitSign
  * Generate fresh Schema.org JSON-LD data for Google Rich Results.
- * Updated: 2026-08-05
  */
 
 export const BASE_URL = 'https://mydigitsign.com';
-export const CURRENT_DATE = '2026-08-05';
+/** Auto-calculated at build time — no manual updates needed */
+export const CURRENT_DATE = new Date().toISOString().split('T')[0];
 
 export interface FAQItem {
   question: string;
@@ -22,7 +22,8 @@ export interface HowToStep {
 /**
  * Generates SoftwareApplication schema for tools.
  *
- * Fallback aggregateRating provided to fix GSC errors for missing rating.
+ * aggregateRating is ONLY included when the caller provides a rating
+ * backed by visible on-page reviews (per Google structured data guidelines).
  */
 export function getSoftwareAppSchema(opts: {
   name: string;
@@ -44,19 +45,16 @@ export function getSoftwareAppSchema(opts: {
       price: '0',
       priceCurrency: 'USD'
     },
-    aggregateRating: opts.rating ? {
-      '@type': 'AggregateRating',
-      ratingValue: opts.rating.ratingValue,
-      ratingCount: opts.rating.ratingCount,
-      bestRating: '5',
-      worstRating: '1',
-    } : {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '214',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // Only include aggregateRating when backed by visible on-page reviews
+    ...(opts.rating ? {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: opts.rating.ratingValue,
+        ratingCount: opts.rating.ratingCount,
+        bestRating: '5',
+        worstRating: '1',
+      },
+    } : {}),
     publisher: {
       '@type': 'Organization',
       name: 'MyDigitSign',

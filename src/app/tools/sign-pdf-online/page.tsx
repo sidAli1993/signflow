@@ -62,13 +62,11 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Sign PDF Online', url: '/tools/sign-pdf-online' },
 ]);
 
-// aggregateRating is backed by visible user testimonials rendered on this page below
 const softwareSchema = getSoftwareAppSchema({
   name: 'MyDigitSign Sign PDF Tool',
   description: '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser.',
   url: 'https://mydigitsign.com/tools/sign-pdf-online',
   applicationCategory: 'BusinessApplication',
-  rating: { ratingValue: '4.9', ratingCount: '47' },
 });
 
 const howToSchema = getHowToSchema({

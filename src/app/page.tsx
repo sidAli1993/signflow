@@ -5,6 +5,7 @@ import { Footer } from '@/components/marketing/Footer';
 import HomeClient from './HomeClient';
 import styles from './page.module.css';
 import { Shield, Zap, Lock, FileCheck, Users, Star } from 'lucide-react';
+import { getAggregateRating } from '@/lib/get-reviews';
 
 // Skeleton shown while HomeClient hydrates on the client
 function HomeClientSkeleton() {
@@ -107,13 +108,6 @@ const softwareSchema = {
   'applicationCategory': 'BusinessApplication',
   'operatingSystem': 'Windows, macOS, Linux, iOS, Android',
   'description': '100% free client-side PDF e-signature tool. Sign, draw, type, and edit PDFs directly inside your browser without uploading files to any server.',
-  'aggregateRating': {
-    '@type': 'AggregateRating',
-    'ratingValue': '4.8',
-    'ratingCount': '214',
-    'bestRating': '5',
-    'worstRating': '1'
-  },
   'offers': {
     '@type': 'Offer',
     'price': '0',
@@ -179,6 +173,41 @@ const faqSchema = {
 };
 
 export default function Home() {
+  const aggregateData = getAggregateRating();
+
+  // JSON-LD schema payload combining Breadcrumb, Organization, SoftwareApplication, and FAQPage
+  const fullSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      breadcrumbSchema,
+      {
+        ...organizationSchema,
+        ...(aggregateData ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: aggregateData.ratingValue,
+            ratingCount: aggregateData.ratingCount,
+            bestRating: '5',
+            worstRating: '1'
+          }
+        } : {})
+      },
+      {
+        ...softwareSchema,
+        ...(aggregateData ? {
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: aggregateData.ratingValue,
+            ratingCount: aggregateData.ratingCount,
+            bestRating: '5',
+            worstRating: '1'
+          }
+        } : {})
+      },
+      faqSchema,
+    ],
+  };
+
   return (
     <div className={styles.appWrapper}>
       <Navbar />
@@ -210,26 +239,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* JSON-LD Schemas — single set only, no duplicates */}
+      {/* JSON-LD Schemas — combined graph with dynamic rating */}
       <script
-        id="breadcrumb-schema"
+        id="seo-schemas"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        id="software-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
-      <script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(fullSchema) }}
       />
 
       {/* ─── Interactive Tool (client-side with Suspense for LCP optimization) ─ */}

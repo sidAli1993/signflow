@@ -1,39 +1,33 @@
 .footer {
-  background-color: var(--color-bg-secondary);
+  background: var(--color-surface);
   border-top: 1px solid var(--color-border);
-  padding-top: var(--space-xl);
-}
-
-.adWrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding: 4rem 0 2rem;
+  margin-top: 4rem;
 }
 
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--space-xl) var(--space-lg) var(--space-md);
+  padding: 0 1.5rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-2xl);
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
-.brandCol {
+.brand {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 1rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  gap: 0.5rem;
   text-decoration: none;
   color: var(--color-text);
 }
@@ -42,121 +36,65 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: var(--gradient-primary);
-  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  border-radius: 8px;
   color: white;
 }
 
 .logoText {
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
 }
 
 .description {
-  color: var(--color-text-secondary);
-  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
   max-width: 300px;
-  margin: 0;
-}
-
-.socials {
-  display: flex;
-  gap: var(--space-sm);
-  margin-top: var(--space-sm);
-}
-
-.socialLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background-color: var(--color-surface);
-  color: var(--color-text-secondary);
-  transition: all var(--transition-fast);
-}
-
-.socialLink:hover {
-  background-color: var(--color-primary-bg);
-  color: var(--color-primary-light);
 }
 
 .linksCol {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 0.75rem;
 }
 
 .colTitle {
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-text);
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
 }
 
 .link {
-  color: var(--color-text-secondary);
-  font-size: 14px;
+  color: var(--color-text-muted);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  font-size: 0.95rem;
+  transition: color 0.2s;
 }
 
 .link:hover {
-  color: var(--color-text);
-}
-
-.bottom {
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.copyright {
-  color: var(--color-text-muted);
-  font-size: 13px;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-  }
-  
-  .brandCol {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  color: var(--color-primary);
 }
 
 .reviewBanner {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background-color: #f8fafc;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
+  align-items: center;
   text-align: center;
 }
 
 .reviewText {
-  color: #334155;
-  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
 }
 
 .reviewLinks {
@@ -167,18 +105,123 @@
 }
 
 .reviewLink {
-  background: white;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 600;
-  color: #0f172a;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text);
   text-decoration: none;
-  border: 1px solid #cbd5e1;
-  transition: all 0.2s;
+  font-weight: 500;
   font-size: 0.9rem;
+  transition: all 0.2s;
 }
 
 .reviewLink:hover {
-  background: #f1f5f9;
-  border-color: #94a3b8;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Product Hunt Badge Styles */
+.phBadgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.phBadgeCard {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  border: 1px solid var(--color-border, rgb(224, 224, 224));
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  background: var(--color-surface, rgb(255, 255, 255));
+  box-shadow: var(--shadow-sm, rgba(0, 0, 0, 0.05) 0px 2px 8px);
+}
+
+.phBadgeHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.phBadgeImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.phBadgeTextContainer {
+  flex: 1 1 0%;
+  min-width: 0px;
+}
+
+.phBadgeTitle {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text, rgb(26, 26, 26));
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phBadgeSubtitle {
+  margin: 4px 0px 0px;
+  font-size: 14px;
+  color: var(--color-text-muted, rgb(102, 102, 102));
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.phBadgeLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: rgb(255, 97, 84);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .brand {
+    grid-column: 1 / -1;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

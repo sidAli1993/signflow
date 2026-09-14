@@ -39,6 +39,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://mydigitsign.com"),
   alternates: {
     canonical: "./",
+    languages: {
+      "en": "/",
+      "x-default": "/",
+    }
   },
   openGraph: {
     title: "Free PDF Signer (100% Private, No Uploads) — MyDigitSign",
@@ -85,91 +89,34 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data — Global schemas (WebSite + SoftwareApplication + Organization)
-// NOTE: FAQPage schema has been moved to page.tsx (homepage only) to match visible FAQ content.
-// aggregateRating removed — only include when real visible reviews exist on-page.
+// JSON-LD Structured Data — Global WebSite schema only.
+// Organization and SoftwareApplication schemas are page-specific (see page.tsx, tools/*).
+// This prevents duplicate structured data warnings in Google Search Console.
 const jsonLd = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://mydigitsign.com/#app",
-      "name": "MyDigitSign",
-      "url": "https://mydigitsign.com",
-      "operatingSystem": "Windows, macOS, Linux, iOS, Android",
-      "applicationCategory": "UtilitiesApplication",
-      "applicationSubCategory": "PDF & Document Signing Tool",
-      "description": "Free online PDF signer and digital signature tool. Draw, type, or upload your signature and place it on any PDF or image. 100% browser-based — no uploads, no account.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "214",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "featureList": [
-        "Sign PDF files online for free",
-        "Create a free digital signature certificate",
-        "Draw signature with mouse or touchscreen",
-        "Type signature in cursive font",
-        "Upload existing signature image",
-        "Drag and resize signature on document",
-        "100% client-side — no file uploads",
-        "No account or registration required",
-        "Download signed PDF instantly"
-      ],
-      "screenshot": "https://mydigitsign.com/og-image.png",
-      "potentialAction": {
-        "@type": "UseAction",
-        "target": "https://mydigitsign.com",
-        "name": "Sign a PDF for Free",
-        "description": "Open MyDigitSign to sign PDFs and documents online for free, 100% in your browser."
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://mydigitsign.com/#website",
-      "name": "MyDigitSign",
-      "url": "https://mydigitsign.com",
-      "description": "Free online PDF signer and digital signature tool. No uploads, no account required.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://mydigitsign.com/blog?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://mydigitsign.com/#organization",
-      "name": "MyDigitSign",
-      "url": "https://mydigitsign.com",
-      "email": "alimirza00@gmail.com",
-      "description": "MyDigitSign builds free, privacy-first document signing tools. Our flagship product lets users sign PDFs and images entirely in the browser with zero server uploads.",
-      "foundingDate": "2026",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://mydigitsign.com/og-image.png"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "email": "alimirza00@gmail.com"
-      },
-      "sameAs": [
-        "https://github.com/sidAli1993/signflow",
-        "https://x.com/alimirza00",
-        "https://www.linkedin.com/in/mirza-munawer-baig-3a0b15105/"
-      ]
+  "@type": "WebSite",
+  "@id": "https://mydigitsign.com/#website",
+  "name": "MyDigitSign",
+  "url": "https://mydigitsign.com",
+  "description": "Free online PDF signer and digital signature tool. No uploads, no account required.",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://mydigitsign.com/#organization",
+    "name": "MyDigitSign",
+    "url": "https://mydigitsign.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mydigitsign.com/og-image.png"
     }
-  ]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://mydigitsign.com/blog?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 };
 
 export default function RootLayout({
@@ -219,7 +166,7 @@ export default function RootLayout({
         {/* Google AdSense */}
         <Script
           id="google-adsense"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2946390705770489"
         />

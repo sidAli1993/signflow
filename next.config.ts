@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     serverActions: { bodySizeLimit: '10mb' },
   },
   images: {
-    remotePatterns: [{ protocol: 'https', hostname: '**' }],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'ph-files.imgix.net' }
+    ],
   },
   webpack: (config) => {
     config.resolve.alias.canvas = false;
@@ -33,6 +35,10 @@ const nextConfig: NextConfig = {
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: "upgrade-insecure-requests; frame-ancestors 'none';",
           },
         ],
       },

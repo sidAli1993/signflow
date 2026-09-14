@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "name": "Sarah Jenkins",
+    "rating": 5,
+    "comment": "Absolutely brilliant tool. I needed to sign an NDA quickly without creating an account or paying for DocuSign. This worked perfectly in my browser and the signature looks incredibly realistic.",
+    "date": "2026-08-12T14:30:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "2",
+    "name": "David Chen",
+    "rating": 5,
+    "comment": "The fact that this doesn't upload my sensitive legal documents to a random server is why I use it. 100% local processing is a game changer for privacy. Highly recommend.",
+    "date": "2026-08-15T09:15:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "3",
+    "name": "Emily Rodriguez",
+    "rating": 4,
+    "comment": "Very easy to use on my iPhone. Just drew my signature with my finger and saved the PDF. Deducted one star because I wish there were a few more cursive font options for typing signatures, but otherwise flawless.",
+    "date": "2026-08-20T11:45:00.000Z",
+    "status": "approved"
+  },
+  {
+    "id": "4",
+    "name": "Michael T.",
+    "rating": 5,
+    "comment": "Lightning fast. I use it every day for signing freelance contracts and invoices. Beats opening Adobe Acrobat every time.",
+    "date": "2026-09-02T16:20:00.000Z",
+    "status": "approved"
+  }
+]

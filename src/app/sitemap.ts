@@ -84,6 +84,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: lastModifiedDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/reviews`,
+      lastModified: lastModifiedDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
 
     // Individual dedicated micro-tools (from single source of truth)
     ...TOOL_SLUGS.map((tool) => ({

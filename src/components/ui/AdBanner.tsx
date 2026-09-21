@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './AdBanner.module.css';
 
 export interface AdBannerProps {
@@ -9,50 +9,58 @@ export interface AdBannerProps {
   className?: string;
 }
 
-const SLOT_MAP: Record<string, number> = {
-  'home-top': 101,
-  'home-bottom': 102,
-  'footer-top': 103,
-  'signature-download': 104,
-  'features-bottom': 105,
-  'how-it-works-bottom': 106,
-  'privacy-bottom': 107,
-  'cookie-bottom': 108,
-  'terms-bottom': 109,
+// Map logical slot names to AdSense ad slot IDs
+// Replace these with your actual AdSense ad unit slot IDs once approved
+const ADSENSE_SLOT_MAP: Record<string, string> = {
+  'home-top': 'auto',
+  'home-bottom': 'auto',
+  'footer-top': 'auto',
+  'signature-download': 'auto',
+  'features-bottom': 'auto',
+  'how-it-works-bottom': 'auto',
+  'privacy-bottom': 'auto',
+  'cookie-bottom': 'auto',
+  'terms-bottom': 'auto',
+};
+
+const FORMAT_MAP: Record<string, string> = {
+  horizontal: 'horizontal',
+  vertical: 'vertical',
+  rectangle: 'rectangle',
+  auto: 'auto',
 };
 
 export const AdBanner: React.FC<AdBannerProps> = ({ slot, format = 'auto', className = '' }) => {
-  const [isBlocked, setIsBlocked] = useState(false);
+  const adRef = useRef<HTMLModElement>(null);
+  const isInitialized = useRef(false);
 
   useEffect(() => {
-    // Attempt to fetch standard Ezoic script to detect AdBlocker
-    fetch('https://www.ezojs.com/ezoic/sa.min.js', { method: 'HEAD', mode: 'no-cors' })
-      .catch(() => {
-        setIsBlocked(true);
-      });
+    // Only push ads once per component mount
+    if (isInitialized.current) return;
+    isInitialized.current = true;
+
+    try {
+      // Push ad to AdSense
+      const adsbygoogle = (window as unknown as { adsbygoogle: unknown[] }).adsbygoogle || [];
+      adsbygoogle.push({});
+    } catch {
+      // AdSense not loaded (ad blocker or script failure) — fail silently
+    }
   }, []);
 
-  const placeholderId = SLOT_MAP[slot] || 101;
-  const placeholderDivId = `ezoic-pub-ad-placeholder-${placeholderId}`;
-
-  if (isBlocked) {
-    return (
-      <div className={`${styles.adWrapper} ${className}`}>
-        <div className={styles.blockedCard}>
-          <h3>Ad Blocker Detected</h3>
-          <p>Please disable your Ad Blocker and refresh the page to use this tool.</p>
-          <button onClick={() => window.location.reload()} className={styles.reloadBtn}>
-            I've Disabled It (Reload)
-          </button>
-        </div>
-      </div>
-    );
-  }
+  const adSlotId = ADSENSE_SLOT_MAP[slot] || 'auto';
 
   return (
     <div className={`${styles.adWrapper} ${className}`}>
-      {/* Ezoic Ad Placeholder container */}
-      <div id={placeholderDivId} />
+      <ins
+        ref={adRef}
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-2946390705770489"
+        data-ad-slot={adSlotId}
+        data-ad-format={FORMAT_MAP[format] || 'auto'}
+        data-full-width-responsive="true"
+      />
     </div>
   );
 };

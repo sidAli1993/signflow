@@ -11,23 +11,7 @@ export const metadata: Metadata = {
     template: "%s | MyDigitSign",
   },
   description: "Sign PDFs and documents online for free. 100% browser-based & private — your files never leave your device. Secure digital signer with zero uploads.",
-  keywords: [
-    "sign pdf online free",
-    "free pdf signer",
-    "digital signature online",
-    "e signature pdf free",
-    "sign document online free",
-    "draw electronic signature",
-    "sign pdf on iphone",
-    "free document signer",
-    "legally binding electronic signature",
-    "online signature tool",
-    "sign pdf without upload",
-    "free digital signature certificate",
-    "create digital signature free",
-    "edit and sign pdf free",
-    "mydigitsign",
-  ],
+
   authors: [{ name: "MyDigitSign Team" }],
   creator: "MyDigitSign",
   publisher: "MyDigitSign",
@@ -151,17 +135,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.variable}>
-        {/* Third-party Analytics & Ad Scripts (lazyOnload to prevent PageSpeed / Lighthouse timeouts) */}
-        <Script id="ezoic-cmp-min" strategy="lazyOnload" src="https://cmp.gatekeeperconsent.com/min.js" />
-        <Script id="ezoic-cmp-main" strategy="lazyOnload" src="https://the.gatekeeperconsent.com/cmp.min.js" />
-        <Script id="ezoic-sa" strategy="lazyOnload" src="https://www.ezojs.com/ezoic/sa.min.js" />
-        <Script id="ezoic-cmd" strategy="lazyOnload">
-          {`
-            window.ezstandalone = window.ezstandalone || {};
-            ezstandalone.cmd = ezstandalone.cmd || [];
-          `}
-        </Script>
-        <Script id="ezoic-analytics" strategy="lazyOnload" src="https://ezoicanalytics.com/analytics.js" />
+        {/* Third-party Analytics & Ad Scripts */}
         <Script id="ahrefs-analytics" strategy="lazyOnload" src="https://analytics.ahrefs.com/analytics.js" data-key="TzxIydSB7JNrL0a3INhH6A" />
         {/* Google AdSense */}
         <Script
@@ -173,12 +147,12 @@ export default function RootLayout({
         {/* Google Analytics Tag */}
         <Script
           id="google-gtag"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-H9B8LS4FRG`}
         />
         <Script
           id="google-analytics"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

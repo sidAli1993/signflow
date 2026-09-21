@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "e-signature legal terms",
     "no server pdf tool agreement"
   ],
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://mydigitsign.com/terms-of-service",
   },
